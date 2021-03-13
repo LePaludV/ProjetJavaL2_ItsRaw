@@ -1,4 +1,17 @@
+import javafx.application.Application;
+import javafx.stage.Stage;
+public class Accueil extends Application {
 
-public class Accueil {
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		primaryStage.show();
+		
+	}
 
+	
+
+	
+	
+
+	
 }
