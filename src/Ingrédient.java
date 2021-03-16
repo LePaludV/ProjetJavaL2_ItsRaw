@@ -1,12 +1,12 @@
-class Ingrédient {
+class IngrÃ©dient {
 	
 	String nom;
-	float quantité;
+	float quantitÃ©;
 	String mesure;
 	
-	public Ingrédient(String nom,float quantité, String mesure) {
+	public IngrÃ©dient(String nom,float quantitÃ©, String mesure) {
 		this.nom = nom;
-		this.quantité=quantité;
+		this.quantitÃ©=quantitÃ©;
 		this.mesure=mesure;
 	}
 	

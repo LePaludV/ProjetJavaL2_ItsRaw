@@ -2,21 +2,20 @@ import javafx.scene.image.Image;
 
 public class Recette {
 		
-	String nom, description;
-	Ingrédient[] ingrédients;
-	int temps,difficulté,note;
-	Image photo;
-	String[] étapes, catégories;
-	
-	public Recette(String nom, Ingrédient[] ingrédients, int temps, int difficulté, int note, Image photo, String description, String[] étapes) {
+	String nom, description,photo;
+	IngrÃ©dient[] ingrÃ©dients;
+	float temps,difficultÃ©,note;
+	String[] Ã©tapes, catÃ©gories;
+
+	public Recette(String nom, IngrÃ©dient[] ingrÃ©dients, float temps, float difficultÃ©, float note, String photo, String description, String[] Ã©tapes) {
 		this.nom = nom;
-		this.ingrédients = ingrédients;
+		this.ingrÃ©dients = ingrÃ©dients;
 		this.temps = temps;
-		this.difficulté = difficulté;
+		this.difficultÃ© = difficultÃ©;
 		this.note = note;
 		this.photo = photo;
 		this.description = description;
-		this.étapes = étapes;
+		this.Ã©tapes = Ã©tapes;
 	}
 	
 
