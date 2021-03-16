@@ -10,7 +10,9 @@ public class Accueil {
 
 	}
 
-
+	public void init() {
+		
+	}
 
 
 
