@@ -8,7 +8,7 @@ public class InterfaceAjouterRecette {
 		
 	}
 	
-	public static StackPane getScene() {
+	public static StackPane getStackPane() {
 		StackPane root = new StackPane();
 		root.getChildren().add(new Label("Bordel ça fonctionne !"));
 		
