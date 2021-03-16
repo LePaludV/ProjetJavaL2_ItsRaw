@@ -7,13 +7,13 @@ import javafx.stage.Stage;
 public class Accueil {
 	Label label;
 	public Accueil(){
-		
+
 	}
 
 
-	
-		
-	
+
+
+
 		// TODO Auto-generated constructor stub
 	}
 			

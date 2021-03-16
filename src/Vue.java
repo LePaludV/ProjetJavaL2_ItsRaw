@@ -11,7 +11,7 @@ public class Vue extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("It's Raw");
 		StackPane root= new StackPane();
-		//root.getChildren().add(acc);
+//		root.getChildren().add(acc);
 		Scene scene = new Scene(root, 800, 600);
 		primaryStage.setScene(scene);
 		primaryStage.show();
