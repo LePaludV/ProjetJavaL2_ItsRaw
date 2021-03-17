@@ -1,5 +1,6 @@
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 
 public class InterfaceAjouterRecette {
@@ -10,7 +11,8 @@ public class InterfaceAjouterRecette {
 	
 	public static StackPane getStackPane() {
 		StackPane root = new StackPane();
-		root.getChildren().add(new Label("Bordel ça fonctionne !"));
+		TextField  nomRecette = new TextField ();
+		root.getChildren().add(nomRecette);
 		
 		
 		

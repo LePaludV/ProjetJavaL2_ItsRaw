@@ -7,13 +7,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Vue extends Application {
 	Stage primaryStage;
 	Accueil acc=new Accueil();
-	BorderPane rootLayout;
+	GridPane rootLayout;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
@@ -21,14 +22,26 @@ public class Vue extends Application {
         this.primaryStage.setWidth(600);
         this.primaryStage.setHeight(600);
 		
-        
+        this.primaryStage.sizeToScene();
         
         // Show the scene containing the root layout.
-        Scene scene=new Scene(InterfaceAjouterRecette.getScene());
-        primaryStage.setScene(scene);
-        primaryStage.show();
-        
-
+    
+        	  try {
+        		  FXMLLoader loader = new FXMLLoader();
+                  loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
+                  rootLayout = (GridPane) loader.load();
+                  
+                  Scene scene=new Scene(rootLayout);
+                  primaryStage.setScene(scene);
+                  primaryStage.show();
+        	  }
+        	  catch(IOException e) {
+        		  e.printStackTrace();
+        	  }
+              
+              
+              
+    
 
 	}
 
