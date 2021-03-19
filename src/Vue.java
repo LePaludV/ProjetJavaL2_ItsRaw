@@ -1,9 +1,12 @@
 import java.io.IOException;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -15,7 +18,11 @@ public class Vue extends Application {
 	Stage primaryStage;
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
+	  
+	  @FXML 
+	  Button ajoutEtape;
 	@Override
+	
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
@@ -26,7 +33,7 @@ public class Vue extends Application {
         
         // Show the scene containing the root layout.
     
-        	  try {
+        	  try {	
         		  FXMLLoader loader = new FXMLLoader();
                   loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
                   rootLayout = (GridPane) loader.load();
@@ -39,9 +46,10 @@ public class Vue extends Application {
         		  e.printStackTrace();
         	  }
               
-              
-              
-    
+            private void Bouton(ActionEvent event) {
+            	System.out.println("test");
+            }
+        	  
 
 	}
 

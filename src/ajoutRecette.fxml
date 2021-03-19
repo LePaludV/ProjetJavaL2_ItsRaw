@@ -58,7 +58,7 @@
    <children>
       <TextField prefHeight="26.0" prefWidth="124.0" GridPane.columnIndex="2" />
       <Button text="Ajouté catégorie" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button text="Ajouter Etape" GridPane.columnIndex="2" GridPane.rowIndex="4">
+      <Button fx:id="ajoutEtape" onAction="#Bouton" text="Ajouter Etape" GridPane.columnIndex="2" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="10.0" left="75.0" />
          </GridPane.margin>
