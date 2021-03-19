@@ -19,36 +19,24 @@ public class Vue extends Application {
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
 	  
-	  @FXML 
-	  Button ajoutEtape;
+	
 	@Override
 	
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
-        this.primaryStage.setWidth(600);
-        this.primaryStage.setHeight(600);
-		
-        this.primaryStage.sizeToScene();
+        this.primaryStage.setWidth(800);
+        this.primaryStage.setHeight(640);
+        this.primaryStage.setResizable(false);
         
-        // Show the scene containing the root layout.
-    
-        	  try {	
-        		  FXMLLoader loader = new FXMLLoader();
-                  loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
-                  rootLayout = (GridPane) loader.load();
-                  
-                  Scene scene=new Scene(rootLayout);
-                  primaryStage.setScene(scene);
-                  primaryStage.show();
-        	  }
-        	  catch(IOException e) {
-        		  e.printStackTrace();
-        	  }
-              
-            private void Bouton(ActionEvent event) {
-            	System.out.println("test");
-            }
+          
+        Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
+        
+        primaryStage.setScene(scene);
+      
+        primaryStage.show();
+        	  
+           
         	  
 
 	}
