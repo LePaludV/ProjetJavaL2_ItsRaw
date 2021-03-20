@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 public class Vue extends Application {
 	Stage primaryStage;
-	Accueil acc=new Accueil();
+	InterfaceAccueil acc=new InterfaceAccueil(null);
 	GridPane rootLayout;
 	  
 	private enum typeInterface {ACCUEIL, AJOUT_RECETTE};
@@ -37,6 +37,17 @@ public class Vue extends Application {
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
             
+        }
+        
+        if(this.currentInterface == typeInterface.ACCUEIL)
+        {
+        	ModèleAccueil mdlAccueil = new ModèleAccueil();
+            AccueilController ctrlAccueil = new AccueilController();
+            InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
+            mdlAccueil.addObserver(vueAccueil);
+            Scene scene=new Scene(vueAccueil.getRoot());
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
         }
       
         primaryStage.show();
