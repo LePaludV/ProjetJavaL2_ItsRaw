@@ -40,16 +40,16 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" style="-fx-background-color: orange;" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" />
@@ -57,11 +57,11 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="260.0" minWidth="260.0" prefWidth="260.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints maxHeight="92.00000610351563" minHeight="10.0" prefHeight="90.40000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="300.0" minHeight="150.0" prefHeight="300.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="260.8000122070312" minHeight="10.0" prefHeight="260.8000122070312" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="27.199987792968727" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="46.199987792968784" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="46.199987792968784" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="262.0" GridPane.rowIndex="1">
@@ -92,10 +92,10 @@
                   <Label fx:id="LabelEtape" alignment="CENTER" layoutX="207.0" layoutY="98.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="168.0" styleClass="description" stylesheets="@Main.css" text="ETAPE" />
                </children>
             </Pane>
-            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="560.0" GridPane.columnIndex="1">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="188.0" prefWidth="547.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="NomRecette" layoutX="116.0" layoutY="-1.0" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
-                  <Text fx:id="Image" layoutX="232.0" layoutY="50.0" onDragDropped="#ImportationImage" strokeType="OUTSIDE" strokeWidth="0.0" text="Importer une image" />
+                  <ImageView fx:id="affImg" fitHeight="150.0" fitWidth="423.0" layoutX="75.0" layoutY="38.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="NomRecette" layoutX="121.0" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
                </children>
             </Pane>
             <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" stylesheets="@Main.css" text="Sauvegarder" GridPane.columnIndex="1" GridPane.rowIndex="4" />
@@ -111,14 +111,13 @@
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="126.0" prefWidth="264.0" GridPane.rowIndex="3" />
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="105.0" prefWidth="260.0" GridPane.rowIndex="2">
                <children>
-                  <TextField fx:id="NomIngredient" layoutX="35.0" layoutY="57.0" prefHeight="25.0" prefWidth="160.0" promptText="Nom de l'ingrédient" />
                   <Button fx:id="AjoutIngrédient" layoutX="52.0" layoutY="91.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
                </children>
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="107.0" prefWidth="267.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="AjoutCatégorie" layoutX="76.0" layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddCatégorie" styleClass=".button" stylesheets="@Main.css" text="Ajouter une catégorie" />
-                  <TextField fx:id="NomCategorie" layoutX="61.0" layoutY="3.0" prefHeight="25.0" prefWidth="157.0" promptText="Nom de la catégorie" />
+                  <Button fx:id="AjoutCatégorie" layoutX="39.0" layoutY="62.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddCatégorie" styleClass=".button" stylesheets="@Main.css" text="Ajouter une catégorie" />
+                  <TextField fx:id="NomCategorie" layoutX="42.0" layoutY="14.0" prefHeight="25.0" prefWidth="157.0" promptText="Nom de la catégorie" />
                </children>
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="259.0">
@@ -154,5 +153,5 @@
             <Pane prefHeight="200.0" prefWidth="560.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-   </top>
+   </center>
 </BorderPane>

@@ -5,6 +5,7 @@ import java.util.Observer;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -25,7 +26,6 @@ public class InterfaceAjouterRecette implements Observer {
 		try {
 			rootLayout = (BorderPane) loader.load();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -54,11 +54,12 @@ public class InterfaceAjouterRecette implements Observer {
 			ingrédient.getChildren().add(new Label(i.nom+" : "+i.quantité+i.mesure));
 		}
 		
-
 		
-		
-		
-		
+		if (recette.photo != null) {
+			System.out.println(recette.photo);			
+			ImageView imgView = (ImageView) rootLayout.lookup("#affImg");
+			imgView.setImage(recette.photo);
+		}		
 	}
 
 }

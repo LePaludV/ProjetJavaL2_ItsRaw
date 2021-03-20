@@ -6,17 +6,23 @@ import javafx.scene.control.TextField;
 
 import javafx.scene.control.ToggleGroup;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.List;
+
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.Label;
 
 import javafx.scene.control.TextArea;
-
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.text.Text;
 import javafx.scene.input.DragEvent;
 
@@ -92,6 +98,23 @@ public class AjoutRecetteController {
 
 	    @FXML
 	    private TextField TexteEtape;
+	    
+		@FXML
+		private ImageView imageView;
+		
+		@FXML
+		private void dragOver(DragEvent event) {
+			if (event.getDragboard().hasFiles()) {
+				event.acceptTransferModes(TransferMode.ANY);
+			}
+		}
+		
+		@FXML
+		private void dragDropped(DragEvent event) throws FileNotFoundException {
+			List<File> files = event.getDragboard().getFiles();
+			Image img = new Image(new FileInputStream(files.get(0)));
+			this.mdl.ajoutPhoto(img);
+		}
 
 	    @FXML
 	    void AddCatégorie(ActionEvent event) {
