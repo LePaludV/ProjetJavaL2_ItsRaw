@@ -3,13 +3,14 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 	
 public class InterfaceAjouterRecette implements Observer {
-	
+	static BorderPane rootLayout;
 	static AjoutRecetteController ctrlAjout;
 	
 	public InterfaceAjouterRecette(AjoutRecetteController ctrl) {
@@ -20,7 +21,7 @@ public class InterfaceAjouterRecette implements Observer {
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
          loader.setController(ctrlAjout);
-         BorderPane rootLayout = null;
+         
 		try {
 			rootLayout = (BorderPane) loader.load();
 		} catch (IOException e) {

@@ -7,10 +7,7 @@ public class ModèleAjoutRecette extends Observable {
 	public ModèleAjoutRecette() {
 		this.recette_courante=new Recette();
 	}
-	
-	public ModèleAjoutRecette() {
-		this.recette_courante = new Recette();
-	}
+
 	
 	public void ajoutNom(String s) {
 		this.recette_courante.nom = s;
