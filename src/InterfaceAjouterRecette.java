@@ -122,47 +122,51 @@ public class InterfaceAjouterRecette {
 
 	    @FXML
 	    void Catégorie(MouseEvent event) {
+	    	//Affichage des catégorie ajouté
 
 	    }
 
 	    @FXML
 	    void Déscription(MouseEvent event) {
+	    	//champ de texte avec la description 
 
 	    }
 
 	    @FXML
 	    void ImportationImage(DragEvent event) {
-
+	    	// test de l'importation d'une image jsp si ça marche 
 	    }
 
 	    @FXML
 	    void Ingrédient(MouseEvent event) {
-
+	    	//Affichage des Ingrédients ajouté
 	    }
 
 	    @FXML
 	    void NomRecette(ActionEvent event) {
-
+	    	//champ de texte pour le nom de la recette
 	    }
 
 	    @FXML
 	    void NoteDifficulté(ActionEvent event) {
-
+	    	//group de boutton radio qui vont de NoteDiff0 à NoteDiff4
 	    }
 
 	    @FXML
 	    void NoteRecette(ActionEvent event) {
+	    	////group de boutton radio qui vont de Note0 à Note4
 
 	    }
 
 	    @FXML
 	    void Sauvegarder(ActionEvent event) {
+	    	//Bouttons sauvegarder
 
 	    }
 
 	    @FXML
 	    void TexteEtape(ActionEvent event) {
-
+	    	//champ de texte pour ecrire une étape
 	    }
 
 	}
