@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
 
-@SuppressWarnings("deprecation")
 public class ModèleRecette extends Observable {
 	
 	ArrayList<Recette> recettes;

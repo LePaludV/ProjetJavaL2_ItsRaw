@@ -13,7 +13,6 @@ public class Vue extends Application {
 	Stage primaryStage;
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
-	private Stage primaryStage;
 
 	private enum InterfaceType {
 			AJOUT_RECETTE, ACCUEIL, PRESENTATION_RECETTE, ETAPE_RECETTE
