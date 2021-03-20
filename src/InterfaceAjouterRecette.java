@@ -39,17 +39,12 @@ public class InterfaceAjouterRecette implements Observer {
 		 return rootLayout;
 	}
 
-
-
-		@Override
-		public void update(Observable o, Object rct) {
-			Recette recette=(Recette) rct;
-			System.out.println(recette.description);
-			
-		}
-
+	@Override
+	public void update(Observable arg0, Object rct) {
+		
+		
 	}
 
-
+}
 
 
