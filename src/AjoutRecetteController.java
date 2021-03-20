@@ -96,6 +96,7 @@ public class AjoutRecetteController {
 	    @FXML
 	    void AddCatégorie(ActionEvent event) {
 	    	System.out.println(NomCategorie.getText());
+	    	this.mdl.ajoutCatégorie(NomCategorie.getText());
 
 	    }
 
@@ -109,6 +110,7 @@ public class AjoutRecetteController {
 	    @FXML
 	    void AddIngrédient(ActionEvent event) {
 	    	System.out.println(NomIngredient.getText());
+	    	this.mdl.ajoutIngrédient(NomIngredient.getText(), 0, null);
 
 	    }
 

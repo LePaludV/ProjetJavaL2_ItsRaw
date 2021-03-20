@@ -25,8 +25,7 @@ public class Vue extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
-        this.primaryStage.setWidth(800);
-        this.primaryStage.setHeight(640);
+        
         this.primaryStage.setResizable(false);
         
         if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
@@ -36,6 +35,7 @@ public class Vue extends Application {
             mdlAjout.addObserver(vueAjout);
             Scene scene=new Scene(vueAjout.getRoot());
             primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
             
         }
       

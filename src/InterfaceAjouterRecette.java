@@ -34,11 +34,29 @@ public class InterfaceAjouterRecette implements Observer {
 
 	@Override
 	public void update(Observable arg0, Object rct) {
-		System.out.println("hjbzefhj");
+		
 		Recette recette= (Recette) rct;
 		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
+		étapes.getChildren().add(new Label());
+		étapes.getChildren().clear();
 		for(String i: recette.étapes) {
 			étapes.getChildren().add(new Label(i));
+			System.out.println(i);
+		}
+		
+		VBox ingrédient = (VBox) rootLayout.lookup("#affIngre");
+		ingrédient.getChildren().add(new Label());
+		ingrédient.getChildren().clear();
+		for(Ingrédient i: recette.ingrédients) {
+			ingrédient.getChildren().add(new Label(i.nom+" : "+i.quantité+" : "+i.mesure));
+			System.out.println(i);
+		}
+		
+		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
+		catégorie.getChildren().add(new Label());
+		catégorie.getChildren().clear();
+		for(String i: recette.catégories) {
+			catégorie.getChildren().add(new Label(i));
 			System.out.println(i);
 		}
 		
