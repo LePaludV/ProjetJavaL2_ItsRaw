@@ -5,10 +5,11 @@ public class ModèleAjoutRecette extends Observable {
 	
 	Recette recette_courante;
 	
-	public ModèleAjoutRecette(String nom) {
-		this.recette_courante = new Recette(nom);
+	public void ajoutNom(String s) {
+		System.out.println(s);
+		this.recette_courante.nom = s;
+		this.notifyObservers(this.recette_courante);
 	}
-	
 	public void ajoutEtape(String s) {
 		this.recette_courante.étapes.add(s);
 		this.notifyObservers(this.recette_courante);
