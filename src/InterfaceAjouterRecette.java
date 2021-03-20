@@ -1,4 +1,7 @@
 import java.io.IOException;
+import java.util.Observable;
+import java.util.Observer;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -19,73 +22,9 @@ import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 
 	
-public class InterfaceAjouterRecette {
+public class InterfaceAjouterRecette implements Observer {
+	
 
-	@FXML
-	private Button AjoutIngrédient;
-	
-	@FXML
-	private Label Ingrédient;
-	
-	@FXML
-	private Button AjoutCatégorie;
-	
-	@FXML
-	private Label Catégorie;
-	
-	@FXML
-	private Button AjoutEtape;
-	
-	@FXML
-	private TextArea Déscription;
-	
-	@FXML
-	private ImageView Image;
-	
-	@FXML
-	private TextField NomRecette;
-	
-	@FXML
-	private Button Sauvegarder;
-	
-	@FXML
-	private RadioButton Note0;
-	
-	@FXML
-	private ToggleGroup Note;
-	
-	@FXML
-	private RadioButton Note1;
-	
-	@FXML
-	private RadioButton Note2;
-	
-	@FXML
-	private RadioButton Note3;
-	
-	@FXML
-	private RadioButton Note4;
-	
-	@FXML
-	private RadioButton Diff0;
-	
-	@FXML
-	private ToggleGroup Difficulté1;
-	
-	@FXML
-	private RadioButton Diff1;
-	
-	@FXML
-	private RadioButton NoteDiff4;
-	
-	@FXML
-	private TextField TexteEtape;
-	
-	
-	public InterfaceAjouterRecette() {
-		
-	}
-	
 	public static BorderPane getRoot() {
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
@@ -171,5 +110,7 @@ public class InterfaceAjouterRecette {
 	    }
 
 	}
+
+}
 
 

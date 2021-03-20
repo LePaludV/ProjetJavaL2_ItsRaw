@@ -9,25 +9,4 @@ public class Accueil {
 	public Accueil(){
 
 	}
-
-	public void init() {
-		
-	}
-
-
-
-		// TODO Auto-generated constructor stub
-	}
-			
-	
-		
-		
-	
-
-	
-
-	
-	
-
-	
-
+}
