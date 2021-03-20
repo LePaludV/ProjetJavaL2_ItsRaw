@@ -4,6 +4,9 @@ import javafx.scene.image.Image;
 public class ModèleAjoutRecette extends Observable {
 	
 	Recette recette_courante;
+	public ModèleAjoutRecette() {
+		this.recette_courante=new Recette();
+	}
 	
 	public void ajoutNom(String s) {
 		System.out.println(s);
@@ -11,11 +14,13 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	public void ajoutEtape(String s) {
+		System.out.println("oui");
 		this.recette_courante.étapes.add(s);
 		this.notifyObservers(this.recette_courante);
 	}
 	
 	public void ajoutDescription(String s){
+		System.out.println("desc");
 		this.recette_courante.description = s;
 		this.notifyObservers(this.recette_courante);
 	}

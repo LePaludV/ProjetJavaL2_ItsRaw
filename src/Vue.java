@@ -18,7 +18,8 @@ public class Vue extends Application {
 	Stage primaryStage;
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
-	  
+	 
+	
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {

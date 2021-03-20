@@ -15,117 +15,134 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
-
+import javafx.scene.control.Spinner;
 import javafx.scene.input.MouseEvent;
-
+import javafx.scene.text.Text;
 import javafx.scene.input.DragEvent;
 
 public class AjoutRecetteController {
-	@FXML
-	private Button AjoutIngrédient;
-	@FXML
-	private Label Ingrédient;
-	@FXML
-	private Button AjoutCatégorie;
-	@FXML
-	private Label Catégorie;
-	@FXML
-	private Button AjoutEtape;
-	@FXML
-	private TextArea Description;
-	@FXML
-	private ImageView Image;
-	@FXML
-	private TextField NomRecette;
-	@FXML
-	private Button Sauvegarder;
-	@FXML
-	private RadioButton Note0;
-	@FXML
-	private ToggleGroup Note;
-	@FXML
-	private RadioButton Note1;
-	@FXML
-	private RadioButton Note2;
-	@FXML
-	private RadioButton Note3;
-	@FXML
-	private RadioButton Note4;
-	@FXML
-	private RadioButton Diff0;
-	@FXML
-	private ToggleGroup Difficulté1;
-	@FXML
-	private RadioButton Diff1;
-	@FXML
-	private RadioButton NoteDiff4;
-	@FXML
-	private TextField TexteEtape;
+	 @FXML
+	    private Button AjoutIngrédient;
 
-	// Event Listener on Button[#AjoutIngrédient].onAction
-	@FXML
-	public void AddIngrédient(ActionEvent event) {
-		
-	}
-	// Event Listener on Label[#Ingrédient].onDragDetected
-	@FXML
-	public void Ingrédient(MouseEvent event) {
-		
-	}
-	// Event Listener on Button[#AjoutCatégorie].onAction
-	@FXML
-	public void AddCatégorie(ActionEvent event) {
-		
-	}
-	// Event Listener on Label[#Catégorie].onDragDetected
-	@FXML
-	public void Catégorie(MouseEvent event) {
-		
-	}
-	// Event Listener on Button[#AjoutEtape].onAction
-	@FXML
-	public void AddEtape(ActionEvent event) {
-		
-	}
-	// Event Listener on TextArea[#Description].onDragDetected
-	@FXML
-	public void Description(MouseEvent event) {
-		
-	}
-	// Event Listener on ImageView[#Image].onDragDropped
-	@FXML
-	public void ImportationImage(DragEvent event) {
-		
-	}
-	// Event Listener on TextField[#NomRecette].onAction
-	@FXML
-	public void NomRecette(ActionEvent event) {
-		this.mdl.ajoutNom(((TextField) event.getSource()).getText());
-		
-	}
-	// Event Listener on Button[#Sauvegarder].onAction
-	@FXML
-	public void Sauvegarder(ActionEvent event) {
-		
-	}
-	// Event Listener on RadioButton[#Note0].onAction
-	@FXML
-	public void NoteRecette(ActionEvent event) {
-		
-	}
-	// Event Listener on RadioButton[#Diff0].onAction
-	@FXML
-	public void NoteDifficulté(ActionEvent event) {
-		
-	}
-	// Event Listener on TextField[#TexteEtape].onAction
-	@FXML
-	public void TexteEtape(ActionEvent event) {
-		
-	}
+	    @FXML
+	    private Label Ingrédient;
+
+	    @FXML
+	    private TextField NomIngredient;
+
+	    @FXML
+	    private Button AjoutCatégorie;
+
+	    @FXML
+	    private Label Catégorie;
+
+	    @FXML
+	    private TextField NomCategorie;
+
+	    @FXML
+	    private Button AjoutEtape;
+
+	    @FXML
+	    private TextArea Description;
+
+	    @FXML
+	    private Label LabelEtape;
+
+	    @FXML
+	    private Text Image;
+
+	    @FXML
+	    private TextField NomRecette;
+
+	    @FXML
+	    private Button Sauvegarder;
+
+	    @FXML
+	    private RadioButton Note0;
+
+	    @FXML
+	    private ToggleGroup Note;
+
+	    @FXML
+	    private RadioButton Note1;
+
+	    @FXML
+	    private RadioButton Note2;
+
+	    @FXML
+	    private RadioButton Note3;
+
+	    @FXML
+	    private RadioButton Note4;
+
+	    @FXML
+	    private RadioButton Diff0;
+
+	    @FXML
+	    private ToggleGroup Difficulté1;
+
+	    @FXML
+	    private RadioButton Diff1;
+
+	    @FXML
+	    private RadioButton NoteDiff4;
+
+	    @FXML
+	    private Spinner<?> SpinnerNum;
+
+	    @FXML
+	    private TextField TexteEtape;
+
+	    @FXML
+	    void AddCatégorie(ActionEvent event) {
+	    	System.out.println(NomCategorie.getText());
+
+	    }
+
+	    @FXML
+	    void AddEtape(ActionEvent event) {
+	    	System.out.println(TexteEtape.getText());
+	    	this.mdl.ajoutEtape(TexteEtape.getText());
+
+	    }
+
+	    @FXML
+	    void AddIngrédient(ActionEvent event) {
+	    	System.out.println(NomIngredient.getText());
+
+	    }
+
+	    @FXML
+	    void ImportationImage(DragEvent event) {
+
+	    }
+
+	    @FXML
+	    void NoteDifficulté(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void NoteRecette(ActionEvent event) {
+
+	    }
+
+	    @FXML
+	    void Sauvegarder(ActionEvent event) {
+	    	System.out.println("Nom de la recette : "+NomRecette.getText());
+	    	System.out.println("Description de la recette : "+Description.getText());
+	    	System.out.println(Note.getSelectedToggle());
+	    	System.out.println(Difficulté1.getSelectedToggle());
+
+	    }
+
+	
 	
 	ModèleAjoutRecette mdl;
 	public AjoutRecetteController() {
 		this.mdl = new ModèleAjoutRecette();
+		
 	}
+	
+	
 }
