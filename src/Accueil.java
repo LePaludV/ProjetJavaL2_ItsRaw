@@ -9,10 +9,4 @@ public class Accueil {
 	public Accueil(){
 
 	}
-
-
-
-
-
-		// TODO Auto-generated constructor stub
-	}
+}

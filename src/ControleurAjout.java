@@ -1,8 +1,7 @@
-
-public class ControleurAjout
+public class ControleurAjout implements ActionListener, MouseListener
 {
-	ModèleAjoutRecette modl;
-	
+	private ModèleAjoutRecette modl;
+
 	public ControleurAjout(String nom) {
 		this.modl = new ModèleAjoutRecette(nom);
 	}
