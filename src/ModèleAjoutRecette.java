@@ -1,4 +1,5 @@
 import java.util.Observable;
+
 import javafx.scene.image.Image;
 
 public class ModèleAjoutRecette extends Observable {
