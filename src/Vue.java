@@ -19,7 +19,8 @@ public class Vue extends Application {
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
 	  
-	
+	private enum typeInterface {ACCUEIL, AJOUT_RECETTE};
+	private typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
@@ -28,10 +29,15 @@ public class Vue extends Application {
         this.primaryStage.setHeight(640);
         this.primaryStage.setResizable(false);
         
-          
-        Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
-        
-        primaryStage.setScene(scene);
+        if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
+            ModèleAjoutRecette mdlAjout = new ModèleAjoutRecette();
+            AjoutRecetteController ctrlAjout = new AjoutRecetteController(mdlAjout);
+            InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
+            mdlAjout.addObserver(vueAjout);
+            Scene scene=new Scene(vueAjout.getRoot());
+            primaryStage.setScene(scene);
+            
+        }
       
         primaryStage.show();
         	  

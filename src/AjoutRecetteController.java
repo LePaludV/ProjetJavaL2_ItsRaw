@@ -125,7 +125,7 @@ public class AjoutRecetteController {
 	}
 	
 	ModèleAjoutRecette mdl;
-	public AjoutRecetteController() {
-		this.mdl = new ModèleAjoutRecette();
+	public AjoutRecetteController(ModèleAjoutRecette mdl) {
+		this.mdl = mdl;
 	}
 }

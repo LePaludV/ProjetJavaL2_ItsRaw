@@ -24,10 +24,16 @@ import javafx.scene.input.MouseEvent;
 	
 public class InterfaceAjouterRecette implements Observer {
 	
+	static AjoutRecetteController ctrlAjout;
+	
+	public InterfaceAjouterRecette(AjoutRecetteController ctrl) {
+		ctrlAjout = ctrl;
+	}
 
 	public static BorderPane getRoot() {
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
+         loader.setController(ctrlAjout);
          BorderPane rootLayout = null;
 		try {
 			rootLayout = (BorderPane) loader.load();
