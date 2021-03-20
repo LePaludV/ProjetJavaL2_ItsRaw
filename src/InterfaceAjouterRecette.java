@@ -135,6 +135,7 @@ public class InterfaceAjouterRecette {
 	    @FXML
 	    void ImportationImage(DragEvent event) {
 	    	// test de l'importation d'une image jsp si ça marche 
+	    	System.out.println(Image.toString());
 	    }
 
 	    @FXML

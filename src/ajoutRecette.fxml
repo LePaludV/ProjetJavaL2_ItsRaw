@@ -91,15 +91,14 @@
             </Pane>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="333.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <TextArea fx:id="Déscription" layoutX="10.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#Déscription" prefHeight="77.0" prefWidth="305.0" promptText="Description" />
-                  <Label layoutX="146.0" layoutY="157.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="ETAPE" />
+                  <TextArea fx:id="Déscription" layoutX="10.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#Déscription" prefHeight="77.0" prefWidth="305.0" promptText="Description" style="-fx-border-radius: 100;" styleClass="description" stylesheets="@Main.css" />
+                  <Label layoutX="146.0" layoutY="157.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="description" stylesheets="@Main.css" text="ETAPE" />
                   <ImageView fx:id="Image" fitHeight="48.0" fitWidth="90.0" layoutX="118.0" layoutY="14.0" onDragDropped="#ImportationImage" pickOnBounds="true" preserveRatio="true" />
                </children>
             </Pane>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="NomRecette" layoutX="105.0" layoutY="36.0" onAction="#NomRecette" prefHeight="26.0" prefWidth="114.0" promptText="Nom de la recette " />
-                  <Label layoutX="77.0" layoutY="14.0" mnemonicParsing="true" text="Création d'une nouvelle Recette" />
+                  <TextField fx:id="NomRecette" layoutX="5.0" layoutY="36.0" onAction="#NomRecette" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
                </children>
             </Pane>
             <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" stylesheets="@Main.css" text="Sauvegarder" GridPane.columnIndex="1" GridPane.rowIndex="4" />
