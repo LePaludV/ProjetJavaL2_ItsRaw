@@ -4,8 +4,11 @@ import javafx.scene.image.Image;
 public class ModèleAjoutRecette extends Observable {
 	
 	Recette recette_courante;
-	public ModèleAjoutRecette() {
+	Vue vue;
+	
+	public ModèleAjoutRecette(Vue v) {
 		this.recette_courante=new Recette();
+		this.vue = v;
 	}
 
 	
@@ -26,8 +29,12 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void ajoutIngrédient(String nom, int quantité, String mesure) {
-		this.recette_courante.ingrédients.add(new Ingrédient(nom,quantité,mesure));
+	public void ajoutIngrédient() {
+		this.vue.ingredientWindow();
+	}
+	
+	public void validerIngrédient(String nom, int quantité, String mesure) {
+		this.recette_courante.ingrédients.add(new Ingrédient(nom, quantité,mesure));
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
