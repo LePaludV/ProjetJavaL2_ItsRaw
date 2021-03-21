@@ -1,4 +1,8 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -9,6 +13,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -88,10 +93,25 @@ public class Vue extends Application {
             AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil);
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
+            Recette r1 = new Recette();
+            Recette r2 = new Recette();
+            Recette r3 = new Recette();
+            try {
+    			r1.photo = new Image(new FileInputStream("imgs/lasagnes.jpg"));
+    			r2.photo = new Image(new FileInputStream("imgs/oeuf_a_la_tomate.jpg"));
+    			r3.photo = new Image(new FileInputStream("imgs/pave_de_saumon_aux_cocos.jpg"));
+    			ArrayList<Recette> lstRecettes = new ArrayList<>();
+                lstRecettes.add(r1);
+                // lstRecettes.add(r2);
+                // lstRecettes.add(r3);
+                vueAccueil.AfficherLesRecettes(lstRecettes);
+    		} catch (FileNotFoundException e) {
+    			System.out.println("Image non trouvée !");
+    		}
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
-            
+         
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
 
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {

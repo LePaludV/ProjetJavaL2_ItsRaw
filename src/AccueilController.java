@@ -1,10 +1,14 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 
 public class AccueilController {
 	@FXML
 	private Button btnAjoutRecette;
+	@FXML
+	public VBox vboxRecette;
+	
 	ModèleAccueil mdl;
 	
 	public AccueilController(ModèleAccueil mod)

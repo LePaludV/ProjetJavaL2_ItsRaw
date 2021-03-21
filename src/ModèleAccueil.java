@@ -50,6 +50,7 @@ public class ModèleAccueil extends Observable {
 	}
 	
 	public void afficherRecettes() {
+		this.setChanged();
 		this.notifyObservers(this.recettes);
 	}
 	
