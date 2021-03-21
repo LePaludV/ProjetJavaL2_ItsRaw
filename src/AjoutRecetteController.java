@@ -105,14 +105,15 @@ public class AjoutRecetteController {
     void AddCatégorie(ActionEvent event) {
     	System.out.println(NomCategorie.getText());
     	this.mdl.ajoutCatégorie(NomCategorie.getText());
-
+    	this.NomCategorie.setText(null);
     }
 
     @FXML
     void AddEtape(ActionEvent event) {
     	System.out.println(TexteEtape.getText());
-    	this.mdl.ajoutEtape(TexteEtape.getText());
-
+    	this.nombreEtape++;
+    	this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
+    	this.TexteEtape.setText("");
     }
 
     @FXML
@@ -146,8 +147,10 @@ public class AjoutRecetteController {
     }
 	
 	ModèleAjoutRecette mdl;
+	int nombreEtape;
 	public AjoutRecetteController(ModèleAjoutRecette mdl) {
 		this.mdl = mdl;
+		this.nombreEtape=0;
 	}
 	
 	

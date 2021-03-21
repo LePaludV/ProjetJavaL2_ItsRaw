@@ -77,8 +77,7 @@ public class InterfaceAjouterRecette implements Observer {
 		}
 		
 		
-		if (recette.photo != null) {
-			System.out.println(recette.photo);			
+		if (recette.photo != null) {		
 			ImageView imgView = (ImageView) rootLayout.lookup("#affImg");
 			imgView.setImage(recette.photo);
 		}
