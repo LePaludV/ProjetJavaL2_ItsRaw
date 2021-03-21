@@ -1,6 +1,6 @@
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -25,10 +25,12 @@ public class InterfaceAccueil implements Observer
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueil.fxml"));
         loader.setController(ctrlAccueil);
+        System.out.println(loader);
         
 		try {
 			rootLayout = (BorderPane) loader.load();
 		} catch (IOException e) {
+			System.out.println("salut");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -38,7 +40,8 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
+		ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
+		
 		
 	}
 }

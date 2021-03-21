@@ -1,8 +1,8 @@
 
 public class Contrôleur {
 	
-	ModèleRecette mdl;
-	public Contrôleur(ModèleRecette modèle) {
+	ModèleAccueil mdl;
+	public Contrôleur(ModèleAccueil modèle) {
 		this.mdl = modèle;
 	}
 	
