@@ -58,7 +58,13 @@ public class ModèleAjoutRecette extends Observable {
 	}
 	
 	public void ajoutNote(int note) {
-		this.recette_courante.note = note;
+		for (int i=0;i<5;i++) {
+			if (i <= note) {
+				this.recette_courante.note[i] = true;
+			} else {
+				this.recette_courante.note[i] = false;
+			}
+		}
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

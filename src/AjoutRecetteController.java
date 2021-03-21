@@ -3,7 +3,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
-
+import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 
 import java.io.File;
@@ -28,139 +28,123 @@ import javafx.scene.input.DragEvent;
 
 public class AjoutRecetteController {
 	 @FXML
-	    private Button AjoutIngrédient;
+    private Button AjoutIngrédient;
 
-	    @FXML
-	    private Label Ingrédient;
+    @FXML
+    private Label Ingrédient;
 
-	    @FXML
-	    private TextField NomIngredient;
+    @FXML
+    private TextField NomIngredient;
 
-	    @FXML
-	    private Button AjoutCatégorie;
+    @FXML
+    private Button AjoutCatégorie;
 
-	    @FXML
-	    private Label Catégorie;
+    @FXML
+    private Label Catégorie;
 
-	    @FXML
-	    private TextField NomCategorie;
+    @FXML
+    private TextField NomCategorie;
 
-	    @FXML
-	    private Button AjoutEtape;
+    @FXML
+    private Button AjoutEtape;
 
-	    @FXML
-	    private TextArea Description;
+    @FXML
+    private TextArea Description;
 
-	    @FXML
-	    private Label LabelEtape;
+    @FXML
+    private Label LabelEtape;
 
-	    @FXML
-	    private Text Image;
+    @FXML
+    private Text Image;
 
-	    @FXML
-	    private TextField NomRecette;
+    @FXML
+    private TextField NomRecette;
 
-	    @FXML
-	    private Button Sauvegarder;
+    @FXML
+    private Button Sauvegarder;
 
-	    @FXML
-	    private RadioButton Note0;
+    @FXML
+    public ToggleGroup note;
 
-	    @FXML
-	    private ToggleGroup Note;
+    @FXML
+    private ToggleButton note0;
 
-	    @FXML
-	    private RadioButton Note1;
+    @FXML
+    private ToggleButton note1;
 
-	    @FXML
-	    private RadioButton Note2;
+    @FXML
+    private ToggleButton note2;
 
-	    @FXML
-	    private RadioButton Note3;
+    @FXML
+    private ToggleButton note3;
 
-	    @FXML
-	    private RadioButton Note4;
+    @FXML
+    private ToggleButton note4;
 
-	    @FXML
-	    private RadioButton Diff0;
-
-	    @FXML
-	    private ToggleGroup Difficulté1;
-
-	    @FXML
-	    private RadioButton Diff1;
-
-	    @FXML
-	    private RadioButton NoteDiff4;
-
-	    @FXML
-	    private Spinner<?> SpinnerNum;
-
-	    @FXML
-	    private TextField TexteEtape;
-	    
-		@FXML
-		private ImageView imageView;
-		
-		@FXML
-		private void dragOver(DragEvent event) {
-			if (event.getDragboard().hasFiles()) {
-				event.acceptTransferModes(TransferMode.ANY);
-			}
-		}
-		
-		@FXML
-		private void dragDropped(DragEvent event) throws FileNotFoundException {
-			List<File> files = event.getDragboard().getFiles();
-			Image img = new Image(new FileInputStream(files.get(0)));
-			this.mdl.ajoutPhoto(img);
-		}
-
-	    @FXML
-	    void AddCatégorie(ActionEvent event) {
-	    	System.out.println(NomCategorie.getText());
-	    	this.mdl.ajoutCatégorie(NomCategorie.getText());
-
-	    }
-
-	    @FXML
-	    void AddEtape(ActionEvent event) {
-	    	System.out.println(TexteEtape.getText());
-	    	this.mdl.ajoutEtape(TexteEtape.getText());
-
-	    }
-
-	    @FXML
-	    void AddIngrédient(ActionEvent event) {
-	    	System.out.println(NomIngredient.getText());
-	    	this.mdl.ajoutIngrédient();
-	    }
-
-	    @FXML
-	    void ImportationImage(DragEvent event) {
-
-	    }
-
-	    @FXML
-	    void NoteDifficulté(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void NoteRecette(ActionEvent event) {
-
-	    }
-
-	    @FXML
-	    void Sauvegarder(ActionEvent event) {
-	    	System.out.println("Nom de la recette : "+NomRecette.getText());
-	    	System.out.println("Description de la recette : "+Description.getText());
-	    	System.out.println(Note.getSelectedToggle());
-	    	System.out.println(Difficulté1.getSelectedToggle());
-
-	    }
-
+    @FXML
+    private TextField TexteEtape;
+    
+	@FXML
+	private ImageView imageView;
 	
+	@FXML
+	private void dragOver(DragEvent event) {
+		if (event.getDragboard().hasFiles()) {
+			event.acceptTransferModes(TransferMode.ANY);
+		}
+	}
+	
+	@FXML
+	private void dragDropped(DragEvent event) throws FileNotFoundException {
+		List<File> files = event.getDragboard().getFiles();
+		Image img = new Image(new FileInputStream(files.get(0)));
+		this.mdl.ajoutPhoto(img);
+	}
+
+    @FXML
+    void AddCatégorie(ActionEvent event) {
+    	System.out.println(NomCategorie.getText());
+    	this.mdl.ajoutCatégorie(NomCategorie.getText());
+
+    }
+
+    @FXML
+    void AddEtape(ActionEvent event) {
+    	System.out.println(TexteEtape.getText());
+    	this.mdl.ajoutEtape(TexteEtape.getText());
+
+    }
+
+    @FXML
+    void AddIngrédient(ActionEvent event) {
+    	System.out.println(NomIngredient.getText());
+    	this.mdl.ajoutIngrédient();
+    }
+
+    @FXML
+    void ImportationImage(DragEvent event) {
+
+    }
+
+    @FXML
+    void NoteDifficulté(ActionEvent event) {
+
+    }
+
+    @FXML
+    void NoteRecette(ActionEvent event) {
+    	if (((ToggleButton) this.note.getSelectedToggle()) != null) {
+        	String s = ((ToggleButton) this.note.getSelectedToggle()).getId();
+        	this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));    		
+    	}
+    }
+
+    @FXML
+    void Sauvegarder(ActionEvent event) {
+    	System.out.println("Nom de la recette : "+NomRecette.getText());
+    	System.out.println("Description de la recette : "+Description.getText());
+    	System.out.println(this.note.getSelectedToggle());
+    }
 	
 	ModèleAjoutRecette mdl;
 	public AjoutRecetteController(ModèleAjoutRecette mdl) {
