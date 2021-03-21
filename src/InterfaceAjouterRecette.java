@@ -87,6 +87,7 @@ public class InterfaceAjouterRecette implements Observer {
 		for (int i=0;i<note.size();i++) {
 			if (note.get(i) instanceof ToggleButton) {
 				ToggleButton tb = (ToggleButton) note.get(i);
+				tb.setBackground(null);
 				if (recette.note[i]) {
 					tb.setGraphic(new ImageView(this.etoileJaune));
 				} else {

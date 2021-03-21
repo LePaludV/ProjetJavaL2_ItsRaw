@@ -22,7 +22,7 @@ public class Vue extends Application {
 	GridPane rootLayout;
 	ModèleAjoutRecette mdlAjout;
 	
-	private enum typeInterface {ACCUEIL, AJOUT_RECETTE};
+	private enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
 	private typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -81,6 +81,12 @@ public class Vue extends Application {
             Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
+        } else if (this.currentInterface == typeInterface.ACCUEIL) {
+        	
+        } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
+        	
+        } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
+        	
         }
 	}
 }

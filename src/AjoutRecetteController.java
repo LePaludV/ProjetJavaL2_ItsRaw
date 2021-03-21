@@ -117,7 +117,6 @@ public class AjoutRecetteController {
 
     @FXML
     void AddIngrédient(ActionEvent event) {
-    	System.out.println(NomIngredient.getText());
     	this.mdl.ajoutIngrédient();
     }
 
