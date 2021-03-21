@@ -20,7 +20,7 @@ public class Vue extends Application {
 	GridPane rootLayout;
 	  
 	private enum typeInterface {ACCUEIL, AJOUT_RECETTE};
-	private typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
+	private typeInterface currentInterface = typeInterface.ACCUEIL;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		this.primaryStage = primaryStage;
