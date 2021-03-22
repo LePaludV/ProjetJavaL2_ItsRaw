@@ -95,6 +95,7 @@ public class Vue extends Application {
             AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil);
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
+            Scene scene=new Scene(InterfaceAccueil.getRoot());
             Recette r1 = new Recette();
             Recette r2 = new Recette();
             Recette r3 = new Recette();
@@ -104,13 +105,12 @@ public class Vue extends Application {
     			r3.photo = new Image(new FileInputStream("imgs/pave_de_saumon_aux_cocos.jpg"));
     			ArrayList<Recette> lstRecettes = new ArrayList<>();
                 lstRecettes.add(r1);
-                // lstRecettes.add(r2);
-                // lstRecettes.add(r3);
+                lstRecettes.add(r2);
+                lstRecettes.add(r3);
                 vueAccueil.AfficherLesRecettes(lstRecettes);
     		} catch (FileNotFoundException e) {
     			System.out.println("Image non trouvée !");
     		}
-            Scene scene=new Scene(InterfaceAccueil.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 

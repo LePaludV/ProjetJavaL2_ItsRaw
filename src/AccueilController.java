@@ -1,5 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import javafx.event.ActionEvent;
 
@@ -7,7 +8,7 @@ public class AccueilController {
 	@FXML
 	private Button btnAjoutRecette;
 	@FXML
-	public VBox vboxRecette;
+	public VBox recettes;
 	
 	ModèleAccueil mdl;
 	
