@@ -21,6 +21,7 @@ import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.text.Font;
@@ -108,12 +109,17 @@ public class AjoutRecetteController {
 	@FXML
 	private ImageView imageView;
 	
+    @FXML
+    private Spinner<?> nbrPersonne;
+	
 	@FXML
 	private void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
 			event.acceptTransferModes(TransferMode.ANY);
 		}
 	}
+	
+	
 	
 	@FXML
 	private void dragDropped(DragEvent event) throws FileNotFoundException {
@@ -179,6 +185,10 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
+		SpinnerValueFactory<Integer> nbr =new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 100, 4,2);
+
+		//this.nbrPersonne.setValueFactory((SpinnerValueFactory<?>) nbr);
+		
 	}
 	
 	public void sauvegarderRecette(Recette rct) {
