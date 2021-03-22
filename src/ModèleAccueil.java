@@ -1,3 +1,9 @@
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
@@ -26,6 +32,41 @@ public class ModèleAccueil extends Observable {
 				this.catégories.put(s, new ArrayList<Recette>());
 			}
 			this.catégories.get(s).add(rct);
+		}
+	}
+	
+	private void saveData() {
+		XMLEncoder encoder = null;
+		try {
+			FileOutputStream fos = new FileOutputStream("donnéeRecette.xml");
+			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			encoder = new XMLEncoder(bos);
+			
+			encoder.writeObject(this.recettes);
+			encoder.writeObject(this.classeIng);
+			encoder.writeObject(this.catégories);
+			encoder.flush();
+		} catch (final java.io.IOException e) {
+			throw new RuntimeException("Ecriture des données impossible");
+		} finally {
+			if (encoder != null) encoder.close();
+		}
+	}
+	
+	private void loadData() {
+		XMLDecoder decoder = null;
+		try {
+			FileInputStream fis = new FileInputStream("donnéeRecette.xml");
+			BufferedInputStream bis = new BufferedInputStream(fis);
+			decoder = new XMLDecoder(bis);
+			
+			this.recettes = (ArrayList<Recette>) decoder.readObject();
+			this.classeIng = (HashMap<Ingrédient, ArrayList<Recette>>) decoder.readObject();
+			this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+		} catch (Exception e) {
+			throw new RuntimeException("Chargement des données impossible");
+		} finally {
+			if (decoder != null) decoder.close();
 		}
 	}
 	
