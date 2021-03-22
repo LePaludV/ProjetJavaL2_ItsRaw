@@ -7,8 +7,9 @@ public class Recette {
 	String nom, description;
 	Image photo;
 	ArrayList<Ingrédient> ingrédients;
-	float temps,difficulté;
+	float temps;
 	boolean[] note = {false,false,false,false,false};
+	boolean[] difficulté = {false,false,false,false,false};
 	ArrayList<String> étapes, catégories;
 
 	public Recette() {

@@ -52,7 +52,14 @@ public class ModèleAjoutRecette extends Observable {
 	}
 	
 	public void ajoutDifficulté(int difficulté) {
-		this.recette_courante.difficulté = difficulté;
+		
+		for (int i=0;i<5;i++) {
+			if (i <= difficulté) {
+				this.recette_courante.difficulté[i] = true;
+			} else {
+				this.recette_courante.difficulté[i] = false;
+			}
+		}
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);		
 	}

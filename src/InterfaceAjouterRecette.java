@@ -26,6 +26,9 @@ public class InterfaceAjouterRecette implements Observer {
 	static AjoutRecetteController ctrlAjout;
 	InputStream is1,is2;
 	Image etoileJaune,etoileNoire;
+	InputStream it1,it2;
+	Image ToqueGrise,ToqueNoire;
+	
 	
 	public InterfaceAjouterRecette(AjoutRecetteController ctrl) {
 		ctrlAjout = ctrl;
@@ -38,7 +41,23 @@ public class InterfaceAjouterRecette implements Observer {
 			System.out.println("Image non trouvée !");
 		}
 		
+		try {
+			it1 = new FileInputStream("imgs/toqueGrise.png");
+			it2 = new FileInputStream("imgs/toqueNoire.png");
+			ToqueGrise = new Image(it1);
+			ToqueNoire = new Image(it2);
+		} catch (FileNotFoundException e) {
+			System.out.println("Image non trouvée !");
+		}
+			
 	}
+	
+
+		
+		
+			
+	
+	
 
 	public static BorderPane getRoot() {
 		 FXMLLoader loader = new FXMLLoader();
@@ -92,8 +111,25 @@ public class InterfaceAjouterRecette implements Observer {
 				} else {
 					tb.setGraphic(new ImageView(this.etoileNoire));
 				}
-			}
+			}}
+			
+			ObservableList<Toggle> difficulté = ctrlAjout.difficulté.getToggles();
+			for (int i=0;i<difficulté.size();i++) {
+				if (difficulté.get(i) instanceof ToggleButton) {
+					ToggleButton tb = (ToggleButton) difficulté.get(i);
+					tb.setBackground(null);
+					
+					if (recette.difficulté[i]) {
+						tb.setGraphic(new ImageView(this.ToqueNoire));
+					} else {
+						tb.setGraphic(new ImageView(this.ToqueGrise));
+					}
+				}
 		}
+		
+		
+		
+		
 	}	
 }
 

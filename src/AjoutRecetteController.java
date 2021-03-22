@@ -65,7 +65,7 @@ public class AjoutRecetteController {
 
     @FXML
     public ToggleGroup note;
-
+    
     @FXML
     private ToggleButton note0;
 
@@ -80,7 +80,25 @@ public class AjoutRecetteController {
 
     @FXML
     private ToggleButton note4;
+    
+    @FXML
+    public ToggleGroup difficulté;
 
+    @FXML
+    private ToggleButton difficluté0;
+    
+    @FXML
+    private ToggleButton difficluté1;
+
+    @FXML
+    private ToggleButton difficluté2;
+
+    @FXML
+    private ToggleButton difficluté3;
+
+    @FXML
+    private ToggleButton difficluté4;
+    
     @FXML
     private TextField TexteEtape;
     
@@ -128,7 +146,11 @@ public class AjoutRecetteController {
 
     @FXML
     void NoteDifficulté(ActionEvent event) {
-
+    	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
+        	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
+        	System.out.println(Character.getNumericValue(s.charAt(s.length()-1)));
+        	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
+    	}
     }
 
     @FXML
