@@ -46,7 +46,6 @@ public class ModèleRecette extends Observable {
 	}
 	
 	public void changerNote(Recette rct, int note) {
-		rct.note = note;
 		this.notifyObservers(rct);
 	}
 }

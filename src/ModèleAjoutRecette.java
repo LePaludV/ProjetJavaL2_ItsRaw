@@ -4,8 +4,11 @@ import javafx.scene.image.Image;
 public class ModèleAjoutRecette extends Observable {
 	
 	Recette recette_courante;
-	public ModèleAjoutRecette() {
+	Vue vue;
+	
+	public ModèleAjoutRecette(Vue v) {
 		this.recette_courante=new Recette();
+		this.vue = v;
 	}
 
 	
@@ -26,8 +29,12 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void ajoutIngrédient(String nom, int quantité, String mesure) {
-		this.recette_courante.ingrédients.add(new Ingrédient(nom,quantité,mesure));
+	public void ajoutIngrédient() {
+		this.vue.ingredientWindow();
+	}
+	
+	public void validerIngrédient(String nom, int quantité, String mesure) {
+		this.recette_courante.ingrédients.add(new Ingrédient(nom, quantité,mesure));
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
@@ -51,13 +58,19 @@ public class ModèleAjoutRecette extends Observable {
 	}
 	
 	public void ajoutNote(int note) {
-		this.recette_courante.note = note;
+		for (int i=0;i<5;i++) {
+			if (i <= note) {
+				this.recette_courante.note[i] = true;
+			} else {
+				this.recette_courante.note[i] = false;
+			}
+		}
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void ajoutPhoto(String s) {
-		this.recette_courante.photo = new Image(s);
+	public void ajoutPhoto(Image img) {
+		this.recette_courante.photo = img;
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
