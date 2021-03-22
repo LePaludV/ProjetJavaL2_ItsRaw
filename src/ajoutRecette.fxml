@@ -47,9 +47,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1092.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="968.0" prefWidth="1080.0" style="-fx-background-color: orange;" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="1330.0" style="-fx-background-color: orange;" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
@@ -57,38 +57,25 @@
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="300.0" minHeight="150.0" prefHeight="300.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="260.8000122070312" minHeight="10.0" prefHeight="260.8000122070312" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="128.60001220703128" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="260.8000122070312" minHeight="10.0" prefHeight="167.73336181640627" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.13337402343745" minHeight="10.0" prefHeight="252.13337402343745" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="148.9333374023438" minHeight="10.0" prefHeight="96.26662597656252" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="174.0" GridPane.rowIndex="1">
                <children>
-                  <Label contentDisplay="CENTER" layoutX="72.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Ingrédient" textFill="#cd1010" underline="true">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </Label>
-                  <Button fx:id="AjoutIngrédient" layoutX="35.0" layoutY="214.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
-                  <Label fx:id="Ingrédient" layoutX="56.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="23.0" prefWidth="71.0" text="INGREDIENT" />
-                  <TextField fx:id="NomIngredient" layoutX="25.0" layoutY="179.0" promptText="Nom de l'ingrédient" />
-                  <VBox fx:id="affEtape" layoutX="34.0" layoutY="33.0" prefHeight="122.0" prefWidth="140.0" />
+                  <VBox fx:id="affIngr" layoutX="44.0" layoutY="-48.0" prefHeight="320.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
-                  <VBox fx:id="affCat" layoutX="15.0" layoutY="-28.0" prefHeight="247.0" prefWidth="248.0" />
+                  <VBox fx:id="affCat" layoutX="9.0" layoutY="-66.0" prefHeight="326.0" prefWidth="248.0" />
                </children>
             </Pane>
-            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="561.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="664.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Pane fx:id="afficherEtape" layoutX="1.0" layoutY="-209.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="559.0">
-                     <children>
-                        <VBox fx:id="affEtape" layoutX="9.0" layoutY="51.0" prefHeight="311.0" prefWidth="553.0" />
-                        <Label fx:id="LabelEtape" alignment="CENTER" layoutX="2.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="553.0" styleClass="description" stylesheets="@Main.css" text="ETAPE" />
-                     </children>
-                  </Pane>
+                  <VBox fx:id="affEtape" layoutX="10.0" layoutY="22.0" prefHeight="193.0" prefWidth="616.0" />
+                  <Label fx:id="LabelEtape" alignment="CENTER" layoutX="127.0" layoutY="-22.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="426.0" styleClass="description" stylesheets="@Main.css" text="ETAPE" />
                </children>
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
@@ -104,19 +91,6 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label fx:id="Catégorie" layoutX="40.0" layoutY="32.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="CATEGORIE" />
-                  <TextField fx:id="NomCategorie" layoutX="18.0" layoutY="181.0" prefHeight="25.0" prefWidth="118.0" promptText="Nom de la catégorie" />
-               </children>
-            </Pane>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <children>
-                  <Button fx:id="AjoutIngrédient" layoutX="52.0" layoutY="91.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
-               </children>
-            </Pane>
-            <Pane fx:id="afficherEtape" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="333.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <children>
-                  <Button fx:id="AjoutCatégorie" layoutX="82.0" layoutY="62.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddCatégorie" styleClass=".button" stylesheets="@Main.css" text="Ajouter une catégorie" />
-                  <TextField fx:id="NomCategorie" layoutX="85.0" layoutY="23.0" onAction="#AddCatégorie" prefHeight="25.0" prefWidth="157.0" promptText="Nom de la catégorie" />
                </children>
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="337.0">
@@ -132,23 +106,39 @@
                   <ToggleButton fx:id="note2" layoutX="166.0" layoutY="-7.0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                   <ToggleButton fx:id="note3" layoutX="213.0" layoutY="-7.0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                   <ToggleButton fx:id="note4" layoutX="260.0" layoutY="-7.0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
+                  <Label contentDisplay="CENTER" layoutX="81.0" layoutY="160.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Ingrédient" textFill="#cd1010" underline="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Pane prefHeight="126.0" prefWidth="684.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="AjoutEtape" layoutX="234.0" layoutY="97.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" styleClass=".button" stylesheets="@Main.css" text="Ajouter Etape" />
-                  <TextField fx:id="TexteEtape" layoutX="113.0" layoutY="41.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" prefHeight="47.0" prefWidth="352.0" promptText="Ajouter une nouvelle étape" />
+                  <Button fx:id="AjoutEtape" layoutX="281.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" styleClass=".button" stylesheets="@Main.css" text="Ajouter Etape" />
+                  <TextField fx:id="TexteEtape" layoutX="161.0" layoutY="9.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" prefHeight="47.0" prefWidth="352.0" promptText="Ajouter une nouvelle étape" />
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Pane prefHeight="204.0" prefWidth="634.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <TextArea fx:id="Description" layoutX="23.0" layoutY="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="144.0" prefWidth="514.0" promptText="Description" style="-fx-border-radius: 100;" styleClass="description" stylesheets="@Main.css" />
+                  <TextArea fx:id="Description" layoutX="86.0" layoutY="6.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="544.0" promptText="Description" style="-fx-border-radius: 100;" styleClass="description" stylesheets="@Main.css" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Button fx:id="AjoutIngrédient" layoutX="64.0" layoutY="73.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="NomCategorie" layoutX="53.0" layoutY="28.0" onAction="#AddCatégorie" prefHeight="25.0" prefWidth="172.0" promptText="Nom de la catégorie" />
+                  <Button fx:id="AjoutIngrédient1" layoutX="74.0" layoutY="66.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddCatégorie" styleClass=".button" stylesheets="@Main.css" text="Ajouter une catégorie" />
                </children>
             </Pane>
          </children>
       </GridPane>
    </center>
    <bottom>
-      <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="130.0" prefWidth="560.0" stylesheets="@Main.css" text="Sauvegarder" BorderPane.alignment="CENTER" />
+      <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="42.0" prefWidth="1105.0" stylesheets="@Main.css" text="Sauvegarder" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
