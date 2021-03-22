@@ -23,6 +23,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.input.DragEvent;
 
@@ -53,6 +55,7 @@ public class AjoutRecetteController {
 
     @FXML
     private Label LabelEtape;
+    
 
     @FXML
     private Text Image;
@@ -65,7 +68,7 @@ public class AjoutRecetteController {
 
     @FXML
     public ToggleGroup note;
-
+    
     @FXML
     private ToggleButton note0;
 
@@ -80,7 +83,25 @@ public class AjoutRecetteController {
 
     @FXML
     private ToggleButton note4;
+    
+    @FXML
+    public ToggleGroup difficulté;
 
+    @FXML
+    private ToggleButton difficluté0;
+    
+    @FXML
+    private ToggleButton difficluté1;
+
+    @FXML
+    private ToggleButton difficluté2;
+
+    @FXML
+    private ToggleButton difficluté3;
+
+    @FXML
+    private ToggleButton difficluté4;
+    
     @FXML
     private TextField TexteEtape;
     
@@ -105,14 +126,15 @@ public class AjoutRecetteController {
     void AddCatégorie(ActionEvent event) {
     	System.out.println(NomCategorie.getText());
     	this.mdl.ajoutCatégorie(NomCategorie.getText());
-
+    	this.NomCategorie.setText(null);
     }
 
     @FXML
     void AddEtape(ActionEvent event) {
     	System.out.println(TexteEtape.getText());
-    	this.mdl.ajoutEtape(TexteEtape.getText());
-
+    	this.nombreEtape++;
+    	this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
+    	this.TexteEtape.setText("");
     }
 
     @FXML
@@ -127,7 +149,11 @@ public class AjoutRecetteController {
 
     @FXML
     void NoteDifficulté(ActionEvent event) {
-
+    	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
+        	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
+        	System.out.println(Character.getNumericValue(s.charAt(s.length()-1)));
+        	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
+    	}
     }
 
     @FXML
@@ -142,13 +168,21 @@ public class AjoutRecetteController {
     void Sauvegarder(ActionEvent event) {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
-    	System.out.println(this.note.getSelectedToggle());
+    	System.out.println("Note :"+this.note.getSelectedToggle());
+    	this.mdl.sauvegarder();
     }
 	
 	ModèleAjoutRecette mdl;
-	public AjoutRecetteController(ModèleAjoutRecette mdl) {
+	ModèleAccueil mdlAcc;
+	int nombreEtape;
+	public AjoutRecetteController(ModèleAjoutRecette mdl, ModèleAccueil mdl2) {
 		this.mdl = mdl;
+		this.mdlAcc = mdl2;
+		this.nombreEtape=0;
 	}
 	
+	public void sauvegarderRecette(Recette rct) {
+		this.mdlAcc.ajouterRecette(rct);
+	}
 	
 }

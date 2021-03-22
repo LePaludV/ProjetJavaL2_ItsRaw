@@ -19,6 +19,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Vue extends Application {
@@ -28,10 +29,11 @@ public class Vue extends Application {
 	ModèleAjoutRecette mdlAjout;
 	ModèleAccueil mdlAccueil;
 
-	enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
-	public typeInterface currentInterface = typeInterface.ACCUEIL;
+	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
+	public typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+        this.mdlAccueil = new ModèleAccueil();
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
 
@@ -87,7 +89,7 @@ public class Vue extends Application {
             Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
-        } else if (this.currentInterface == typeInterface.ACCUEIL) 
+        } else if (this.currentInterface == typeInterface.ACCUEIL)
         {
         	this.mdlAccueil = new ModèleAccueil(this);
             AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil);
@@ -111,7 +113,7 @@ public class Vue extends Application {
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
-         
+
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
 
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {

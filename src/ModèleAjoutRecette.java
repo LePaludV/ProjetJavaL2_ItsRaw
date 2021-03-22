@@ -53,7 +53,14 @@ public class ModèleAjoutRecette extends Observable {
 	}
 	
 	public void ajoutDifficulté(int difficulté) {
-		this.recette_courante.difficulté = difficulté;
+		
+		for (int i=0;i<5;i++) {
+			if (i <= difficulté) {
+				this.recette_courante.difficulté[i] = true;
+			} else {
+				this.recette_courante.difficulté[i] = false;
+			}
+		}
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);		
 	}
@@ -72,6 +79,14 @@ public class ModèleAjoutRecette extends Observable {
 	
 	public void ajoutPhoto(Image img) {
 		this.recette_courante.photo = img;
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
+	
+	public void sauvegarder() {
+		this.recette_courante.saved=true;
+		this.vue.currentInterface = Vue.typeInterface.ACCUEIL;
+		this.vue.changeWindow();
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
