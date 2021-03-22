@@ -74,5 +74,13 @@ public class ModèleAjoutRecette extends Observable {
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
+	
+	public void sauvegarder() {
+		this.recette_courante.saved=true;
+		this.vue.currentInterface = Vue.typeInterface.ACCUEIL;
+		this.vue.changeWindow();
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
 
 }

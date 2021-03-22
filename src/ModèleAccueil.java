@@ -3,13 +3,13 @@ import java.util.HashMap;
 import java.util.Observable;
 
 @SuppressWarnings("deprecation")
-public class ModèleRecette extends Observable {
+public class ModèleAccueil extends Observable {
 	
 	ArrayList<Recette> recettes;
 	HashMap<Ingrédient, ArrayList<Recette>> classeIng;
 	HashMap<String, ArrayList<Recette>> catégories;
 	
-	public ModèleRecette() {
+	public ModèleAccueil() {
 		this.recettes = new ArrayList<Recette>();
 	}
 	

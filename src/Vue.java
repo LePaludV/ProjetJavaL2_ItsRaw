@@ -14,6 +14,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class Vue extends Application {
@@ -21,14 +22,16 @@ public class Vue extends Application {
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
 	ModèleAjoutRecette mdlAjout;
+	ModèleAccueil mdlAccueil;
 	
-	private enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
-	private typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
+	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
+	public typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+        this.mdlAccueil = new ModèleAccueil();
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
-        
+        	
         this.primaryStage.setResizable(false);
         
         this.changeWindow();
@@ -72,21 +75,24 @@ public class Vue extends Application {
 		secondStage.show();
 	}
 
-	public void changeWindow() {
-        if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
-            this.mdlAjout = new ModèleAjoutRecette(this);
-            AjoutRecetteController ctrlAjout = new AjoutRecetteController(mdlAjout);
-            InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
-            this.mdlAjout.addObserver(vueAjout);
-            Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
-            primaryStage.setScene(scene);
-            this.primaryStage.sizeToScene();
-        } else if (this.currentInterface == typeInterface.ACCUEIL) {
-        	
-        } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
-        	
-        } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
-        	
+	public void changeWindow() {        
+        switch (this.currentInterface) {
+        	case ACCUEIL:
+        		System.out.println("Accueil");
+        		break;
+        	case AJOUT_RECETTE:
+                this.mdlAjout = new ModèleAjoutRecette(this);
+                AjoutRecetteController ctrlAjout = new AjoutRecetteController(this.mdlAjout, this.mdlAccueil);
+                InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
+                this.mdlAjout.addObserver(vueAjout);
+                Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
+                primaryStage.setScene(scene);
+                this.primaryStage.sizeToScene();
+        		break;
+        	case ACCUEIL_RECETTE:
+        		break;
+        	case ETAPE_RECETTE:
+        		break;
         }
 	}
 }

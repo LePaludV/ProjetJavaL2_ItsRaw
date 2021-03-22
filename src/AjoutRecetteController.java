@@ -23,6 +23,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.input.DragEvent;
 
@@ -53,6 +55,7 @@ public class AjoutRecetteController {
 
     @FXML
     private Label LabelEtape;
+    
 
     @FXML
     private Text Image;
@@ -143,15 +146,21 @@ public class AjoutRecetteController {
     void Sauvegarder(ActionEvent event) {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
-    	System.out.println(this.note.getSelectedToggle());
+    	System.out.println("Note :"+this.note.getSelectedToggle());
+    	this.mdl.sauvegarder();
     }
 	
 	ModèleAjoutRecette mdl;
+	ModèleAccueil mdlAcc;
 	int nombreEtape;
-	public AjoutRecetteController(ModèleAjoutRecette mdl) {
+	public AjoutRecetteController(ModèleAjoutRecette mdl, ModèleAccueil mdl2) {
 		this.mdl = mdl;
+		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
 	}
 	
+	public void sauvegarderRecette(Recette rct) {
+		this.mdlAcc.ajouterRecette(rct);
+	}
 	
 }

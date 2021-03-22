@@ -7,8 +7,10 @@ import java.util.Observer;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
@@ -18,7 +20,9 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 	
 public class InterfaceAjouterRecette implements Observer {
@@ -53,10 +57,40 @@ public class InterfaceAjouterRecette implements Observer {
 
 		 return rootLayout;
 	}
+	
+	public void validerSauvegarde(Recette recette) {
+		Stage secondStage = new Stage();
+		VBox parent = new VBox();
+		Scene scene = new Scene(parent);
+		Label lbl = new Label("Voulez-vous valider cette recette ?");
+		Button oui = new Button("Oui");
+		Button non = new Button("Non");
+		HBox listeBtns = new HBox();
+		
+		non.setAlignment(Pos.CENTER);
+		oui.setAlignment(Pos.CENTER);
+		
+		oui.setOnAction(e -> {
+			secondStage.close();
+			this.ctrlAjout.sauvegarderRecette(recette);
+		});
+
+		non.setOnAction(e -> {
+			secondStage.close();
+		});
+
+		listeBtns.getChildren().addAll(oui,non);
+	
+		parent.getChildren().add(lbl);
+		parent.getChildren().add(listeBtns);
+		
+		secondStage.setScene(scene);
+		secondStage.show();
+	}
 
 	@Override
 	public void update(Observable arg0, Object rct) {
-		
+	
 		Recette recette = (Recette) rct;
 		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
 		étapes.getChildren().clear();
@@ -93,6 +127,10 @@ public class InterfaceAjouterRecette implements Observer {
 					tb.setGraphic(new ImageView(this.etoileNoire));
 				}
 			}
+		}
+		
+		if (recette.saved) {
+			this.validerSauvegarde(recette);
 		}
 	}	
 }
