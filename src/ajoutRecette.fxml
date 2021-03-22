@@ -118,8 +118,8 @@
                         </ToggleButton>
                         <ToggleButton fx:id="difficluté1" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté2" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
-                        <ToggleButton fx:id="difficluté4" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté3" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
+                        <ToggleButton fx:id="difficluté4" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                      </children>
                   </HBox>
                   <HBox layoutX="64.0" layoutY="-19.0" prefHeight="100.0" prefWidth="200.0">
