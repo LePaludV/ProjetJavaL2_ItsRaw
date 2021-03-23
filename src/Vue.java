@@ -14,11 +14,11 @@ public class Vue extends Application {
 	Accueil acc=new Accueil();
 	GridPane rootLayout;
 
-	private enum InterfaceType {
+	public enum InterfaceType {
 			AJOUT_RECETTE, ACCUEIL, PRESENTATION_RECETTE, ETAPE_RECETTE
 	};
 
-	private InterfaceType currentInterface = InterfaceType.AJOUT_RECETTE;
+	public InterfaceType currentInterface = InterfaceType.AJOUT_RECETTE;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -52,8 +52,6 @@ public class Vue extends Application {
 		}
 	}
 
-<<<<<<< Updated upstream
-=======
 	public void changeWindow() {
         if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
             this.mdlAjout = new ModèleAjoutRecette(this);
@@ -94,5 +92,4 @@ public class Vue extends Application {
 
         }
 	}
->>>>>>> Stashed changes
 }
