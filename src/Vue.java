@@ -52,4 +52,47 @@ public class Vue extends Application {
 		}
 	}
 
+<<<<<<< Updated upstream
+=======
+	public void changeWindow() {
+        if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
+            this.mdlAjout = new ModèleAjoutRecette(this);
+            AjoutRecetteController ctrlAjout = new AjoutRecetteController(mdlAjout, this.mdlAccueil);
+            InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
+            this.mdlAjout.addObserver(vueAjout);
+            Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+        } else if (this.currentInterface == typeInterface.ACCUEIL)
+        {
+        	this.mdlAccueil = new ModèleAccueil(this);
+            AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil);
+            InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
+            this.mdlAccueil.addObserver(vueAccueil);
+            Scene scene=new Scene(InterfaceAccueil.getRoot());
+            Recette r1 = new Recette();
+            Recette r2 = new Recette();
+            Recette r3 = new Recette();
+            try {
+    			r1.photo = new Image(new FileInputStream("imgs/lasagnes.jpg"));
+    			r2.photo = new Image(new FileInputStream("imgs/oeuf_a_la_tomate.jpg"));
+    			r3.photo = new Image(new FileInputStream("imgs/pave_de_saumon_aux_cocos.jpg"));
+    			ArrayList<Recette> lstRecettes = new ArrayList<>();
+                lstRecettes.add(r1);
+                lstRecettes.add(r2);
+                lstRecettes.add(r3);
+                vueAccueil.AfficherLesRecettes(lstRecettes);
+    		} catch (FileNotFoundException e) {
+    			System.out.println("Image non trouvée !");
+    		}
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+
+        } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
+
+        } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
+
+        }
+	}
+>>>>>>> Stashed changes
 }
