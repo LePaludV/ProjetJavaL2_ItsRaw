@@ -30,16 +30,16 @@ public class Vue extends Application {
 	ModèleAccueil mdlAccueil;
 
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
-	public typeInterface currentInterface = typeInterface.AJOUT_RECETTE;
+	public typeInterface currentInterface = typeInterface.ACCUEIL;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-        this.mdlAccueil = new ModèleAccueil();
+        this.mdlAccueil = new ModèleAccueil(this);
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
 
         this.primaryStage.setResizable(false);
 
-        this.changeWindow();
+        this.changeWindow(this.currentInterface);
         primaryStage.show();
 	}
 
@@ -80,10 +80,11 @@ public class Vue extends Application {
 		secondStage.show();
 	}
 
-	public void changeWindow() {
+	public void changeWindow(typeInterface inter) {
+		this.currentInterface = inter;
         if (this.currentInterface == typeInterface.AJOUT_RECETTE) {
             this.mdlAjout = new ModèleAjoutRecette(this);
-            AjoutRecetteController ctrlAjout = new AjoutRecetteController(mdlAjout);
+            AjoutRecetteController ctrlAjout = new AjoutRecetteController(mdlAjout, mdlAccueil);
             InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
             this.mdlAjout.addObserver(vueAjout);
             Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
@@ -96,21 +97,6 @@ public class Vue extends Application {
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
-            Recette r1 = new Recette();
-            Recette r2 = new Recette();
-            Recette r3 = new Recette();
-            try {
-    			r1.photo = new Image(new FileInputStream("imgs/lasagnes.jpg"));
-    			r2.photo = new Image(new FileInputStream("imgs/oeuf_a_la_tomate.jpg"));
-    			r3.photo = new Image(new FileInputStream("imgs/pave_de_saumon_aux_cocos.jpg"));
-    			ArrayList<Recette> lstRecettes = new ArrayList<>();
-                lstRecettes.add(r1);
-                lstRecettes.add(r2);
-                lstRecettes.add(r3);
-                vueAccueil.AfficherLesRecettes(lstRecettes);
-    		} catch (FileNotFoundException e) {
-    			System.out.println("Image non trouvée !");
-    		}
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 
