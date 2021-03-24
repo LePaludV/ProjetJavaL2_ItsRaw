@@ -1,4 +1,5 @@
 import java.util.Observable;
+
 import javafx.scene.image.Image;
 
 public class ModèleAjoutRecette extends Observable {
@@ -84,8 +85,6 @@ public class ModèleAjoutRecette extends Observable {
 	
 	public void sauvegarder() {
 		this.recette_courante.saved=true;
-		this.vue.currentInterface = Vue.typeInterface.ACCUEIL;
-		this.vue.changeWindow();
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

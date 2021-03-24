@@ -105,6 +105,9 @@ public class AjoutRecetteController {
     
     @FXML
     private TextField TexteEtape;
+
+    @FXML
+    private Spinner<Integer> nbrPersonne;
     
 	@FXML
 	private ImageView imageView;
@@ -130,14 +133,12 @@ public class AjoutRecetteController {
 
     @FXML
     void AddCatégorie(ActionEvent event) {
-    	System.out.println(NomCategorie.getText());
     	this.mdl.ajoutCatégorie(NomCategorie.getText());
     	this.NomCategorie.setText(null);
     }
 
     @FXML
     void AddEtape(ActionEvent event) {
-    	System.out.println(TexteEtape.getText());
     	this.nombreEtape++;
     	this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
     	this.TexteEtape.setText("");
@@ -157,7 +158,6 @@ public class AjoutRecetteController {
     void NoteDifficulté(ActionEvent event) {
     	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
         	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
-        	System.out.println(Character.getNumericValue(s.charAt(s.length()-1)));
         	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
     	}
     }
@@ -185,14 +185,16 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
-		SpinnerValueFactory<Integer> nbr =new SpinnerValueFactory.IntegerSpinnerValueFactory(2, 100, 4,2);
-
-		//this.nbrPersonne.setValueFactory((SpinnerValueFactory<?>) nbr);
-		
+		System.out.println(this.nbrPersonne);
 	}
 	
 	public void sauvegarderRecette(Recette rct) {
 		this.mdlAcc.ajouterRecette(rct);
+	}
+	
+	public void personnesSpinner() {
+		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
+		this.nbrPersonne.setValueFactory(nombre);
 	}
 	
 }
