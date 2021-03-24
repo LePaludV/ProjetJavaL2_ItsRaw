@@ -1,81 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_202" class="java.beans.XMLDecoder">
+<java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="Recette">
+   <object class="Recette" id="Recette0">
+    <void property="catégories">
+     <void method="add">
+      <string>1. </string>
+     </void>
+    </void>
+    <void property="difficulté">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
+    </void>
     <void property="save">
      <boolean>true</boolean>
     </void>
    </object>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
-  </void>
-  <void method="add">
-   <object class="Recette"/>
   </void>
  </object>
 </java>
