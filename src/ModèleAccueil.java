@@ -14,7 +14,7 @@ public class ModèleAccueil extends Observable {
 	ArrayList<Recette> recettes;
 	HashMap<Ingrédient, ArrayList<Recette>> classeIng;
 	HashMap<String, ArrayList<Recette>> catégories;
-	Vue vue;
+	Vue vue;	
 	
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();

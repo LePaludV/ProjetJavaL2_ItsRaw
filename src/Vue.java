@@ -33,9 +33,11 @@ public class Vue extends Application {
 	GridPane rootLayout;
 	ModèleAjoutRecette mdlAjout;
 	ModèleAccueil mdlAccueil;
-
+	ModèleAccueilRecette mdlAccueilRecette;
+	
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
         this.mdlAccueil = new ModèleAccueil(this);
@@ -116,6 +118,15 @@ public class Vue extends Application {
             this.primaryStage.sizeToScene();
 
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
+        	Recette recette = null; 
+        	this.mdlAccueilRecette = new ModèleAccueilRecette(this);
+            AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
+            InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
+            //ctrlAccueilRecette.loadRecette(recette);
+            Scene scene=new Scene(InterfaceAccueilRecette.getRoot());
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+        	
 
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
 

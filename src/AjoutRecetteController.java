@@ -112,9 +112,7 @@ public class AjoutRecetteController {
 	@FXML
 	private ImageView imageView;
 	
-    @FXML
-    private Spinner<?> nbrPersonne;
-	
+
 	@FXML
 	private void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
