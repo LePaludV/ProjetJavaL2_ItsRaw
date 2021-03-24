@@ -85,7 +85,7 @@
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <children>
-                  <ImageView fx:id="affImg" fitHeight="277.0" fitWidth="518.0" layoutX="14.0" layoutY="60.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="affImg" fitHeight="277.0" fitWidth="518.0" layoutX="15.0" layoutY="60.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" />
                   <TextField fx:id="NomRecette" layoutX="109.0" layoutY="14.0" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
                </children>
             </Pane>

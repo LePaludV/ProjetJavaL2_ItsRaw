@@ -74,5 +74,8 @@
   <void method="add">
    <object class="Recette"/>
   </void>
+  <void method="add">
+   <object class="Recette"/>
+  </void>
  </object>
 </java>

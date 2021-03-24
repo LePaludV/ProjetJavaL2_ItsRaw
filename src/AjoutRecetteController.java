@@ -112,12 +112,15 @@ public class AjoutRecetteController {
 	@FXML
 	private ImageView imageView;
 	
+
 	@FXML
 	private void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
 			event.acceptTransferModes(TransferMode.ANY);
 		}
 	}
+	
+	
 	
 	@FXML
 	private void dragDropped(DragEvent event) throws FileNotFoundException {
