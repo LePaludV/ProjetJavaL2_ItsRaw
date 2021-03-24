@@ -21,6 +21,7 @@ import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.text.Font;
@@ -104,6 +105,9 @@ public class AjoutRecetteController {
     
     @FXML
     private TextField TexteEtape;
+
+    @FXML
+    private Spinner<Integer> nbrPersonne;
     
 	@FXML
 	private ImageView imageView;
@@ -176,10 +180,16 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
+		System.out.println(this.nbrPersonne);
 	}
 	
 	public void sauvegarderRecette(Recette rct) {
 		this.mdlAcc.ajouterRecette(rct);
+	}
+	
+	public void personnesSpinner() {
+		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
+		this.nbrPersonne.setValueFactory(nombre);
 	}
 	
 }

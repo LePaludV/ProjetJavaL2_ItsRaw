@@ -71,8 +71,6 @@ public class Vue extends Application {
 		
 		Label lblNom = new Label("Nom :");
 		Label lblQuantité = new Label("Quantité :");
-		Label lblMesure = new Label("Mesure :");
-
 		Button btnValider = new Button("Valider !");
 
 		btnValider.setOnAction(e -> {
@@ -89,7 +87,6 @@ public class Vue extends Application {
 		parent.getChildren().add(txtNom);
 		parent.getChildren().add(lblQuantité);
 		parent.getChildren().add(txtQuantité);
-		parent.getChildren().add(lblMesure);
 		parent.getChildren().addAll(menu);
 		parent.getChildren().add(btnValider);
 
@@ -105,6 +102,7 @@ public class Vue extends Application {
             InterfaceAjouterRecette vueAjout = new InterfaceAjouterRecette(ctrlAjout);
             this.mdlAjout.addObserver(vueAjout);
             Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
+            ctrlAjout.personnesSpinner();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
         } else if (this.currentInterface == typeInterface.ACCUEIL)

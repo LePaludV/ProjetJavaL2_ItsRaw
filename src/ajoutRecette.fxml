@@ -49,7 +49,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <bottom>
       <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="42.0" prefWidth="1105.0" stylesheets="@Main.css" text="Sauvegarder" BorderPane.alignment="CENTER" />
    </bottom>
@@ -108,8 +108,8 @@
                      </opaqueInsets>
                   </Label>
                   <Label layoutX="20.0" layoutY="109.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Difficulté" textFill="#cd1010" />
-                  <Spinner fx:id="nbrPersonne" layoutX="142.0" layoutY="55.0" prefHeight="25.0" prefWidth="45.0" />
-                  <HBox layoutX="69.0" layoutY="100.0" prefHeight="100.0" prefWidth="282.0">
+                  <Spinner fx:id="nbrPersonne" layoutX="171.0" layoutY="55.0" prefHeight="31.0" prefWidth="69.0" />
+                  <HBox layoutX="85.0" layoutY="100.0" prefHeight="50.0" prefWidth="236.0">
                      <children>
                         <ToggleButton fx:id="difficluté0" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="46.0">
                            <toggleGroup>
@@ -122,7 +122,7 @@
                         <ToggleButton fx:id="difficluté4" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                      </children>
                   </HBox>
-                  <HBox layoutX="64.0" layoutY="-19.0" prefHeight="100.0" prefWidth="200.0">
+                  <HBox layoutX="62.0" layoutY="-1.0" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <ToggleButton fx:id="note0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="46.0">
                            <toggleGroup>
