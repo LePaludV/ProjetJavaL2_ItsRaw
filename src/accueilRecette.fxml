@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1330.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="817.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="653.7999267578125" minWidth="10.0" prefWidth="513.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="btnSuivieRecette" layoutX="85.0" layoutY="736.0" mnemonicParsing="false" onAction="#btnSuivieRecette" prefHeight="73.0" prefWidth="395.0" text="Suivre la recette" />
+                  <Label layoutX="71.0" layoutY="42.0" text="Note" />
+                  <Label layoutX="71.0" layoutY="83.0" text="Difficulté" />
+                  <HBox layoutX="157.0" layoutY="18.0" prefHeight="49.0" prefWidth="239.0">
+                     <children>
+                        <ToggleButton fx:id="note0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="note1" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="note2" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="note3" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="note4" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="158.0" layoutY="74.0" prefHeight="50.0" prefWidth="238.0">
+                     <children>
+                        <ToggleButton fx:id="difficluté0" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="difficluté1" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="difficluté2" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="difficluté3" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" />
+                        <ToggleButton fx:id="difficluté4" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" />
+                     </children>
+                  </HBox>
+                  <Pane layoutX="23.0" layoutY="195.0" prefHeight="474.0" prefWidth="467.0">
+                     <children>
+                        <Text layoutX="99.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédient" textAlignment="CENTER" wrappingWidth="257.05206298828125" />
+                        <Label fx:id="TexteIngrédient" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="ImageRecette" fitHeight="428.0" fitWidth="594.0" layoutX="115.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/not_found.png" />
+                     </image>
+                  </ImageView>
+                  <Pane layoutX="43.0" layoutY="526.0" prefHeight="280.0" prefWidth="717.0">
+                     <children>
+                        <Text layoutX="229.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="CENTER" wrappingWidth="257.05206298828125" />
+                        <Label fx:id="TexteDescription" layoutX="36.0" layoutY="36.0" prefHeight="253.0" prefWidth="669.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </center>
+</BorderPane>

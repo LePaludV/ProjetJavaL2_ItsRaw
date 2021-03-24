@@ -1,0 +1,36 @@
+@font-face {
+    font-family: Oswald-Bold;
+    src: url("../polices/Oswald-Bold.ttf");
+}
+
+.button{
+    -fx-background-insets: 1 1 1 1, 1;
+	-fx-background-radius: 10;
+	-fx-background-color: #D94333;
+}
+
+.button:hover {
+    -fx-background-color: #AB1C0C;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #D94333;
+  -fx-text-fill: #1d1d1d;
+}
+
+.description{
+	-fx-background-insets: 1 1 1 1, 1;
+	-fx-background-radius: 20;
+	-fx-control-inner-background: #56898D;
+	-fx-highlight-text-fill: #5DAB9B;
+	-fx-text-fill: #E08E44; 
+	-fx-background-color:#56898D;
+}
+
+.label{
+	-fx-font-family:"Oswald-Bold";
+}
+
+.gridPane{
+	-fx-background-color: #E08E44;
+}
