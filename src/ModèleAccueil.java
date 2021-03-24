@@ -20,6 +20,8 @@ public class ModèleAccueil extends Observable {
 		this.recettes = new ArrayList<Recette>();
 		this.vue = v;
 		this.loadData();
+		this.setChanged();
+		this.notifyObservers(this.recettes);
 	}
 	
 	public void goToAjouterRecette()
@@ -49,7 +51,7 @@ public class ModèleAccueil extends Observable {
 		}
 		
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
-		System.out.println(this.recettes.toString());
+		System.out.println("liste de recettes : "+this.recettes.toString());
 		this.saveData();
 		this.afficherRecettes();
 	}
@@ -87,8 +89,6 @@ public class ModèleAccueil extends Observable {
 			encoder = new XMLEncoder(bos);
 			
 			encoder.writeObject(this.recettes);
-			encoder.writeObject(this.catégories);
-			encoder.writeObject(this.classeIng);
 			encoder.flush();
 			
 		} catch (final java.io.IOException e) {
@@ -101,15 +101,13 @@ public class ModèleAccueil extends Observable {
 	
 	private void loadData() {
 		XMLDecoder decoder = null;
-		
+		System.out.println("liste de recettes : "+this.recettes.toString());
 		try {
 			FileInputStream fis = new FileInputStream("data.xml");
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
 			
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
-			this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
-			this.classeIng = (HashMap<Ingrédient, ArrayList<Recette>>) decoder.readObject();
 			
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");

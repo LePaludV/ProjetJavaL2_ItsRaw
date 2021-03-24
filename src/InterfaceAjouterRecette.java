@@ -56,13 +56,6 @@ public class InterfaceAjouterRecette implements Observer {
 
 	}
 
-
-
-
-
-
-
-
 	public static BorderPane getRoot() {
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
@@ -145,20 +138,21 @@ public class InterfaceAjouterRecette implements Observer {
 				} else {
 					tb.setGraphic(new ImageView(this.etoileNoire));
 				}
-			}}
+			}
+		}
 
-			ObservableList<Toggle> difficulté = ctrlAjout.difficulté.getToggles();
-			for (int i=0;i<difficulté.size();i++) {
-				if (difficulté.get(i) instanceof ToggleButton) {
-					ToggleButton tb = (ToggleButton) difficulté.get(i);
-					tb.setBackground(null);
+		ObservableList<Toggle> difficulté = ctrlAjout.difficulté.getToggles();
+		for (int i=0;i<difficulté.size();i++) {
+			if (difficulté.get(i) instanceof ToggleButton) {
+				ToggleButton tb = (ToggleButton) difficulté.get(i);
+				tb.setBackground(null);
 
-					if (recette.difficulté[i]) {
-						tb.setGraphic(new ImageView(this.ToqueNoire));
-					} else {
-						tb.setGraphic(new ImageView(this.ToqueGrise));
-					}
+				if (recette.difficulté[i]) {
+					tb.setGraphic(new ImageView(this.ToqueNoire));
+				} else {
+					tb.setGraphic(new ImageView(this.ToqueGrise));
 				}
+			}
 		}
 
 		if (recette.saved) {

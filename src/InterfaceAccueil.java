@@ -59,7 +59,6 @@ public class InterfaceAccueil implements Observer
 					System.out.println("rec" + recettes);
 					System.out.println(lstRecettes.get(i+j).photo);
 					hb.getChildren().add(imageCourante);
-					// this.ctrlAccueil.vboxRecette.getChildren().add(new Button());
 				}
 			}
 			this.ctrlAccueil.recettes.getChildren().add(hb);

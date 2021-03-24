@@ -124,14 +124,12 @@ public class AjoutRecetteController {
 
     @FXML
     void AddCatégorie(ActionEvent event) {
-    	System.out.println(NomCategorie.getText());
     	this.mdl.ajoutCatégorie(NomCategorie.getText());
     	this.NomCategorie.setText(null);
     }
 
     @FXML
     void AddEtape(ActionEvent event) {
-    	System.out.println(TexteEtape.getText());
     	this.nombreEtape++;
     	this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
     	this.TexteEtape.setText("");
@@ -151,7 +149,6 @@ public class AjoutRecetteController {
     void NoteDifficulté(ActionEvent event) {
     	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
         	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
-        	System.out.println(Character.getNumericValue(s.charAt(s.length()-1)));
         	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
     	}
     }

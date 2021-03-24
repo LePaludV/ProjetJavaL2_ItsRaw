@@ -19,4 +19,9 @@ public class Recette {
 		this.catégories = new ArrayList<String>();
 		this.saved=false;
 	}
+	
+	@Override
+	public String toString() {
+		return nom+"\n";		
+	}
 }

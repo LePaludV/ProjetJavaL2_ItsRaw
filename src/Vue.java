@@ -1,3 +1,4 @@
+import java.awt.List;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,7 +13,11 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -52,8 +57,18 @@ public class Vue extends Application {
 
 		TextField txtNom = new TextField();
 		TextField txtQuantité = new TextField();
-		TextField txtMesure = new TextField();
 
+		MenuButton menu = new MenuButton("Mesure");
+		String[] mesures = {"g", "kg", "l", "cl", "cuil. café", "cuil. soupe", "pincé(s)"};
+		ArrayList<RadioMenuItem> listeItems = new ArrayList<RadioMenuItem>();
+		ToggleGroup grp = new ToggleGroup();
+		
+		for (String s : mesures) {
+			RadioMenuItem item = new RadioMenuItem(s);
+			item.setToggleGroup(grp);
+			menu.getItems().add(item);
+		}
+		
 		Label lblNom = new Label("Nom :");
 		Label lblQuantité = new Label("Quantité :");
 		Label lblMesure = new Label("Mesure :");
@@ -64,7 +79,9 @@ public class Vue extends Application {
 			String q = txtQuantité.getText();
 			System.out.println(q);
 			Integer quantité = Integer.parseInt(q);
-			this.mdlAjout.validerIngrédient(txtNom.getText(), quantité, txtMesure.getText());
+			System.out.println(menu.getText());
+			RadioMenuItem currentItem = (RadioMenuItem) grp.getSelectedToggle();
+			this.mdlAjout.validerIngrédient(txtNom.getText(), quantité, currentItem.getText() );
 			secondStage.close();
 		});
 
@@ -73,7 +90,7 @@ public class Vue extends Application {
 		parent.getChildren().add(lblQuantité);
 		parent.getChildren().add(txtQuantité);
 		parent.getChildren().add(lblMesure);
-		parent.getChildren().add(txtMesure);
+		parent.getChildren().addAll(menu);
 		parent.getChildren().add(btnValider);
 
 		secondStage.setScene(scene);
