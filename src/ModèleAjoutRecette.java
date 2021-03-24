@@ -45,13 +45,7 @@ public class ModèleAjoutRecette extends Observable {
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
-	
-	public void ajoutTemps(int temps) {
-		this.recette_courante.temps = temps;
-		this.setChanged();
-		this.notifyObservers(this.recette_courante);
-	}
-	
+
 	public void ajoutDifficulté(int difficulté) {
 		
 		for (int i=0;i<5;i++) {

@@ -30,3 +30,7 @@
 .label{
 	-fx-font-family:"Oswald-Bold";
 }
+
+.gridPane{
+	-fx-background-color: #E08E44;
+}

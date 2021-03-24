@@ -2,6 +2,7 @@ import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
@@ -15,13 +16,14 @@ public class ModèleAccueil extends Observable {
 	HashMap<Ingrédient, ArrayList<Recette>> classeIng;
 	HashMap<String, ArrayList<Recette>> catégories;
 	Vue vue;
+	File fichier;
 	
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();
 		this.vue = v;
-		this.loadData();
 		this.setChanged();
 		this.notifyObservers(this.recettes);
+		this.fichier = new File("data.xml");
 	}
 	
 	public void goToAjouterRecette()
@@ -87,7 +89,6 @@ public class ModèleAccueil extends Observable {
 			FileOutputStream fos = new FileOutputStream("data.xml");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
-			
 			encoder.writeObject(this.recettes);
 			encoder.flush();
 			
