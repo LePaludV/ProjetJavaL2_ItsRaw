@@ -110,7 +110,7 @@ public class AjoutRecetteController {
     private Spinner<Integer> nbrPersonne;
     
 	@FXML
-	private ImageView imageView;
+	private ImageView affImg;
 	
 
 	@FXML
@@ -173,7 +173,7 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	this.mdl.sauvegarder();
+    	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText());
     }
 	
 	ModèleAjoutRecette mdl;

@@ -1,13 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_281" class="java.beans.XMLDecoder">
- <string>javafx.scene.image.Image@43dfd79f</string>
- <object class="java.util.ArrayList">
-  <void method="add">
-   <object class="Recette">
-    <void property="save">
-     <boolean>true</boolean>
-    </void>
-   </object>
-  </void>
- </object>
+ <null/>
 </java>
