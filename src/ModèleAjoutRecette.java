@@ -1,13 +1,17 @@
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Observable;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageOutputStream;
 
+import com.sun.org.apache.xalan.internal.templates.Constants;
+
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
+import javafx.scene.shape.Path;
 
 public class ModèleAjoutRecette extends Observable {
 	
@@ -97,10 +101,11 @@ public class ModèleAjoutRecette extends Observable {
 	
 	private void saveImage(Image image) {
 		try {
+			
 			System.out.println(image.toString());
-			File outputFile = new File("../imgs");
+            File file = new File("imagesRecette/"+image.toString()+".png");
 			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
-			ImageIO.write(bufferedImage, "JPG", outputFile);
+			ImageIO.write(bufferedImage, "png", file);
 		} catch (IOException ex) {
 			throw new RuntimeException(ex);
 		}

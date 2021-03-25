@@ -36,7 +36,7 @@ public class Vue extends Application {
 	ModèleAccueilRecette mdlAccueilRecette;
 	
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
-	public typeInterface currentInterface = typeInterface.ACCUEIL_RECETTE;
+	public typeInterface currentInterface = typeInterface.ACCUEIL;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
