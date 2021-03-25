@@ -15,14 +15,14 @@ import javafx.scene.layout.BorderPane;
 
 public class InterfaceAccueilRecette  implements Observer {
 	static BorderPane rootLayout;
-	static AccueilRecetteController ctrlAjout;
+	static AccueilRecetteController ctrlAccueilRct;
 	InputStream is1,is2;
 	Image etoileJaune,etoileNoire;
 	InputStream it1,it2;
 	Image ToqueGrise,ToqueNoire;
 
 	public InterfaceAccueilRecette(AccueilRecetteController ctrl) {
-		ctrlAjout = ctrl;
+		ctrlAccueilRct = ctrl;
 		try {
 			is1 = new FileInputStream("imgs/etoileJaune.png");
 			is2 = new FileInputStream("imgs/etoileNoire.png");
@@ -40,14 +40,14 @@ public class InterfaceAccueilRecette  implements Observer {
 		} catch (FileNotFoundException e) {
 			System.out.println("Image non trouvée !");
 		}
-	
+
 	}
 
 	public static BorderPane getRoot() {
 		
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueilRecette.fxml"));
-        loader.setController(ctrlAjout);
+        loader.setController(ctrlAccueilRct);
 
 		try {
 			rootLayout = (BorderPane) loader.load();
@@ -58,14 +58,15 @@ public class InterfaceAccueilRecette  implements Observer {
 		 return rootLayout;
 	}
 	
-	public void update(Observable arg0, Object rct) {
-		//Pb sur cette uptade qui s'acitve pas, peut être à cause de l'update dans interfaceAjoutRecette avec des package
-		//+ besoin de savoir l'état (avec un if )peut-être .
+	public void update(Observable arg0, Object rct) { 
+		
+
+
 		//Quand on va modifier la note / difficulté le uptade dois faire la sauvegarder automatique (ce que faisait le btn sauvegarder de ajout recette).
 		// quand on update faut créer un nouveau fichier xml a partir de l'acnien avec la nouvel note et supprimer l'ancien ensuite ?
 	Recette recette = (Recette) rct;
 	System.out.println("test");
-	ObservableList<Toggle> note = ctrlAjout.note.getToggles();
+	ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
 	for (int i=0;i<note.size();i++) {
 		if (note.get(i) instanceof ToggleButton) {
 			ToggleButton tb = (ToggleButton) note.get(i);
@@ -78,7 +79,7 @@ public class InterfaceAccueilRecette  implements Observer {
 		}
 	}
 
-	ObservableList<Toggle> difficulté = ctrlAjout.difficulté.getToggles();
+	ObservableList<Toggle> difficulté = ctrlAccueilRct.difficulté.getToggles();
 	for (int i=0;i<difficulté.size();i++) {
 		if (difficulté.get(i) instanceof ToggleButton) {
 			ToggleButton tb = (ToggleButton) difficulté.get(i);
@@ -91,6 +92,30 @@ public class InterfaceAccueilRecette  implements Observer {
 			}
 		}
 	}
+	loadRecette(recette);
 	}
+		public void loadRecette(Recette rct) {
+			if(rct==null) {
+				this.ctrlAccueilRct.TexteDescription.setText("Problème chargement de la recette séléctionner dans l'accueil "
+						+ "\nOU interface lancé par défaut (cf ''currentInterface'' dans Vue.java)");
+			}
+			else {
+			// à tester si la méthode uptade lance bien loadRecette avec rct choisi dans l'accueil + si ça s'affiche bien
+				// + éventuelle problème si une valeur null.
+			this.ctrlAccueilRct.TexteDescription.setText(rct.description);
+			String ingr = null;
+			for(Ingrédient s: rct.ingrédients) {
+				ingr+="- "+s.quantité+s.mesure+" "+s.nom+"\n";
+			}
+		
+			this.ctrlAccueilRct.TexteIngrédient.setText("ingr");
+			
+			this.ctrlAccueilRct.ImageRecette.setImage(rct.photo);
+			this.ctrlAccueilRct.Nom.setText(rct.nom);
+			this.ctrlAccueilRct.nbrPersonne.setText("Pour "+rct.nbrPersonne+" Personne(s).");};
+			
+			
+		}
+	
 	
 }

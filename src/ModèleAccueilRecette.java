@@ -38,5 +38,7 @@ public class ModèleAccueilRecette extends Observable{
 		this.recette_courante = rct;
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
+		
+		
 	}
 }

@@ -14,52 +14,52 @@ public class AccueilRecetteController {
 	    public ToggleGroup note;
 
 	    @FXML
-	    private ToggleButton note0;
+	    public ToggleButton note0;
 
 	    @FXML
-	    private ToggleButton note1;
+	    public ToggleButton note1;
 
 	    @FXML
-	    private ToggleButton note2;
+	    public ToggleButton note2;
 
 	    @FXML
-	    private ToggleButton note3;
+	    public ToggleButton note3;
 
 	    @FXML
-	    private ToggleButton note4;
+	    public ToggleButton note4;
 	    
 	    @FXML
 	    public ToggleGroup difficulté;
 
 	    @FXML
-	    private ToggleButton difficluté0;
+	    public ToggleButton difficluté0;
 
 	    @FXML
-	    private ToggleButton difficluté1;
+	    public ToggleButton difficluté1;
 
 	    @FXML
-	    private ToggleButton difficluté2;
+	    public ToggleButton difficluté2;
 
 	    @FXML
-	    private ToggleButton difficluté3;
+	    public ToggleButton difficluté3;
 
 	    @FXML
-	    private ToggleButton difficluté4;
+	    public ToggleButton difficluté4;
 
 	    @FXML
-	    private Label TexteIngrédient;
+	    public Label TexteIngrédient;
 
 	    @FXML
-	    private ImageView ImageRecette;
+	    public ImageView ImageRecette;
 
 	    @FXML
-	    private Label TexteDescription;
+	    public Label TexteDescription;
 	    
 	    @FXML
-	    private Label Nom;
+	    public Label Nom;
 	    
 	    @FXML
-	    private Label nbrPersonne;
+	    public Label nbrPersonne;
 
 	    @FXML
 	    void NoteDifficulté(ActionEvent event) {
@@ -91,21 +91,7 @@ public class AccueilRecetteController {
 
 		}
 		
-		public void loadRecette(Recette rct) {
-			TexteDescription.setText(rct.description);
-			String ingr = null;
-			for(Ingrédient s: rct.ingrédients) {
-				ingr+="- "+s.quantité+s.mesure+" "+s.nom+"\n";
-			}
-			String cat = null;
-			for(String s: rct.catégories) {
-				ingr+="- "+s+"\n";
-			}
-			ImageRecette.setImage(rct.photo);
-			Nom.setText(rct.nom);
-			nbrPersonne.setText("Pour "+rct.nbrPersonne+" Personne(s).");
-			
-		}
+		
 
 		
 	}
