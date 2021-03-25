@@ -74,6 +74,7 @@ public class InterfaceAccueil implements Observer
 					System.out.println("rec" + recettes);
 					System.out.println(lstRecettes.get(i+j).photo);*/
 					try {
+						String nom  = lstRecettes.get(i+j).photo.toString();
 						btn.backgroundProperty().setValue(new Background((new BackgroundImage(new Image(new FileInputStream("imgs/lasagnes.jpg")), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, null, null))));
 					} catch (FileNotFoundException e) {
 						// TODO Auto-generated catch block
