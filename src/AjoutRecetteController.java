@@ -183,12 +183,10 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
-		System.out.println(this.nbrPersonne);
 	}
 	
 	public void sauvegarderRecette(Recette rct) {
 		this.mdlAcc.ajouterRecette(rct);
-		System.out.println(rct.photo);
 	}
 	
 	public void personnesSpinner() {

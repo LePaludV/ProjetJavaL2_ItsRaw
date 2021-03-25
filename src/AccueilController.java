@@ -7,19 +7,26 @@ import javafx.event.ActionEvent;
 public class AccueilController {
 	@FXML
 	private Button btnAjoutRecette;
+	
 	@FXML
 	public VBox recettes;
 	
 	ModèleAccueil mdl;
+	ModèleAccueilRecette mdlRecette;
 	
-	public AccueilController(ModèleAccueil mod)
+	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette)
 	{
 		this.mdl = mod;
+		this.mdlRecette = mdlRecette;
 	}
 
 	// Event Listener on Button[#btnAjoutRecette].onAction
 	@FXML
 	public void ajouterRecette(ActionEvent event) {
 		this.mdl.goToAjouterRecette();
+	}
+	
+	public void openRecette(Recette rct) {
+		this.mdlRecette.setRecette(rct);
 	}
 }

@@ -64,6 +64,10 @@ public class InterfaceAccueil implements Observer
 				if(i+j<lstRecettes.size())
 				{
 					Button btn = new Button();
+					btn.setId(Character.getName(i));
+					btn.setOnAction(e -> {
+						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
+					});
 					/*ImageView imageCourante = new ImageView(lstRecettes.get(i+j).photo);
 					imageCourante.setFitHeight(100);
 					imageCourante.setFitWidth(100);

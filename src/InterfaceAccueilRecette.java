@@ -23,7 +23,6 @@ public class InterfaceAccueilRecette  implements Observer {
 
 	public InterfaceAccueilRecette(AccueilRecetteController ctrl) {
 		ctrlAjout = ctrl;
-		ctrlAjout = ctrl;
 		try {
 			is1 = new FileInputStream("imgs/etoileJaune.png");
 			is2 = new FileInputStream("imgs/etoileNoire.png");
@@ -91,5 +90,7 @@ public class InterfaceAccueilRecette  implements Observer {
 				tb.setGraphic(new ImageView(this.ToqueGrise));
 			}
 		}
-	}}
+	}
+	}
+	
 }

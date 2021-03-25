@@ -6,7 +6,6 @@ public class ModèleAccueilRecette extends Observable{
 	
 	
 	public ModèleAccueilRecette(Vue v) {
-		this.recette_courante=new Recette();
 		this.vue = v;
 	}
 	public void ajoutDifficulté(int difficulté) {
@@ -34,5 +33,10 @@ public class ModèleAccueilRecette extends Observable{
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
-
+	
+	public void setRecette(Recette rct) {
+		this.recette_courante = rct;
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
 }

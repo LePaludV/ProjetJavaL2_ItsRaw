@@ -110,7 +110,7 @@ public class Vue extends Application {
         } else if (this.currentInterface == typeInterface.ACCUEIL)
         {
         	this.mdlAccueil = new ModèleAccueil(this);
-            AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil);
+            AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil, this.mdlAccueilRecette);
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
