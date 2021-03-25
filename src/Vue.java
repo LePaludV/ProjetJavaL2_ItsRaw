@@ -119,7 +119,10 @@ public class Vue extends Application {
 
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
         	Recette recette = null; 
-        	this.mdlAccueilRecette = new ModèleAccueilRecette(this);
+        	//this.mdlAccueilRecette = new ModèleAccueilRecette(this);
+        	 //AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(mdlAjout, mdlAccueil);
+        	//InterfaceAjouterRecette vueAccueilRecette = new InterfaceAjouterRecette(ctrlAccueilRecette);
+        	//this.mdlAjout.addObserver(vueAccueilRecette);
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
             InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
             //ctrlAccueilRecette.loadRecette(recette);
