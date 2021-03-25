@@ -110,7 +110,7 @@ public class ModèleAccueil extends Observable {
 			decoder = new XMLDecoder(bis);
 			
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
-			
+
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");
 		} finally {
