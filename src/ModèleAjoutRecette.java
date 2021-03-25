@@ -1,5 +1,12 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.Observable;
 
+import javax.imageio.ImageIO;
+import javax.imageio.stream.ImageOutputStream;
+
+import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 public class ModèleAjoutRecette extends Observable {
@@ -73,6 +80,7 @@ public class ModèleAjoutRecette extends Observable {
 	
 	public void ajoutPhoto(Image img) {
 		this.recette_courante.photo = img;
+		//Ajouter un image io read
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
@@ -81,8 +89,21 @@ public class ModèleAjoutRecette extends Observable {
 		this.recette_courante.saved=true;
 		this.recette_courante.nom = s;
 		this.recette_courante.description = desc;
+		System.out.println(this.recette_courante.photo);
+		this.saveImage(this.recette_courante.photo);
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
+	}
+	
+	private void saveImage(Image image) {
+		try {
+			System.out.println(image.toString());
+			File outputFile = new File("../imgs");
+			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
+			ImageIO.write(bufferedImage, "JPG", outputFile);
+		} catch (IOException ex) {
+			throw new RuntimeException(ex);
+		}
 	}
 
 }

@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_281" class="java.beans.XMLDecoder">
- <null/>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="Recette">
+    <void property="nom">
+     <string></string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+ </object>
 </java>
