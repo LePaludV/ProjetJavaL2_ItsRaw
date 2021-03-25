@@ -77,8 +77,10 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void sauvegarder() {
+	public void sauvegarder(String s, String desc) {
 		this.recette_courante.saved=true;
+		this.recette_courante.nom = s;
+		this.recette_courante.description = desc;
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

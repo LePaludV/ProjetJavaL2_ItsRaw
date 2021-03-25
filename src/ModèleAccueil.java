@@ -90,8 +90,8 @@ public class ModèleAccueil extends Observable {
 			FileOutputStream fos = new FileOutputStream("data.xml");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
-			System.out.println(this.recettes.get(0).photo);
-			encoder.writeObject(this.recettes.get(0).photo.toString());
+			System.out.println(this.recettes.get(0).photo.impl_getUrl());
+			encoder.writeObject(this.recettes.get(0).photo.impl_getUrl());
 			//encoder.writeObject(this.recettes);
 			encoder.flush();
 			
