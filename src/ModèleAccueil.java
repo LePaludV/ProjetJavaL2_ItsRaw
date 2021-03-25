@@ -33,6 +33,7 @@ public class ModèleAccueil extends Observable {
 	}
 	
 	public void ajouterRecette(Recette rct) {
+		
 		recettes.add(rct);
 		if (this.classeIng != null) {
 			for (Ingrédient i : rct.ingrédients) {
@@ -89,7 +90,9 @@ public class ModèleAccueil extends Observable {
 			FileOutputStream fos = new FileOutputStream("data.xml");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
-			encoder.writeObject(this.recettes);
+			System.out.println(this.recettes.get(0).photo);
+			encoder.writeObject(this.recettes.get(0).photo.toString());
+			//encoder.writeObject(this.recettes);
 			encoder.flush();
 			
 		} catch (final java.io.IOException e) {

@@ -188,6 +188,7 @@ public class AjoutRecetteController {
 	
 	public void sauvegarderRecette(Recette rct) {
 		this.mdlAcc.ajouterRecette(rct);
+		System.out.println(rct.photo);
 	}
 	
 	public void personnesSpinner() {
