@@ -3,11 +3,15 @@
 	import javafx.scene.control.Button;
 	import javafx.scene.control.Label;
 	import javafx.scene.control.ToggleButton;
-	import javafx.scene.image.ImageView;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.ImageView;
 public class AccueilRecetteController {
 
 	    @FXML
 	    private Button btnSuivieRecette;
+	    
+	    @FXML
+	    public ToggleGroup note;
 
 	    @FXML
 	    private ToggleButton note0;
@@ -23,6 +27,9 @@ public class AccueilRecetteController {
 
 	    @FXML
 	    private ToggleButton note4;
+	    
+	    @FXML
+	    public ToggleGroup difficulté;
 
 	    @FXML
 	    private ToggleButton difficluté0;
@@ -47,15 +54,28 @@ public class AccueilRecetteController {
 
 	    @FXML
 	    private Label TexteDescription;
+	    
+	    @FXML
+	    private Label Nom;
+	    
+	    @FXML
+	    private Label nbrPersonne;
 
 	    @FXML
 	    void NoteDifficulté(ActionEvent event) {
-
+	    	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
+	        	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
+	        	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
+	    	}
 	    }
 
 	    @FXML
 	    void NoteRecette(ActionEvent event) {
-
+	    	System.out.println("fonction note recette controller ");
+	    	if (((ToggleButton) this.note.getSelectedToggle()) != null) {
+	        	String s = ((ToggleButton) this.note.getSelectedToggle()).getId();
+	        	this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));    		
+	    	}
 	    }
 
 	    @FXML
@@ -81,6 +101,9 @@ public class AccueilRecetteController {
 			for(String s: rct.catégories) {
 				ingr+="- "+s+"\n";
 			}
+			ImageRecette.setImage(rct.photo);
+			Nom.setText(rct.nom);
+			nbrPersonne.setText("Pour "+rct.nbrPersonne+" Personne(s).");
 			
 		}
 

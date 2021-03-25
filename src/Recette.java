@@ -13,6 +13,7 @@ public class Recette implements Serializable {
 	boolean saved;
 	boolean[] difficulté = {false,false,false,false,false};
 	ArrayList<String> étapes, catégories;
+	int nbrPersonne;
 
 	public Recette() {
 		this.ingrédients = new ArrayList<Ingrédient>();
@@ -21,6 +22,14 @@ public class Recette implements Serializable {
 		this.saved=false;
 		this.description = "";
 		this.photo = null;
+	}
+	
+	public int getNbrPersonne() {
+		return this.nbrPersonne;
+	}
+	
+	public void setNbrPersonne(int i) {
+		this.nbrPersonne=i;
 	}
 	
 	public String getNom() {
