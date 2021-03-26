@@ -68,6 +68,7 @@ public class InterfaceAccueil implements Observer
 					
 					btn.setOnAction(e -> {
 						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
+						
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
 					

@@ -89,10 +89,11 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void sauvegarder(String s, String desc) {
+	public void sauvegarder(String s, String desc, Integer nbrPersonne) {
 		this.recette_courante.saved=true;
 		this.recette_courante.nom = s;
 		this.recette_courante.description = desc;
+		this.recette_courante.nbrPersonne=nbrPersonne;
 		this.saveImage(this.recette_courante.photo);
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);

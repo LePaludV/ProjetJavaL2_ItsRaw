@@ -89,6 +89,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		non.setOnAction(e -> {
 			secondStage.close();
+			recette.saved=false;
 		});
 
 		listeBtns.getChildren().addAll(oui,non);

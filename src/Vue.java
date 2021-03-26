@@ -43,11 +43,13 @@ public class Vue extends Application {
         this.mdlAccueil = new ModèleAccueil(this);
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
-
         this.primaryStage.setResizable(false);
-
+        
+        this.mdlAccueilRecette = new ModèleAccueilRecette(this);
+        
         this.changeWindow(this.currentInterface);
         primaryStage.show();
+        
 	}
 
 	public void changeWindow(typeInterface inter) {
@@ -74,9 +76,10 @@ public class Vue extends Application {
             this.primaryStage.sizeToScene();
 
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
+        	System.out.println("changewindow");
         	Recette rct=new Recette();
         	rct=null;
-        	this.mdlAccueilRecette = new ModèleAccueilRecette(this);        	
+        	     	
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
             InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
             this.mdlAccueilRecette.addObserver(vueAccueilRecette);

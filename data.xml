@@ -89,5 +89,90 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Recette" id="Recette1">
+    <void property="ingrédients">
+     <void method="add">
+      <object class="Ingrédient">
+       <void property="mesure">
+        <string>g</string>
+       </void>
+       <void property="nom">
+        <string>ezfr</string>
+       </void>
+       <void property="quantité">
+        <float>13.0</float>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void property="nom">
+     <string></string>
+    </void>
+    <void property="note">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
+     <void index="2">
+      <boolean>true</boolean>
+     </void>
+     <void index="3">
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Recette" id="Recette2">
+    <void property="catégories">
+     <void method="add">
+      <string>1. rien</string>
+     </void>
+    </void>
+    <void property="description">
+     <string>AKZE</string>
+    </void>
+    <void property="difficulté">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
+     <void index="2">
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>fzefqsf</string>
+    </void>
+    <void property="note">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
+     <void index="2">
+      <boolean>true</boolean>
+     </void>
+     <void index="3">
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

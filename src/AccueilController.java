@@ -30,7 +30,6 @@ public class AccueilController {
 		
 		
 		this.mdl.goToAjouterAccueilRecette();
-	
 		System.out.println("reçu");
 		this.mdlRecette.setRecette(rct);
 	}

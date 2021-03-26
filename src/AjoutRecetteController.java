@@ -184,7 +184,7 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText());
+    	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
     }
 	
 	ModèleAjoutRecette mdl;

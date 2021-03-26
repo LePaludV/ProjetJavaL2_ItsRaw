@@ -116,10 +116,12 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void goToAjouterAccueilRecette() {
+		
 		// TODO Auto-generated method stub
-
+		System.out.println("gotoacc");
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
+		
 		
 	}
 }
