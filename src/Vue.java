@@ -50,52 +50,6 @@ public class Vue extends Application {
         primaryStage.show();
 	}
 
-	public void ingredientWindow() {
-
-		Stage secondStage = new Stage();
-
-		HBox parent = new HBox();
-		Scene scene = new Scene(parent);
-
-		TextField txtNom = new TextField();
-		TextField txtQuantité = new TextField();
-
-		MenuButton menu = new MenuButton("Mesure");
-		String[] mesures = {"g", "kg", "l", "cl", "cuil. café", "cuil. soupe", "pincé(s)"};
-		ArrayList<RadioMenuItem> listeItems = new ArrayList<RadioMenuItem>();
-		ToggleGroup grp = new ToggleGroup();
-		
-		for (String s : mesures) {
-			RadioMenuItem item = new RadioMenuItem(s);
-			item.setToggleGroup(grp);
-			menu.getItems().add(item);
-		}
-		
-		Label lblNom = new Label("Nom :");
-		Label lblQuantité = new Label("Quantité :");
-		Button btnValider = new Button("Valider !");
-
-		btnValider.setOnAction(e -> {
-			String q = txtQuantité.getText();
-			System.out.println(q);
-			Integer quantité = Integer.parseInt(q);
-			System.out.println(menu.getText());
-			RadioMenuItem currentItem = (RadioMenuItem) grp.getSelectedToggle();
-			this.mdlAjout.validerIngrédient(txtNom.getText(), quantité, currentItem.getText() );
-			secondStage.close();
-		});
-
-		parent.getChildren().add(lblNom);
-		parent.getChildren().add(txtNom);
-		parent.getChildren().add(lblQuantité);
-		parent.getChildren().add(txtQuantité);
-		parent.getChildren().addAll(menu);
-		parent.getChildren().add(btnValider);
-
-		secondStage.setScene(scene);
-		secondStage.show();
-	}
-
 	public void changeWindow(typeInterface inter) {
 		this.currentInterface = inter;
         if (this.currentInterface == typeInterface.AJOUT_RECETTE) {

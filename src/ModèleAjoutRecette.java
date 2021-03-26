@@ -39,8 +39,8 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void ajoutIngrédient() {
-		this.vue.ingredientWindow();
+	public void ajoutIngrédient(String nom, int quantité, String mesure) {
+		this.recette_courante.ingrédients.add(new Ingrédient(nom, quantité, mesure));
 	}
 	
 	public void validerIngrédient(String nom, int quantité, String mesure) {

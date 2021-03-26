@@ -4,7 +4,7 @@
 }
 
 .button{
-    -fx-background-insets: 1 1 1 1, 1;
+  -fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;
 	-fx-background-color: #D94333;
 }
@@ -23,7 +23,7 @@
 	-fx-background-radius: 20;
 	-fx-control-inner-background: #56898D;
 	-fx-highlight-text-fill: #5DAB9B;
-	-fx-text-fill: #E08E44; 
+	-fx-text-fill: #E08E44;
 	-fx-background-color:#56898D;
 }
 

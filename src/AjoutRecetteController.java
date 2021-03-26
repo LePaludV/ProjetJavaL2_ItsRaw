@@ -14,12 +14,14 @@ import java.util.List;
 import javafx.event.ActionEvent;
 
 import javafx.scene.control.Label;
-
+import javafx.scene.control.Labeled;
+import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -35,9 +37,6 @@ public class AjoutRecetteController {
 
     @FXML
     private Label Ingrédient;
-
-    @FXML
-    private TextField NomIngredient;
 
     @FXML
     private Button AjoutCatégorie;
@@ -112,6 +111,17 @@ public class AjoutRecetteController {
 	@FXML
 	private ImageView affImg;
 	
+    @FXML
+    private TextField nomIngrédient;
+
+    @FXML
+    private Spinner<Integer> quantitéIngrédient;
+
+    @FXML
+    private MenuButton mesureIngrédient;
+    
+    @FXML
+    public ToggleGroup mesures;
 
 	@FXML
 	private void dragOver(DragEvent event) {
@@ -119,9 +129,7 @@ public class AjoutRecetteController {
 			event.acceptTransferModes(TransferMode.ANY);
 		}
 	}
-	
-	
-	
+		
 	@FXML
 	private void dragDropped(DragEvent event) throws FileNotFoundException {
 		List<File> files = event.getDragboard().getFiles();
@@ -144,7 +152,10 @@ public class AjoutRecetteController {
 
     @FXML
     void AddIngrédient(ActionEvent event) {
-    	this.mdl.ajoutIngrédient();
+    	String nom = this.nomIngrédient.getText();
+    	int quantité = this.quantitéIngrédient.getValue();
+    	String mesure = ((RadioMenuItem) this.mesures.getSelectedToggle()).getText();
+    	this.mdl.ajoutIngrédient(nom, quantité, mesure);
     }
 
     @FXML
@@ -192,6 +203,8 @@ public class AjoutRecetteController {
 	public void personnesSpinner() {
 		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
 		this.nbrPersonne.setValueFactory(nombre);
+    	SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
+		this.quantitéIngrédient.setValueFactory(nombre2);
 	}
 	
 }

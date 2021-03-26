@@ -29,7 +29,7 @@ public class InterfaceAccueil implements Observer
 {
 	static BorderPane rootLayout;
 	static AccueilController ctrlAccueil;
-	private static final float DIVISION_RATION = 1.8f;
+	private static final float DIVISION_RATION = 2.5f;
 	
 	public InterfaceAccueil(AccueilController ctrl)
 	{
@@ -52,18 +52,16 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
-		VBox recettes = (VBox) rootLayout.lookup("#recettes");
+		VBox recettes = ctrlAccueil.recettes;
 		recettes.getChildren().clear();
 		ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
-		System.out.println(lstRecettes);
-		System.out.println((lstRecettes.size()/3)+lstRecettes.size()%3);
 		for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 		{
 			HBox hb = new HBox();
 			hb.setSpacing(20);
 			for(int j = 0; j<3; j++)
 			{
-				if(i+j<lstRecettes.size())
+				if((i+2)*i+j<lstRecettes.size())
 				{
 					Button btn = new Button();
 					btn.setId(Character.getName(i));
@@ -72,13 +70,11 @@ public class InterfaceAccueil implements Observer
 					});
 					
 					try {
-						String nom  = lstRecettes.get(i+j).nom;
+						String nom  = lstRecettes.get((i+2)*i+j).nom;
 						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
 						ImageView imgView = new ImageView(img);
 						imgView.setFitHeight(img.getHeight()/DIVISION_RATION);
 						imgView.setFitWidth(img.getWidth()/DIVISION_RATION);
-						btn.setText(nom);
-						btn.setAlignment(Pos.BOTTOM_RIGHT);
 						btn.setGraphic(imgView);
 						btn.setBackground(null);
 					} catch (FileNotFoundException e) {
