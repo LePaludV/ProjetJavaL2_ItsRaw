@@ -48,11 +48,11 @@ public class Recette implements Serializable {
 		this.description = s;
 	}
 	
-	public Image getPhoto() {
-		return this.photo;
+	public String getNomImage() {
+		return this.nom;
 	}
 	
-	public void setPhoto(String s) {
+	public void setNomImage(String s) {
 		this.photo = new Image(s);
 	}
 	

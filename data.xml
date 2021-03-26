@@ -4,7 +4,7 @@
   <void method="add">
    <object class="Recette">
     <void property="nom">
-     <string></string>
+     <string>tomate</string>
     </void>
     <void property="save">
      <boolean>true</boolean>

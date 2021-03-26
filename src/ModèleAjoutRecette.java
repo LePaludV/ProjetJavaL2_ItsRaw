@@ -28,14 +28,12 @@ public class ModèleAjoutRecette extends Observable {
 		this.recette_courante.nom = s;
 	}
 	public void ajoutEtape(String s) {
-		System.out.println("oui");
 		this.recette_courante.étapes.add(s);
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
 	
 	public void ajoutDescription(String s){
-		System.out.println("desc");
 		this.recette_courante.description = s;
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
@@ -103,7 +101,7 @@ public class ModèleAjoutRecette extends Observable {
 		try {
 			
 			System.out.println(image.toString());
-            File file = new File("imagesRecette/"+image.toString()+".png");
+            File file = new File("imagesRecette/"+this.recette_courante.nom+".png");
 			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
 			ImageIO.write(bufferedImage, "png", file);
 		} catch (IOException ex) {
