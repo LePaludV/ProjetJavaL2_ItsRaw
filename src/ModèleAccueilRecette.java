@@ -36,6 +36,8 @@ public class ModèleAccueilRecette extends Observable{
 	
 	public void setRecette(Recette rct) {
 		this.recette_courante = rct;
+		System.out.println("Recette choisi : "+rct.nom);
+		
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 		

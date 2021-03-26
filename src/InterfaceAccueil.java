@@ -57,17 +57,25 @@ public class InterfaceAccueil implements Observer
 		ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
 		System.out.println(lstRecettes);
 		System.out.println((lstRecettes.size()/3)+lstRecettes.size()%3);
+		int taille=0;
 		for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 		{
 			HBox hb = new HBox();
 			hb.setSpacing(20);
 			for(int j = 0; j<3; j++)
 			{
-				if(i+j<lstRecettes.size())
+				
+				if(taille<lstRecettes.size())
 				{
+					
+
 					Button btn = new Button();
-					btn.setId(Character.getName(i));
+					btn.setId(Integer.toString(taille));
+
+					taille++;
 					btn.setOnAction(e -> {
+						System.out.println(btn.getId());
+						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
 					

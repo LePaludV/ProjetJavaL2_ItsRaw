@@ -27,6 +27,7 @@ public class AccueilController {
 	}
 	
 	public void openRecette(Recette rct) {
+		System.out.println("reçu");
 		this.mdlRecette.setRecette(rct);
 	}
 }
