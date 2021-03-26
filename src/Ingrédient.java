@@ -1,7 +1,8 @@
 import java.io.Serializable;
 
-class Ingrédient  implements Serializable {
-	
+public class Ingrédient  implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 	String nom;
 	float quantité;
 	String mesure;
@@ -13,9 +14,7 @@ class Ingrédient  implements Serializable {
 	}
 	
 	public Ingrédient() {
-		this.nom = "";
-		this.quantité = 0.0f;
-		this.mesure = "";
+		
 	}
 	
 	public String getNom() {

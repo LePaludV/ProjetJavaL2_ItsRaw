@@ -2,9 +2,24 @@
 <java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="Recette">
+   <object class="Recette" id="Recette0">
+    <void property="ingrédients">
+     <void method="add">
+      <object class="Ingrédient">
+       <void property="mesure">
+        <string>g</string>
+       </void>
+       <void property="nom">
+        <string>farine</string>
+       </void>
+       <void property="quantité">
+        <float>250.0</float>
+       </void>
+      </object>
+     </void>
+    </void>
     <void property="nom">
-     <string>tomate</string>
+     <string>lasagne</string>
     </void>
     <void property="save">
      <boolean>true</boolean>
