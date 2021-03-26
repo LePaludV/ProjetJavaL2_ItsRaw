@@ -1,3 +1,5 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -36,8 +38,9 @@ public class Recette implements Serializable {
 		return this.nom;
 	}
 	
-	public void setNom(String nom) {
+	public void setNom(String nom) throws FileNotFoundException {
 		this.nom = nom;
+		this.photo = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
 	}
 	
 	public String getDescription() {
@@ -54,6 +57,7 @@ public class Recette implements Serializable {
 	
 	public void setNomImage(String s) {
 		this.photo = new Image(s);
+		System.out.println("photo chargé :"+this.photo);
 	}
 	
 	public ArrayList<Ingrédient> getIngrédients(){

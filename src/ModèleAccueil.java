@@ -21,9 +21,8 @@ public class ModèleAccueil extends Observable {
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();
 		this.vue = v;
-		this.setChanged();
-		this.notifyObservers(this.recettes);
 		this.fichier = new File("data.xml");
+		this.loadData();
 	}
 	
 	public void goToAjouterRecette()
@@ -54,7 +53,6 @@ public class ModèleAccueil extends Observable {
 		}
 		
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
-		System.out.println("liste de recettes : "+this.recettes.toString());
 		this.saveData();
 		this.afficherRecettes();
 	}
@@ -103,7 +101,6 @@ public class ModèleAccueil extends Observable {
 	
 	private void loadData() {
 		XMLDecoder decoder = null;
-		System.out.println("liste de recettes : "+this.recettes.toString());
 		try {
 			FileInputStream fis = new FileInputStream("data.xml");
 			BufferedInputStream bis = new BufferedInputStream(fis);

@@ -114,6 +114,7 @@ public class Vue extends Application {
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
+            this.mdlAccueil.afficherRecettes();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 

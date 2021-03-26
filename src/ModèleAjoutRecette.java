@@ -91,7 +91,6 @@ public class ModèleAjoutRecette extends Observable {
 		this.recette_courante.saved=true;
 		this.recette_courante.nom = s;
 		this.recette_courante.description = desc;
-		System.out.println(this.recette_courante.photo);
 		this.saveImage(this.recette_courante.photo);
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
@@ -99,8 +98,6 @@ public class ModèleAjoutRecette extends Observable {
 	
 	private void saveImage(Image image) {
 		try {
-			
-			System.out.println(image.toString());
             File file = new File("imagesRecette/"+this.recette_courante.nom+".png");
 			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
 			ImageIO.write(bufferedImage, "png", file);

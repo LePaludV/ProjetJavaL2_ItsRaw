@@ -10,6 +10,7 @@ import java.util.Observer;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,6 +29,7 @@ public class InterfaceAccueil implements Observer
 {
 	static BorderPane rootLayout;
 	static AccueilController ctrlAccueil;
+	private static final float DIVISION_RATION = 1.8f;
 	
 	public InterfaceAccueil(AccueilController ctrl)
 	{
@@ -43,17 +45,17 @@ public class InterfaceAccueil implements Observer
 		try {
 			rootLayout = (BorderPane) loader.load();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		 return rootLayout;
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
 		VBox recettes = (VBox) rootLayout.lookup("#recettes");
+		recettes.getChildren().clear();
 		ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
+		System.out.println(lstRecettes);
 		System.out.println((lstRecettes.size()/3)+lstRecettes.size()%3);
 		for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 		{
@@ -68,27 +70,27 @@ public class InterfaceAccueil implements Observer
 					btn.setOnAction(e -> {
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
-					/*ImageView imageCourante = new ImageView(lstRecettes.get(i+j).photo);
-					imageCourante.setFitHeight(100);
-					imageCourante.setFitWidth(100);
-					System.out.println("rec" + recettes);
-					System.out.println(lstRecettes.get(i+j).photo);*/
+					
 					try {
-						String nom  = lstRecettes.get(i+j).photo.toString();
-						btn.backgroundProperty().setValue(new Background((new BackgroundImage(new Image(new FileInputStream("imgs/lasagnes.jpg")), BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT, null, null))));
+						String nom  = lstRecettes.get(i+j).nom;
+						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
+						ImageView imgView = new ImageView(img);
+						imgView.setFitHeight(img.getHeight()/DIVISION_RATION);
+						imgView.setFitWidth(img.getWidth()/DIVISION_RATION);
+						btn.setText(nom);
+						btn.setAlignment(Pos.BOTTOM_RIGHT);
+						btn.setGraphic(imgView);
+						btn.setBackground(null);
 					} catch (FileNotFoundException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					//btn.setOnAction(ctrlAccueil.ajouterRecette(new ActionEvent());
 					hb.getChildren().add(btn);
-					//hb.getChildren().add(imageCourante);
 				}
 			}
-			this.ctrlAccueil.recettes.getChildren().add(hb);
+			ctrlAccueil.recettes.getChildren().add(hb);
 		}
 		ScrollPane sp = new ScrollPane();
-		sp.setContent(this.ctrlAccueil.recettes);
+		sp.setContent(ctrlAccueil.recettes);
 		
 	}
 }
