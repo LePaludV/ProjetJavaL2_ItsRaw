@@ -41,6 +41,8 @@ public class ModèleAjoutRecette extends Observable {
 	
 	public void ajoutIngrédient(String nom, int quantité, String mesure) {
 		this.recette_courante.ingrédients.add(new Ingrédient(nom, quantité, mesure));
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
 	}
 	
 	public void validerIngrédient(String nom, int quantité, String mesure) {
@@ -92,6 +94,11 @@ public class ModèleAjoutRecette extends Observable {
 		this.recette_courante.nom = s;
 		this.recette_courante.description = desc;
 		this.saveImage(this.recette_courante.photo);
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
+	
+	public void afficherInterface() {
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

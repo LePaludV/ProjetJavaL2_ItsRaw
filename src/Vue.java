@@ -59,6 +59,7 @@ public class Vue extends Application {
             this.mdlAjout.addObserver(vueAjout);
             Scene scene=new Scene(InterfaceAjouterRecette.getRoot());
             ctrlAjout.personnesSpinner();
+            this.mdlAjout.afficherInterface();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
         } else if (this.currentInterface == typeInterface.ACCUEIL)
