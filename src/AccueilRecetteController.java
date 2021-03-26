@@ -60,6 +60,9 @@ public class AccueilRecetteController {
 	    
 	    @FXML
 	    public Label nbrPersonne;
+	    
+	    @FXML
+	    private Button btnRetour;
 
 	    @FXML
 	    void NoteDifficulté(ActionEvent event) {
@@ -71,7 +74,7 @@ public class AccueilRecetteController {
 
 	    @FXML
 	    void NoteRecette(ActionEvent event) {
-	    	System.out.println("fonction note recette controller ");
+	    	
 	    	if (((ToggleButton) this.note.getSelectedToggle()) != null) {
 	        	String s = ((ToggleButton) this.note.getSelectedToggle()).getId();
 	        	this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));    		
@@ -82,6 +85,13 @@ public class AccueilRecetteController {
 	    void btnSuivieRecette(ActionEvent event) {
 
 	    }
+	    
+	    @FXML
+	    void RetourAccueil(ActionEvent event) {
+	    	this.mdl.goToAccueil();
+
+	    }
+	    
 	   
 		ModèleAccueilRecette mdl;
 

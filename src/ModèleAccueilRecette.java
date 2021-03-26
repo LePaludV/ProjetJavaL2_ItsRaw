@@ -7,8 +7,18 @@ public class ModèleAccueilRecette extends Observable{
 	
 	public ModèleAccueilRecette(Vue v) {
 		this.vue = v;
+		this.recette_courante=new Recette();
 	}
+	
+	public void setRecette(Recette rct) {
+		this.recette_courante = rct;
+		System.out.println("Recette choisi : "+rct.nom);
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
+	
 	public void ajoutDifficulté(int difficulté) {
+	//Pb pas de recette_courante
 		
 		for (int i=0;i<5;i++) {
 			if (i <= difficulté) {
@@ -22,7 +32,7 @@ public class ModèleAccueilRecette extends Observable{
 	}
 	
 	public void ajoutNote(int note) {
-		System.out.println("fonction note recette modèle ");
+	
 		for (int i=0;i<5;i++) {
 			if (i <= note) {
 				this.recette_courante.note[i] = true;
@@ -34,13 +44,11 @@ public class ModèleAccueilRecette extends Observable{
 		this.notifyObservers(this.recette_courante);
 	}
 	
-	public void setRecette(Recette rct) {
-		this.recette_courante = rct;
-		System.out.println("Recette choisi : "+rct.nom);
-		
-		this.setChanged();
-		this.notifyObservers(this.recette_courante);
-		
+
+	public void goToAccueil() {
+		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL;
+		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
+		// TODO Auto-generated method stub
 		
 	}
 }

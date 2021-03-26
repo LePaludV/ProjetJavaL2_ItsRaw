@@ -114,4 +114,12 @@ public class ModèleAccueil extends Observable {
 			if (decoder != null) decoder.close();
 		}
 	}
+
+	public void goToAjouterAccueilRecette() {
+		// TODO Auto-generated method stub
+
+		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
+		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
+		
+	}
 }

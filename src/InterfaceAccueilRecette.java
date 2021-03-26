@@ -65,7 +65,7 @@ public class InterfaceAccueilRecette  implements Observer {
 		//Quand on va modifier la note / difficulté le uptade dois faire la sauvegarder automatique (ce que faisait le btn sauvegarder de ajout recette).
 		// quand on update faut créer un nouveau fichier xml a partir de l'acnien avec la nouvel note et supprimer l'ancien ensuite ?
 	Recette recette = (Recette) rct;
-	System.out.println("test");
+
 	ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
 	for (int i=0;i<note.size();i++) {
 		if (note.get(i) instanceof ToggleButton) {

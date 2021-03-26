@@ -63,14 +63,10 @@ public class InterfaceAccueil implements Observer
 			{
 				if((i+2)*i+j<lstRecettes.size())
 				{
-					
-
 					Button btn = new Button();
-					btn.setId(Integer.toString(taille));
-
-					taille++;
+					btn.setId(Integer.toString((i+2)*i+j));
+					
 					btn.setOnAction(e -> {
-						System.out.println(btn.getId());
 						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
