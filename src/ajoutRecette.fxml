@@ -35,6 +35,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.RadioMenuItem?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -54,7 +56,7 @@
       <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="42.0" prefWidth="1105.0" stylesheets="@Main.css" text="Sauvegarder" BorderPane.alignment="CENTER" />
    </bottom>
    <top>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="1330.0" style="-fx-background-color: orange;" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="1330.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
@@ -150,7 +152,24 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="AjoutIngrédient" layoutX="64.0" layoutY="73.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
+                  <Button fx:id="AjoutIngrédient" layoutX="89.0" layoutY="208.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddIngrédient" styleClass=".button" stylesheets="@Main.css" text="Ajouter un ingrédient" />
+                  <TextField fx:id="nomIngrédient" layoutY="169.0" prefHeight="31.0" prefWidth="102.0" promptText="Nom" />
+                  <Spinner fx:id="quantitéIngrédient" layoutX="112.0" layoutY="169.0" prefHeight="31.0" prefWidth="100.0" />
+                  <MenuButton fx:id="mesureIngrédient" layoutX="230.0" layoutY="169.0" mnemonicParsing="false" text="Mesures">
+                     <items>
+                        <RadioMenuItem mnemonicParsing="false" text="g">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="mesures" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" text="kg" toggleGroup="$mesures" />
+                        <RadioMenuItem mnemonicParsing="false" text="l" toggleGroup="$mesures" />
+                        <RadioMenuItem mnemonicParsing="false" text="cl" toggleGroup="$mesures" />
+                        <RadioMenuItem mnemonicParsing="false" text="cuil. soupe" toggleGroup="$mesures" />
+                        <RadioMenuItem mnemonicParsing="false" text="cuil. café" toggleGroup="$mesures" />
+                        <RadioMenuItem mnemonicParsing="false" text="pincé" toggleGroup="$mesures" />
+                     </items>
+                  </MenuButton>
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
