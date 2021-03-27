@@ -10,6 +10,7 @@ public class AccueilController {
 	
 	@FXML
 	public VBox recettes;
+	public VBox catégories;
 	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
@@ -32,5 +33,9 @@ public class AccueilController {
 		this.mdl.goToAjouterAccueilRecette();
 		System.out.println("reçu");
 		this.mdlRecette.setRecette(rct);
+	}
+	
+	public void clickOnCategories(String id) {
+		System.out.println(id);
 	}
 }

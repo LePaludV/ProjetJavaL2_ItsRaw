@@ -34,3 +34,10 @@
 .gridPane{
 	-fx-background-color: #E08E44;
 }
+
+.buttonCategories{
+	-fx-pref-width: 405;
+	-fx-pref-heigth: 50;
+	-fx-border-radius: 0;
+	-fx-border-color: black;
+}
