@@ -66,11 +66,7 @@
             <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="117.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="174.0" GridPane.rowIndex="1">
-               <children>
-                  <VBox fx:id="affIngr" layoutX="44.0" layoutY="-48.0" prefHeight="320.0" prefWidth="288.0" />
-               </children>
-            </Pane>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="174.0" GridPane.rowIndex="1" />
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <VBox fx:id="affCat" layoutX="9.0" layoutY="-66.0" prefHeight="326.0" prefWidth="248.0" />
@@ -169,6 +165,7 @@
                         <RadioMenuItem mnemonicParsing="false" text="pincé" toggleGroup="$mesures" />
                      </items>
                   </MenuButton>
+                  <VBox fx:id="affIngr" layoutX="26.0" layoutY="-225.0" prefHeight="382.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">

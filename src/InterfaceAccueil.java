@@ -29,7 +29,7 @@ public class InterfaceAccueil implements Observer
 {
 	static BorderPane rootLayout;
 	static AccueilController ctrlAccueil;
-	private static final float DIVISION_RATION = 2.5f;
+	private static final float DIVISION_RATION = 2.9f;
 	
 	public InterfaceAccueil(AccueilController ctrl)
 	{

@@ -211,13 +211,12 @@ public class AjoutRecetteController {
 		this.mdlAcc.changeWindow(save, rct);
 	}
 	
-	
-	
 	public void personnesSpinner() {
 		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
 		this.nbrPersonne.setValueFactory(nombre);
     	SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
 		this.quantitéIngrédient.setValueFactory(nombre2);
+		this.quantitéIngrédient.setEditable(true);
 	}
 	
 }
