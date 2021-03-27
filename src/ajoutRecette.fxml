@@ -52,11 +52,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <bottom>
-      <Button fx:id="Sauvegarder" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="42.0" prefWidth="1105.0" stylesheets="@Main.css" text="Sauvegarder" BorderPane.alignment="CENTER" />
-   </bottom>
    <top>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="826.0" prefWidth="1330.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="862.0" prefWidth="1330.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
@@ -65,15 +62,11 @@
         <rowConstraints>
           <RowConstraints maxHeight="300.0" minHeight="150.0" prefHeight="300.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="260.8000122070312" minHeight="10.0" prefHeight="167.73336181640627" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="252.13337402343745" minHeight="10.0" prefHeight="252.13337402343745" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="148.9333374023438" minHeight="10.0" prefHeight="96.26662597656252" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="252.13337402343745" minHeight="10.0" prefHeight="244.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="117.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="174.0" GridPane.rowIndex="1">
-               <children>
-                  <VBox fx:id="affIngr" layoutX="44.0" layoutY="-48.0" prefHeight="320.0" prefWidth="288.0" />
-               </children>
-            </Pane>
+            <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="174.0" GridPane.rowIndex="1" />
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <children>
                   <VBox fx:id="affCat" layoutX="9.0" layoutY="-66.0" prefHeight="326.0" prefWidth="248.0" />
@@ -87,7 +80,7 @@
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <children>
-                  <ImageView fx:id="affImg" fitHeight="277.0" fitWidth="518.0" layoutX="15.0" layoutY="60.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="affImg" fitHeight="277.0" fitWidth="518.0" layoutX="15.0" layoutY="60.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" styleClass="imageimport" />
                   <TextField fx:id="NomRecette" layoutX="109.0" layoutY="14.0" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
                </children>
             </Pane>
@@ -100,18 +93,18 @@
                   </Label>
                </children>
             </Pane>
-            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="337.0">
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="337.0">
                <children>
-                  <Label layoutX="20.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Note" textFill="#cd1010" />
-                  <Label layoutX="14.0" layoutY="59.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Nombre de personnes" textFill="#cd1010" />
-                  <Label contentDisplay="CENTER" layoutX="81.0" layoutY="160.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Ingrédient" textFill="#cd1010" underline="true">
+                  <Label layoutX="21.0" layoutY="87.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Note" textFill="#cd1010" />
+                  <Label layoutX="15.0" layoutY="132.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Nombre de personnes" textFill="#cd1010" />
+                  <Label contentDisplay="CENTER" layoutX="82.0" layoutY="233.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Ingrédient" textFill="#cd1010" underline="true">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
                   </Label>
-                  <Label layoutX="20.0" layoutY="109.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Difficulté" textFill="#cd1010" />
-                  <Spinner fx:id="nbrPersonne" layoutX="171.0" layoutY="55.0" prefHeight="31.0" prefWidth="69.0" />
-                  <HBox layoutX="85.0" layoutY="100.0" prefHeight="50.0" prefWidth="236.0">
+                  <Label layoutX="21.0" layoutY="182.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" text="Difficulté" textFill="#cd1010" />
+                  <Spinner fx:id="nbrPersonne" layoutX="172.0" layoutY="128.0" prefHeight="31.0" prefWidth="69.0" />
+                  <HBox layoutX="86.0" layoutY="173.0" prefHeight="50.0" prefWidth="236.0">
                      <children>
                         <ToggleButton fx:id="difficluté0" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="46.0">
                            <toggleGroup>
@@ -124,7 +117,7 @@
                         <ToggleButton fx:id="difficluté4" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                      </children>
                   </HBox>
-                  <HBox layoutX="62.0" layoutY="-1.0" prefHeight="50.0" prefWidth="200.0">
+                  <HBox layoutX="63.0" layoutY="72.0" prefHeight="50.0" prefWidth="200.0">
                      <children>
                         <ToggleButton fx:id="note0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="46.0">
                            <toggleGroup>
@@ -137,12 +130,14 @@
                         <ToggleButton fx:id="note4" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                      </children>
                   </HBox>
+                  <Button fx:id="retour" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#exit" prefHeight="44.0" prefWidth="132.0" text="Retour" />
                </children>
             </Pane>
-            <Pane prefHeight="126.0" prefWidth="684.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Pane prefHeight="184.0" prefWidth="681.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <Button fx:id="AjoutEtape" layoutX="281.0" layoutY="61.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" styleClass=".button" stylesheets="@Main.css" text="Ajouter Etape" />
-                  <TextField fx:id="TexteEtape" layoutX="161.0" layoutY="9.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" prefHeight="47.0" prefWidth="352.0" promptText="Ajouter une nouvelle étape" />
+                  <Button fx:id="AjoutEtape" layoutX="281.0" layoutY="42.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" styleClass=".button" stylesheets="@Main.css" text="Ajouter Etape" />
+                  <TextField fx:id="TexteEtape" layoutX="160.0" layoutY="-9.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#AddEtape" prefHeight="47.0" prefWidth="352.0" promptText="Ajouter une nouvelle étape" />
+                  <Button fx:id="Sauvegarder" layoutX="142.0" layoutY="81.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" onAction="#Sauvegarder" prefHeight="42.0" prefWidth="401.0" stylesheets="@Main.css" text="Sauvegarder" />
                </children>
             </Pane>
             <Pane prefHeight="204.0" prefWidth="634.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -170,6 +165,7 @@
                         <RadioMenuItem mnemonicParsing="false" text="pincé" toggleGroup="$mesures" />
                      </items>
                   </MenuButton>
+                  <VBox fx:id="affIngr" layoutX="26.0" layoutY="-225.0" prefHeight="382.0" prefWidth="288.0" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">

@@ -48,8 +48,8 @@
    <top>
       <GridPane prefHeight="742.0" prefWidth="1080.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="673.0" minWidth="10.0" prefWidth="655.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="535.0" minWidth="10.0" prefWidth="425.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="676.0" minWidth="10.0" prefWidth="676.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="535.0" minWidth="10.0" prefWidth="404.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="229.0" minHeight="0.0" prefHeight="66.0" vgrow="SOMETIMES" />
@@ -57,7 +57,7 @@
           <RowConstraints maxHeight="575.0" minHeight="10.0" prefHeight="568.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="btnAjoutRecette" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="391.0" stylesheets="@Main.css" text="Ajouter Recette" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="btnAjoutRecette" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="391.0" stylesheets="@Main.css" text="Ajouter Recette" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Label prefHeight="55.0" prefWidth="230.0" stylesheets="@Main.css" text="IT'S ROOOOOOW" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <font>
                   <Font name="System Bold" size="27.0" />
@@ -74,7 +74,15 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <VBox fx:id="recettes" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2" />
+            <ScrollPane fx:id="scrollRecettes" prefHeight="484.0" prefWidth="667.0" GridPane.rowIndex="2">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="482.0" prefWidth="674.0">
+                     <children>
+                        <VBox fx:id="recettes" layoutX="-3.0" layoutY="2.0" prefHeight="484.0" prefWidth="679.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
          </children>
       </GridPane>
    </top>

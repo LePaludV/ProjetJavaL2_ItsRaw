@@ -12,6 +12,9 @@ public class AccueilController {
 	public VBox recettes;
 	public VBox catégories;
 	
+	@FXML
+    public ScrollPane scrollRecettes; 
+	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	

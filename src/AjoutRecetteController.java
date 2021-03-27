@@ -22,6 +22,7 @@ import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -121,7 +122,15 @@ public class AjoutRecetteController {
     private MenuButton mesureIngrédient;
     
     @FXML
-    public ToggleGroup mesures;
+    public ToggleGroup mesures; 
+
+    @FXML
+    private Button retour;
+    
+    @FXML
+    private void exit(ActionEvent event) {
+    	this.mdlAcc.changeWindow(false, null);
+    }
 
 	@FXML
 	private void dragOver(DragEvent event) {
@@ -184,7 +193,9 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
+    	if (this.affImg.getImage() != null) {
+        	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
+    	}
     }
 	
 	ModèleAjoutRecette mdl;
@@ -196,8 +207,8 @@ public class AjoutRecetteController {
 		this.nombreEtape=0;
 	}
 	
-	public void sauvegarderRecette(Recette rct) {
-		this.mdlAcc.ajouterRecette(rct);
+	public void sauvegarderRecette(boolean save, Recette rct) {
+		this.mdlAcc.changeWindow(save, rct);
 	}
 	
 	public void personnesSpinner() {
@@ -205,6 +216,7 @@ public class AjoutRecetteController {
 		this.nbrPersonne.setValueFactory(nombre);
     	SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
 		this.quantitéIngrédient.setValueFactory(nombre2);
+		this.quantitéIngrédient.setEditable(true);
 	}
 	
 }
