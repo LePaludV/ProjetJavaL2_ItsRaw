@@ -84,7 +84,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		oui.setOnAction(e -> {
 			secondStage.close();
-			this.ctrlAjout.sauvegarderRecette(recette);
+			this.ctrlAjout.sauvegarderRecette(true, recette);
 		});
 
 		non.setOnAction(e -> {
@@ -99,6 +99,44 @@ public class InterfaceAjouterRecette implements Observer {
 
 		secondStage.setScene(scene);
 		secondStage.show();
+	}
+	
+	public void exitRecette(Recette recette) {
+		Stage secondStage = new Stage();
+		VBox parent = new VBox();
+		Scene scene = new Scene(parent);
+		Label lbl = new Label("Voulez-vous sauvegarder cette recette ?");
+		Button oui = new Button("Oui");
+		Button non = new Button("Non");
+		Button annuler = new Button("Annuler");
+		HBox listeBtns = new HBox();
+
+		listeBtns.setAlignment(Pos.CENTER);
+
+		oui.setOnAction(e -> {
+			secondStage.close();
+			ctrlAjout.sauvegarderRecette(true, recette);
+		});
+
+		non.setOnAction(e -> {
+			recette.saved=false;
+			ctrlAjout.sauvegarderRecette(false, recette);
+			secondStage.close();
+		});
+		
+		annuler.setOnAction(e -> {
+			recette.saved=false;
+			secondStage.close();
+		});
+
+		listeBtns.getChildren().addAll(oui,non);
+
+		parent.getChildren().add(lbl);
+		parent.getChildren().add(listeBtns);
+
+		secondStage.setScene(scene);
+		secondStage.show();
+		
 	}
 
 	@Override

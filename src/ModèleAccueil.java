@@ -31,6 +31,15 @@ public class ModèleAccueil extends Observable {
 		this.vue.changeWindow(Vue.typeInterface.AJOUT_RECETTE);
 	}
 	
+	public void changeWindow(boolean save, Recette rct) {
+		if (save) {
+			this.ajouterRecette(rct);
+		}
+		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
+		this.afficherRecettes();
+	}
+
+	
 	public void ajouterRecette(Recette rct) {
 		
 		recettes.add(rct);
@@ -52,9 +61,7 @@ public class ModèleAccueil extends Observable {
 			}			
 		}
 		
-		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
 		this.saveData();
-		this.afficherRecettes();
 	}
 	
 	public void afficherParCatègories(String catègorie) {
@@ -116,8 +123,6 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void goToAjouterAccueilRecette() {
-		
-		// TODO Auto-generated method stub
 		System.out.println("gotoacc");
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);

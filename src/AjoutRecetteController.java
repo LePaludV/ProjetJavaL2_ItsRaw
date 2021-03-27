@@ -122,6 +122,15 @@ public class AjoutRecetteController {
     
     @FXML
     public ToggleGroup mesures;
+    
+
+    @FXML
+    private Button retour;
+    
+    @FXML
+    private void exit(ActionEvent event) {
+    	this.mdlAcc.changeWindow(false, null);
+    }
 
 	@FXML
 	private void dragOver(DragEvent event) {
@@ -184,7 +193,9 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
+    	if (this.affImg.getImage() != null) {
+        	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
+    	}
     }
 	
 	ModèleAjoutRecette mdl;
@@ -196,9 +207,11 @@ public class AjoutRecetteController {
 		this.nombreEtape=0;
 	}
 	
-	public void sauvegarderRecette(Recette rct) {
-		this.mdlAcc.ajouterRecette(rct);
+	public void sauvegarderRecette(boolean save, Recette rct) {
+		this.mdlAcc.changeWindow(save, rct);
 	}
+	
+	
 	
 	public void personnesSpinner() {
 		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
