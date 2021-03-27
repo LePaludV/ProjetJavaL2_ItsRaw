@@ -11,6 +11,9 @@ public class AccueilController {
 	@FXML
 	public VBox recettes;
 	
+	@FXML
+    public ScrollPane scrollRecettes; 
+	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	

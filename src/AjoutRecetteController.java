@@ -22,6 +22,7 @@ import javafx.scene.image.ImageView;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.RadioMenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
@@ -121,8 +122,7 @@ public class AjoutRecetteController {
     private MenuButton mesureIngrédient;
     
     @FXML
-    public ToggleGroup mesures;
-    
+    public ToggleGroup mesures; 
 
     @FXML
     private Button retour;

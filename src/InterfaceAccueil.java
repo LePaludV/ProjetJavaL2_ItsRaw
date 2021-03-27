@@ -88,8 +88,6 @@ public class InterfaceAccueil implements Observer
 			}
 			ctrlAccueil.recettes.getChildren().add(hb);
 		}
-		ScrollPane sp = new ScrollPane();
-		sp.setContent(ctrlAccueil.recettes);
-		
+		ctrlAccueil.scrollRecettes.setContent(recettes);		
 	}
 }
