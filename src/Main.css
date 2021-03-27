@@ -37,7 +37,9 @@
 
 .buttonCategories{
 	-fx-pref-width: 405;
-	-fx-pref-heigth: 50;
+	-fx-pref-heigth: 70;
 	-fx-border-radius: 0;
 	-fx-border-color: black;
+	-fx-background-color:#D94333;
+	-fx-alignment: center;
 }

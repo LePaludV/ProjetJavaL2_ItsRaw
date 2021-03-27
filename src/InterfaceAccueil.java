@@ -34,19 +34,19 @@ public class InterfaceAccueil implements Observer
 {
 	static BorderPane rootLayout;
 	static AccueilController ctrlAccueil;
-	private static final float DIVISION_RATION = 2.9f;
-
+	private static final float DIVISION_RATION = 3f;
+	
 	public InterfaceAccueil(AccueilController ctrl)
 	{
 		ctrlAccueil = ctrl;
 	}
-
-	public static BorderPane getRoot()
+	
+	public static BorderPane getRoot() 
 	{
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueil.fxml"));
         loader.setController(ctrlAccueil);
-
+        
 		try {
 			rootLayout = (BorderPane) loader.load();
 		} catch (IOException e) {
@@ -57,6 +57,7 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
+		System.out.println("text" + arg);
 		if(arg instanceof ArrayList<?>)
 		{
 			//recettes
@@ -73,13 +74,13 @@ public class InterfaceAccueil implements Observer
 					{
 						Button btn = new Button();
 						btn.setId(Integer.toString((i+2)*i+j));
-
+						
 						btn.setOnAction(e -> {
 							System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
-
+							
 							this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 						});
-
+						
 						try {
 							String nom  = lstRecettes.get((i+2)*i+j).nom;
 							Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
@@ -99,7 +100,7 @@ public class InterfaceAccueil implements Observer
 			ScrollPane sp = new ScrollPane();
 			sp.setContent(ctrlAccueil.recettes);
 		}
-
+		
 		else if(arg instanceof HashMap<?, ?>)
 		{
 			//categories
@@ -108,23 +109,23 @@ public class InterfaceAccueil implements Observer
 			lstR.add(new Recette());
 			categories.put("Dessert", lstR);
 			VBox cat = ctrlAccueil.catégories;
+			cat.setSpacing(10);
 			cat.getChildren().clear();
 			for(Map.Entry<String, ArrayList<Recette>> m : categories.entrySet())
 			{
-				System.out.println(m.getKey());
 				Button btn = new Button();
 				btn.setId(m.getKey());
+				btn.getStyleClass().clear();
 				btn.getStyleClass().add("buttonCategories");
 				btn.getStylesheets().add("Main.css");
 				btn.textProperty().set(m.getKey());
-
+				
 				btn.setOnAction(e -> {
 					this.ctrlAccueil.clickOnCategories(btn.getId());
 				});
-
 				cat.getChildren().add(btn);
 			}
 		}
-		ctrlAccueil.scrollRecettes.setContent(recettes);
+		
 	}
 }

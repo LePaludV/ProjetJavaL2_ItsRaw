@@ -247,5 +247,61 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="description">
+     <string>C&apos;est le plat preferé de garfield
+</string>
+    </void>
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagne</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagne</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagne</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagne</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

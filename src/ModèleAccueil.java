@@ -20,6 +20,7 @@ public class ModèleAccueil extends Observable {
 	
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();
+		this.catégories = new HashMap<String, ArrayList<Recette>>();
 		this.vue = v;
 		this.fichier = new File("data.xml");
 		this.loadData();
@@ -36,7 +37,9 @@ public class ModèleAccueil extends Observable {
 			this.ajouterRecette(rct);
 		}
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
+		System.out.println("change window");
 		this.afficherRecettes();
+		this.afficherCategories();
 	}
 
 	
@@ -64,6 +67,12 @@ public class ModèleAccueil extends Observable {
 		this.saveData();
 	}
 	
+	public void afficherCategories() {
+		System.out.println("aff cat");
+		this.setChanged();
+		this.notifyObservers(this.catégories);
+	}
+	
 	public void afficherParCatègories(String catègorie) {
 		if (this.catégories.get(catègorie) != null) {
 			this.setChanged();
@@ -79,6 +88,7 @@ public class ModèleAccueil extends Observable {
 	}
 	
 	public void afficherRecettes() {
+		System.out.println("aff recette");
 		this.setChanged();
 		this.notifyObservers(this.recettes);
 	}
@@ -96,6 +106,7 @@ public class ModèleAccueil extends Observable {
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
 			encoder.writeObject(this.recettes);
+			//encoder.writeObject(this.catégories);
 			encoder.flush();
 			
 		} catch (final java.io.IOException e) {
@@ -114,6 +125,7 @@ public class ModèleAccueil extends Observable {
 			decoder = new XMLDecoder(bis);
 			
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
+			//this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
 
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");

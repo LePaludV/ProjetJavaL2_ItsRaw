@@ -72,6 +72,7 @@ public class Vue extends Application {
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             this.mdlAccueil.afficherRecettes();
+            this.mdlAccueil.afficherCategories();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 
