@@ -22,12 +22,7 @@ public class AccueilController {
 	
 	@FXML
 	private ComboBox<String> searchBar;
-	
-	@FXML
-	private void rechercherIngrédients(ActionEvent e) {
 		
-	}
-	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	BarreDeRecherche<String> bdr;
@@ -51,10 +46,12 @@ public class AccueilController {
 	}
 	
 	public void compléterComboBox(Set<String> liste) {
-		System.out.println(this.searchBar);
 		for (String s : liste) {
 			this.searchBar.getItems().add(s);
 		}
+	}
+	
+	public void createSearchBar() {
 		this.bdr = new BarreDeRecherche<String>(this.searchBar);
 	}
 }

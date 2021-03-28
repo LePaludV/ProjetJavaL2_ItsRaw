@@ -73,6 +73,8 @@ public class Vue extends Application {
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             this.mdlAccueil.afficherRecettes();
             ctrlAccueil.compléterComboBox(this.mdlAccueil.classeIng.keySet());
+            ctrlAccueil.compléterComboBox(this.mdlAccueil.catégories.keySet());
+            ctrlAccueil.createSearchBar();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 

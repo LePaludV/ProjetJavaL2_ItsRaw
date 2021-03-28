@@ -84,7 +84,6 @@ public class ModèleAjoutRecette extends Observable {
 	
 	public void ajoutPhoto(Image img) {
 		this.recette_courante.photo = img;
-		//Ajouter un image io read
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

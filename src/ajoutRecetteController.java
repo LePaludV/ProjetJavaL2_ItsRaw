@@ -27,6 +27,7 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -110,7 +111,7 @@ public class AjoutRecetteController {
     private Spinner<Integer> nbrPersonne;
     
 	@FXML
-	private ImageView affImg;
+	private VBox affImg;
 	
     @FXML
     private TextField nomIngrédient;
@@ -196,7 +197,7 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	if (this.affImg.getImage() != null) {
+    	if (this.affImg.getChildren().size()==2) {
         	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
     	}
     }

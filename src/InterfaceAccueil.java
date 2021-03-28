@@ -21,13 +21,13 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class InterfaceAccueil implements Observer
 {
-	static BorderPane rootLayout;
+	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
 	private static final float DIVISION_RATION = 2.9f;
 	
@@ -36,14 +36,14 @@ public class InterfaceAccueil implements Observer
 		ctrlAccueil = ctrl;
 	}
 	
-	public static BorderPane getRoot() 
+	public static SplitPane getRoot() 
 	{
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueil.fxml"));
         loader.setController(ctrlAccueil);
         
 		try {
-			rootLayout = (BorderPane) loader.load();
+			rootLayout = (SplitPane) loader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

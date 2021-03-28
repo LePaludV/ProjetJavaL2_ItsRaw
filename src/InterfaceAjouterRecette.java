@@ -165,7 +165,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 
 		if (recette.photo != null) {
-			ImageView imgView = (ImageView) rootLayout.lookup("#affImg");
+			ImageView imgView = new ImageView(recette.photo);
 			imgView.setImage(recette.photo);
 			imgView.setFitHeight(recette.photo.getHeight()/5);
 			imgView.setFitWidth(recette.photo.getWidth()/5);

@@ -42,7 +42,6 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -77,10 +76,13 @@
                   <VBox fx:id="affEtape" layoutX="24.0" layoutY="21.0" prefHeight="241.0" prefWidth="616.0" />
                </children>
             </Pane>
-            <Pane fx:id="paneImage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="547.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Pane fx:id="paneImage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="573.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <children>
-                  <ImageView fx:id="affImg" fitHeight="274.0" fitWidth="557.0" layoutX="-7.0" layoutY="35.0" onDragDropped="#dragDropped" onDragOver="#dragOver" pickOnBounds="true" preserveRatio="true" styleClass="imageimport" />
-                  <TextField fx:id="NomRecette" layoutX="109.0" layoutY="10.0" prefHeight="26.0" prefWidth="330.0" promptText="Nom de la recette " />
+                  <VBox fx:id="affImg" layoutX="30.0" layoutY="14.0" prefHeight="218.0" prefWidth="543.0">
+                     <children>
+                        <TextField fx:id="NomRecette" prefHeight="1.0" prefWidth="549.0" promptText="Nom de la recette " />
+                     </children>
+                  </VBox>
                </children>
             </Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="97.0" prefWidth="302.0" GridPane.columnIndex="2">
