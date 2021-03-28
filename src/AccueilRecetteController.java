@@ -83,7 +83,7 @@ public class AccueilRecetteController {
 
 	    @FXML
 	    void btnSuivieRecette(ActionEvent event) {
-
+	    	this.mdl.goToEtapes();
 	    }
 	    
 	    @FXML

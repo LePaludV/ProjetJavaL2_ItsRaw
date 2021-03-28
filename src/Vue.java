@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import com.sun.javafx.css.FontFace.FontFaceSrc;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,6 +36,7 @@ public class Vue extends Application {
 	ModèleAjoutRecette mdlAjout;
 	ModèleAccueil mdlAccueil;
 	ModèleAccueilRecette mdlAccueilRecette;
+	ModèleEtapes mdlEtapes;
 	
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
@@ -91,7 +94,13 @@ public class Vue extends Application {
         	
 
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
-
+        	this.mdlEtapes = new ModèleEtapes(this);
+            EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
+            InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
+            Scene scene=new Scene(InterfaceEtapes.getRoot());
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+        	
         }
 	}
 }

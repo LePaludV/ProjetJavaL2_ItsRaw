@@ -1,3 +1,4 @@
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -39,6 +40,6 @@ public class AccueilController {
 	}
 	
 	public void clickOnCategories(String id) {
-		System.out.println(id);
+		this.mdl.afficherParCatègories(id);
 	}
 }

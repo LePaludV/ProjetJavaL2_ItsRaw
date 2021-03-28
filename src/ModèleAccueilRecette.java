@@ -52,4 +52,10 @@ public class ModèleAccueilRecette extends Observable{
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public void goToEtapes()
+	{
+		this.vue.currentInterface = this.vue.currentInterface.ETAPE_RECETTE;
+		this.vue.changeWindow(Vue.typeInterface.ETAPE_RECETTE);
+	}
 }

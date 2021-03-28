@@ -303,5 +303,31 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagnes</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>lasagnes</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

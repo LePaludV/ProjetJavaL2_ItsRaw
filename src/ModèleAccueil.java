@@ -1,3 +1,4 @@
+
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
@@ -8,6 +9,8 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
+
+import Vue.typeInterface;
 
 @SuppressWarnings("deprecation")
 public class ModèleAccueil extends Observable {
