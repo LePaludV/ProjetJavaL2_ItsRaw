@@ -160,7 +160,7 @@ public class InterfaceAjouterRecette implements Observer {
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.ingrédients) {
-			ingrédient.getChildren().add(new Label(i.nom+" : "+i.quantité+i.mesure));
+			ingrédient.getChildren().add(new Label((int)i.quantité+i.mesure+" "+i.nom));
 		}
 
 

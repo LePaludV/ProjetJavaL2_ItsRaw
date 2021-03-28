@@ -63,10 +63,16 @@ public class BarreDeRecherche<T> implements EventHandler {
 
         if (evt.getCode() == KeyCode.RIGHT || evt.getCode() == KeyCode.LEFT
                 || evt.isControlDown() || evt.getCode() == KeyCode.HOME
-                || evt.getCode() == KeyCode.END || evt.getCode() == KeyCode.TAB
-                || evt.getCode() == KeyCode.ENTER) {
+                || evt.getCode() == KeyCode.END || evt.getCode() == KeyCode.TAB ) {
             return;
+        } 
+        
+        if (evt.getCode() == KeyCode.ENTER) {
+//        	String s = this.comboBox.getEditor().
+//        	this.comboBox.getEditor().setText(s);
+        	return;
         }
+        
 
         ObservableList list = FXCollections.observableArrayList();
         for (int i=0; i<data.size(); i++) {

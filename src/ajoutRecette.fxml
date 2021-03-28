@@ -152,11 +152,12 @@
                   <Spinner fx:id="quantitéIngrédient" layoutX="112.0" layoutY="169.0" prefHeight="31.0" prefWidth="100.0" />
                   <MenuButton fx:id="mesureIngrédient" layoutX="230.0" layoutY="169.0" mnemonicParsing="false" text="Mesures">
                      <items>
-                        <RadioMenuItem mnemonicParsing="false" text="g">
+                        <RadioMenuItem fx:id="defaultRadiobutton" mnemonicParsing="false" text=" ">
                            <toggleGroup>
                               <ToggleGroup fx:id="mesures" />
                            </toggleGroup>
                         </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" text="g" toggleGroup="$mesures" />
                         <RadioMenuItem mnemonicParsing="false" text="kg" toggleGroup="$mesures" />
                         <RadioMenuItem mnemonicParsing="false" text="l" toggleGroup="$mesures" />
                         <RadioMenuItem mnemonicParsing="false" text="cl" toggleGroup="$mesures" />

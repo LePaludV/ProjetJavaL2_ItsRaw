@@ -128,6 +128,9 @@ public class AjoutRecetteController {
     private Button retour;
     
     @FXML
+    private RadioMenuItem defaultRadiobutton;
+    
+    @FXML
     private void exit(ActionEvent event) {
     	this.mdlAcc.changeWindow(false, null);
     }
@@ -217,5 +220,6 @@ public class AjoutRecetteController {
     	SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
 		this.quantitéIngrédient.setValueFactory(nombre2);
 		this.quantitéIngrédient.setEditable(true);
+		this.mesures.selectToggle(this.defaultRadiobutton);	
+		}
 	}
-}
