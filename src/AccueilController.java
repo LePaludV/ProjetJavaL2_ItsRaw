@@ -12,11 +12,10 @@ import javafx.event.ActionEvent;
 public class AccueilController {
 	@FXML
 	private Button btnAjoutRecette;
+	
 	@FXML
 	public VBox recettes;
 	
-<<<<<<< Updated upstream
-=======
 	@FXML
     public ScrollPane scrollRecettes; 
 	
@@ -28,12 +27,13 @@ public class AccueilController {
 		
 	}
 	
->>>>>>> Stashed changes
 	ModèleAccueil mdl;
+	ModèleAccueilRecette mdlRecette;
 	
-	public AccueilController(ModèleAccueil mod)
+	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette)
 	{
 		this.mdl = mod;
+		this.mdlRecette = mdlRecette;
 	}
 
 	// Event Listener on Button[#btnAjoutRecette].onAction
@@ -41,8 +41,6 @@ public class AccueilController {
 	public void ajouterRecette(ActionEvent event) {
 		this.mdl.goToAjouterRecette();
 	}
-<<<<<<< Updated upstream
-=======
 	
 	public void openRecette(Recette rct) {
 		this.mdl.goToAjouterAccueilRecette();
@@ -55,5 +53,4 @@ public class AccueilController {
 			this.searchBar.getItems().add(ing.nom);
 		}
 	}
->>>>>>> Stashed changes
 }
