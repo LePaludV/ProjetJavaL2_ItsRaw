@@ -27,6 +27,7 @@ public class ModèleAccueil extends Observable {
 		this.vue = v;
 		this.fichier = new File("data.xml");
 		this.jeuxDeTests();
+		this.loadData();
 	}
 	
 	private void jeuxDeTests() {
@@ -202,10 +203,10 @@ public class ModèleAccueil extends Observable {
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
 			
-			this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+			this.recettes = (ArrayList<Recette>) decoder.readObject();
 			
 		} catch (Exception e) {
-			throw new RuntimeException("Chargement des données impossible !");
+			e.printStackTrace();
 		} finally {
 			if (decoder != null) decoder.close();
 		}
