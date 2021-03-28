@@ -166,10 +166,13 @@ public class InterfaceAjouterRecette implements Observer {
 
 		if (recette.photo != null) {
 			ImageView imgView = new ImageView(recette.photo);
-			imgView.setImage(recette.photo);
-			imgView.setFitHeight(recette.photo.getHeight()/5);
-			imgView.setFitWidth(recette.photo.getWidth()/5);
-			
+			double hauteurVbox = ctrlAjout.affImg.getHeight();
+			double hauteurPhoto = recette.photo.getHeight();
+			double coeff = (hauteurVbox/hauteurPhoto);
+			imgView.setFitHeight(hauteurPhoto*coeff);
+			imgView.setFitWidth(recette.photo.getWidth()*coeff);
+			ctrlAjout.affImg.getChildren().add(imgView);
+			ctrlAjout.affImg.setSpacing(4);
 		}
 
 		ObservableList<Toggle> note = ctrlAjout.note.getToggles();

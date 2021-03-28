@@ -1,5 +1,5 @@
 import javafx.fxml.FXML;
-
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 
 import javafx.scene.control.TextField;
@@ -111,7 +111,7 @@ public class AjoutRecetteController {
     private Spinner<Integer> nbrPersonne;
     
 	@FXML
-	private VBox affImg;
+	public VBox affImg;
 	
     @FXML
     private TextField nomIngrédient;
@@ -197,7 +197,7 @@ public class AjoutRecetteController {
     	System.out.println("Nom de la recette : "+NomRecette.getText());
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
-    	if (this.affImg.getChildren().size()==2) {
+    	if (this.affImg.getChildren().size()>1) {
         	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
     	}
     }
@@ -209,6 +209,7 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
+
 	}
 	
 	public void sauvegarderRecette(boolean save, Recette rct) {
@@ -221,6 +222,7 @@ public class AjoutRecetteController {
     	SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
 		this.quantitéIngrédient.setValueFactory(nombre2);
 		this.quantitéIngrédient.setEditable(true);
-		this.mesures.selectToggle(this.defaultRadiobutton);	
+		this.mesures.selectToggle(this.defaultRadiobutton);
+		this.affImg.setAlignment(Pos.TOP_CENTER);
 		}
 	}
