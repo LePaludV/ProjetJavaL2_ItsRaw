@@ -164,7 +164,7 @@ public class InterfaceAjouterRecette implements Observer {
 		}
 
 
-		if (recette.photo != null) {
+		if (recette.photo != null && ctrlAjout.affImg.getChildren().size() < 2) {
 			ImageView imgView = new ImageView(recette.photo);
 			double hauteurVbox = ctrlAjout.affImg.getHeight();
 			double hauteurPhoto = recette.photo.getHeight();

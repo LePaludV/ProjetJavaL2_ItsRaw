@@ -29,7 +29,6 @@ public class InterfaceAccueil implements Observer
 {
 	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
-	private static final float DIVISION_RATION = 2.9f;
 	
 	public InterfaceAccueil(AccueilController ctrl)
 	{
@@ -76,8 +75,11 @@ public class InterfaceAccueil implements Observer
 						String nom  = lstRecettes.get((i+2)*i+j).nom;
 						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
 						ImageView imgView = new ImageView(img);
-						imgView.setFitHeight(img.getHeight()/DIVISION_RATION);
-						imgView.setFitWidth(img.getWidth()/DIVISION_RATION);
+						double largeurScroll = ctrlAccueil.scrollRecettes.getWidth();
+						double largeurPhoto = img.getWidth();
+						double coeff = (largeurScroll/largeurPhoto);
+						imgView.setFitHeight((img.getHeight()*coeff)/3);
+						imgView.setFitWidth((img.getWidth()*coeff)/3);
 						btn.setGraphic(imgView);
 						btn.setBackground(null);
 					} catch (FileNotFoundException e) {
