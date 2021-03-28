@@ -72,7 +72,7 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <ComboBox editable="true" prefHeight="31.0" prefWidth="420.0" promptText="Search Bar" GridPane.columnIndex="1" />
+            <ComboBox fx:id="searchBar" editable="true" prefHeight="31.0" prefWidth="420.0" promptText="Search Bar" GridPane.columnIndex="1" />
          </children>
       </GridPane>
    </top>

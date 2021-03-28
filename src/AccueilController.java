@@ -6,6 +6,7 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Set;
 
 import javafx.event.ActionEvent;
 
@@ -29,6 +30,7 @@ public class AccueilController {
 	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
+	BarreDeRecherche<String> bdr;
 	
 	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette)
 	{
@@ -48,9 +50,11 @@ public class AccueilController {
 		this.mdlRecette.setRecette(rct);
 	}
 	
-	private void compléterComboBox(HashSet<Ingrédient> liste) {
-		for (Ingrédient ing : liste) {
-			this.searchBar.getItems().add(ing.nom);
+	public void compléterComboBox(Set<String> liste) {
+		System.out.println(this.searchBar);
+		for (String s : liste) {
+			this.searchBar.getItems().add(s);
 		}
+		this.bdr = new BarreDeRecherche<String>(this.searchBar);
 	}
 }
