@@ -218,5 +218,4 @@ public class AjoutRecetteController {
 		this.quantitéIngrédient.setValueFactory(nombre2);
 		this.quantitéIngrédient.setEditable(true);
 	}
-	
 }

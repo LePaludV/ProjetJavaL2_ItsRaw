@@ -91,13 +91,14 @@ public class ModèleAccueil extends Observable {
 	
 	private void saveData() {
 		XMLEncoder encoder = null;
-		
+		ArrayList<Object> liste = new ArrayList<Object>();
 		try {
 			FileOutputStream fos = new FileOutputStream("data.xml");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
-			encoder.writeObject(this.recettes);
-			encoder.writeObject(this.catégories);
+			liste.add(this.recettes);
+			liste.add(this.catégories);
+			encoder.writeObject(liste);
 			encoder.flush();
 			
 		} catch (final java.io.IOException e) {
@@ -106,19 +107,21 @@ public class ModèleAccueil extends Observable {
 			if (encoder != null) encoder.close();
 		}
 		System.out.println("Data saved !");
+		
 	}
 	
 	private void loadData() {
 		XMLDecoder decoder = null;
+		ArrayList<Object> liste = new ArrayList<Object>();
 		try {
 			FileInputStream fis = new FileInputStream("data.xml");
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
 			
-	
-			this.recettes = (ArrayList<Recette>) decoder.readObject();
-			this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
-
+			liste = (ArrayList<Object>) decoder.readObject();
+			this.recettes = (ArrayList<Recette>) liste.get(0);
+			this.catégories = (HashMap<String, ArrayList<Recette>>) liste.get(1);
+			
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");
 		} finally {

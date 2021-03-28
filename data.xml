@@ -2,212 +2,55 @@
 <java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="Recette" id="Recette0">
-    <void property="catégories">
-     <void method="add">
-      <string>1. Pelez carottes et navetrs. Fendez les poireaux et le chou en 4. Rincez tous les légumes.</string>
-     </void>
-     <void method="add">
-      <string>2. Dans une grande marmite, versez 3 l d&apos;eau avec 1 bouquet garni. Dès qu&apos;elle bout, ajoutez-y les légumes ( sauf l&apos;un des blanc de poireaux), ainsi qu&apos;un oignon piqué de girofle. Salez. Laissez cuire à petit feu pendant 45 mn.</string>
-     </void>
-     <void method="add">
-      <string>3. Pendant ce temps, nettoyez les poissons et prélevez les filets des dorades et des grondins.</string>
-     </void>
-     <void method="add">
-      <string>4. Coupez le bar en 6 tranches. Gardez les têtes et les nageoires des dorades et des grondins.</string>
-     </void>
-     <void method="add">
-      <string>5. Préparez un fumet de poisson en mettant les parures (têtes et nageoires) à cuire dans 2 l d&apos;eau, avec le blanc de poireau restant, 1 bouquet garni, l&apos;autre oignon piqué de girofle et 1 verre de vin blanc. Salez et poivrez. Laissez frémir pendant 30 mn.</string>
-     </void>
-     <void method="add">
-      <string>6. Pelez et hachez les échalotes. Mettez-les dans une petite casserole avec le reste de vin.</string>
-     </void>
-     <void method="add">
-      <string>7. Laissez cuire à petit feu pendant 15 à 20 mn. Ajoutez la crème fraîche et mélangez. Salez et poivrez. Gardez sur feu doux.</string>
-     </void>
-     <void method="add">
-      <string>8. Filtrez le fumet et remettez-le dans une casserole. Déposez-y les filets et les tranches de poisson. Portez à ébullition. Baissez la source de chaleur et laissez-les cuire à petits frémissements pendant 8 mn.</string>
-     </void>
-     <void method="add">
-      <string>9. Egouttez les poissons et disposez-les dans un plat de service chaud. Egouttez les légumes et rangez-les autour du poisson.</string>
-     </void>
-     <void method="add">
-      <string>10. Servez le pot-au-feu de poisson accompagné de la sauce aux échalotes.</string>
-     </void>
-    </void>
-    <void property="description">
-     <string>Excellente recette avec du poisson !</string>
-    </void>
-    <void property="difficulté">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
-     <void index="2">
-      <boolean>true</boolean>
-     </void>
-    </void>
-    <void property="ingrédients">
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>pincé</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="Recette" id="Recette0">
+      <void property="description">
+       <string>Excellente !</string>
+      </void>
+      <void property="difficulté">
+       <void index="0">
+        <boolean>true</boolean>
        </void>
-       <void property="nom">
-        <string>sel</string>
+       <void index="1">
+        <boolean>true</boolean>
        </void>
-       <void property="quantité">
-        <float>1.0</float>
+       <void index="2">
+        <boolean>true</boolean>
        </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>pincé</string>
+       <void index="3">
+        <boolean>true</boolean>
        </void>
-       <void property="nom">
-        <string>bouquet garnis</string>
+       <void index="4">
+        <boolean>true</boolean>
        </void>
-       <void property="quantité">
-        <float>1.0</float>
+      </void>
+      <void property="nbrPersonne">
+       <int>4</int>
+      </void>
+      <void property="nom">
+       <string>lasagnes 35</string>
+      </void>
+      <void property="note">
+       <void index="0">
+        <boolean>true</boolean>
        </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>pincé</string>
+       <void index="1">
+        <boolean>true</boolean>
        </void>
-       <void property="nom">
-        <string>dorades</string>
+       <void index="2">
+        <boolean>true</boolean>
        </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>carotte</string>
-       </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>navets</string>
-       </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>poireaux</string>
-       </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>branches de céleri</string>
-       </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>1 coeur de Chou</string>
-       </void>
-       <void property="quantité">
-        <float>1.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>oignons</string>
-       </void>
-       <void property="quantité">
-        <float>2.0</float>
-       </void>
-      </object>
-     </void>
-     <void method="add">
-      <object class="Ingrédient">
-       <void property="mesure">
-        <string>kg</string>
-       </void>
-       <void property="nom">
-        <string>verre de vin blanc sec</string>
-       </void>
-       <void property="quantité">
-        <float>2.0</float>
-       </void>
-      </object>
-     </void>
-    </void>
-    <void property="nbrPersonne">
-     <int>4</int>
-    </void>
-    <void property="nom">
-     <string>Pot au feu de poisson</string>
-    </void>
-    <void property="note">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
-     <void index="2">
-      <boolean>true</boolean>
-     </void>
-     <void index="3">
-      <boolean>true</boolean>
-     </void>
-     <void index="4">
-      <boolean>true</boolean>
-     </void>
-    </void>
-    <void property="save">
-     <boolean>true</boolean>
+      </void>
+      <void property="save">
+       <boolean>true</boolean>
+      </void>
+     </object>
     </void>
    </object>
+  </void>
+  <void method="add">
+   <null/>
   </void>
  </object>
 </java>
