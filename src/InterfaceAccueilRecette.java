@@ -100,8 +100,6 @@ public class InterfaceAccueilRecette  implements Observer {
 						+ "\nOU interface lancé par défaut (cf ''currentInterface'' dans Vue.java)");
 			}
 			else {
-			// à tester si la méthode uptade lance bien loadRecette avec rct choisi dans l'accueil + si ça s'affiche bien
-				// + éventuelle problème si une valeur null.
 			this.ctrlAccueilRct.TexteDescription.setText(rct.description);
 			String ingr = null;
 			for(Ingrédient s: rct.ingrédients) {

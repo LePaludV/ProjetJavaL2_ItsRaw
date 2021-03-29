@@ -45,7 +45,7 @@ public class Vue extends Application {
         this.primaryStage.setTitle("It's Raw");
         this.primaryStage.setResizable(false);
 
-        this.mdlAccueilRecette = new ModèleAccueilRecette(this);
+        this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil);
 
         this.changeWindow(this.currentInterface);
         primaryStage.show();

@@ -131,7 +131,15 @@ public class ModèleAccueil extends Observable {
 
 
 	public void ajouterRecette(Recette rct) {
-
+		
+		for(int i =0;i<this.recettes.size();i++) {
+			System.out.println(this.recettes.get(i).nom+ " | "+rct.nom);
+			if(this.recettes.get(i).nom.contentEquals(rct.nom)) {
+				System.out.println("Supprimer"+i);
+				this.recettes.remove(i);
+			}
+		}
+		
 		recettes.add(rct);
 		if (this.classeIng != null) {
 			for (Ingrédient i : rct.ingrédients) {
@@ -169,6 +177,7 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void afficherRecettes() {
+		System.out.println(this.recettes);
 		this.setChanged();
 		this.notifyObservers(this.recettes);
 	}

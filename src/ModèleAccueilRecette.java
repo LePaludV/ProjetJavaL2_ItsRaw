@@ -3,9 +3,10 @@ import java.util.Observable;
 public class ModèleAccueilRecette extends Observable{
 	public Recette recette_courante;
 	Vue vue;
+	ModèleAccueil mdlAcc;
 	
-	
-	public ModèleAccueilRecette(Vue v) {
+	public ModèleAccueilRecette(Vue v,ModèleAccueil mdl) {
+		this.mdlAcc=mdl;
 		this.vue = v;
 		
 	}
@@ -47,6 +48,8 @@ public class ModèleAccueilRecette extends Observable{
 	
 
 	public void goToAccueil() {
+		
+		this.mdlAcc.ajouterRecette(this.recette_courante);
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
 		// TODO Auto-generated method stub
