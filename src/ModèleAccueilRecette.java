@@ -49,6 +49,7 @@ public class ModèleAccueilRecette extends Observable{
 
 	public void goToAccueil() {
 		
+		
 		this.mdlAcc.ajouterRecette(this.recette_courante);
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
