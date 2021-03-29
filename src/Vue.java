@@ -34,7 +34,7 @@ public class Vue extends Application {
 	ModèleAjoutRecette mdlAjout;
 	ModèleAccueil mdlAccueil;
 	ModèleAccueilRecette mdlAccueilRecette;
-	
+
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
 
@@ -44,12 +44,12 @@ public class Vue extends Application {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
         this.primaryStage.setResizable(false);
-        
+
         this.mdlAccueilRecette = new ModèleAccueilRecette(this);
-        
+
         this.changeWindow(this.currentInterface);
         primaryStage.show();
-        
+
 	}
 
 	public void changeWindow(typeInterface inter) {
@@ -72,6 +72,9 @@ public class Vue extends Application {
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             this.mdlAccueil.afficherRecettes();
+            ctrlAccueil.compléterComboBox(this.mdlAccueil.classeIng.keySet());
+            ctrlAccueil.compléterComboBox(this.mdlAccueil.catégories.keySet());
+            ctrlAccueil.createSearchBar();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 
@@ -79,7 +82,7 @@ public class Vue extends Application {
         	System.out.println("changewindow");
         	Recette rct=new Recette();
         	rct=null;
-        	     	
+
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
             InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
             this.mdlAccueilRecette.addObserver(vueAccueilRecette);
@@ -87,7 +90,7 @@ public class Vue extends Application {
             primaryStage.setScene(scene);
             vueAccueilRecette.loadRecette(rct);
             this.primaryStage.sizeToScene();
-        	
+
 
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
 
