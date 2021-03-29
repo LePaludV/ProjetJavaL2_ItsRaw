@@ -56,7 +56,7 @@ public class InterfaceAjouterRecette implements Observer {
 	}
 
 	public static BorderPane getRoot() {
-		
+
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
          loader.setController(ctrlAjout);
@@ -100,7 +100,7 @@ public class InterfaceAjouterRecette implements Observer {
 		secondStage.setScene(scene);
 		secondStage.show();
 	}
-	
+
 	public void exitRecette(Recette recette) {
 		Stage secondStage = new Stage();
 		VBox parent = new VBox();
@@ -123,7 +123,7 @@ public class InterfaceAjouterRecette implements Observer {
 			ctrlAjout.sauvegarderRecette(false, recette);
 			secondStage.close();
 		});
-		
+
 		annuler.setOnAction(e -> {
 			recette.saved=false;
 			secondStage.close();
@@ -136,7 +136,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		secondStage.setScene(scene);
 		secondStage.show();
-		
+
 	}
 
 	@Override
@@ -146,7 +146,9 @@ public class InterfaceAjouterRecette implements Observer {
 		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
 		étapes.getChildren().clear();
 		for(String i: recette.étapes) {
-			étapes.getChildren().add(new Label(i));
+			Label etape = new Label(i);
+			etape.setWrapText(true);
+			étapes.getChildren().add(etape);
 		}
 
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
@@ -158,13 +160,19 @@ public class InterfaceAjouterRecette implements Observer {
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.ingrédients) {
-			ingrédient.getChildren().add(new Label(i.nom+" : "+i.quantité+i.mesure));
+			ingrédient.getChildren().add(new Label((int)i.quantité+i.mesure+" "+i.nom));
 		}
 
 
-		if (recette.photo != null) {
-			ImageView imgView = (ImageView) rootLayout.lookup("#affImg");
-			imgView.setImage(recette.photo);
+		if (recette.photo != null && ctrlAjout.affImg.getChildren().size() < 2) {
+			ImageView imgView = new ImageView(recette.photo);
+			double hauteurVbox = ctrlAjout.affImg.getHeight();
+			double hauteurPhoto = recette.photo.getHeight();
+			double coeff = (hauteurVbox/hauteurPhoto);
+			imgView.setFitHeight(hauteurPhoto*coeff);
+			imgView.setFitWidth(recette.photo.getWidth()*coeff);
+			ctrlAjout.affImg.getChildren().add(imgView);
+			ctrlAjout.affImg.setSpacing(4);
 		}
 
 		ObservableList<Toggle> note = ctrlAjout.note.getToggles();

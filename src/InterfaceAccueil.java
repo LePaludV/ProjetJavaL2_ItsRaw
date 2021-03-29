@@ -21,29 +21,28 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 public class InterfaceAccueil implements Observer
 {
-	static BorderPane rootLayout;
+	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
-	private static final float DIVISION_RATION = 2.9f;
-	
+
 	public InterfaceAccueil(AccueilController ctrl)
 	{
 		ctrlAccueil = ctrl;
 	}
-	
-	public static BorderPane getRoot() 
+
+	public static SplitPane getRoot()
 	{
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueil.fxml"));
         loader.setController(ctrlAccueil);
-        
+
 		try {
-			rootLayout = (BorderPane) loader.load();
+			rootLayout = (SplitPane) loader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -65,21 +64,23 @@ public class InterfaceAccueil implements Observer
 				{
 					Button btn = new Button();
 					btn.setId(Integer.toString((i+2)*i+j));
-					
+
 					btn.setOnAction(e -> {
 						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
-						
+
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
-					
+
 					try {
 						String nom  = lstRecettes.get((i+2)*i+j).nom;
 						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
 						ImageView imgView = new ImageView(img);
-						imgView.setFitHeight(img.getHeight()/DIVISION_RATION);
-						imgView.setFitWidth(img.getWidth()/DIVISION_RATION);
+						double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
+						double largeurPhoto = img.getWidth();
+						double coeff = (largeurScroll/largeurPhoto);
+						imgView.setFitHeight((img.getHeight()*coeff)/3);
+						imgView.setFitWidth((img.getWidth()*coeff)/3);
 						btn.setGraphic(imgView);
-						btn.setBackground(null);
 					} catch (FileNotFoundException e) {
 						e.printStackTrace();
 					}
@@ -88,6 +89,6 @@ public class InterfaceAccueil implements Observer
 			}
 			ctrlAccueil.recettes.getChildren().add(hb);
 		}
-		ctrlAccueil.scrollRecettes.setContent(recettes);		
+		ctrlAccueil.scrollRecettes.setContent(recettes);
 	}
 }
