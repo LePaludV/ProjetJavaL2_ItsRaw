@@ -7,14 +7,14 @@
      <string>nom</string>
      <void method="set">
       <object idref="Recette0"/>
-      <string>qsdfZ</string>
+      <string>pates</string>
      </void>
     </void>
     <void class="Main.Recette" method="getField">
      <string>description</string>
      <void method="set">
       <object idref="Recette0"/>
-      <string>fsfd</string>
+      <string>zefzefzef</string>
      </void>
     </void>
     <void class="Main.Recette" method="getField">
@@ -34,4 +34,36 @@
    </object>
   </void>
  </object>
+<void class="Main.Recette" id="Field0" method="getField">
+ <string>difficulté</string>
+ <void id="booleanArray0" method="get">
+  <object idref="Recette0"/>
+  <void index="1">
+   <boolean>true</boolean>
+  </void>
+  <void index="2">
+   <boolean>true</boolean>
+  </void>
+  <void index="0">
+   <boolean>true</boolean>
+  </void>
+ </void>
+</void>
+<void idref="booleanArray0"/>
+<void class="Main.Recette" id="Field1" method="getField">
+ <string>note</string>
+ <void id="booleanArray1" method="get">
+  <object idref="Recette0"/>
+  <void index="1">
+   <boolean>true</boolean>
+  </void>
+  <void index="2">
+   <boolean>true</boolean>
+  </void>
+  <void index="0">
+   <boolean>true</boolean>
+  </void>
+ </void>
+</void>
+<void idref="booleanArray1"/>
 </java>

@@ -41,8 +41,8 @@ public class InterfaceAjouterRecette implements Observer {
 	public InterfaceAjouterRecette(AjoutRecetteController ctrl) {
 		ctrlAjout = ctrl;
 		try {
-			is1 = new FileInputStream("../imgs/etoileJaune.png");
-			is2 = new FileInputStream("../imgs/etoileNoire.png");
+			is1 = new FileInputStream("imgs/etoileJaune.png");
+			is2 = new FileInputStream("imgs/etoileNoire.png");
 			etoileJaune = new Image(is1);
 			etoileNoire = new Image(is2);
 		} catch (FileNotFoundException e) {
@@ -50,8 +50,8 @@ public class InterfaceAjouterRecette implements Observer {
 		}
 
 		try {
-			it1 = new FileInputStream("../imgs/toqueGrise.png");
-			it2 = new FileInputStream("../imgs/toqueNoire.png");
+			it1 = new FileInputStream("imgs/toqueGrise.png");
+			it2 = new FileInputStream("imgs/toqueNoire.png");
 			ToqueGrise = new Image(it1);
 			ToqueNoire = new Image(it2);
 		} catch (FileNotFoundException e) {

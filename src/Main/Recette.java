@@ -45,7 +45,7 @@ public class Recette implements Serializable {
 	
 	public void setNom(String nom) throws FileNotFoundException {
 		this.nom = nom;
-		this.photo = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
+		this.photo = new Image(new FileInputStream("imagesRecette/"+this.nom+".png"));
 	}
 	
 	public String getDescription() {
