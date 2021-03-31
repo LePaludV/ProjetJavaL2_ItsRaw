@@ -2,6 +2,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class AccueilController {
 	
 	@FXML
 	private ComboBox<String> searchBar;
-		
+	
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	BarreDeRecherche<String> bdr;
@@ -49,6 +50,10 @@ public class AccueilController {
 		for (String s : liste) {
 			this.searchBar.getItems().add(s);
 		}
+		System.out.println("hello");
+		this.searchBar.setOnKeyPressed(e -> {
+			System.out.println(e.getCode());
+		});
 	}
 	
 	public void createSearchBar() {

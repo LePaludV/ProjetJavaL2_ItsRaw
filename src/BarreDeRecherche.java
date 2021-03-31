@@ -68,8 +68,7 @@ public class BarreDeRecherche<T> implements EventHandler {
         } 
         
         if (evt.getCode() == KeyCode.ENTER) {
-//        	String s = this.comboBox.getEditor().
-//        	this.comboBox.getEditor().setText(s);
+        	
         	return;
         }
         

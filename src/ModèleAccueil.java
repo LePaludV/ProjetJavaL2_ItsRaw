@@ -27,7 +27,7 @@ public class ModèleAccueil extends Observable {
 		this.vue = v;
 		this.fichier = new File("data.xml");
 		this.jeuxDeTests();
-		this.loadData();
+		this.loadData("data.xml");
 	}
 	
 	private void jeuxDeTests() {
@@ -151,7 +151,7 @@ public class ModèleAccueil extends Observable {
 			}			
 		}
 		
-		this.saveData();
+		this.saveData("data.xml");
 	}
 	
 	public void afficherParCatègories(String catègorie) {
@@ -178,10 +178,10 @@ public class ModèleAccueil extends Observable {
 		this.notifyObservers(rct);
 	}
 	
-	private void saveData() {
+	private void saveData(String url) {
 		XMLEncoder encoder = null;
 		try {
-			FileOutputStream fos = new FileOutputStream("data.xml");
+			FileOutputStream fos = new FileOutputStream(url);
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
 			encoder.writeObject(this.recettes);
@@ -196,10 +196,10 @@ public class ModèleAccueil extends Observable {
 		
 	}
 	
-	private void loadData() {
+	private void loadData(String url) {
 		XMLDecoder decoder = null;
 		try {
-			FileInputStream fis = new FileInputStream("data.xml");
+			FileInputStream fis = new FileInputStream(url);
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
 			
