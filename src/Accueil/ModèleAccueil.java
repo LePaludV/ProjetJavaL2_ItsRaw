@@ -22,14 +22,17 @@ public class ModèleAccueil extends Observable {
 	public HashMap<String, ArrayList<Recette>> catégories;
 	public Vue vue;
 	public File fichier;
+	
 
 	public ModèleAccueil(Vue v) {
+		this.fichier=new File("data.xml");
 		this.recettes = new ArrayList<Recette>();
 		this.catégories = new HashMap<String, ArrayList<Recette>>();
 		this.classeIng = new HashMap<String, ArrayList<Recette>>();
 		this.vue = v;
 		this.jeuxDeTests();
 		this.loadData();
+		
 	}
 
 	private void jeuxDeTests() {
@@ -224,6 +227,7 @@ public class ModèleAccueil extends Observable {
 
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
 			//this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+			
 
 		} catch (Exception e) {
 			

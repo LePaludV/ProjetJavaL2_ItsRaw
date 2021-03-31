@@ -34,6 +34,7 @@ import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
+import Etapes.*;
 public class Vue extends Application {
 	Stage primaryStage;
 	InterfaceAccueil acc=new InterfaceAccueil(null);
