@@ -44,15 +44,15 @@ public class InterfaceAccueil implements Observer
 	public static SplitPane getRoot()
 	{
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Vue.class.getResource("accueil.fxml"));
-        loader.setController(ctrlAccueil);
+		loader.setLocation(Vue.class.getResource("accueil.fxml"));
+		loader.setController(ctrlAccueil);
 
 		try {
 			rootLayout = (SplitPane) loader.load();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 return rootLayout;
+		return rootLayout;
 	}
 
 	@Override
@@ -70,60 +70,38 @@ public class InterfaceAccueil implements Observer
 				hb.setSpacing(20);
 				for(int j = 0; j<3; j++)
 				{
-					Button btn = new Button();
-					btn.setId(Integer.toString((i+2)*i+j));
+					if((i+2)*i+j<lstRecettes.size())
+					{
+						Button btn = new Button();
+						btn.setId(Integer.toString((i+2)*i+j));
 
-					btn.setOnAction(e -> {
-						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
+						btn.setOnAction(e -> {
+							System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
 
-						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
-					});
+							this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
+						});
 
-					try {
-						String nom  = lstRecettes.get((i+2)*i+j).nom;
-						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
-						ImageView imgView = new ImageView(img);
-						double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
-						double largeurPhoto = img.getWidth();
-						double coeff = (largeurScroll/largeurPhoto);
-						imgView.setFitHeight((img.getHeight()*coeff)/3);
-						imgView.setFitWidth((img.getWidth()*coeff)/3);
-						btn.setGraphic(imgView);
-					} catch (FileNotFoundException e) {
-						e.printStackTrace();
+						try {
+							String nom  = lstRecettes.get((i+2)*i+j).nom;
+							Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
+							ImageView imgView = new ImageView(img);
+							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
+							double largeurPhoto = img.getWidth();
+							double coeff = (largeurScroll/largeurPhoto);
+							imgView.setFitHeight((img.getHeight()*coeff)/3);
+							imgView.setFitWidth((img.getWidth()*coeff)/3);
+							btn.setGraphic(imgView);
+						} catch (FileNotFoundException e) {
+							e.printStackTrace();
+						}
+						hb.getChildren().add(btn);
 					}
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);
 			}
 			ScrollPane sp = new ScrollPane();
 			sp.setContent(ctrlAccueil.recettes);
+			ctrlAccueil.scrollRecettes.setContent(recettes);
 		}
-
-		else if(arg instanceof HashMap<?, ?>)
-		{
-			//categories
-			HashMap<String, ArrayList<Recette>> categories = (HashMap<String, ArrayList<Recette>>) arg;
-			ArrayList<Recette> lstR = new ArrayList<>();
-			lstR.add(new Recette());
-			categories.put("Dessert", lstR);
-			VBox cat = ctrlAccueil.catégories;
-			cat.setSpacing(10);
-			cat.getChildren().clear();
-			for(Map.Entry<String, ArrayList<Recette>> m : categories.entrySet())
-			{
-				Button btn = new Button();
-				btn.setId(m.getKey());
-				btn.getStyleClass().clear();
-				btn.getStyleClass().add("buttonCategories");
-				btn.getStylesheets().add("Main.css");
-				btn.textProperty().set(m.getKey());
-
-				btn.setOnAction(e -> {
-					this.ctrlAccueil.clickOnCategories(btn.getId());
-				});
-				cat.getChildren().add(btn);
-			}
-		}
-		ctrlAccueil.scrollRecettes.setContent(recettes);
 	}
 }

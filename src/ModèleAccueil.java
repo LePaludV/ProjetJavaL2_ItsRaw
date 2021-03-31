@@ -9,7 +9,6 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
-import Vue.typeInterface;
 import javafx.scene.control.ComboBox;
 
 @SuppressWarnings("deprecation")
