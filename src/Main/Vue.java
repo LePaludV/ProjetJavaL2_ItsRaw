@@ -1,3 +1,5 @@
+package Main;
+
 import java.awt.List;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,7 +30,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class Vue extends Application {
 	Stage primaryStage;
 	InterfaceAccueil acc=new InterfaceAccueil(null);

@@ -1,11 +1,16 @@
+package Main;
 import java.io.Serializable;
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 
 public class Ingrédient  implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	String nom;
-	float quantité;
-	String mesure;
+	public String nom;
+	public float quantité;
+	public String mesure;
 	
 	public Ingrédient(String nom,float quantité, String mesure) {
 		this.nom = nom;

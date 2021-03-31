@@ -1,10 +1,17 @@
-	import javafx.event.ActionEvent;
-	import javafx.fxml.FXML;
-	import javafx.scene.control.Button;
-	import javafx.scene.control.Label;
-	import javafx.scene.control.ToggleButton;
+package AccueilRecette;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.image.ImageView;
+
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
+
 public class AccueilRecetteController {
 
 	    @FXML
