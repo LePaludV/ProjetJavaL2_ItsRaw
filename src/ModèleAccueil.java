@@ -1,3 +1,4 @@
+
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
@@ -8,7 +9,6 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
-
 import javafx.scene.control.ComboBox;
 
 @SuppressWarnings("deprecation")
@@ -126,12 +126,14 @@ public class ModèleAccueil extends Observable {
 			this.ajouterRecette(rct);
 		}
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
+		System.out.println("change window");
 		this.afficherRecettes();
+		this.afficherCategories();
 	}
 
 
 	public void ajouterRecette(Recette rct) {
-		
+
 		for(int i =0;i<this.recettes.size();i++) {
 			System.out.println(this.recettes.get(i).nom+ " | "+rct.nom);
 			if(this.recettes.get(i).nom.contentEquals(rct.nom)) {
@@ -139,7 +141,7 @@ public class ModèleAccueil extends Observable {
 				this.recettes.remove(i);
 			}
 		}
-		
+
 		recettes.add(rct);
 		if (this.classeIng != null) {
 			for (Ingrédient i : rct.ingrédients) {
@@ -160,6 +162,12 @@ public class ModèleAccueil extends Observable {
 		}
 
 		this.saveData();
+	}
+
+	public void afficherCategories() {
+		System.out.println("aff cat");
+		this.setChanged();
+		this.notifyObservers(this.catégories);
 	}
 
 	public void afficherParCatègories(String catègorie) {
@@ -194,6 +202,7 @@ public class ModèleAccueil extends Observable {
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
 			encoder.writeObject(this.recettes);
+			//encoder.writeObject(this.catégories);
 			encoder.flush();
 
 		} catch (final java.io.IOException e) {
@@ -212,6 +221,7 @@ public class ModèleAccueil extends Observable {
 			decoder = new XMLDecoder(bis);
 
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
+			//this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
 
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");
