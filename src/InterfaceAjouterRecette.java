@@ -56,7 +56,7 @@ public class InterfaceAjouterRecette implements Observer {
 	}
 
 	public static BorderPane getRoot() {
-		
+
 		 FXMLLoader loader = new FXMLLoader();
          loader.setLocation(Vue.class.getResource("ajoutRecette.fxml"));
          loader.setController(ctrlAjout);
@@ -100,7 +100,7 @@ public class InterfaceAjouterRecette implements Observer {
 		secondStage.setScene(scene);
 		secondStage.show();
 	}
-	
+
 	public void exitRecette(Recette recette) {
 		Stage secondStage = new Stage();
 		VBox parent = new VBox();
@@ -123,7 +123,7 @@ public class InterfaceAjouterRecette implements Observer {
 			ctrlAjout.sauvegarderRecette(false, recette);
 			secondStage.close();
 		});
-		
+
 		annuler.setOnAction(e -> {
 			recette.saved=false;
 			secondStage.close();
@@ -136,7 +136,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		secondStage.setScene(scene);
 		secondStage.show();
-		
+
 	}
 
 	@Override

@@ -13,13 +13,13 @@ import javafx.scene.control.ComboBox;
 
 @SuppressWarnings("deprecation")
 public class ModèleAccueil extends Observable {
-	
+
 	ArrayList<Recette> recettes;
 	HashMap<String, ArrayList<Recette>> classeIng;
 	HashMap<String, ArrayList<Recette>> catégories;
 	Vue vue;
 	File fichier;
-	
+
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();
 		this.catégories = new HashMap<String, ArrayList<Recette>>();
@@ -29,7 +29,7 @@ public class ModèleAccueil extends Observable {
 		this.jeuxDeTests();
 		this.loadData("data.xml");
 	}
-	
+
 	private void jeuxDeTests() {
 		Recette rct1 = new Recette();
 		rct1.nom = "Tarte aux citrons";
@@ -53,14 +53,14 @@ public class ModèleAccueil extends Observable {
 		rct10.nom = "Tartiflette";
 		Recette rct11 = new Recette();
 		rct11.nom = "Lasagne à la bolognaise";
-		
+
 		ArrayList<Recette> fromage = new ArrayList<Recette>();
 		fromage.add(rct5);
 		fromage.add(rct6);
 		fromage.add(rct7);
 		fromage.add(rct10);
 		this.catégories.put("Fromage", fromage);
-		
+
 		ArrayList<Recette> tomate = new ArrayList<Recette>();
 		tomate.add(rct3);
 		tomate.add(rct5);
@@ -73,7 +73,7 @@ public class ModèleAccueil extends Observable {
 		dessert.add(rct8);
 		dessert.add(rct9);
 		this.catégories.put("Dessert", dessert);
-		
+
 		ArrayList<Recette> plat = new ArrayList<Recette>();
 		plat.add(rct4);
 		plat.add(rct5);
@@ -82,7 +82,7 @@ public class ModèleAccueil extends Observable {
 		plat.add(rct10);
 		plat.add(rct11);
 		this.catégories.put("Plat", plat);
-		
+
 		ArrayList<Recette> farine = new ArrayList<Recette>();
 		farine.add(rct2);
 		farine.add(rct5);
@@ -90,14 +90,14 @@ public class ModèleAccueil extends Observable {
 		farine.add(rct8);
 		farine.add(rct11);
 		this.classeIng.put("Farine", farine);
-		
+
 		ArrayList<Recette> tomateIng = new ArrayList<Recette>();
 		tomateIng.add(rct3);
 		tomateIng.add(rct5);
 		tomateIng.add(rct6);
 		tomateIng.add(rct11);
 		this.classeIng.put("Tomate", tomateIng);
-	
+
 		ArrayList<Recette> viandeIng = new ArrayList<Recette>();
 		viandeIng.add(rct4);
 		viandeIng.add(rct5);
@@ -114,13 +114,13 @@ public class ModèleAccueil extends Observable {
 		fromageIng.add(rct10);
 		this.classeIng.put("Fromage", fromageIng);
 	}
-	
+
 	public void goToAjouterRecette()
 	{
 		this.vue.currentInterface = this.vue.currentInterface.AJOUT_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.AJOUT_RECETTE);
 	}
-	
+
 	public void changeWindow(boolean save, Recette rct) {
 		if (save) {
 			this.ajouterRecette(rct);
@@ -129,9 +129,9 @@ public class ModèleAccueil extends Observable {
 		this.afficherRecettes();
 	}
 
-	
+
 	public void ajouterRecette(Recette rct) {
-		
+
 		recettes.add(rct);
 		if (this.classeIng != null) {
 			for (Ingrédient i : rct.ingrédients) {
@@ -141,43 +141,43 @@ public class ModèleAccueil extends Observable {
 				this.classeIng.get(i.nom).add(rct);
 			}
 		}
-		
+
 		if (this.catégories != null) {
 			for (String s : rct.catégories) {
 				if (this.catégories.get(s) == null) {
 					this.catégories.put(s, new ArrayList<Recette>());
 				}
 				this.catégories.get(s).add(rct);
-			}			
+			}
 		}
-		
+
 		this.saveData("data.xml");
 	}
-	
+
 	public void afficherParCatègories(String catègorie) {
 		if (this.catégories.get(catègorie) != null) {
 			this.setChanged();
 			this.notifyObservers(this.catégories.get(catègorie));
 		}
 	}
-	
+
 	public void afficherParIngrèdients(Ingrédient ing) {
 		if (this.catégories.get(ing) != null) {
 			this.setChanged();
 			this.notifyObservers(this.classeIng.get(ing));
 		}
 	}
-	
+
 	public void afficherRecettes() {
 		this.setChanged();
 		this.notifyObservers(this.recettes);
 	}
-	
+
 	public void changerNote(Recette rct, int note) {
 		this.setChanged();
 		this.notifyObservers(rct);
 	}
-	
+
 	private void saveData(String url) {
 		XMLEncoder encoder = null;
 		try {
@@ -186,27 +186,26 @@ public class ModèleAccueil extends Observable {
 			encoder = new XMLEncoder(bos);
 			encoder.writeObject(this.recettes);
 			encoder.flush();
-			
+
 		} catch (final java.io.IOException e) {
 			throw new RuntimeException("Ecriture des données impossible !");
 		} finally {
 			if (encoder != null) encoder.close();
 		}
 		System.out.println("Data saved !");
-		
 	}
-	
+
 	private void loadData(String url) {
 		XMLDecoder decoder = null;
 		try {
 			FileInputStream fis = new FileInputStream(url);
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
-			
+
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
-			
+
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException("Chargement des données impossible !");
 		} finally {
 			if (decoder != null) decoder.close();
 		}
@@ -216,7 +215,7 @@ public class ModèleAccueil extends Observable {
 		System.out.println("gotoacc");
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
-		
-		
+
+
 	}
 }

@@ -57,7 +57,7 @@ public class AjoutRecetteController {
 
     @FXML
     private Label LabelEtape;
-    
+
 
     @FXML
     private Text Image;
@@ -70,7 +70,7 @@ public class AjoutRecetteController {
 
     @FXML
     public ToggleGroup note;
-    
+
     @FXML
     private ToggleButton note0;
 
@@ -85,13 +85,13 @@ public class AjoutRecetteController {
 
     @FXML
     private ToggleButton note4;
-    
+
     @FXML
     public ToggleGroup difficulté;
 
     @FXML
     private ToggleButton difficluté0;
-    
+
     @FXML
     private ToggleButton difficluté1;
 
@@ -103,16 +103,16 @@ public class AjoutRecetteController {
 
     @FXML
     private ToggleButton difficluté4;
-    
+
     @FXML
     private TextField TexteEtape;
 
     @FXML
     private Spinner<Integer> nbrPersonne;
-    
+
 	@FXML
 	public VBox affImg;
-	
+
     @FXML
     private TextField nomIngrédient;
 
@@ -121,16 +121,16 @@ public class AjoutRecetteController {
 
     @FXML
     private MenuButton mesureIngrédient;
-    
+
     @FXML
-    public ToggleGroup mesures; 
+    public ToggleGroup mesures;
 
     @FXML
     private Button retour;
-    
+
     @FXML
     private RadioMenuItem defaultRadiobutton;
-    
+
     @FXML
     private void exit(ActionEvent event) {
     	this.mdlAcc.changeWindow(false, null);
@@ -142,7 +142,7 @@ public class AjoutRecetteController {
 			event.acceptTransferModes(TransferMode.ANY);
 		}
 	}
-		
+
 	@FXML
 	private void dragDropped(DragEvent event) throws FileNotFoundException {
 		List<File> files = event.getDragboard().getFiles();
@@ -180,7 +180,7 @@ public class AjoutRecetteController {
     void NoteDifficulté(ActionEvent event) {
     	if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
         	String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
-        	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
+        	this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));
     	}
     }
 
@@ -188,7 +188,7 @@ public class AjoutRecetteController {
     void NoteRecette(ActionEvent event) {
     	if (((ToggleButton) this.note.getSelectedToggle()) != null) {
         	String s = ((ToggleButton) this.note.getSelectedToggle()).getId();
-        	this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));    		
+        	this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));
     	}
     }
 
@@ -198,10 +198,10 @@ public class AjoutRecetteController {
     	System.out.println("Description de la recette : "+Description.getText());
     	System.out.println("Note :"+this.note.getSelectedToggle());
     	if (this.affImg.getChildren().size()>1) {
-        	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
+        	this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
     	}
     }
-	
+
 	ModèleAjoutRecette mdl;
 	ModèleAccueil mdlAcc;
 	int nombreEtape;
@@ -209,13 +209,12 @@ public class AjoutRecetteController {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
 		this.nombreEtape=0;
-
 	}
-	
+
 	public void sauvegarderRecette(boolean save, Recette rct) {
 		this.mdlAcc.changeWindow(save, rct);
 	}
-	
+
 	public void personnesSpinner() {
 		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
 		this.nbrPersonne.setValueFactory(nombre);

@@ -14,20 +14,20 @@ import javafx.event.ActionEvent;
 public class AccueilController {
 	@FXML
 	private Button btnAjoutRecette;
-	
+
 	@FXML
 	public VBox recettes;
-	
+
 	@FXML
-    public ScrollPane scrollRecettes; 
-	
+    public ScrollPane scrollRecettes;
+
 	@FXML
 	private ComboBox<String> searchBar;
-	
+
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	BarreDeRecherche<String> bdr;
-	
+
 	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette)
 	{
 		this.mdl = mod;
@@ -39,13 +39,13 @@ public class AccueilController {
 	public void ajouterRecette(ActionEvent event) {
 		this.mdl.goToAjouterRecette();
 	}
-	
+
 	public void openRecette(Recette rct) {
 		this.mdl.goToAjouterAccueilRecette();
 		System.out.println("reçu");
 		this.mdlRecette.setRecette(rct);
 	}
-	
+
 	public void compléterComboBox(Set<String> liste) {
 		for (String s : liste) {
 			this.searchBar.getItems().add(s);
@@ -55,7 +55,7 @@ public class AccueilController {
 			System.out.println(e.getCode());
 		});
 	}
-	
+
 	public void createSearchBar() {
 		this.bdr = new BarreDeRecherche<String>(this.searchBar);
 	}

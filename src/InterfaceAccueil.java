@@ -29,18 +29,18 @@ public class InterfaceAccueil implements Observer
 {
 	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
-	
+
 	public InterfaceAccueil(AccueilController ctrl)
 	{
 		ctrlAccueil = ctrl;
 	}
-	
-	public static SplitPane getRoot() 
+
+	public static SplitPane getRoot()
 	{
 		FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Vue.class.getResource("accueil.fxml"));
         loader.setController(ctrlAccueil);
-        
+
 		try {
 			rootLayout = (SplitPane) loader.load();
 		} catch (IOException e) {
@@ -64,13 +64,13 @@ public class InterfaceAccueil implements Observer
 				{
 					Button btn = new Button();
 					btn.setId(Integer.toString((i+2)*i+j));
-					
+
 					btn.setOnAction(e -> {
 						System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
-						
+
 						this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 					});
-					
+
 					try {
 						String nom  = lstRecettes.get((i+2)*i+j).nom;
 						Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
@@ -89,6 +89,6 @@ public class InterfaceAccueil implements Observer
 			}
 			ctrlAccueil.recettes.getChildren().add(hb);
 		}
-		ctrlAccueil.scrollRecettes.setContent(recettes);		
+		ctrlAccueil.scrollRecettes.setContent(recettes);
 	}
 }
