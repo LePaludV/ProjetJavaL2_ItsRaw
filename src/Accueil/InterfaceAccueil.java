@@ -1,3 +1,4 @@
+package Accueil;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -24,6 +25,10 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.control.SplitPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 
 public class InterfaceAccueil implements Observer
 {
@@ -38,7 +43,7 @@ public class InterfaceAccueil implements Observer
 	public static SplitPane getRoot()
 	{
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Vue.class.getResource("accueil.fxml"));
+        loader.setLocation(Vue.class.getResource("../accueil.fxml"));
         loader.setController(ctrlAccueil);
 
 		try {

@@ -1,3 +1,4 @@
+package Accueil;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.BufferedInputStream;
@@ -10,22 +11,24 @@ import java.util.HashMap;
 import java.util.Observable;
 
 import javafx.scene.control.ComboBox;
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 
-@SuppressWarnings("deprecation")
 public class ModèleAccueil extends Observable {
 
-	ArrayList<Recette> recettes;
-	HashMap<String, ArrayList<Recette>> classeIng;
-	HashMap<String, ArrayList<Recette>> catégories;
-	Vue vue;
-	File fichier;
+	public ArrayList<Recette> recettes;
+	public HashMap<String, ArrayList<Recette>> classeIng;
+	public HashMap<String, ArrayList<Recette>> catégories;
+	public Vue vue;
+	public File fichier;
 
 	public ModèleAccueil(Vue v) {
 		this.recettes = new ArrayList<Recette>();
 		this.catégories = new HashMap<String, ArrayList<Recette>>();
 		this.classeIng = new HashMap<String, ArrayList<Recette>>();
 		this.vue = v;
-		this.fichier = new File("data.xml");
 		this.jeuxDeTests();
 		this.loadData();
 	}
@@ -214,7 +217,8 @@ public class ModèleAccueil extends Observable {
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
 
 		} catch (Exception e) {
-			throw new RuntimeException("Chargement des données impossible !");
+			
+			e.printStackTrace();
 		} finally {
 			if (decoder != null) decoder.close();
 		}

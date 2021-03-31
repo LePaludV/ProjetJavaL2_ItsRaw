@@ -1,3 +1,4 @@
+package Main;
 import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
 
@@ -13,6 +14,13 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class BarreDeRecherche<T> implements EventHandler {
 	
     private ComboBox comboBox;

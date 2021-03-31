@@ -1,3 +1,4 @@
+package AjoutRecette;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,10 @@ import com.sun.org.apache.xalan.internal.templates.Constants;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 import javafx.scene.shape.Path;
-
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class ModèleAjoutRecette extends Observable {
 
 	Recette recette_courante;

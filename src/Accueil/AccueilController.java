@@ -1,4 +1,7 @@
+package Accueil;
 import javafx.fxml.FXML;
+
+
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ScrollPane;
@@ -9,6 +12,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 import javafx.event.ActionEvent;
+
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 
 public class AccueilController {
 	@FXML

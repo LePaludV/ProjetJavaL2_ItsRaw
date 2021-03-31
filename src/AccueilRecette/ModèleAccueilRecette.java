@@ -1,5 +1,9 @@
+package AccueilRecette;
 import java.util.Observable;
-
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class ModèleAccueilRecette extends Observable{
 	public Recette recette_courante;
 	Vue vue;

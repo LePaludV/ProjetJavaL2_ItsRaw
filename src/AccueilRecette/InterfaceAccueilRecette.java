@@ -1,3 +1,4 @@
+package AccueilRecette;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -12,7 +13,10 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class InterfaceAccueilRecette  implements Observer {
 	static BorderPane rootLayout;
 	static AccueilRecetteController ctrlAccueilRct;
@@ -24,8 +28,8 @@ public class InterfaceAccueilRecette  implements Observer {
 	public InterfaceAccueilRecette(AccueilRecetteController ctrl) {
 		ctrlAccueilRct = ctrl;
 		try {
-			is1 = new FileInputStream("imgs/etoileJaune.png");
-			is2 = new FileInputStream("imgs/etoileNoire.png");
+			is1 = new FileInputStream("../imgs/etoileJaune.png");
+			is2 = new FileInputStream("../imgs/etoileNoire.png");
 			etoileJaune = new Image(is1);
 			etoileNoire = new Image(is2);
 		} catch (FileNotFoundException e) {
@@ -33,8 +37,8 @@ public class InterfaceAccueilRecette  implements Observer {
 		}
 
 		try {
-			it1 = new FileInputStream("imgs/toqueGrise.png");
-			it2 = new FileInputStream("imgs/toqueNoire.png");
+			it1 = new FileInputStream("../imgs/toqueGrise.png");
+			it2 = new FileInputStream("../imgs/toqueNoire.png");
 			ToqueGrise = new Image(it1);
 			ToqueNoire = new Image(it2);
 		} catch (FileNotFoundException e) {
@@ -46,7 +50,7 @@ public class InterfaceAccueilRecette  implements Observer {
 	public static BorderPane getRoot() {
 		
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Vue.class.getResource("accueilRecette.fxml"));
+        loader.setLocation(Vue.class.getResource("../accueilRecette.fxml"));
         loader.setController(ctrlAccueilRct);
 
 		try {
