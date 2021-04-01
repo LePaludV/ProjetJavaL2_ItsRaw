@@ -12,6 +12,7 @@ public class ModèleEtapes extends Observable{
 	
 	public void setRecette(Recette rct) {
 		this.recette_courante = rct;
+		this.notifyObservers(recette_courante);
 	}
 	
 	public void setEtapes()
@@ -27,14 +28,20 @@ public class ModèleEtapes extends Observable{
 	
 	public void  clickSuivant()
 	{
-		this.indexEtape +=1;
-		this.setEtapes();
+		if(this.indexEtape<this.recette_courante.getEtapes().size())
+		{
+			this.indexEtape +=1;
+			this.setEtapes();
+		}
 	}
 	
 	public void clickPrecedent()
 	{
-		this.indexEtape -=1;
-		this.setEtapes();
+		if(this.indexEtape>0)
+		{
+			this.indexEtape -=1;
+			this.setEtapes();
+		}
 	}
 
 }

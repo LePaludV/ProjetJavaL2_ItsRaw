@@ -3,7 +3,9 @@ import java.util.Observable;
 import java.util.Observer;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 
 public class InterfaceEtapes implements Observer {
 
@@ -32,8 +34,12 @@ public class InterfaceEtapes implements Observer {
 	
 	@Override
 	public void update(Observable o, Object arg) {
-		
-		
+		if(arg instanceof Recette)
+		{
+			Recette recette  = (Recette) arg;
+			Label titre = (Label) rootLayout.lookup("#titre");
+			titre.setText(recette.getNom());
+			System.out.println("ok");		}
 	}
 
 }

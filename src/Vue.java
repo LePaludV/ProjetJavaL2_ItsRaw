@@ -100,6 +100,7 @@ public class Vue extends Application {
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
             InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
             this.mdlEtapes.addObserver(vueEtapes);
+            
             Scene scene=new Scene(InterfaceEtapes.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();

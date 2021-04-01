@@ -7,7 +7,6 @@ public class ModèleAccueilRecette extends Observable{
 	
 	public ModèleAccueilRecette(Vue v) {
 		this.vue = v;
-		
 	}
 	
 	public void setRecette(Recette rct) {
