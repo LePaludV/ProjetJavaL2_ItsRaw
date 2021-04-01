@@ -62,10 +62,8 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
-		System.out.println("text" + arg);
 		if(arg instanceof ArrayList<?>)
 		{
-			//recettes
 			VBox recettes = ctrlAccueil.recettes;
 			recettes.getChildren().clear();
 			ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
@@ -81,24 +79,19 @@ public class InterfaceAccueil implements Observer
 						btn.setId(Integer.toString((i+2)*i+j));
 
 						btn.setOnAction(e -> {
-							System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).nom);
-
-							this.ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
+							System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).getPhoto());
+							ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 						});
 
-						try {
-							String nom  = lstRecettes.get((i+2)*i+j).nom;
-							Image img = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
-							ImageView imgView = new ImageView(img);
-							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
-							double largeurPhoto = img.getWidth();
-							double coeff = (largeurScroll/largeurPhoto);
-							imgView.setFitHeight((img.getHeight()*coeff)/3);
-							imgView.setFitWidth((img.getWidth()*coeff)/3);
-							btn.setGraphic(imgView);
-						} catch (FileNotFoundException e) {
-							e.printStackTrace();
-						}
+						Recette recette_courante = lstRecettes.get((i+2)*i+j);
+						String nom  = lstRecettes.get((i+2)*i+j).getNom();
+						ImageView imgView = new ImageView(recette_courante.getPhoto());
+						double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
+						double largeurPhoto = recette_courante.getPhoto().getWidth();
+						double coeff = (largeurScroll/largeurPhoto);
+						imgView.setFitHeight((recette_courante.getPhoto().getHeight()*coeff)/3);
+						imgView.setFitWidth((recette_courante.getPhoto().getWidth()*coeff)/3);
+						btn.setGraphic(imgView);
 						hb.getChildren().add(btn);
 					}
 				}

@@ -93,7 +93,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		non.setOnAction(e -> {
 			secondStage.close();
-			recette.saved=false;
+			recette.setSave(false);
 		});
 
 		listeBtns.getChildren().addAll(oui,non);
@@ -123,13 +123,13 @@ public class InterfaceAjouterRecette implements Observer {
 		});
 
 		non.setOnAction(e -> {
-			recette.saved=false;
+			recette.setSave(false);
 			ctrlAjout.sauvegarderRecette(false, recette);
 			secondStage.close();
 		});
 
 		annuler.setOnAction(e -> {
-			recette.saved=false;
+			recette.setSave(false);
 			secondStage.close();
 		});
 
@@ -149,7 +149,7 @@ public class InterfaceAjouterRecette implements Observer {
 		Recette recette = (Recette) rct;
 		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
 		étapes.getChildren().clear();
-		for(String i: recette.étapes) {
+		for(String i: recette.getEtapes()) {
 			Label etape = new Label(i);
 			etape.setWrapText(true);
 			étapes.getChildren().add(etape);
@@ -157,24 +157,24 @@ public class InterfaceAjouterRecette implements Observer {
 
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
 		catégorie.getChildren().clear();
-		for(String i: recette.catégories) {
+		for(String i: recette.getCatégories()) {
 			catégorie.getChildren().add(new Label(i));
 		}
 
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
-		for(Ingrédient i: recette.ingrédients) {
+		for(Ingrédient i: recette.getIngrédients()) {
 			ingrédient.getChildren().add(new Label((int)i.quantité+i.mesure+" "+i.nom));
 		}
 
 
-		if (recette.photo != null && ctrlAjout.affImg.getChildren().size() < 2) {
-			ImageView imgView = new ImageView(recette.photo);
+		if (recette.getPhoto() != null && ctrlAjout.affImg.getChildren().size() < 2) {
+			ImageView imgView = new ImageView(recette.getPhoto());
 			double hauteurVbox = ctrlAjout.affImg.getHeight();
-			double hauteurPhoto = recette.photo.getHeight();
+			double hauteurPhoto = recette.getPhoto().getHeight();
 			double coeff = (hauteurVbox/hauteurPhoto);
 			imgView.setFitHeight(hauteurPhoto*coeff);
-			imgView.setFitWidth(recette.photo.getWidth()*coeff);
+			imgView.setFitWidth(recette.getPhoto().getWidth()*coeff);
 			ctrlAjout.affImg.getChildren().add(imgView);
 			ctrlAjout.affImg.setSpacing(4);
 		}
@@ -184,7 +184,7 @@ public class InterfaceAjouterRecette implements Observer {
 			if (note.get(i) instanceof ToggleButton) {
 				ToggleButton tb = (ToggleButton) note.get(i);
 				tb.setBackground(null);
-				if (recette.note[i]) {
+				if (recette.getNote()[i]) {
 					tb.setGraphic(new ImageView(this.etoileJaune));
 				} else {
 					tb.setGraphic(new ImageView(this.etoileNoire));
@@ -198,7 +198,7 @@ public class InterfaceAjouterRecette implements Observer {
 				ToggleButton tb = (ToggleButton) difficulté.get(i);
 				tb.setBackground(null);
 
-				if (recette.difficulté[i]) {
+				if (recette.getDifficulté()[i]) {
 					tb.setGraphic(new ImageView(this.ToqueNoire));
 				} else {
 					tb.setGraphic(new ImageView(this.ToqueGrise));
@@ -206,7 +206,7 @@ public class InterfaceAjouterRecette implements Observer {
 			}
 		}
 
-		if (recette.saved) {
+		if (recette.getSave()) {
 			this.validerSauvegarde(recette);
 		}
 	}

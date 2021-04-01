@@ -28,8 +28,8 @@ public class InterfaceAccueilRecette  implements Observer {
 	public InterfaceAccueilRecette(AccueilRecetteController ctrl) {
 		ctrlAccueilRct = ctrl;
 		try {
-			is1 = new FileInputStream("../imgs/etoileJaune.png");
-			is2 = new FileInputStream("../imgs/etoileNoire.png");
+			is1 = new FileInputStream("imgs/etoileJaune.png");
+			is2 = new FileInputStream("imgs/etoileNoire.png");
 			etoileJaune = new Image(is1);
 			etoileNoire = new Image(is2);
 		} catch (FileNotFoundException e) {
@@ -37,8 +37,8 @@ public class InterfaceAccueilRecette  implements Observer {
 		}
 
 		try {
-			it1 = new FileInputStream("../imgs/toqueGrise.png");
-			it2 = new FileInputStream("../imgs/toqueNoire.png");
+			it1 = new FileInputStream("imgs/toqueGrise.png");
+			it2 = new FileInputStream("imgs/toqueNoire.png");
 			ToqueGrise = new Image(it1);
 			ToqueNoire = new Image(it2);
 		} catch (FileNotFoundException e) {
@@ -48,10 +48,10 @@ public class InterfaceAccueilRecette  implements Observer {
 	}
 
 	public static BorderPane getRoot() {
-		
+
 		FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Vue.class.getResource("../accueilRecette.fxml"));
-        loader.setController(ctrlAccueilRct);
+		loader.setLocation(Vue.class.getResource("../accueilRecette.fxml"));
+		loader.setController(ctrlAccueilRct);
 
 		try {
 			rootLayout = (BorderPane) loader.load();
@@ -59,65 +59,58 @@ public class InterfaceAccueilRecette  implements Observer {
 			e.printStackTrace();
 		}
 
-		 return rootLayout;
+		return rootLayout;
+	}
+
+	public void update(Observable arg0, Object rct) { 
+		Recette recette = (Recette) rct;
+
+		ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
+		for (int i=0;i<note.size();i++) {
+			if (note.get(i) instanceof ToggleButton) {
+				ToggleButton tb = (ToggleButton) note.get(i);
+				tb.setBackground(null);
+				if (recette.getNote()[i]) {
+					tb.setGraphic(new ImageView(this.etoileJaune));
+				} else {
+					tb.setGraphic(new ImageView(this.etoileNoire));
+				}
+			}
+		}
+
+		ObservableList<Toggle> difficulté = ctrlAccueilRct.difficulté.getToggles();
+		for (int i=0;i<difficulté.size();i++) {
+			if (difficulté.get(i) instanceof ToggleButton) {
+				ToggleButton tb = (ToggleButton) difficulté.get(i);
+				tb.setBackground(null);
+
+				if (recette.getDifficulté()[i]) {
+					tb.setGraphic(new ImageView(this.ToqueNoire));
+				} else {
+					tb.setGraphic(new ImageView(this.ToqueGrise));
+				}
+			}
+		}
+		loadRecette(recette);
 	}
 	
-	public void update(Observable arg0, Object rct) { 
-		
-
-
-		//Quand on va modifier la note / difficulté le uptade dois faire la sauvegarder automatique (ce que faisait le btn sauvegarder de ajout recette).
-		// quand on update faut créer un nouveau fichier xml a partir de l'acnien avec la nouvel note et supprimer l'ancien ensuite ?
-	Recette recette = (Recette) rct;
-
-	ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
-	for (int i=0;i<note.size();i++) {
-		if (note.get(i) instanceof ToggleButton) {
-			ToggleButton tb = (ToggleButton) note.get(i);
-			tb.setBackground(null);
-			if (recette.note[i]) {
-				tb.setGraphic(new ImageView(this.etoileJaune));
-			} else {
-				tb.setGraphic(new ImageView(this.etoileNoire));
-			}
+	public void loadRecette(Recette rct) {
+		if(rct==null) {
+			ctrlAccueilRct.TexteDescription.setText("Problème chargement de la recette séléctionner dans l'accueil "
+					+ "\nOU interface lancé par défaut (cf ''currentInterface'' dans Vue.java)");
 		}
-	}
-
-	ObservableList<Toggle> difficulté = ctrlAccueilRct.difficulté.getToggles();
-	for (int i=0;i<difficulté.size();i++) {
-		if (difficulté.get(i) instanceof ToggleButton) {
-			ToggleButton tb = (ToggleButton) difficulté.get(i);
-			tb.setBackground(null);
-
-			if (recette.difficulté[i]) {
-				tb.setGraphic(new ImageView(this.ToqueNoire));
-			} else {
-				tb.setGraphic(new ImageView(this.ToqueGrise));
-			}
-		}
-	}
-	loadRecette(recette);
-	}
-		public void loadRecette(Recette rct) {
-			if(rct==null) {
-				this.ctrlAccueilRct.TexteDescription.setText("Problème chargement de la recette séléctionner dans l'accueil "
-						+ "\nOU interface lancé par défaut (cf ''currentInterface'' dans Vue.java)");
-			}
-			else {
-			this.ctrlAccueilRct.TexteDescription.setText(rct.description);
+		else {
+			ctrlAccueilRct.TexteDescription.setText(rct.getDescription());
 			String ingr = null;
-			for(Ingrédient s: rct.ingrédients) {
+			for(Ingrédient s: rct.getIngrédients()) {
 				ingr+="- "+s.quantité+s.mesure+" "+s.nom+"\n";
 			}
-		
-			this.ctrlAccueilRct.TexteIngrédient.setText("ingr");
-			
-			this.ctrlAccueilRct.ImageRecette.setImage(rct.photo);
-			this.ctrlAccueilRct.Nom.setText(rct.nom);
-			this.ctrlAccueilRct.nbrPersonne.setText("Pour "+rct.nbrPersonne+" Personne(s).");};
-			
-			
-		}
-	
-	
+
+			ctrlAccueilRct.TexteIngrédient.setText("ingr");
+			System.out.println("nom de la recette "+rct.getNom());
+			System.out.println("photo de la recette "+rct.getPhoto());
+			ctrlAccueilRct.ImageRecette.setImage(rct.getPhoto());
+			ctrlAccueilRct.Nom.setText(rct.getNom());
+			ctrlAccueilRct.nbrPersonne.setText("Pour "+rct.getNbrPersonne()+" Personne(s).");};
+	}
 }

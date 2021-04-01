@@ -5,6 +5,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -13,7 +14,9 @@ import javafx.scene.control.ComboBox;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
-import Main.*;
+import Main.Recette;
+import Main.Vue;
+import Main.Ingrédient;
 
 public class ModèleAccueil extends Observable {
 
@@ -34,27 +37,27 @@ public class ModèleAccueil extends Observable {
 
 	private void jeuxDeTests() {
 		Recette rct1 = new Recette();
-		rct1.nom = "Tarte aux citrons";
+		rct1.setNom("Tarte aux citrons");
 		Recette rct2 = new Recette();
-		rct2.nom = "Flans";
+		rct2.setNom("Flans");
 		Recette rct3 = new Recette();
-		rct3.nom = "Salade de tomates";
+		rct3.setNom("Salade de tomates");
 		Recette rct4 = new Recette();
-		rct4.nom = "Pot au feu";
+		rct4.setNom("Pot au feu");
 		Recette rct5 = new Recette();
-		rct5.nom = "Pizza";
+		rct5.setNom("Pizza");
 		Recette rct6 = new Recette();
-		rct6.nom = "Hamburger";
+		rct6.setNom("Hamburger");
 		Recette rct7 = new Recette();
-		rct7.nom = "Pâtes au fromage";
+		rct7.setNom("Pâtes au fromage");
 		Recette rct8 = new Recette();
-		rct8.nom = "Crèpes";
+		rct8.setNom("Crèpes");
 		Recette rct9 = new Recette();
-		rct9.nom = "Tiramisu";
+		rct9.setNom("Tiramisu");
 		Recette rct10 = new Recette();
-		rct10.nom = "Tartiflette";
+		rct10.setNom("Tartiflette");
 		Recette rct11 = new Recette();
-		rct11.nom = "Lasagne à la bolognaise";
+		rct11.setNom("Lasagne à la bolognaise");
 
 		ArrayList<Recette> fromage = new ArrayList<Recette>();
 		fromage.add(rct5);
@@ -128,7 +131,6 @@ public class ModèleAccueil extends Observable {
 			this.ajouterRecette(rct);
 		}
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
-		System.out.println("change window");
 		this.afficherRecettes();
 		this.afficherCategories();
 	}
@@ -137,16 +139,14 @@ public class ModèleAccueil extends Observable {
 	public void ajouterRecette(Recette rct) {
 
 		for(int i =0;i<this.recettes.size();i++) {
-			System.out.println(this.recettes.get(i).nom+ " | "+rct.nom);
-			if(this.recettes.get(i).nom.contentEquals(rct.nom)) {
-				System.out.println("Supprimer"+i);
+			if(this.recettes.get(i).getNom().contentEquals(rct.getNom())) {
 				this.recettes.remove(i);
 			}
 		}
 
 		recettes.add(rct);
 		if (this.classeIng != null) {
-			for (Ingrédient i : rct.ingrédients) {
+			for (Ingrédient i : rct.getIngrédients()) {
 				if (this.classeIng.get(i.nom) == null) {
 					this.classeIng.put(i.nom, new ArrayList<Recette>());
 				}
@@ -155,7 +155,7 @@ public class ModèleAccueil extends Observable {
 		}
 
 		if (this.catégories != null) {
-			for (String s : rct.catégories) {
+			for (String s : rct.getCatégories()) {
 				if (this.catégories.get(s) == null) {
 					this.catégories.put(s, new ArrayList<Recette>());
 				}
@@ -167,7 +167,6 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void afficherCategories() {
-		System.out.println("aff cat");
 		this.setChanged();
 		this.notifyObservers(this.catégories);
 	}
@@ -187,7 +186,6 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void afficherRecettes() {
-		System.out.println(this.recettes);
 		this.setChanged();
 		this.notifyObservers(this.recettes);
 	}
@@ -216,6 +214,7 @@ public class ModèleAccueil extends Observable {
 	}
 
 	private void loadData() {
+		System.out.println("liste des recettes "+this.recettes);
 		XMLDecoder decoder = null;
 		try {
 			FileInputStream fis = new FileInputStream("data.xml");
@@ -224,20 +223,19 @@ public class ModèleAccueil extends Observable {
 
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
 			//this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
-
 		} catch (Exception e) {
 			
 			e.printStackTrace();
 		} finally {
 			if (decoder != null) decoder.close();
 		}
+		System.out.println("nom de la recette : "+this.recettes.get(0).getNom());
+		System.out.println("photo de la recette : "+this.recettes.get(0).getNom());
+		System.out.println("Data loaded !");
 	}
 
 	public void goToAjouterAccueilRecette() {
-		System.out.println("gotoacc");
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
-
-
 	}
 }

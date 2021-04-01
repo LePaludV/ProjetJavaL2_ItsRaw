@@ -33,7 +33,11 @@ import javafx.stage.Stage;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
+import Etapes.EtapesController;
+import Etapes.InterfaceEtapes;
+import Etapes.ModèleEtapes;
 import Main.*;
+
 public class Vue extends Application {
 	Stage primaryStage;
 	InterfaceAccueil acc=new InterfaceAccueil(null);
@@ -74,7 +78,6 @@ public class Vue extends Application {
             this.primaryStage.sizeToScene();
         } else if (this.currentInterface == typeInterface.ACCUEIL)
         {
-        	this.mdlAccueil = new ModèleAccueil(this);
             AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil, this.mdlAccueilRecette);
             InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
             this.mdlAccueil.addObserver(vueAccueil);
@@ -90,7 +93,6 @@ public class Vue extends Application {
         	System.out.println("changewindow");
         	Recette rct=new Recette();
         	rct=null;
-
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
             InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
             this.mdlAccueilRecette.addObserver(vueAccueilRecette);
@@ -98,8 +100,6 @@ public class Vue extends Application {
             primaryStage.setScene(scene);
             vueAccueilRecette.loadRecette(rct);
             this.primaryStage.sizeToScene();
-
-
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
         	this.mdlEtapes = new ModèleEtapes(this);
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);

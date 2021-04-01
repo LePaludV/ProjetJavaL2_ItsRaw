@@ -5,24 +5,22 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import javafx.scene.image.Image;
-import Accueil.*;
-import AccueilRecette.*;
-import AjoutRecette.*;
-import Main.*;
+
 public class Recette implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	public String nom;
-	public String description;
-	public Image photo;
-	public ArrayList<Ingrédient> ingrédients;
-	public boolean[] note = {false,false,false,false,false};
-	public boolean saved;
-	public boolean[] difficulté = {false,false,false,false,false};
-	public ArrayList<String> étapes, catégories;
-	public int nbrPersonne;
+	String nom;
+	String description;
+	Image photo;
+	ArrayList<Ingrédient> ingrédients;
+	boolean[] note = {false,false,false,false,false};
+	boolean saved;
+	boolean[] difficulté = {false,false,false,false,false};
+	ArrayList<String> étapes, catégories;
+	int nbrPersonne;
 
 	public Recette() {
+		this.nom="";
 		this.ingrédients = new ArrayList<Ingrédient>();
 		this.étapes = new ArrayList<String>();
 		this.catégories = new ArrayList<String>();
@@ -43,9 +41,21 @@ public class Recette implements Serializable {
 		return this.nom;
 	}
 	
-	public void setNom(String nom) throws FileNotFoundException {
+	public Image getPhoto() {
+		return this.photo;
+	}
+	
+	public void setPhotoByImage(Image img) {
+		System.out.println("setPhoto !");
+		this.photo = img;
+	}
+	
+	public void setPhoto() {
+		this.photo = new Image("imagesRecette/"+this.nom+".png");
+	}
+	
+	public void setNom(String nom){
 		this.nom = nom;
-		this.photo = new Image(new FileInputStream("imagesRecette/"+nom+".png"));
 	}
 	
 	public String getDescription() {
@@ -54,15 +64,6 @@ public class Recette implements Serializable {
 	
 	public void setDescription(String s) {
 		this.description = s;
-	}
-	
-	public String getNomImage() {
-		return this.nom;
-	}
-	
-	public void setNomImage(String s) {
-		this.photo = new Image(s);
-		System.out.println("photo chargé :"+this.photo);
 	}
 	
 	public ArrayList<Ingrédient> getIngrédients(){

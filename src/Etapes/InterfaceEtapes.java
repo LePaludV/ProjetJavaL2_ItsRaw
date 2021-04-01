@@ -1,7 +1,9 @@
+package Etapes;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
+import Main.Vue;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.BorderPane;
 

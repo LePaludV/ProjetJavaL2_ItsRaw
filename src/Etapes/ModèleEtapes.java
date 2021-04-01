@@ -1,3 +1,6 @@
+package Etapes;
+import Main.Vue;
+
 public class ModèleEtapes {
 	Vue vue;
 	
