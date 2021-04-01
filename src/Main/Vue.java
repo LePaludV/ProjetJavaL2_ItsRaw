@@ -37,7 +37,7 @@ import Etapes.EtapesController;
 import Etapes.InterfaceEtapes;
 import Etapes.ModèleEtapes;
 import Main.*;
-
+import Etapes.*;
 public class Vue extends Application {
 	Stage primaryStage;
 	InterfaceAccueil acc=new InterfaceAccueil(null);

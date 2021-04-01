@@ -108,7 +108,7 @@ public class ModèleAjoutRecette extends Observable {
 		this.notifyObservers(this.recette_courante);
 	}
 
-	private void saveImage(Image image) {
+	public void saveImage(Image image) {
 		try {
             File file = new File("imagesRecette/"+this.recette_courante.getNom()+".png");
 			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(image, null);
