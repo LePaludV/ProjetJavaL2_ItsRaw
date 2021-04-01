@@ -23,7 +23,7 @@
             <RowConstraints maxHeight="321.0" minHeight="8.0" prefHeight="44.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="21.0" prefWidth="123.0" text="Nom de recettes" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label fx:id="titre" prefHeight="21.0" prefWidth="123.0" text="Nom de recettes" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
                   <Button fx:id="suivant" layoutX="628.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickOnSuivant" text="SUIVANT" />
@@ -38,13 +38,13 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fitHeight="280.0" fitWidth="554.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="image" fitHeight="280.0" fitWidth="554.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imgs/not_found.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-border-color: black; -fx-alignment: center;" text="blablabla" />
-                  <Label layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" style="-fx-border-color: black; -fx-alignment: center;" text="ETAPE" />
+                  <Label fx:id="description" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-border-color: black; -fx-alignment: center;" text="blablabla" />
+                  <Label fx:id="etape" layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" style="-fx-border-color: black; -fx-alignment: center;" text="ETAPE" />
                </children>
             </Pane>
          </children>
