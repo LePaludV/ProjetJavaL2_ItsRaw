@@ -27,7 +27,11 @@ public class ModèleAccueil extends Observable {
 		this.vue = v;
 		this.fichier = new File("data.xml");
 		this.jeuxDeTests();
+<<<<<<< Updated upstream:src/ModèleAccueil.java
 		this.loadData("data.xml");
+=======
+		this.loadData();
+>>>>>>> Stashed changes:src/Accueil/ModèleAccueil.java
 	}
 
 	private void jeuxDeTests() {
@@ -195,7 +199,13 @@ public class ModèleAccueil extends Observable {
 		System.out.println("Data saved !");
 	}
 
+<<<<<<< Updated upstream:src/ModèleAccueil.java
 	private void loadData(String url) {
+=======
+	@SuppressWarnings("unchecked")
+	private void loadData() {
+		System.out.println("liste des recettes "+this.recettes);
+>>>>>>> Stashed changes:src/Accueil/ModèleAccueil.java
 		XMLDecoder decoder = null;
 		try {
 			FileInputStream fis = new FileInputStream(url);
@@ -203,12 +213,28 @@ public class ModèleAccueil extends Observable {
 			decoder = new XMLDecoder(bis);
 
 			this.recettes = (ArrayList<Recette>) decoder.readObject();
+<<<<<<< Updated upstream:src/ModèleAccueil.java
+=======
+		} catch (Exception e) {
+>>>>>>> Stashed changes:src/Accueil/ModèleAccueil.java
 
 		} catch (Exception e) {
 			throw new RuntimeException("Chargement des données impossible !");
 		} finally {
 			if (decoder != null) decoder.close();
 		}
+<<<<<<< Updated upstream:src/ModèleAccueil.java
+=======
+		
+		for (Recette r : this.recettes) {
+			try {
+				r.setPhoto();
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Data loaded !");
+>>>>>>> Stashed changes:src/Accueil/ModèleAccueil.java
 	}
 
 	public void goToAjouterAccueilRecette() {

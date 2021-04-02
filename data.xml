@@ -21,6 +21,7 @@
      <int>4</int>
     </void>
     <void property="nom">
+<<<<<<< Updated upstream
      <string>Rhum</string>
     </void>
     <void property="note">
@@ -30,11 +31,30 @@
      <void index="1">
       <boolean>true</boolean>
      </void>
+=======
+     <string>miam</string>
+>>>>>>> Stashed changes
     </void>
     <void property="save">
      <boolean>true</boolean>
     </void>
    </object>
   </void>
+<<<<<<< Updated upstream
+=======
+  <void method="add">
+   <object class="Main.Recette">
+    <void property="nbrPersonne">
+     <int>4</int>
+    </void>
+    <void property="nom">
+     <string>sdfsa</string>
+    </void>
+    <void property="save">
+     <boolean>true</boolean>
+    </void>
+   </object>
+  </void>
+>>>>>>> Stashed changes
  </object>
 </java>

@@ -159,6 +159,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
+<<<<<<< Updated upstream:src/InterfaceAjouterRecette.java
 		for(Ingrédient i: recette.ingrédients) {
 			ingrédient.getChildren().add(new Label((int)i.quantité+i.mesure+" "+i.nom));
 		}
@@ -171,6 +172,36 @@ public class InterfaceAjouterRecette implements Observer {
 			double coeff = (hauteurVbox/hauteurPhoto);
 			imgView.setFitHeight(hauteurPhoto*coeff);
 			imgView.setFitWidth(recette.photo.getWidth()*coeff);
+=======
+		for(Ingrédient i: recette.getIngrédients()) {
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			Button btn = new Button();
+			
+			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
+			try {
+				FileInputStream fis = new FileInputStream("imgs/red_cross.png");
+				ImageView imgV = new ImageView(new Image(fis));
+				imgV.setFitHeight(20);
+				imgV.setFitWidth(20);
+				btn.setGraphic(imgV);
+				btn.setBackground(null);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}			
+			hb.getChildren().addAll(btn, lbl);
+			ingrédient.getChildren().add(hb);
+		}
+
+
+		if (recette.getPhotoImage() != null && ctrlAjout.affImg.getChildren().size() < 2) {
+			ImageView imgView = new ImageView(recette.getPhotoImage());
+			double hauteurVbox = ctrlAjout.affImg.getHeight();
+			double hauteurPhoto = recette.getPhotoImage().getHeight();
+			double coeff = (hauteurVbox/hauteurPhoto);
+			imgView.setFitHeight(hauteurPhoto*coeff);
+			imgView.setFitWidth(recette.getPhotoImage().getWidth()*coeff);
+>>>>>>> Stashed changes:src/AjoutRecette/InterfaceAjouterRecette.java
 			ctrlAjout.affImg.getChildren().add(imgView);
 			ctrlAjout.affImg.setSpacing(4);
 		}

@@ -89,11 +89,19 @@ public class ModèleAjoutRecette extends Observable {
 	}
 
 	public void sauvegarder(String s, String desc, Integer nbrPersonne) {
+<<<<<<< Updated upstream:src/ModèleAjoutRecette.java
 		this.recette_courante.saved=true;
 		this.recette_courante.nom = s;
 		this.recette_courante.description = desc;
 		this.recette_courante.nbrPersonne=nbrPersonne;
 		this.saveImage(this.recette_courante.photo);
+=======
+		this.recette_courante.setSave(true);
+		this.recette_courante.setNom(s);
+		this.recette_courante.setDescription(desc);
+		this.recette_courante.setNbrPersonne(nbrPersonne);
+		this.saveImage(this.recette_courante.getPhotoImage());
+>>>>>>> Stashed changes:src/AjoutRecette/ModèleAjoutRecette.java
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

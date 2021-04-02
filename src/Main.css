@@ -2,7 +2,7 @@
     font-family: Oswald-Bold;
     src: url("../polices/Oswald-Bold.ttf");
 }
-
+/*
 .button{
   -fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;
@@ -17,7 +17,7 @@
   -fx-background-color: #D94333;
   -fx-text-fill: #1d1d1d;
 }
-
+*/
 .description{
 	-fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 20;
