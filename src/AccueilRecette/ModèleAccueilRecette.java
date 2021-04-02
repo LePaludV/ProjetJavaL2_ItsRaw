@@ -4,14 +4,17 @@ import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
+import Panier.*;
 public class ModèleAccueilRecette extends Observable{
 	public Recette recette_courante;
 	Vue vue;
 	ModèleAccueil mdlAcc;
+	ModèlePanier mdlPanier;
 
-	public ModèleAccueilRecette(Vue v,ModèleAccueil mdl) {
+	public ModèleAccueilRecette(Vue v,ModèleAccueil mdl,ModèlePanier mdlPanier) {
 		this.mdlAcc=mdl;
 		this.vue = v;
+		this.mdlPanier=mdlPanier;
 
 	}
 
@@ -61,6 +64,7 @@ public class ModèleAccueilRecette extends Observable{
 
 	public void ajouterAuPanier() {
 		System.out.println("Ajout des ingrédients au panier :");
+		this.mdlPanier.addIngredient(this.recette_courante.getIngrédients());
 		for(int i = 0;i<this.recette_courante.getIngrédients().size();i++) {
 			System.out.println(this.recette_courante.getIngrédients().get(i).mesure);
 			System.out.println(this.recette_courante.getIngrédients().get(i).nom);

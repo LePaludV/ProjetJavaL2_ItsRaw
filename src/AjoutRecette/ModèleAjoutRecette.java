@@ -45,13 +45,22 @@ public class ModèleAjoutRecette extends Observable {
 	}
 
 	public void ajoutIngrédient(String nom, int quantité, String mesure) {
-		this.recette_courante.getIngrédients().add(new Ingrédient(nom, quantité, mesure));
+		Ingrédient ingr=new Ingrédient();
+		ingr.setNom(nom);
+		ingr.setQuantité(quantité);
+		ingr.setMesure(mesure);
+		this.recette_courante.getIngrédients().add(ingr);
+
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
 
 	public void validerIngrédient(String nom, int quantité, String mesure) {
-		this.recette_courante.getIngrédients().add(new Ingrédient(nom, quantité,mesure));
+		Ingrédient ingr=new Ingrédient();
+		ingr.setNom(nom);
+		ingr.setQuantité(quantité);
+		ingr.setMesure(mesure);
+		this.recette_courante.getIngrédients().add(ingr);
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

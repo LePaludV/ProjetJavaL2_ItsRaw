@@ -54,7 +54,10 @@
       </Pane>
       <ScrollPane fx:id="scrollPanier" hbarPolicy="NEVER" minWidth="793.0" prefHeight="711.0" prefWidth="793.0" styleClass="gridPane" stylesheets="@Main.css">
          <content>
-            <VBox prefHeight="711.0" prefWidth="798.0" styleClass="gridPane" stylesheets="@Main.css" />
+            <VBox prefHeight="711.0" prefWidth="798.0" styleClass="gridPane" stylesheets="@Main.css">
+               <children>
+                  <Label fx:id="TextePanier" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="698.0" prefWidth="783.0" textAlignment="CENTER" />
+               </children></VBox>
          </content>
       </ScrollPane>
   </items>
