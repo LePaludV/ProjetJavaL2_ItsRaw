@@ -35,7 +35,6 @@ public class ModèleAccueil extends Observable {
 		this.vue = v;
 		this.jeuxDeTests();
 		this.loadData();
-
 	}
 
 	private void jeuxDeTests() {
@@ -231,6 +230,10 @@ public class ModèleAccueil extends Observable {
 			e.printStackTrace();
 		} finally {
 			if (decoder != null) decoder.close();
+		}
+		
+		for (Recette r : this.recettes) {
+			r.setPhoto();
 		}
 		System.out.println("nom de la recette : "+this.recettes.get(0).getNom());
 		System.out.println("photo de la recette : "+this.recettes.get(0).getNom());

@@ -51,7 +51,15 @@ public class Recette implements Serializable {
 	}
 
 	public void setPhoto() {
-		this.photo = new Image("imagesRecette/"+this.nom+".png");
+		String s = "imagesRecette/"+this.nom+".png";
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(s);
+			this.photo = new Image(fis);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 	public void setNom(String nom){
