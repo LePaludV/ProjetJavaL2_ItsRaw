@@ -107,6 +107,12 @@ public class ModèleAjoutRecette extends Observable {
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
+	
+	public void supprimerIng(Ingrédient ing) {
+		this.recette_courante.getIngrédients().remove(ing);
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
 
 	public void saveImage(Image image) {
 		try {

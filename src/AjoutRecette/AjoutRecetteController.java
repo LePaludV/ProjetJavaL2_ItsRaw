@@ -217,6 +217,10 @@ public class AjoutRecetteController {
 
 	}
 	
+	public void supprimerIngrédient(Ingrédient ing) {
+		this.mdl.supprimerIng(ing);
+	}
+	
 	public void sauvegarderRecette(boolean save, Recette rct) {
 		this.mdlAcc.changeWindow(save, rct);
 	}

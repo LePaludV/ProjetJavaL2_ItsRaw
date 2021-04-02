@@ -164,7 +164,27 @@ public class InterfaceAjouterRecette implements Observer {
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.getIngrédients()) {
-			ingrédient.getChildren().add(new Label((int)i.quantité+i.mesure+" "+i.nom));
+			Button btn = new Button();
+			
+			btn.setOnAction(e -> {
+				ctrlAjout.supprimerIngrédient(i);
+			});
+			
+			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			try {
+				FileInputStream fis = new FileInputStream("imgs/red_cross.png");
+				ImageView imgView = new ImageView(new Image(fis));
+				imgView.setFitHeight(20);
+				imgView.setFitWidth(20);
+				btn.setGraphic(imgView);
+				btn.setBackground(null);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+			hb.getChildren().addAll(btn, lbl);
+			ingrédient.getChildren().add(hb);
 		}
 
 

@@ -3,17 +3,17 @@
     src: url("../polices/Oswald-Bold.ttf");
 }
 
-.button{
+.button1{
   -fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;
 	-fx-background-color: #D94333;
 }
 
-.button:hover {
+.button1:hover {
     -fx-background-color: #AB1C0C;
 }
 
-.button:pressed, .button:default:hover:pressed {
+.button1:pressed, .button:default:hover:pressed {
   -fx-background-color: #D94333;
   -fx-text-fill: #1d1d1d;
 }

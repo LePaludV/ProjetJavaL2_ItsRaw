@@ -46,7 +46,7 @@
   <items>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="gridPane" stylesheets="@Main.css">
          <children>
-            <Button fx:id="btnAjoutRecette" layoutX="542.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="186.0" stylesheets="@Main.css" text="Ajouter Recette" />
+            <Button fx:id="btnAjoutRecette" layoutX="542.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="186.0" styleClass="button1" stylesheets="@Main.css" text="Ajouter Recette" />
             <Label layoutX="43.0" layoutY="25.0" prefHeight="117.0" prefWidth="398.0" stylesheets="@Main.css" text="IT'S ROOOOOOW">
                <font>
                   <Font name="System Bold" size="27.0" />
