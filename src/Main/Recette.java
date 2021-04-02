@@ -116,7 +116,7 @@ public class Recette implements Serializable {
 	}
 
 	public ArrayList<String> getCatégories(){
-		return this.étapes;
+		return this.catégories;
 	}
 
 	public void setCatégories(ArrayList<String> lstCatégories) {

@@ -37,6 +37,7 @@ import Etapes.EtapesController;
 import Etapes.InterfaceEtapes;
 import Etapes.ModèleEtapes;
 import Main.*;
+import Panier.*;
 import Etapes.*;
 public class Vue extends Application {
 	Stage primaryStage;
@@ -46,8 +47,9 @@ public class Vue extends Application {
 	ModèleAccueil mdlAccueil;
 	ModèleAccueilRecette mdlAccueilRecette;
 	ModèleEtapes mdlEtapes;
+	ModèlePanier mdlPanier;
 
-	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE};
+	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE, PANIER};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
 
 	@Override
@@ -105,6 +107,15 @@ public class Vue extends Application {
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
             InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
             Scene scene=new Scene(InterfaceEtapes.getRoot());
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+
+        }
+        else if (this.currentInterface == typeInterface.PANIER) {
+        	this.mdlPanier = new ModèlePanier(this);
+            PanierController ctrlPanier = new PanierController(this.mdlPanier);
+            InterfacePanier vuePanier = new InterfacePanier(ctrlPanier);
+            Scene scene=new Scene(InterfacePanier.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
 
