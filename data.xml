@@ -2,46 +2,19 @@
 <java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.ArrayList">
   <void method="add">
-   <object class="Recette" id="Recette0">
-    <void property="difficulté">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
-     <void index="2">
-      <boolean>true</boolean>
-     </void>
-     <void index="3">
-      <boolean>true</boolean>
-     </void>
-    </void>
+   <object class="Main.Recette">
     <void property="nbrPersonne">
      <int>4</int>
     </void>
     <void property="nom">
-<<<<<<< Updated upstream
-     <string>Rhum</string>
-    </void>
-    <void property="note">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
-=======
      <string>miam</string>
->>>>>>> Stashed changes
+     <string>saumon</string>
     </void>
     <void property="save">
      <boolean>true</boolean>
     </void>
    </object>
   </void>
-<<<<<<< Updated upstream
-=======
   <void method="add">
    <object class="Main.Recette">
     <void property="nbrPersonne">
@@ -55,6 +28,37 @@
     </void>
    </object>
   </void>
->>>>>>> Stashed changes
  </object>
+<void class="Main.Recette" id="Field0" method="getField">
+ <string>difficulté</string>
+ <void id="booleanArray0" method="get">
+  <object idref="Recette0"/>
+  <void index="1">
+   <boolean>true</boolean>
+  </void>
+  <void index="2">
+   <boolean>true</boolean>
+  </void>
+  <void index="0">
+   <boolean>true</boolean>
+  </void>
+ </void>
+</void>
+<void idref="booleanArray0"/>
+<void class="Main.Recette" id="Field1" method="getField">
+ <string>note</string>
+ <void id="booleanArray1" method="get">
+  <object idref="Recette0"/>
+  <void index="1">
+   <boolean>true</boolean>
+  </void>
+  <void index="2">
+   <boolean>true</boolean>
+  </void>
+  <void index="0">
+   <boolean>true</boolean>
+  </void>
+ </void>
+</void>
+<void idref="booleanArray1"/>
 </java>
