@@ -147,22 +147,18 @@ public class ModèleAccueil extends Observable {
 		}
 
 		recettes.add(rct);
-		if (this.classeIng != null) {
-			for (Ingrédient i : rct.getIngrédients()) {
-				if (this.classeIng.get(i.nom) == null) {
-					this.classeIng.put(i.nom, new ArrayList<Recette>());
-				}
-				this.classeIng.get(i.nom).add(rct);
+		for (Ingrédient i : rct.getIngrédients()) {
+			if (this.classeIng.get(i.nom) == null) {
+				this.classeIng.put(i.nom, new ArrayList<Recette>());
 			}
+			this.classeIng.get(i.nom).add(rct);
 		}
 
-		if (this.catégories != null) {
-			for (String s : rct.getCatégories()) {
-				if (this.catégories.get(s) == null) {
-					this.catégories.put(s, new ArrayList<Recette>());
-				}
-				this.catégories.get(s).add(rct);
+		for (String s : rct.getCatégories()) {
+			if (this.catégories.get(s) == null) {
+				this.catégories.put(s, new ArrayList<Recette>());
 			}
+			this.catégories.get(s).add(rct);
 		}
 
 		this.saveData();

@@ -95,7 +95,7 @@ public class InterfaceAjouterRecette implements Observer {
 			secondStage.close();
 			recette.setSave(false);
 		});
-
+		listeBtns.setAlignment(Pos.CENTER);
 		listeBtns.getChildren().addAll(oui,non);
 
 		parent.getChildren().add(lbl);
@@ -151,6 +151,10 @@ public class InterfaceAjouterRecette implements Observer {
 		étapes.getChildren().clear();
 		for(String i: recette.getEtapes()) {
 			Label etape = new Label(i);
+			etape.getStylesheets().add("Main.css");
+			etape.getStyleClass().add("label2");
+			etape.setPrefWidth(étapes.getWidth());
+			etape.setPrefHeight(15);
 			etape.setWrapText(true);
 			étapes.getChildren().add(etape);
 		}
@@ -158,7 +162,9 @@ public class InterfaceAjouterRecette implements Observer {
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
 		catégorie.getChildren().clear();
 		for(String i: recette.getCatégories()) {
-			catégorie.getChildren().add(new Label(i));
+			Label cat = new Label(i);
+			cat.getStyleClass().add("label3");
+			catégorie.getChildren().add(cat);
 		}
 
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
