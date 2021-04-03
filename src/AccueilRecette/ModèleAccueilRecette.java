@@ -65,11 +65,11 @@ public class ModèleAccueilRecette extends Observable{
 	public void ajouterAuPanier() {
 		System.out.println("Ajout des ingrédients au panier :");
 		this.mdlPanier.addIngredient(this.recette_courante.getIngrédients());
-		for(int i = 0;i<this.recette_courante.getIngrédients().size();i++) {
+		/*for(int i = 0;i<this.recette_courante.getIngrédients().size();i++) {
 			System.out.println(this.recette_courante.getIngrédients().get(i).mesure);
 			System.out.println(this.recette_courante.getIngrédients().get(i).nom);
 			System.out.println(this.recette_courante.getIngrédients().get(i).quantité);
-		}
+		}*/
 		
 		
 	}

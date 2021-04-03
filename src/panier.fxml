@@ -36,6 +36,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -50,14 +52,16 @@
                </font>
             </Label>
             <Button fx:id="btnRetour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToAccueil" text="Retour à l'accueil" />
+            <ImageView fx:id="poubelle" fitHeight="55.0" fitWidth="56.0" layoutX="729.0" layoutY="111.0" onMousePressed="#viderPanier" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/delete.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <ScrollPane fx:id="scrollPanier" hbarPolicy="NEVER" minWidth="793.0" prefHeight="711.0" prefWidth="793.0" styleClass="gridPane" stylesheets="@Main.css">
          <content>
-            <VBox prefHeight="711.0" prefWidth="798.0" styleClass="gridPane" stylesheets="@Main.css">
-               <children>
-                  <Label fx:id="TextePanier" alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="698.0" prefWidth="783.0" textAlignment="CENTER" />
-               </children></VBox>
+            <VBox fx:id="listeIngr" alignment="TOP_CENTER" prefHeight="712.0" prefWidth="798.0" styleClass="gridPane" stylesheets="@Main.css" />
          </content>
       </ScrollPane>
   </items>

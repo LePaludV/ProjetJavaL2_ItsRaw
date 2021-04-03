@@ -116,10 +116,13 @@ public class Vue extends Application {
         	
             PanierController ctrlPanier = new PanierController(this.mdlPanier);
             InterfacePanier vuePanier = new InterfacePanier(ctrlPanier, this.mdlPanier);
+            this.mdlPanier.addObserver(vuePanier);
+       
             Scene scene=new Scene(InterfacePanier.getRoot());
             vuePanier.loadPanier();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
+            this.mdlPanier.AfficherPanier();
 
         }
 	}
