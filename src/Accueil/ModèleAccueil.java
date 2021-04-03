@@ -244,4 +244,10 @@ public class ModèleAccueil extends Observable {
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
 	}
+
+	public void goToPanier() {
+		this.vue.currentInterface = this.vue.currentInterface.PANIER;
+		this.vue.changeWindow(Vue.typeInterface.PANIER);
+		
+	}
 }

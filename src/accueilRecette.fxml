@@ -35,7 +35,8 @@
                         <ToggleButton fx:id="note0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0">
                            <toggleGroup>
                               <ToggleGroup fx:id="note" />
-                           </toggleGroup></ToggleButton>
+                           </toggleGroup>
+                        </ToggleButton>
                         <ToggleButton fx:id="note1" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                         <ToggleButton fx:id="note2" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                         <ToggleButton fx:id="note3" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
@@ -47,7 +48,8 @@
                         <ToggleButton fx:id="difficluté0" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0">
                            <toggleGroup>
                               <ToggleGroup fx:id="difficulté" />
-                           </toggleGroup></ToggleButton>
+                           </toggleGroup>
+                        </ToggleButton>
                         <ToggleButton fx:id="difficluté1" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté2" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté3" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
@@ -58,6 +60,11 @@
                      <children>
                         <Text layoutX="182.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Ingrédient" textAlignment="CENTER" wrappingWidth="124.78533935546875" />
                         <Label fx:id="TexteIngrédient" alignment="TOP_CENTER" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" styleClass="description" />
+                        <ImageView fx:id="imgPanier" fitHeight="42.0" fitWidth="50.0" layoutX="367.0" layoutY="398.0" onMouseClicked="#ajouterAuPanier" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/ajoutPanier.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </Pane>
                   <Label fx:id="nbrPersonne" layoutX="73.0" layoutY="145.0" prefHeight="17.0" prefWidth="199.0" textAlignment="CENTER" />

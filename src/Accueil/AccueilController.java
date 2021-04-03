@@ -5,6 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TouchEvent;
 import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
@@ -20,7 +23,7 @@ import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
 
-public class AccueilController implements Observer {
+public class AccueilController{
 	@FXML
 	private Button btnAjoutRecette;
 
@@ -32,6 +35,9 @@ public class AccueilController implements Observer {
 
 	@FXML
 	private ComboBox<String> searchBar;
+
+	@FXML
+	    private ImageView panier;
 
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
@@ -64,8 +70,12 @@ public class AccueilController implements Observer {
 		this.bdr = new BarreDeRecherche<String>(this.searchBar);
 	}
 
-	@Override
-	public void update(Observable arg0, Object texte) {
-		
+
+
+	@FXML
+	void goToPanier(MouseEvent event) {
+		this.mdl.goToPanier();
 	}
+
+
 }
