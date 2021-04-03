@@ -33,8 +33,9 @@ public class ModèleAccueil extends Observable {
 		this.catégories = new HashMap<String, ArrayList<Recette>>();
 		this.classeIng = new HashMap<String, ArrayList<Recette>>();
 		this.vue = v;
-		this.jeuxDeTests();
-		this.loadData();
+		this.loadData("data");
+		this.loadData("dataCatégories");
+		this.loadData("dataIngrédients");
 	}
 
 	private void jeuxDeTests() {
@@ -147,25 +148,23 @@ public class ModèleAccueil extends Observable {
 		}
 
 		recettes.add(rct);
-		if (this.classeIng != null) {
-			for (Ingrédient i : rct.getIngrédients()) {
-				if (this.classeIng.get(i.nom) == null) {
-					this.classeIng.put(i.nom, new ArrayList<Recette>());
-				}
-				this.classeIng.get(i.nom).add(rct);
+		for (Ingrédient i : rct.getIngrédients()) {
+			if (this.classeIng.get(i.nom) == null) {
+				this.classeIng.put(i.nom, new ArrayList<Recette>());
 			}
+			this.classeIng.get(i.nom).add(rct);
 		}
 
-		if (this.catégories != null) {
-			for (String s : rct.getCatégories()) {
-				if (this.catégories.get(s) == null) {
-					this.catégories.put(s, new ArrayList<Recette>());
-				}
-				this.catégories.get(s).add(rct);
+		for (String s : rct.getCatégories()) {
+			if (this.catégories.get(s) == null) {
+				this.catégories.put(s, new ArrayList<Recette>());
 			}
+			this.catégories.get(s).add(rct);
 		}
 
-		this.saveData();
+		this.saveData("data");
+		this.saveData("dataCatégories");
+		this.saveData("dataIngrédients");
 	}
 
 	public void afficherCategories() {
@@ -173,14 +172,14 @@ public class ModèleAccueil extends Observable {
 		this.notifyObservers(this.catégories);
 	}
 
-	public void afficherParCatègories(String catègorie) {
+	public void afficherParCatégories(String catègorie) {
 		if (this.catégories.get(catègorie) != null) {
 			this.setChanged();
 			this.notifyObservers(this.catégories.get(catègorie));
 		}
 	}
 
-	public void afficherParIngrèdients(Ingrédient ing) {
+	public void afficherParIngrèdients(String ing) {
 		if (this.catégories.get(ing) != null) {
 			this.setChanged();
 			this.notifyObservers(this.classeIng.get(ing));
@@ -197,14 +196,19 @@ public class ModèleAccueil extends Observable {
 		this.notifyObservers(rct);
 	}
 
-	private void saveData() {
+	private void saveData(String url) {
 		XMLEncoder encoder = null;
 		try {
-			FileOutputStream fos = new FileOutputStream("data.xml");
+			FileOutputStream fos = new FileOutputStream(url+".xml");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			encoder = new XMLEncoder(bos);
-			encoder.writeObject(this.recettes);
-			//encoder.writeObject(this.catégories);
+			if (url.equals("data")) {
+				encoder.writeObject(this.recettes);				
+			} else if (url.equals("dataCatégories")) {
+				encoder.writeObject(this.catégories);
+			} else if (url.equals("dataIngrédients")) {
+				encoder.writeObject(this.classeIng);
+			}
 			encoder.flush();
 
 		} catch (final java.io.IOException e) {
@@ -215,16 +219,21 @@ public class ModèleAccueil extends Observable {
 		System.out.println("Data saved !");
 	}
 
-	private void loadData() {
+	private void loadData(String url) {
 		System.out.println("liste des recettes "+this.recettes);
 		XMLDecoder decoder = null;
 		try {
-			FileInputStream fis = new FileInputStream("data.xml");
+			FileInputStream fis = new FileInputStream(url+".xml");
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			decoder = new XMLDecoder(bis);
-
-			this.recettes = (ArrayList<Recette>) decoder.readObject();
-			//this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+			
+			if (url.equals("data")) {
+				this.recettes = (ArrayList<Recette>) decoder.readObject();				
+			} else if (url.equals("dataCatégories")) {
+				this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+			} else if (url.equals("dataIngrédients")) {
+				this.classeIng = (HashMap<String, ArrayList<Recette>>) decoder.readObject();				
+			}
 		} catch (Exception e) {
 
 			e.printStackTrace();

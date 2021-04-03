@@ -1,6 +1,7 @@
 package Main;
 import java.nio.channels.SelectableChannel;
 import java.nio.channels.SelectionKey;
+import java.util.Observable;
 
 import com.sun.corba.se.pept.transport.Acceptor;
 import com.sun.corba.se.pept.transport.Connection;
@@ -21,15 +22,15 @@ import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
-public class BarreDeRecherche<T> implements EventHandler {
+public class BarreDeRecherche<T> extends Observable implements EventHandler {
 	
-    private ComboBox comboBox;
+    private ComboBox<T> comboBox;
     private StringBuilder sb;
     private ObservableList<T> data;
     private boolean moveCaretToPos = false;
     private int caretPos;
 
-    public BarreDeRecherche(final ComboBox comboBox) {
+    public BarreDeRecherche(final ComboBox<T> comboBox) {
         this.comboBox = comboBox;
         sb = new StringBuilder();
         data = comboBox.getItems();
@@ -76,8 +77,9 @@ public class BarreDeRecherche<T> implements EventHandler {
         } 
         
         if (evt.getCode() == KeyCode.ENTER) {
-//        	String s = this.comboBox.getEditor().
-//        	this.comboBox.getEditor().setText(s);
+        	this.setChanged();
+        	this.notifyObservers(this.comboBox.getEditor().getText());
+        	this.comboBox.getEditor().setText(null);
         	return;
         }
         
