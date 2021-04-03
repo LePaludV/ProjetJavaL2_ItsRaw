@@ -44,7 +44,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.20351758793969849" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="900.0" prefWidth="800.0" styleClass="gridPane" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.20351758793969849" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="900.0" prefWidth="900.0" styleClass="gridPane" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <items>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="gridPane" stylesheets="@Main.css">
          <children>
@@ -64,9 +64,9 @@
       </Pane>
       <ScrollPane fx:id="scrollRecettes" minWidth="793.0" prefHeight="711.0" prefWidth="793.0" styleClass="gridPane" stylesheets="@Main.css">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="798.0" styleClass="gridPane" stylesheets="@Main.css">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="880.0" styleClass="gridPane" stylesheets="@Main.css">
                <children>
-                  <VBox fx:id="recettes" layoutX="-3.0" layoutY="2.0" onMousePressed="#goToPanier" prefHeight="711.0" prefWidth="808.0" styleClass="gridPane" stylesheets="@Main.css" />
+                  <VBox fx:id="recettes" layoutX="-3.0" layoutY="2.0" onMousePressed="#goToPanier" prefHeight="711.0" prefWidth="882.0" styleClass="gridPane" stylesheets="@Main.css" />
                </children>
             </AnchorPane>
          </content>

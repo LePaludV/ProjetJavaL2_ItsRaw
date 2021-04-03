@@ -70,10 +70,7 @@
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="664.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <VBox fx:id="affEtape" alignment="TOP_CENTER" layoutX="24.0" layoutY="21.0" prefHeight="228.0" prefWidth="616.0">
-                     <children>
-                        <Label prefHeight="21.0" prefWidth="639.0" text="etape1" />
-                     </children></VBox>
+                  <VBox fx:id="affEtape" alignment="TOP_CENTER" layoutX="24.0" layoutY="-9.0" prefHeight="247.0" prefWidth="616.0" spacing="10.0" />
                </children>
             </Pane>
             <Pane fx:id="paneImage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="303.0" prefWidth="573.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">

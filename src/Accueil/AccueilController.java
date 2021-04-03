@@ -23,7 +23,7 @@ import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
 
-public class AccueilController{
+public class AccueilController implements Observer{
 	@FXML
 	private Button btnAjoutRecette;
 
@@ -68,6 +68,7 @@ public class AccueilController{
 
 	public void createSearchBar() {
 		this.bdr = new BarreDeRecherche<String>(this.searchBar);
+		this.bdr.addObserver(this);
 	}
 
 
@@ -75,6 +76,16 @@ public class AccueilController{
 	@FXML
 	void goToPanier(MouseEvent event) {
 		this.mdl.goToPanier();
+	}
+
+	@Override
+	public void update(Observable arg0, Object string) {
+		String recherche = (String) string;
+		if (this.mdl.catégories.keySet().contains(recherche)) {
+			this.mdl.afficherParCatégories(recherche);
+		} else if (this.mdl.classeIng.keySet().contains(recherche)) {
+			this.mdl.afficherParIngrèdients(recherche);
+		}
 	}
 
 

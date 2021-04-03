@@ -177,6 +177,7 @@ public class InterfaceAjouterRecette implements Observer {
 			});
 			
 			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
+			lbl.getStyleClass().add("label3");
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
 			try {

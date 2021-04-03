@@ -85,14 +85,19 @@ public class InterfaceAccueil implements Observer
 
 						Recette recette_courante = lstRecettes.get((i+2)*i+j);
 						String nom  = lstRecettes.get((i+2)*i+j).getNom();
-						ImageView imgView = new ImageView(recette_courante.getPhoto());
-						double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
-						double largeurPhoto = recette_courante.getPhoto().getWidth();
-						double coeff = (largeurScroll/largeurPhoto);
-						imgView.setFitHeight((recette_courante.getPhoto().getHeight()*coeff)/3);
-						imgView.setFitWidth((recette_courante.getPhoto().getWidth()*coeff)/3);
-						btn.setGraphic(imgView);
-						hb.getChildren().add(btn);
+						System.out.println("nom des recettes : "+nom);
+						System.out.println(recette_courante.getPhoto());
+						if(recette_courante.getPhoto() != null) {
+							ImageView imgView = new ImageView(recette_courante.getPhoto());
+							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
+							double largeurPhoto = recette_courante.getPhoto().getWidth();
+							double coeff = (largeurScroll/largeurPhoto);
+							imgView.setFitHeight((recette_courante.getPhoto().getHeight()*coeff)/3);
+							imgView.setFitWidth((recette_courante.getPhoto().getWidth()*coeff)/3);
+							btn.setGraphic(imgView);
+							btn.setBackground(null);
+							hb.getChildren().add(btn);							
+						}
 					}
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);
