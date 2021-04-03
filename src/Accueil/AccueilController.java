@@ -9,6 +9,8 @@ import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Set;
 
 import javafx.event.ActionEvent;
@@ -18,7 +20,7 @@ import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
 
-public class AccueilController {
+public class AccueilController implements Observer {
 	@FXML
 	private Button btnAjoutRecette;
 
@@ -60,5 +62,10 @@ public class AccueilController {
 
 	public void createSearchBar() {
 		this.bdr = new BarreDeRecherche<String>(this.searchBar);
+	}
+
+	@Override
+	public void update(Observable arg0, Object texte) {
+		
 	}
 }

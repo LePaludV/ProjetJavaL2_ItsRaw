@@ -34,6 +34,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.RadioMenuItem?>
@@ -173,8 +174,7 @@
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <children>
-                  <TextField fx:id="NomCategorie" layoutX="67.0" layoutY="27.0" onAction="#AddCatégorie" prefHeight="25.0" prefWidth="172.0" promptText="Nom de la catégorie" />
-                  <Button fx:id="AjoutIngrédient1" layoutX="74.0" layoutY="66.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AddCatégorie" styleClass="button1" stylesheets="@Main.css" text="Ajouter une catégorie" />
+                  <ComboBox fx:id="searchCatégorie" editable="true" layoutX="28.0" layoutY="23.0" prefHeight="31.0" prefWidth="250.0" promptText="Catégorie" />
                </children>
             </Pane>
          </children>
