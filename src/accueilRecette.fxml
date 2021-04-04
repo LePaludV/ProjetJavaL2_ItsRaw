@@ -14,9 +14,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="855.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1330.0" BorderPane.alignment="CENTER">
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1330.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="817.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="653.7999267578125" minWidth="10.0" prefWidth="513.0" />
@@ -27,7 +27,7 @@
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <Button fx:id="btnSuivieRecette" layoutX="85.0" layoutY="736.0" mnemonicParsing="false" onAction="#btnSuivieRecette" prefHeight="73.0" prefWidth="395.0" text="Suivre la recette" />
+                  <Button fx:id="btnSuivieRecette" layoutX="53.0" layoutY="738.0" mnemonicParsing="false" onAction="#btnSuivieRecette" prefHeight="73.0" prefWidth="395.0" text="Suivre la recette" />
                   <Label layoutX="71.0" layoutY="42.0" text="Note" />
                   <Label layoutX="71.0" layoutY="83.0" text="Difficulté" />
                   <HBox layoutX="157.0" layoutY="18.0" prefHeight="49.0" prefWidth="239.0">
@@ -35,7 +35,8 @@
                         <ToggleButton fx:id="note0" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0">
                            <toggleGroup>
                               <ToggleGroup fx:id="note" />
-                           </toggleGroup></ToggleButton>
+                           </toggleGroup>
+                        </ToggleButton>
                         <ToggleButton fx:id="note1" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                         <ToggleButton fx:id="note2" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
                         <ToggleButton fx:id="note3" mnemonicParsing="false" onAction="#NoteRecette" prefHeight="47.0" prefWidth="47.0" toggleGroup="$note" />
@@ -47,7 +48,8 @@
                         <ToggleButton fx:id="difficluté0" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0">
                            <toggleGroup>
                               <ToggleGroup fx:id="difficulté" />
-                           </toggleGroup></ToggleButton>
+                           </toggleGroup>
+                        </ToggleButton>
                         <ToggleButton fx:id="difficluté1" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté2" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
                         <ToggleButton fx:id="difficluté3" mnemonicParsing="false" onAction="#NoteDifficulté" prefHeight="47.0" prefWidth="47.0" toggleGroup="$difficulté" />
@@ -56,14 +58,19 @@
                   </HBox>
                   <Pane layoutX="23.0" layoutY="195.0" prefHeight="474.0" prefWidth="467.0">
                      <children>
-                        <Text layoutX="99.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédient" textAlignment="CENTER" wrappingWidth="257.05206298828125" />
-                        <Label fx:id="TexteIngrédient" alignment="TOP_CENTER" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" />
+                        <Text layoutX="182.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Ingrédient" textAlignment="CENTER" wrappingWidth="124.78533935546875" />
+                        <Label fx:id="TexteIngrédient" alignment="TOP_CENTER" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" styleClass="description" />
+                        <ImageView fx:id="imgPanier" fitHeight="42.0" fitWidth="50.0" layoutX="367.0" layoutY="398.0" onMouseClicked="#ajouterAuPanier" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/ajoutPanier.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </Pane>
                   <Label fx:id="nbrPersonne" layoutX="73.0" layoutY="145.0" prefHeight="17.0" prefWidth="199.0" textAlignment="CENTER" />
                </children>
             </Pane>
-            <Pane prefHeight="200.0" prefWidth="200.0">
+            <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@Main.css">
                <children>
                   <ImageView fx:id="ImageRecette" fitHeight="428.0" fitWidth="594.0" layoutX="116.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -72,11 +79,11 @@
                   </ImageView>
                   <Pane layoutX="43.0" layoutY="526.0" prefHeight="280.0" prefWidth="717.0">
                      <children>
-                        <Text layoutX="229.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="CENTER" wrappingWidth="257.05206298828125" />
-                        <Label fx:id="TexteDescription" alignment="TOP_CENTER" layoutX="36.0" layoutY="36.0" prefHeight="253.0" prefWidth="669.0" />
+                        <Text layoutX="229.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Description" textAlignment="CENTER" wrappingWidth="257.05206298828125" />
+                        <Label fx:id="TexteDescription" alignment="TOP_CENTER" layoutX="36.0" layoutY="36.0" prefHeight="253.0" prefWidth="669.0" styleClass="description" stylesheets="@Main.css" />
                      </children>
                   </Pane>
-                  <Label fx:id="Nom" alignment="TOP_CENTER" layoutX="176.0" layoutY="17.0" prefHeight="17.0" prefWidth="495.0" textAlignment="CENTER" />
+                  <Label fx:id="Nom" alignment="TOP_CENTER" layoutX="176.0" layoutY="17.0" prefHeight="17.0" prefWidth="495.0" styleClass="titre" stylesheets="@Main.css" textAlignment="CENTER" />
                   <Button fx:id="btnRetour" layoutX="18.0" layoutY="12.0" mnemonicParsing="false" onAction="#RetourAccueil" text="Retour à l'accueil" />
                </children>
             </Pane>
