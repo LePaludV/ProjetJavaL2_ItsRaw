@@ -147,16 +147,19 @@ public class InterfaceAjouterRecette implements Observer {
 	public void update(Observable arg0, Object rct) {
 
 		Recette recette = (Recette) rct;
-		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
-		étapes.getChildren().clear();
+		ctrlAjout.affEtape.getChildren().clear();
 		for(String i: recette.getEtapes()) {
 			Label etape = new Label(i);
+			String text = etape.getText();
+			text = text.substring(0,3)+text.substring(3,4).toUpperCase()+text.substring(4).toLowerCase();
+			etape.setText(text);
 			etape.getStylesheets().add("Main.css");
 			etape.getStyleClass().add("label2");
-			etape.setPrefWidth(étapes.getWidth());
+			etape.setPrefWidth(ctrlAjout.affEtape.getWidth());
 			etape.setPrefHeight(15);
 			etape.setWrapText(true);
-			étapes.getChildren().add(etape);
+			ctrlAjout.affEtape.getChildren().add(etape);
+			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}
 
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
@@ -178,6 +181,7 @@ public class InterfaceAjouterRecette implements Observer {
 			
 			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
 			lbl.getStyleClass().add("label3");
+			lbl.setWrapText(true);
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
 			try {

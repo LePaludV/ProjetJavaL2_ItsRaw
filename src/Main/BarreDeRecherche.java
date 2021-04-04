@@ -72,7 +72,8 @@ public class BarreDeRecherche<T> extends Observable implements EventHandler {
 
         if (evt.getCode() == KeyCode.RIGHT || evt.getCode() == KeyCode.LEFT
                 || evt.isControlDown() || evt.getCode() == KeyCode.HOME
-                || evt.getCode() == KeyCode.END || evt.getCode() == KeyCode.TAB ) {
+                || evt.getCode() == KeyCode.END || evt.getCode() == KeyCode.TAB 
+                || evt.getCode() == KeyCode.CAPS) {
             return;
         } 
         
