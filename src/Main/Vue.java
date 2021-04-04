@@ -51,6 +51,8 @@ public class Vue extends Application {
 
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE, PANIER};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
+	
+	public Recette recetteCourante = new Recette();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -108,9 +110,9 @@ public class Vue extends Application {
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
             InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
             this.mdlEtapes.addObserver(vueEtapes);
-            
             Scene scene=new Scene(InterfaceEtapes.getRoot());
             primaryStage.setScene(scene);
+            vueEtapes.loadRecette(recetteCourante);
             this.primaryStage.sizeToScene();
 
         }
