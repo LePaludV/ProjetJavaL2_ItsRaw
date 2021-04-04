@@ -55,11 +55,12 @@ public class Vue extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
         this.mdlAccueil = new ModèleAccueil(this);
+        this.mdlPanier=new ModèlePanier(this);
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
         this.primaryStage.setResizable(false);
 
-        this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil);
+        this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil, mdlPanier);
 
         this.changeWindow(this.currentInterface);
         primaryStage.show();
@@ -112,12 +113,16 @@ public class Vue extends Application {
 
         }
         else if (this.currentInterface == typeInterface.PANIER) {
-        	this.mdlPanier = new ModèlePanier(this);
+        	
             PanierController ctrlPanier = new PanierController(this.mdlPanier);
-            InterfacePanier vuePanier = new InterfacePanier(ctrlPanier);
+            InterfacePanier vuePanier = new InterfacePanier(ctrlPanier, this.mdlPanier);
+            this.mdlPanier.addObserver(vuePanier);
+       
             Scene scene=new Scene(InterfacePanier.getRoot());
+            vuePanier.loadPanier();
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
+            this.mdlPanier.AfficherPanier();
 
         }
 	}

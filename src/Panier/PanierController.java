@@ -1,9 +1,13 @@
 package Panier;
 
+import Main.Ingrédient;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 
 public class PanierController {
@@ -14,9 +18,9 @@ public class PanierController {
 
     @FXML
     private ScrollPane scrollPanier;
-
+    
     @FXML
-    private VBox listeIngrédient;
+    private ImageView poubelle;
 
     public PanierController(ModèlePanier mdlPanier) {
 		this.mdl=mdlPanier;
@@ -27,6 +31,18 @@ public class PanierController {
 		this.mdl.goToAccueil();
     	
     }
+
+	public void supprimerIngrédient(Ingrédient ingrédient) {
+		this.mdl.supprimerIngr(ingrédient);
+		
+		
+	}
+	@FXML
+	void viderPanier(MouseEvent event) {
+		this.mdl.viderPanier();
+	    }
+
+	
 
 }
 

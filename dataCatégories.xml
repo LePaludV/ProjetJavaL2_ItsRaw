@@ -36,7 +36,7 @@
       </void>
       <void property="ingrédients">
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient0">
+        <object class="Main.Ingrédient" id="Ingrédient24">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -61,7 +61,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient1">
+        <object class="Main.Ingrédient" id="Ingrédient25">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -79,14 +79,14 @@
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient1"/>
+           <object idref="Ingrédient25"/>
            <string>pincé</string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient2">
+        <object class="Main.Ingrédient" id="Ingrédient26">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -111,7 +111,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient3">
+        <object class="Main.Ingrédient" id="Ingrédient27">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -136,7 +136,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient4">
+        <object class="Main.Ingrédient" id="Ingrédient28">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -154,14 +154,14 @@
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient4"/>
+           <object idref="Ingrédient28"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient5">
+        <object class="Main.Ingrédient" id="Ingrédient29">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -179,14 +179,14 @@
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient5"/>
+           <object idref="Ingrédient29"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient6">
+        <object class="Main.Ingrédient" id="Ingrédient30">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -204,14 +204,14 @@
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient6"/>
+           <object idref="Ingrédient30"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient7">
+        <object class="Main.Ingrédient" id="Ingrédient31">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -236,7 +236,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient8">
+        <object class="Main.Ingrédient" id="Ingrédient32">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -311,7 +311,7 @@
       </void>
       <void property="ingrédients">
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient9">
+        <object class="Main.Ingrédient" id="Ingrédient33">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -336,7 +336,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient10">
+        <object class="Main.Ingrédient" id="Ingrédient34">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -361,7 +361,7 @@
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient11">
+        <object class="Main.Ingrédient" id="Ingrédient35">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
@@ -654,7 +654,7 @@
    <string>Boeuf</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette0"/>
+     <object idref="Recette1"/>
     </void>
    </object>
   </void>
