@@ -42,14 +42,34 @@ public class InterfaceEtapes implements Observer {
 		if(i<this.rct.getEtapes().size())
 		{
 			ctrlEtapes.textEtape.setText("Etape " + (i+1));
-			ctrlEtapes.textDescription.setText(this.rct.getEtapes().get(i));
+			ctrlEtapes.textDescription.setText(description(this.rct.getEtapes().get(i)));
 		}
 		else
 		{
 			ctrlEtapes.finRecette();
 			ctrlEtapes.textEtape.setText("Etape " + (this.rct.getEtapes().size()));
-			ctrlEtapes.textDescription.setText(this.rct.getEtapes().get(this.rct.getEtapes().size()-1));
+			ctrlEtapes.textDescription.setText(description(this.rct.getEtapes().get(this.rct.getEtapes().size()-1)));
 		}
+	}
+	
+	public String description(String des)
+	{
+		String newText = "";
+		int compteurChar = 0;
+		for(int i = 2; i < des.length(); i++)
+		{
+			if(compteurChar<50 || des.charAt(i) != ' ')
+			{
+				newText = newText + des.charAt(i);
+				compteurChar += 1;
+			}
+			else
+			{
+				compteurChar = 0;
+				newText = newText + '\n';
+			}
+		}
+		return newText;
 	}
 	
 	public void loadRecette(Recette rct)
@@ -65,7 +85,7 @@ public class InterfaceEtapes implements Observer {
 			ctrlEtapes.nom.setText(rct.getNom());
 			ctrlEtapes.image.setImage(rct.getPhoto());
 			ctrlEtapes.textEtape.setText("Etape 1");
-			ctrlEtapes.textDescription.setText(rct.getEtapes().get(0));
+			ctrlEtapes.textDescription.setText(description(rct.getEtapes().get(0)));
 			String ingr = null;
 			for(Ingrédient s: rct.getIngrédients()) {
 				ingr+="- "+s.quantité+s.mesure+" "+s.nom+"\n";

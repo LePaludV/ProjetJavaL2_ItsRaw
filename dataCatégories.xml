@@ -1407,6 +1407,190 @@
       </void>
      </object>
     </void>
+    <void method="add">
+     <object class="Main.Recette" id="Recette7">
+      <void property="catégories">
+       <void method="add">
+        <string>Agneau</string>
+       </void>
+      </void>
+      <void property="description">
+       <string>Recette incournable de paque !</string>
+      </void>
+      <void property="difficulté">
+       <void index="0">
+        <boolean>true</boolean>
+       </void>
+      </void>
+      <void property="etapes">
+       <void method="add">
+        <string>1. Faire chauffer le four Th 7/8. Préparer le gigot en enlevant, à l&apos;aide d&apos;un couteau, le gras de la viande de façon à ce que la chair soit à vif.</string>
+       </void>
+       <void method="add">
+        <string>2. Faire une pommade avec la graisse, l&apos;ail écrasé, le romarin effeuillé et le gros sel</string>
+       </void>
+       <void method="add">
+        <string>3. Faire pénétrer cette pommade dans la chair en massant le gigot.</string>
+       </void>
+       <void method="add">
+        <string>4. Mettre au four et arroser tous les 1/4 d&apos;heure avec un mélange d&apos;eau chaude et de graisse.</string>
+       </void>
+       <void method="add">
+        <string>5. Pour ceux qui aiment l&apos;ail confit : pensez à mettre au fond du plat quelques gousses d&apos;ail non épluchées.</string>
+       </void>
+      </void>
+      <void property="ingrédients">
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient43">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient43"/>
+           <string>gigot d&apos;agneau</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient43"/>
+           <float>1.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient43"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient44">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient44"/>
+           <string>branche de romarin frais</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient44"/>
+           <float>2.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient44"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient45">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient45"/>
+           <string>gousse d&apos;ail</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient45"/>
+           <float>2.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient45"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient46">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient46"/>
+           <string>Gros sel</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient46"/>
+           <float>1.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient46"/>
+           <string>cuil. soupe</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient47">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient47"/>
+           <string>Graisse d&apos;oie</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient47"/>
+           <float>1.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient47"/>
+           <string>cuil. soupe</string>
+          </void>
+         </void>
+        </object>
+       </void>
+      </void>
+      <void property="nbrPersonne">
+       <int>4</int>
+      </void>
+      <void property="nom">
+       <string>Gigot d&apos;agneau à l&apos;ail et au romarin</string>
+      </void>
+      <void property="note">
+       <void index="0">
+        <boolean>true</boolean>
+       </void>
+       <void index="1">
+        <boolean>true</boolean>
+       </void>
+       <void index="2">
+        <boolean>true</boolean>
+       </void>
+       <void index="3">
+        <boolean>true</boolean>
+       </void>
+      </void>
+      <void property="save">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
    </object>
   </void>
   <void method="put">

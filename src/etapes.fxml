@@ -43,7 +43,7 @@
                         <Image url="@../imgs/not_found.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="textDescription" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" styleClass="description" stylesheets="@Main.css" />
+                  <Label fx:id="textDescription" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-text-alignment: center;" styleClass="description" stylesheets="@Main.css" />
                   <Label fx:id="textEtape" layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" styleClass="titre" stylesheets="@Main.css" />
                </children>
             </Pane>
