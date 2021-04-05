@@ -9,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Observable;
 
 import Main.*;
@@ -19,9 +20,14 @@ public class ModèlePanier extends Observable{
 	File panier;
 	String[][] liquide =  {{"","l","0,01"},{"100","cl","0,5"},{"1.5","cuil. soupe","0,33"},{"3","cuil. café",""}};
 	String[][] poids = {{"","kg","0,001"},{"1000","g","0,2"},{"5","pincé",""}};
+
+
+	
+	
 	public ModèlePanier(Vue vue) {
 		this.vue = vue;
 		this.panier=new File("panier.xml");
+		
 	}
 	public void goToAccueil() {
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL;
@@ -32,30 +38,39 @@ public class ModèlePanier extends Observable{
 		this.Ingrédients=ChargementPanier();
 		
 		for(Ingrédient i: ingr) {
+			Ingrédient maj=i;
 			for(int j =0;j<this.Ingrédients.size();j++) {
 				
+				System.out.println((i.nom+"   "+this.Ingrédients.get(j).nom));
 				if(i.nom.equals(this.Ingrédients.get(j).nom)) {
 					System.out.println("Existe déjà"+i.nom);
-					/*if(Arrays.toString(liquide).contains(i.mesure) & Arrays.toString(liquide).contains(this.Ingrédients.get(j).mesure)) {
-						Ingrédient maj=majIngrédientLiquide(this.Ingrédients.get(j),i);
-						System.out.println(i.mesure+"   "+this.Ingrédients.get(j).mesure);
-						this.Ingrédients.remove(i);
-						this.Ingrédients.add(maj);
-					}
-					else if (Arrays.toString(poids).contains(i.mesure) & Arrays.toString(poids).contains(this.Ingrédients.get(j).mesure)) {
-						Ingrédient maj=majIngrédientPoids(this.Ingrédients.get(j),i);
-						System.out.println(i.mesure+"   "+this.Ingrédients.get(j).mesure);
-						this.Ingrédients.remove(i);
-						this.Ingrédients.add(maj);
-					}
 					
+					if(estLiquide(i.mesure) & estLiquide(this.Ingrédients.get(j).mesure)) {
+						maj=majIngrédientLiquide(this.Ingrédients.get(j),i);
+						System.out.println("Ingrédients Liquide déjà existant  "+maj.quantité);
+						this.Ingrédients.remove(j);
+						
+
+					}
+					else if (estSolide(i.mesure) & estSolide(this.Ingrédients.get(j).mesure)) {
+						maj=majIngrédientPoids(this.Ingrédients.get(j),i);
+						System.out.println("Ingrédients Solide déjà existant  "+maj.quantité);
+						this.Ingrédients.remove(j);
+					
+						
+					}else {
+						maj=i;
+					}
 					
 					
 				
 				
-					*/
+					
 				}
-			}this.Ingrédients.add(i);
+					
+				
+			}
+			this.Ingrédients.add(maj);
 			
 			
 		}
@@ -63,25 +78,177 @@ public class ModèlePanier extends Observable{
 		SauvegardePanier();
 		
 	}
+	private boolean estSolide(String m) {
+		String[] nomPoids= {"kg","g","pincé"};
+		for(String i : nomPoids) {
+			if(i.contains(m)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	private boolean estLiquide(String m) {
+		
+		String[] nomLiquide= {"l","cl","cuil. soupe","cuil. café"};
+		for(String i : nomLiquide) {
+			System.out.println("test de 2 "+i);
+			if(i.contains(m)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	
+	
+	
 	private Ingrédient majIngrédientLiquide(Ingrédient j, Ingrédient i) {
 		//j = Ingrédient déjà dans la liste qu'il faut modifier 
 		//i = Ingrédient qu'il faut comparer avec j pour additioner les quatité en fonction des mesures.
-		if(j.mesure.equals(i.mesure)) {
-			j.quantité+=i.quantité;
+		System.out.println("MODIF QUANTITE LIQUIDE ");
+		
+		
+		//On va charcher qui à la plus grande mesure , pour unifier les quantiré avec la plus grande mesures
+		//Si j est en Litres
+		if(j.mesure.equals("l")) {
+			if(i.mesure.equals("cl")) {
+				j.quantité+=i.quantité*0.01;
+			}
+			else if(i.mesure.equals("cuil. soupe")) {
+				j.quantité+=i.quantité*(0.01*0.5);
+			}
+			else if(i.mesure.equals("cuil. café")) {
+				j.quantité+=i.quantité*(0.01*0.5*0.33);
+			}
+			else if(i.mesure.equals("l")) {
+				j.quantité+=i.quantité;
+			}
+			return j;
 		}
-		return null;
+		//Sinon si i est en litres 
+		else if(i.mesure.equals("l")) {
+				if(j.mesure.equals("cl")) {
+					i.quantité+=j.quantité*0.01;
+				}
+				else if(j.mesure.equals("cuil. soupe")) {
+					i.quantité+=j.quantité*(0.01*0.5);
+				}
+				else if(j.mesure.equals("cuil. café")) {
+					i.quantité+=j.quantité*(0.01*0.5*0.33);
+				}
+				else if(j.mesure.equals("l")) {
+					i.quantité+=j.quantité;
+				}
+				return i;
+			}
+		//Sinon si j est en cl
+		else if(j.mesure.equals("cl")) {
+			if(i.mesure.equals("cuil. soupe")) {
+				j.quantité+=i.quantité*(0.5);
+			}
+			else if(i.mesure.equals("cuil. café")) {
+				j.quantité+=i.quantité*(0.5*0.33);
+			}
+			else if(i.mesure.equals("cl")) {
+				j.quantité+=i.quantité;
+			}
+			return j;
+		}
+		//Sinon si i est en cl
+		else if(i.mesure.equals("cl")) {
+			if(j.mesure.equals("cuil. soupe")) {
+				i.quantité+=j.quantité*(0.5);
+			}
+			else if(j.mesure.equals("cuil. café")) {
+				i.quantité+=j.quantité*(0.5*0.33);
+			}
+			else if(j.mesure.equals("cl")) {
+				i.quantité+=j.quantité;
+			}
+			return i;
+		}
+		
+		//Sinon si j est en cuil a soupe
+		else if(j.mesure.equals("cuil. soupe")) {
+			if(i.mesure.equals("cuil. café")) {
+				j.quantité+=i.quantité*(0.33);
+			}
+			else if(i.mesure.equals("cuil. soupe")) {
+				j.quantité+=i.quantité;
+			}
+			return j;
+		}
+		//Sinon si i est en cuil a soupe
+		else if(i.mesure.equals("cuil. soupe")) {
+			if(j.mesure.equals("cuil. café")) {
+				i.quantité+=j.quantité*(0.33);
+			}
+			else if(j.mesure.equals("cuil. soupe")) {
+				i.quantité+=j.quantité;
+			}
+			return i;
+		}
+		else {
+			if(j.mesure.equals(i.mesure)) {
+				j.quantité+=i.quantité;
+				return j;
+			}
+		}
+		//Reste des possibilité : même mesures donc 1er cas 		
+		return j;
 	}
 	private Ingrédient majIngrédientPoids(Ingrédient j, Ingrédient i) {
 		//j = Ingrédient déjà dans la liste qu'il faut modifier 
 		//i = Ingrédient qu'il faut comparer avec j pour additioner les quatité en fonction des mesures.
 		
-		if(j.mesure.equals(i.mesure)) {
-			j.quantité+=i.quantité;
+		if(j.mesure.equals("kg")) {
+			if(i.mesure.equals("g")) {
+				j.quantité+=i.quantité*0.001;
+			}
+			else if(i.mesure.equals("pincé")) {
+				j.quantité+=i.quantité*(0.001*0.2);
+			}
+			else if(i.mesure.equals("kg")) {
+				j.quantité+=i.quantité;
+			}
+			return j;
 		}
-		
-		return j ;
-		
-		
+		else if(i.mesure.equals("kg")) {
+			if(j.mesure.equals("g")) {
+				i.quantité+=j.quantité*0.001;
+			}
+			else if(j.mesure.equals("pincé")) {
+				i.quantité+=j.quantité*(0.001*0.2);
+			}
+			if(j.mesure.equals("kg")) {
+				i.quantité+=j.quantité;
+			}
+			return i;
+		}
+		else if(j.mesure.equals("g")) {
+			if(i.mesure.equals("pincé")) {
+				j.quantité+=i.quantité*(0.2);
+			}
+			else if(i.mesure.equals("g")) {
+				j.quantité+=i.quantité;
+			}
+			return j;
+		}
+		else if(i.mesure.equals("g")) {
+			if(j.mesure.equals("pincé")) {
+				i.quantité+=j.quantité*(0.2);
+			}
+			else if(j.mesure.equals("g")) {
+				i.quantité+=j.quantité;
+			}
+			return i;
+		}
+		else{
+			if(j.mesure.equals(i.mesure)) {
+		}
+			j.quantité+=i.quantité;
+			return j;
+		}
 	}
 	private void SauvegardePanier() {
 		
