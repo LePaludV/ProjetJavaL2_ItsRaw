@@ -17,6 +17,14 @@
   -fx-text-fill: rgb(226,217,205);
 }
 
+.corss_button:default {
+	-fx-background: null;
+}
+
+.cross_button:hover{
+	-fx-background-color: rgba(0,0,0,0.2);
+}
+
 .description{
 	-fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;

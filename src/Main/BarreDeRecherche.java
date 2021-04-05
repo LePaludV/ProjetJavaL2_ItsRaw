@@ -47,8 +47,7 @@ public class BarreDeRecherche<T> extends Observable implements EventHandler {
     }
 
     @Override
-    public void handle(Event event) {
-    	
+    public void handle(Event event) {    	
     	KeyEvent evt = (KeyEvent) event;
 
         if(evt.getCode() == KeyCode.UP) {

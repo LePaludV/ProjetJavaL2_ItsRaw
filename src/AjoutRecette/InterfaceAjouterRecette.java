@@ -148,17 +148,21 @@ public class InterfaceAjouterRecette implements Observer {
 
 		Recette recette = (Recette) rct;
 		ctrlAjout.affEtape.getChildren().clear();
-		for(String i: recette.getEtapes()) {
-			Label etape = new Label(i);
-			String text = etape.getText();
-			text = text.substring(0,3)+text.substring(3,4).toUpperCase()+text.substring(4).toLowerCase();
-			etape.setText(text);
-			etape.getStylesheets().add("Main.css");
+		for(int i=0;i<recette.getEtapes().size();i++) {
+			String text = (i+1)+". "+recette.getEtapes().get(i);
+			Label etape = new Label(text);
 			etape.getStyleClass().add("label2");
 			etape.setPrefWidth(ctrlAjout.affEtape.getWidth());
 			etape.setPrefHeight(15);
 			etape.setWrapText(true);
-			ctrlAjout.affEtape.getChildren().add(etape);
+			Button btn = new Croix();
+			btn.setOnAction(e -> {
+				ctrlAjout.supprimerEtape(text.split(" ")[1]);
+			});
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			hb.getChildren().addAll(btn, etape);
+			ctrlAjout.affEtape.getChildren().add(hb);
 			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}
 
@@ -167,14 +171,20 @@ public class InterfaceAjouterRecette implements Observer {
 		for(String i: recette.getCatégories()) {
 			Label cat = new Label(i);
 			cat.getStyleClass().add("label3");
-			catégorie.getChildren().add(cat);
+			Button btn = new Croix();
+			btn.setOnAction(e -> {
+				ctrlAjout.supprimerCatégorie(i);
+			});
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			hb.getChildren().addAll(btn, cat);
+			catégorie.getChildren().add(hb);
 		}
 
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.getIngrédients()) {
-			Button btn = new Button();
-			
+			Button btn = new Croix();
 			btn.setOnAction(e -> {
 				ctrlAjout.supprimerIngrédient(i);
 			});
@@ -184,16 +194,6 @@ public class InterfaceAjouterRecette implements Observer {
 			lbl.setWrapText(true);
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
-			try {
-				FileInputStream fis = new FileInputStream("imgs/red_cross.png");
-				ImageView imgView = new ImageView(new Image(fis));
-				imgView.setFitHeight(20);
-				imgView.setFitWidth(20);
-				btn.setGraphic(imgView);
-				btn.setBackground(null);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
 			hb.getChildren().addAll(btn, lbl);
 			ingrédient.getChildren().add(hb);
 		}

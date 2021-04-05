@@ -166,8 +166,7 @@ public class AjoutRecetteController implements Observer {
 	
 	@FXML
 	void AddEtape(ActionEvent event) {
-		this.nombreEtape++;
-		this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
+		this.mdl.ajoutEtape(this.TexteEtape.getText());
 		this.TexteEtape.setText("");
 	}
 
@@ -224,6 +223,14 @@ public class AjoutRecetteController implements Observer {
 
 	public void supprimerIngrédient(Ingrédient ing) {
 		this.mdl.supprimerIng(ing);
+	}
+	
+	public void supprimerCatégorie(String cat) {
+		this.mdl.supprimerCat(cat);
+	}
+
+	public void supprimerEtape(String s) {
+		this.mdl.supprimerEtape(s);
 	}
 
 	public void sauvegarderRecette(boolean save, Recette rct) {
