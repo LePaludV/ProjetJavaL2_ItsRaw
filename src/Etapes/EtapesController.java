@@ -5,15 +5,20 @@ import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 import AccueilRecette.ModèleAccueilRecette;
 import javafx.event.ActionEvent;
 
 public class EtapesController {
 	@FXML
-	private Button precedent;
+	public Button precedent;
 	@FXML
-	private Button suivant;
+	public Button suivant;
 	@FXML
 	private Button retour;
 	@FXML

@@ -1,10 +1,14 @@
 package Etapes;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import Accueil.*;
 import AccueilRecette.*;
@@ -99,6 +103,19 @@ public class InterfaceEtapes implements Observer {
 				Ingrédient.append(rct.getIngrédients().get(i).nom+" "+(int)rct.getIngrédients().get(i).quantité+" "+rct.getIngrédients().get(i).mesure+"\n");
 			}
 			ctrlEtapes.textIngredients.setText(Ingrédient.toString());
+		}
+		try {
+			ImageView d = new ImageView(new Image(new FileInputStream("imgs/FlecheDroite.png")));
+			ImageView g = new ImageView(new Image(new FileInputStream("imgs/FlecheGauche.png")));
+			d.setFitHeight(35);
+			g.setFitHeight(35);
+			d.setFitWidth(50);
+			g.setFitWidth(50);
+			ctrlEtapes.suivant.setGraphic(d);
+			ctrlEtapes.precedent.setGraphic(g);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

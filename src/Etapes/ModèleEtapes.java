@@ -1,12 +1,15 @@
 package Etapes;
 import java.util.Observable;
-
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
 import Main.*;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
-public class ModèleEtapes extends Observable{
+public class ModèleEtapes extends Observable implements EventHandler {
 	Vue vue;
 	int indexEtape;
 	
@@ -38,6 +41,20 @@ public class ModèleEtapes extends Observable{
 		{
 			this.indexEtape -=1;
 			this.setEtapes();
+		}
+	}
+	
+	@Override
+	public void handle(Event event)
+	{
+		KeyEvent evt = (KeyEvent) event;
+		if(evt.getCode() == KeyCode.RIGHT)
+		{
+			clickSuivant();
+		}
+		else if(evt.getCode() == KeyCode.LEFT)
+		{
+			clickPrecedent();
 		}
 	}
 
