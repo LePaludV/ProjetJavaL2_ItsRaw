@@ -54,12 +54,6 @@ public class InterfacePanier implements Observer {
 	public void update(Observable arg0, Object arg1) {
 
 		ArrayList<Ingrédient> Ingrédients=this.mdlPanier.ChargementPanier();
-		/*StringBuilder strIngr = new StringBuilder();
-		for(int i = 0;i<Ingrédients.size();i++) {
-			strIngr.append(Ingrédients.get(i).nom+" "+(int)Ingrédients.get(i).quantité+" "+Ingrédients.get(i).mesure+"\n");
-		}
-			this.ctrlPanier.TextePanier.setText(strIngr.toString());
-		};*/
 		VBox lstIngr = (VBox) rootLayout.lookup("#listeIngr");
 		lstIngr.getChildren().clear();
 		

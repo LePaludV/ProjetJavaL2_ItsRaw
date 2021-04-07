@@ -2095,6 +2095,274 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object class="Main.Recette" id="Recette8">
+      <void property="catégories">
+       <void method="add">
+        <string>Boeuf</string>
+       </void>
+       <void method="add">
+        <string>Pâque</string>
+       </void>
+      </void>
+      <void property="description">
+       <string>Les enfants adorent cette recette !</string>
+      </void>
+      <void property="etapes">
+       <void method="add">
+        <string>1. Battre l&apos;oeuf dans un saladier, ajouter la chapelure, saler poivrer à convenance. Melanger à la mixture la viande hachée et malaxer à la main.</string>
+       </void>
+       <void method="add">
+        <string>2. Ajouter l&apos;échalote et la ciboulette émincées finement et 2 cuillères à soupe de ketchup. Malaxer à nouveau.</string>
+       </void>
+       <void method="add">
+        <string>3. Une fois le tout bien mélangé, former des boulettes de la taille d&apos;un oeuf. Etaler de la farine sur une assiette et y rouler y les boulettes.</string>
+       </void>
+       <void method="add">
+        <string>4. Faire revenir ces boulettes dans une poêle avec du beurre et un filet d&apos;huile de tournesol en les retournant souvent pendant 15 à 20 mn, suivant la cuisson désirée.</string>
+       </void>
+       <void method="add">
+        <string>5. Servez immédiatement avec des tagliatelles ou des pommes sautées.</string>
+       </void>
+      </void>
+      <void property="ingrédients">
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient62">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient62"/>
+           <string>Farine</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient62"/>
+           <float>100.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient62"/>
+           <string>g</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient63">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient63"/>
+           <string>Sel</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient63"/>
+           <float>1.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient63"/>
+           <string>pincé</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient64">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient64"/>
+           <string>Ketchup</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient64"/>
+           <float>10.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient64"/>
+           <string>cl</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient65">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient65"/>
+           <string>Boeuf haché</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient65"/>
+           <float>500.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient65"/>
+           <string>g</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient66">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient66"/>
+           <string>Echalotes</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient66"/>
+           <float>2.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient66"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient67">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient67"/>
+           <string>Brins de ciboulette</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient67"/>
+           <float>5.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient67"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient68">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient68"/>
+           <string>Oeuf</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient68"/>
+           <float>1.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient68"/>
+           <string> </string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient69">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient69"/>
+           <string>Chapelure fine</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient69"/>
+           <float>2.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient69"/>
+           <string>cuil. soupe</string>
+          </void>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="Main.Ingrédient" id="Ingrédient70">
+         <void class="Main.Ingrédient" method="getField">
+          <string>nom</string>
+          <void method="set">
+           <object idref="Ingrédient70"/>
+           <string>Poivre</string>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>quantité</string>
+          <void method="set">
+           <object idref="Ingrédient70"/>
+           <float>2.0</float>
+          </void>
+         </void>
+         <void class="Main.Ingrédient" method="getField">
+          <string>mesure</string>
+          <void method="set">
+           <object idref="Ingrédient70"/>
+           <string>pincé</string>
+          </void>
+         </void>
+        </object>
+       </void>
+      </void>
+      <void property="nbrPersonne">
+       <int>4</int>
+      </void>
+      <void property="nom">
+       <string>Boulettes de boeuf scandinaves</string>
+      </void>
+      <void property="save">
+       <boolean>true</boolean>
+      </void>
+     </object>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -2115,13 +2383,16 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object idref="Recette8"/>
+    </void>
    </object>
   </void>
   <void method="put">
    <string>Jaune d&apos;oeuf</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object class="Main.Recette" id="Recette8">
+     <object class="Main.Recette" id="Recette9">
       <void property="catégories">
        <void method="add">
         <string>Fromage</string>
@@ -2160,125 +2431,125 @@
       </void>
       <void property="ingrédients">
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient62">
+        <object class="Main.Ingrédient" id="Ingrédient71">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
-           <object idref="Ingrédient62"/>
+           <object idref="Ingrédient71"/>
            <string>Branche de thym</string>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>quantité</string>
           <void method="set">
-           <object idref="Ingrédient62"/>
+           <object idref="Ingrédient71"/>
            <float>1.0</float>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient62"/>
+           <object idref="Ingrédient71"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient63">
+        <object class="Main.Ingrédient" id="Ingrédient72">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
-           <object idref="Ingrédient63"/>
+           <object idref="Ingrédient72"/>
            <string>Pâte feuilleté</string>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>quantité</string>
           <void method="set">
-           <object idref="Ingrédient63"/>
+           <object idref="Ingrédient72"/>
            <float>1.0</float>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient63"/>
+           <object idref="Ingrédient72"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient64">
+        <object class="Main.Ingrédient" id="Ingrédient73">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
-           <object idref="Ingrédient64"/>
+           <object idref="Ingrédient73"/>
            <string>Camembert</string>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>quantité</string>
           <void method="set">
-           <object idref="Ingrédient64"/>
+           <object idref="Ingrédient73"/>
            <float>1.0</float>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient64"/>
+           <object idref="Ingrédient73"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient65">
+        <object class="Main.Ingrédient" id="Ingrédient74">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
-           <object idref="Ingrédient65"/>
+           <object idref="Ingrédient74"/>
            <string>Tranche de lard</string>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>quantité</string>
           <void method="set">
-           <object idref="Ingrédient65"/>
+           <object idref="Ingrédient74"/>
            <float>1.0</float>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient65"/>
+           <object idref="Ingrédient74"/>
            <string> </string>
           </void>
          </void>
         </object>
        </void>
        <void method="add">
-        <object class="Main.Ingrédient" id="Ingrédient66">
+        <object class="Main.Ingrédient" id="Ingrédient75">
          <void class="Main.Ingrédient" method="getField">
           <string>nom</string>
           <void method="set">
-           <object idref="Ingrédient66"/>
+           <object idref="Ingrédient75"/>
            <string>Jaune d&apos;oeuf</string>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>quantité</string>
           <void method="set">
-           <object idref="Ingrédient66"/>
+           <object idref="Ingrédient75"/>
            <float>1.0</float>
           </void>
          </void>
          <void class="Main.Ingrédient" method="getField">
           <string>mesure</string>
           <void method="set">
-           <object idref="Ingrédient66"/>
+           <object idref="Ingrédient75"/>
            <string> </string>
           </void>
          </void>
@@ -2313,28 +2584,28 @@
    <string>gousse d&apos;ail</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object class="Main.Recette" id="Recette9">
+     <object class="Main.Recette" id="Recette10">
       <void property="nom">
        <string>Salade de tomates</string>
       </void>
      </object>
     </void>
     <void method="add">
-     <object class="Main.Recette" id="Recette10">
+     <object class="Main.Recette" id="Recette11">
       <void property="nom">
        <string>Pizza</string>
       </void>
      </object>
     </void>
     <void method="add">
-     <object class="Main.Recette" id="Recette11">
+     <object class="Main.Recette" id="Recette12">
       <void property="nom">
        <string>Hamburger</string>
       </void>
      </object>
     </void>
     <void method="add">
-     <object class="Main.Recette" id="Recette12">
+     <object class="Main.Recette" id="Recette13">
       <void property="nom">
        <string>Lasagne à la bolognaise</string>
       </void>
@@ -2381,6 +2652,9 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object idref="Recette8"/>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -2401,13 +2675,16 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object idref="Recette8"/>
+    </void>
    </object>
   </void>
   <void method="put">
    <string>Pâte feuilleté</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette8"/>
+     <object idref="Recette9"/>
     </void>
    </object>
   </void>
@@ -2429,6 +2706,9 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object idref="Recette8"/>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -2448,6 +2728,9 @@
     </void>
     <void method="add">
      <object idref="Recette7"/>
+    </void>
+    <void method="add">
+     <object idref="Recette8"/>
     </void>
    </object>
   </void>
@@ -2469,7 +2752,7 @@
    <string>Branche de thym</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette8"/>
+     <object idref="Recette9"/>
     </void>
    </object>
   </void>
@@ -2517,13 +2800,16 @@
     <void method="add">
      <object idref="Recette7"/>
     </void>
+    <void method="add">
+     <object idref="Recette8"/>
+    </void>
    </object>
   </void>
   <void method="put">
    <string>Camembert</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette8"/>
+     <object idref="Recette9"/>
     </void>
    </object>
   </void>
@@ -2538,10 +2824,10 @@
      </object>
     </void>
     <void method="add">
-     <object idref="Recette10"/>
+     <object idref="Recette11"/>
     </void>
     <void method="add">
-     <object idref="Recette11"/>
+     <object idref="Recette12"/>
     </void>
     <void method="add">
      <object class="Main.Recette">
@@ -2551,13 +2837,16 @@
      </object>
     </void>
     <void method="add">
-     <object idref="Recette12"/>
+     <object idref="Recette13"/>
     </void>
     <void method="add">
      <object idref="Recette7"/>
     </void>
     <void method="add">
      <object idref="Recette7"/>
+    </void>
+    <void method="add">
+     <object idref="Recette8"/>
     </void>
    </object>
   </void>
@@ -2572,20 +2861,20 @@
      </object>
     </void>
     <void method="add">
-     <object idref="Recette10"/>
-    </void>
-    <void method="add">
      <object idref="Recette11"/>
     </void>
     <void method="add">
-     <object class="Main.Recette" id="Recette13">
+     <object idref="Recette12"/>
+    </void>
+    <void method="add">
+     <object class="Main.Recette" id="Recette14">
       <void property="nom">
        <string>Tartiflette</string>
       </void>
      </object>
     </void>
     <void method="add">
-     <object idref="Recette12"/>
+     <object idref="Recette13"/>
     </void>
     <void method="add">
      <object idref="Recette2"/>
@@ -2628,13 +2917,13 @@
    <string>Sel</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette9"/>
-    </void>
-    <void method="add">
      <object idref="Recette10"/>
     </void>
     <void method="add">
      <object idref="Recette11"/>
+    </void>
+    <void method="add">
+     <object idref="Recette12"/>
     </void>
     <void method="add">
      <object class="Main.Recette">
@@ -2644,13 +2933,16 @@
      </object>
     </void>
     <void method="add">
-     <object idref="Recette13"/>
+     <object idref="Recette14"/>
     </void>
     <void method="add">
      <object idref="Recette7"/>
     </void>
     <void method="add">
      <object idref="Recette7"/>
+    </void>
+    <void method="add">
+     <object idref="Recette8"/>
     </void>
    </object>
   </void>
@@ -2658,7 +2950,7 @@
    <string>Tranche de lard</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <object idref="Recette8"/>
+     <object idref="Recette9"/>
     </void>
    </object>
   </void>
