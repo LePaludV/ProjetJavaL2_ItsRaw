@@ -18,9 +18,7 @@ public class ModèlePanier extends Observable{
 	Vue vue;
 	ArrayList<Ingrédient> Ingrédients;
 	File panier;
-	String[][] liquide =  {{"","l","0,01"},{"100","cl","0,5"},{"1.5","cuil. soupe","0,33"},{"3","cuil. café",""}};
-	String[][] poids = {{"","kg","0,001"},{"1000","g","0,2"},{"5","pincé",""}};
-
+	
 
 	
 	
@@ -43,18 +41,18 @@ public class ModèlePanier extends Observable{
 				
 				System.out.println((i.nom+"   "+this.Ingrédients.get(j).nom));
 				if(i.nom.equals(this.Ingrédients.get(j).nom)) {
-					System.out.println("Existe déjà"+i.nom);
+					
 					
 					if(estLiquide(i.mesure) & estLiquide(this.Ingrédients.get(j).mesure)) {
 						maj=majIngrédientLiquide(this.Ingrédients.get(j),i);
-						System.out.println("Ingrédients Liquide déjà existant  "+maj.quantité);
+						
 						this.Ingrédients.remove(j);
 						
 
 					}
 					else if (estSolide(i.mesure) & estSolide(this.Ingrédients.get(j).mesure)) {
 						maj=majIngrédientPoids(this.Ingrédients.get(j),i);
-						System.out.println("Ingrédients Solide déjà existant  "+maj.quantité);
+						
 						this.Ingrédients.remove(j);
 					
 						
