@@ -1,36 +1,69 @@
-@font-face {
-    font-family: Oswald-Bold;
-    src: url("../polices/Oswald-Bold.ttf");
-}
-
-.button{
-    -fx-background-insets: 1 1 1 1, 1;
+.button1{
+  	-fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;
-	-fx-background-color: #D94333;
+	-fx-font-size: 20px;
+	-fx-font-style: italic;
+	-fx-background-color: rgb(38,52,78);
+	-fx-text-fill: rgb(226,217,205);
 }
 
-.button:hover {
-    -fx-background-color: #AB1C0C;
+.button1:hover {
+    -fx-background-color: rgb(51, 69, 102);
+	-fx-text-fill: rgb(226,217,205);
 }
 
-.button:pressed, .button:default:hover:pressed {
-  -fx-background-color: #D94333;
-  -fx-text-fill: #1d1d1d;
+.button1:pressed, .button:default:hover:pressed {
+  -fx-background-color: rgb(38,52,78);
+  -fx-text-fill: rgb(226,217,205);
+}
+
+.corss_button:default {
+	-fx-background: null;
+}
+
+.cross_button:hover{
+	-fx-background-color: rgba(0,0,0,0.2);
 }
 
 .description{
 	-fx-background-insets: 1 1 1 1, 1;
-	-fx-background-radius: 20;
-	-fx-control-inner-background: #56898D;
-	-fx-highlight-text-fill: #5DAB9B;
-	-fx-text-fill: #E08E44; 
-	-fx-background-color:#56898D;
+	-fx-background-radius: 10;
+	-fx-control-inner-background: rgb(197,127,107);
+	-fx-highlight-text-fill: rgb(38,52,78);
+	-fx-text-fill: rgb(38,52,78);
+	-fx-background-color:rgb(197,127,107);
+	-fx-font-size: 15px;
 }
-
-.label{
-	-fx-font-family:"Oswald-Bold";
-}
-
 .gridPane{
-	-fx-background-color: #E08E44;
+	-fx-background-color: rgb(226,217,205);
+}
+.titre{
+	-fx-font-size: 25px;
+	-fx-text-fill:rgb(38,52,78);
+	-fx-font-weight: bold;
+	-fx-alignment: center;
+}
+
+.box
+{
+	-fx-background-color: rgb(148,32,40);
+	-fx-background-radius: 10;
+}
+
+.label1
+{
+	-fx-font-weight: bold;
+}
+
+.label2{
+	-fx-background-radius: 5;
+	-fx-text-fill: rgb(38,52,78);
+	-fx-font-size: 15px;
+	-fx-font-weight: bold;
+}
+
+.label3 {
+	-fx-text-fill:rgb(226,217,205);
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
 }

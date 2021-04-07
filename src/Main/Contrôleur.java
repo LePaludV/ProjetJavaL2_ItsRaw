@@ -1,4 +1,8 @@
-
+package Main;
+import Accueil.*;
+import AccueilRecette.*;
+import AjoutRecette.*;
+import Main.*;
 public class Contrôleur {
 	
 	ModèleAccueil mdl;
