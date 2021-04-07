@@ -51,7 +51,7 @@
                   <Font name="System Bold" size="27.0" />
                </font>
             </Label>
-            <Button fx:id="btnRetour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToAccueil" text="Retour à l'accueil" />
+            <Button fx:id="btnRetour" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#goToAccueil" style="-fx-font-size: 15;" styleClass="button1" stylesheets="@Main.css" text="Retour à l'accueil" />
             <ImageView fx:id="poubelle" fitHeight="55.0" fitWidth="56.0" layoutX="729.0" layoutY="111.0" onMousePressed="#viderPanier" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/delete.png" />
