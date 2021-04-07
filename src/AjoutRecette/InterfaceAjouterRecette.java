@@ -147,16 +147,23 @@ public class InterfaceAjouterRecette implements Observer {
 	public void update(Observable arg0, Object rct) {
 
 		Recette recette = (Recette) rct;
-		VBox étapes = (VBox) rootLayout.lookup("#affEtape");
-		étapes.getChildren().clear();
-		for(String i: recette.getEtapes()) {
-			Label etape = new Label(i);
-			etape.getStylesheets().add("Main.css");
+		ctrlAjout.affEtape.getChildren().clear();
+		for(int i=0;i<recette.getEtapes().size();i++) {
+			String text = (i+1)+". "+recette.getEtapes().get(i);
+			Label etape = new Label(text);
 			etape.getStyleClass().add("label2");
-			etape.setPrefWidth(étapes.getWidth());
+			etape.setPrefWidth(ctrlAjout.affEtape.getWidth());
 			etape.setPrefHeight(15);
 			etape.setWrapText(true);
-			étapes.getChildren().add(etape);
+			Button btn = new Croix();
+			btn.setOnAction(e -> {
+				ctrlAjout.supprimerEtape(text.split(" ")[1]);
+			});
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			hb.getChildren().addAll(btn, etape);
+			ctrlAjout.affEtape.getChildren().add(hb);
+			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}
 
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
@@ -164,32 +171,29 @@ public class InterfaceAjouterRecette implements Observer {
 		for(String i: recette.getCatégories()) {
 			Label cat = new Label(i);
 			cat.getStyleClass().add("label3");
-			catégorie.getChildren().add(cat);
+			Button btn = new Croix();
+			btn.setOnAction(e -> {
+				ctrlAjout.supprimerCatégorie(i);
+			});
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			hb.getChildren().addAll(btn, cat);
+			catégorie.getChildren().add(hb);
 		}
 
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.getIngrédients()) {
-			Button btn = new Button();
-			
+			Button btn = new Croix();
 			btn.setOnAction(e -> {
 				ctrlAjout.supprimerIngrédient(i);
 			});
 			
 			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
 			lbl.getStyleClass().add("label3");
+			lbl.setWrapText(true);
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
-			try {
-				FileInputStream fis = new FileInputStream("imgs/red_cross.png");
-				ImageView imgView = new ImageView(new Image(fis));
-				imgView.setFitHeight(20);
-				imgView.setFitWidth(20);
-				btn.setGraphic(imgView);
-				btn.setBackground(null);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
 			hb.getChildren().addAll(btn, lbl);
 			ingrédient.getChildren().add(hb);
 		}

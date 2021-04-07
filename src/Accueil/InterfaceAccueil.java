@@ -86,7 +86,7 @@ public class InterfaceAccueil implements Observer
 						Recette recette_courante = lstRecettes.get((i+2)*i+j);
 						String nom  = lstRecettes.get((i+2)*i+j).getNom();
 						System.out.println("nom des recettes : "+nom);
-						System.out.println(recette_courante.getPhoto());
+						System.out.println("photo de la recette : "+recette_courante.getPhoto());
 						if(recette_courante.getPhoto() != null) {
 							ImageView imgView = new ImageView(recette_courante.getPhoto());
 							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();

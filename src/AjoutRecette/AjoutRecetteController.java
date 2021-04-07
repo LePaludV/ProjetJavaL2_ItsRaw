@@ -30,6 +30,7 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -137,6 +138,12 @@ public class AjoutRecetteController implements Observer {
 
 	@FXML
 	private ComboBox<String> searchCatégorie;
+	
+	@FXML
+	public VBox affEtape;
+	
+	@FXML
+	public AnchorPane anchorEtape;
 
 	@FXML
 	private void exit(ActionEvent event) {
@@ -159,15 +166,13 @@ public class AjoutRecetteController implements Observer {
 	
 	@FXML
 	void AddEtape(ActionEvent event) {
-		System.out.println("Etape !");
-		this.nombreEtape++;
-		this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
+		this.mdl.ajoutEtape(this.TexteEtape.getText());
 		this.TexteEtape.setText("");
 	}
 
 	@FXML
 	void AddIngrédient(ActionEvent event) {
-		String nom = this.nomIngrédient.getText();
+		String nom = this.nomIngrédient.getText().toLowerCase();
 		int quantité = this.quantitéIngrédient.getValue();
 		String mesure = ((RadioMenuItem) this.mesures.getSelectedToggle()).getText();
 		this.mdl.ajoutIngrédient(nom, quantité, mesure);
@@ -219,6 +224,14 @@ public class AjoutRecetteController implements Observer {
 	public void supprimerIngrédient(Ingrédient ing) {
 		this.mdl.supprimerIng(ing);
 	}
+	
+	public void supprimerCatégorie(String cat) {
+		this.mdl.supprimerCat(cat);
+	}
+
+	public void supprimerEtape(String s) {
+		this.mdl.supprimerEtape(s);
+	}
 
 	public void sauvegarderRecette(boolean save, Recette rct) {
 		this.mdlAcc.changeWindow(save, rct);
@@ -244,6 +257,6 @@ public class AjoutRecetteController implements Observer {
 	@Override
 	public void update(Observable o, Object texte) {
 		String s = (String) texte;
-		this.mdl.ajoutCatégorie(s);
+		this.mdl.ajoutCatégorie(s.toLowerCase());
 	}
 }

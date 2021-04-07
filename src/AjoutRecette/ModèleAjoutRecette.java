@@ -122,6 +122,18 @@ public class ModèleAjoutRecette extends Observable {
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}
+	
+	public void supprimerCat(String cat) {
+		this.recette_courante.getCatégories().remove(cat);
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
+	
+	public void supprimerEtape(String etape) {
+		this.recette_courante.getEtapes().remove(etape);
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+	}
 
 	public void saveImage(Image image) {
 		try {
