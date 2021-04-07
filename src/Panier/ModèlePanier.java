@@ -38,24 +38,15 @@ public class ModèlePanier extends Observable{
 		for(Ingrédient i: ingr) {
 			Ingrédient maj=i;
 			for(int j =0;j<this.Ingrédients.size();j++) {
-				
 				System.out.println((i.nom+"   "+this.Ingrédients.get(j).nom));
 				if(i.nom.equals(this.Ingrédients.get(j).nom)) {
-					
-					
 					if(estLiquide(i.mesure) & estLiquide(this.Ingrédients.get(j).mesure)) {
 						maj=majIngrédientLiquide(this.Ingrédients.get(j),i);
-						
 						this.Ingrédients.remove(j);
-						
-
 					}
 					else if (estSolide(i.mesure) & estSolide(this.Ingrédients.get(j).mesure)) {
-						maj=majIngrédientPoids(this.Ingrédients.get(j),i);
-						
+						maj=majIngrédientPoids(this.Ingrédients.get(j),i);					
 						this.Ingrédients.remove(j);
-					
-						
 					}else {
 						maj=i;
 					}

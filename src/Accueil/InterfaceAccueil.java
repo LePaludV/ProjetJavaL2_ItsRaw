@@ -84,20 +84,23 @@ public class InterfaceAccueil implements Observer
 						});
 
 						Recette recette_courante = lstRecettes.get((i+2)*i+j);
-						String nom  = lstRecettes.get((i+2)*i+j).getNom();
-						System.out.println("nom des recettes : "+nom);
-						System.out.println("photo de la recette : "+recette_courante.getPhoto());
-						if(recette_courante.getPhoto() != null) {
-							ImageView imgView = new ImageView(recette_courante.getPhoto());
+						String nom  = recette_courante.getNom();
+						System.out.println(nom);
+						try {
+							FileInputStream fis = new FileInputStream("imagesRecette/"+nom+".png");
+							System.out.println(fis);
+							ImageView imgView = new ImageView(new Image(fis));
 							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
 							double largeurPhoto = recette_courante.getPhoto().getWidth();
 							double coeff = (largeurScroll/largeurPhoto);
 							imgView.setFitHeight((recette_courante.getPhoto().getHeight()*coeff)/3);
 							imgView.setFitWidth((recette_courante.getPhoto().getWidth()*coeff)/3);
 							btn.setGraphic(imgView);
-							btn.setBackground(null);
-							hb.getChildren().add(btn);							
+						} catch (FileNotFoundException e1) {
+							e1.printStackTrace();
 						}
+						btn.setBackground(null);
+						hb.getChildren().add(btn);							
 					}
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);

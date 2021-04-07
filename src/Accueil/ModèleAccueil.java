@@ -20,107 +20,19 @@ import Main.Ingrédient;
 
 public class ModèleAccueil extends Observable {
 
-	public ArrayList<Recette> recettes;
-	public HashMap<String, ArrayList<Recette>> classeIng;
-	public HashMap<String, ArrayList<Recette>> catégories;
+	public HashMap<String, Recette> recettes;
+	public HashMap<String, ArrayList<String>> classeIng;
+	public HashMap<String, ArrayList<String>> catégories;
 	public Vue vue;
 	public File fichier;
 
 
 	public ModèleAccueil(Vue v) {
 		this.fichier=new File("data.xml");
-		this.recettes = new ArrayList<Recette>();
-		this.catégories = new HashMap<String, ArrayList<Recette>>();
-		this.classeIng = new HashMap<String, ArrayList<Recette>>();
+		this.recettes = new HashMap<String, Recette>();
+		this.catégories = new HashMap<String, ArrayList<String>>();
+		this.classeIng = new HashMap<String, ArrayList<String>>();
 		this.vue = v;
-		this.loadData("data");
-		this.loadData("dataCatégories");
-		this.loadData("dataIngrédients");
-	}
-
-	private void jeuxDeTests() {
-		Recette rct1 = new Recette();
-		rct1.setNom("Tarte aux citrons");
-		Recette rct2 = new Recette();
-		rct2.setNom("Flans");
-		Recette rct3 = new Recette();
-		rct3.setNom("Salade de tomates");
-		Recette rct4 = new Recette();
-		rct4.setNom("Pot au feu");
-		Recette rct5 = new Recette();
-		rct5.setNom("Pizza");
-		Recette rct6 = new Recette();
-		rct6.setNom("Hamburger");
-		Recette rct7 = new Recette();
-		rct7.setNom("Pâtes au fromage");
-		Recette rct8 = new Recette();
-		rct8.setNom("Crèpes");
-		Recette rct9 = new Recette();
-		rct9.setNom("Tiramisu");
-		Recette rct10 = new Recette();
-		rct10.setNom("Tartiflette");
-		Recette rct11 = new Recette();
-		rct11.setNom("Lasagne à la bolognaise");
-
-		ArrayList<Recette> fromage = new ArrayList<Recette>();
-		fromage.add(rct5);
-		fromage.add(rct6);
-		fromage.add(rct7);
-		fromage.add(rct10);
-		this.catégories.put("Fromage", fromage);
-
-		ArrayList<Recette> tomate = new ArrayList<Recette>();
-		tomate.add(rct3);
-		tomate.add(rct5);
-		tomate.add(rct11);
-		this.catégories.put("Tomate", tomate);
-
-		ArrayList<Recette> dessert = new ArrayList<Recette>();
-		dessert.add(rct2);
-		dessert.add(rct1);
-		dessert.add(rct8);
-		dessert.add(rct9);
-		this.catégories.put("Dessert", dessert);
-
-		ArrayList<Recette> plat = new ArrayList<Recette>();
-		plat.add(rct4);
-		plat.add(rct5);
-		plat.add(rct6);
-		plat.add(rct7);
-		plat.add(rct10);
-		plat.add(rct11);
-		this.catégories.put("Plat", plat);
-
-		ArrayList<Recette> farine = new ArrayList<Recette>();
-		farine.add(rct2);
-		farine.add(rct5);
-		farine.add(rct6);
-		farine.add(rct8);
-		farine.add(rct11);
-		this.classeIng.put("Farine", farine);
-
-		ArrayList<Recette> tomateIng = new ArrayList<Recette>();
-		tomateIng.add(rct3);
-		tomateIng.add(rct5);
-		tomateIng.add(rct6);
-		tomateIng.add(rct11);
-		this.classeIng.put("Tomate", tomateIng);
-
-		ArrayList<Recette> viandeIng = new ArrayList<Recette>();
-		viandeIng.add(rct4);
-		viandeIng.add(rct5);
-		viandeIng.add(rct6);
-		viandeIng.add(rct10);
-		viandeIng.add(rct11);
-		this.classeIng.put("Viande", viandeIng);
-
-		ArrayList<Recette> fromageIng = new ArrayList<Recette>();
-		fromageIng.add(rct3);
-		fromageIng.add(rct5);
-		fromageIng.add(rct6);
-		fromageIng.add(rct7);
-		fromageIng.add(rct10);
-		this.classeIng.put("Fromage", fromageIng);
 	}
 
 	public void goToAjouterRecette()
@@ -141,25 +53,19 @@ public class ModèleAccueil extends Observable {
 
 	public void ajouterRecette(Recette rct) {
 
-		for(int i =0;i<this.recettes.size();i++) {
-			if(this.recettes.get(i).getNom().contentEquals(rct.getNom())) {
-				this.recettes.remove(i);
-			}
-		}
-
-		recettes.add(rct);
+		this.recettes.put(rct.getNom(), rct);
 		for (Ingrédient i : rct.getIngrédients()) {
 			if (this.classeIng.get(i.nom) == null) {
-				this.classeIng.put(i.nom, new ArrayList<Recette>());
+				this.classeIng.put(i.nom, new ArrayList<String>());
 			}
-			this.classeIng.get(i.nom).add(rct);
+			this.classeIng.get(i.nom).add(rct.getNom());
 		}
 
 		for (String s : rct.getCatégories()) {
 			if (this.catégories.get(s) == null) {
-				this.catégories.put(s, new ArrayList<Recette>());
+				this.catégories.put(s, new ArrayList<String>());
 			}
-			this.catégories.get(s).add(rct);
+			this.catégories.get(s).add(rct.getNom());
 		}
 
 		this.saveData("data");
@@ -172,15 +78,20 @@ public class ModèleAccueil extends Observable {
 		this.notifyObservers(this.catégories);
 	}
 
-	public void afficherParCatégories(String catègorie) {
-		if (this.catégories.get(catègorie) != null) {
+	public void afficherParCatégories(String catégorie) {
+		if (this.catégories.get(catégorie) != null) {
+			ArrayList<Recette> liste = new ArrayList<Recette>();
+			for (String nomRecette : this.catégories.get(catégorie)) {
+				liste.add(this.recettes.get(nomRecette));
+			}
 			this.setChanged();
-			this.notifyObservers(this.catégories.get(catègorie));
+			this.notifyObservers(liste);
 		}
 	}
 
 	public void afficherParIngrèdients(String ing) {
 		if (this.classeIng.get(ing) != null) {
+			System.out.println("affichage ingrédient : "+ing);
 			this.setChanged();
 			this.notifyObservers(this.classeIng.get(ing));
 		}
@@ -188,6 +99,10 @@ public class ModèleAccueil extends Observable {
 
 	public void afficherRecettes() {
 		this.setChanged();
+		ArrayList<Recette> liste = new ArrayList<Recette>();
+		for (String nom : this.recettes.keySet()) {
+			liste.add(this.recettes.get(nom));
+		}
 		this.notifyObservers(this.recettes);
 	}
 
@@ -228,11 +143,11 @@ public class ModèleAccueil extends Observable {
 			decoder = new XMLDecoder(bis);
 			
 			if (url.equals("data")) {
-				this.recettes = (ArrayList<Recette>) decoder.readObject();				
+				this.recettes = (HashMap<String, Recette>) decoder.readObject();				
 			} else if (url.equals("dataCatégories")) {
-				this.catégories = (HashMap<String, ArrayList<Recette>>) decoder.readObject();
+				this.catégories = (HashMap<String, ArrayList<String>>) decoder.readObject();
 			} else if (url.equals("dataIngrédients")) {
-				this.classeIng = (HashMap<String, ArrayList<Recette>>) decoder.readObject();				
+				this.classeIng = (HashMap<String, ArrayList<String>>) decoder.readObject();				
 			}
 		} catch (Exception e) {
 
@@ -241,11 +156,9 @@ public class ModèleAccueil extends Observable {
 			if (decoder != null) decoder.close();
 		}
 		
-		for (Recette r : this.recettes) {
-			r.setPhoto();
+		for (String r : this.recettes.keySet()) {
+			this.recettes.get(r).setPhoto();
 		}
-		System.out.println("nom de la recette : "+this.recettes.get(0).getNom());
-		System.out.println("photo de la recette : "+this.recettes.get(0).getNom());
 		System.out.println("Data loaded !");
 	}
 
