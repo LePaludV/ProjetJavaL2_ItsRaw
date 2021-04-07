@@ -167,7 +167,7 @@ public class AjoutRecetteController implements Observer {
 	@FXML
 	void AddEtape(ActionEvent event) {
 		this.nombreEtape++;
-		this.mdl.ajoutEtape(this.nombreEtape+". "+this.TexteEtape.getText());
+		this.mdl.ajoutEtape(this.TexteEtape.getText());
 		this.TexteEtape.setText("");
 	}
 

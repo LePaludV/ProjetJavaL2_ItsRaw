@@ -12,6 +12,7 @@ import javafx.scene.input.KeyEvent;
 public class ModèleEtapes extends Observable implements EventHandler {
 	Vue vue;
 	int indexEtape;
+	public Recette recette_courante;
 	
 	public ModèleEtapes(Vue v) {
 		this.vue = v;
@@ -22,6 +23,11 @@ public class ModèleEtapes extends Observable implements EventHandler {
 	{
 		this.setChanged();
 		this.notifyObservers(this.indexEtape);
+	}
+	
+	public void setRecette(Recette rct)
+	{
+		this.recette_courante = rct;
 	}
 
 	public void goToAccueil() {

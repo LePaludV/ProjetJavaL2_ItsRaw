@@ -52,8 +52,6 @@ public class Vue extends Application {
 	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE, PANIER};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
 	
-	public Recette recetteCourante = new Recette();
-
 	@Override
 	public void start(Stage primaryStage) throws Exception {
         this.mdlAccueil = new ModèleAccueil(this);
@@ -97,7 +95,8 @@ public class Vue extends Application {
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
         	System.out.println("changewindow");
         	Recette rct=new Recette();
-        	rct=null;
+        	if(this.mdlEtapes == null) {rct = null;}
+        	else {rct=this.mdlEtapes.recette_courante;}
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
             InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
             this.mdlAccueilRecette.addObserver(vueAccueilRecette);
@@ -106,13 +105,17 @@ public class Vue extends Application {
             vueAccueilRecette.loadRecette(rct);
             this.primaryStage.sizeToScene();
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
+        	Recette rct = new Recette();
+        	System.out.println("ok");
+        	rct = this.mdlAccueilRecette.recette_courante;
         	this.mdlEtapes = new ModèleEtapes(this);
+        	this.mdlEtapes.setRecette(rct);
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
             InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
             this.mdlEtapes.addObserver(vueEtapes);
             Scene scene=new Scene(InterfaceEtapes.getRoot());
             primaryStage.setScene(scene);
-            vueEtapes.loadRecette(recetteCourante);
+            vueEtapes.loadRecette(rct);
             this.primaryStage.sizeToScene();
 
         }

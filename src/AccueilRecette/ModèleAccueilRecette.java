@@ -58,7 +58,6 @@ public class ModèleAccueilRecette extends Observable{
 
 	public void goToEtapes()
 	{
-		this.vue.recetteCourante = recette_courante;
 		this.vue.currentInterface = this.vue.currentInterface.ETAPE_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ETAPE_RECETTE);
 	}

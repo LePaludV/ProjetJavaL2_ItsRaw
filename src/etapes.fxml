@@ -43,11 +43,11 @@
                         <Image url="@../imgs/not_found.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="textDescription" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-text-alignment: center;" styleClass="description" stylesheets="@Main.css" />
+                  <Label fx:id="textDescription" alignment="CENTER" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-text-alignment: center;" styleClass="description" stylesheets="@Main.css" wrapText="true" />
                   <Label fx:id="textEtape" layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" styleClass="titre" stylesheets="@Main.css" />
                </children>
             </Pane>
-            <Label fx:id="textIngredients" prefHeight="554.0" prefWidth="325.0" styleClass="description" stylesheets="@Main.css" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Label fx:id="textIngredients" alignment="TOP_CENTER" prefHeight="554.0" prefWidth="325.0" styleClass="description" stylesheets="@Main.css" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </center>
