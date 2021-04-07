@@ -198,6 +198,14 @@
     <void property="description">
      <string>Les enfants adorent cette recette !</string>
     </void>
+    <void property="difficulté">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
+    </void>
     <void property="etapes">
      <void method="add">
       <string>1. Battre l&apos;oeuf dans un saladier, ajouter la chapelure, saler poivrer à convenance. Melanger à la mixture la viande hachée et malaxer à la main.</string>
@@ -447,6 +455,14 @@
     </void>
     <void property="nom">
      <string>Boulettes de boeuf scandinaves</string>
+    </void>
+    <void property="note">
+     <void index="0">
+      <boolean>true</boolean>
+     </void>
+     <void index="1">
+      <boolean>true</boolean>
+     </void>
     </void>
     <void property="save">
      <boolean>true</boolean>
