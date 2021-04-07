@@ -180,7 +180,7 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void afficherParIngrèdients(String ing) {
-		if (this.catégories.get(ing) != null) {
+		if (this.classeIng.get(ing) != null) {
 			this.setChanged();
 			this.notifyObservers(this.classeIng.get(ing));
 		}

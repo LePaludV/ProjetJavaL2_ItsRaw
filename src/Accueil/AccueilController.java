@@ -84,6 +84,8 @@ public class AccueilController implements Observer{
 		if (this.mdl.catégories.keySet().contains(recherche)) {
 			this.mdl.afficherParCatégories(recherche);
 		} else if (this.mdl.classeIng.keySet().contains(recherche)) {
+			System.out.println(recherche);
+			
 			this.mdl.afficherParIngrèdients(recherche);
 		}
 	}
