@@ -63,7 +63,6 @@ public class AjoutRecetteController implements Observer {
 	@FXML
 	private Label LabelEtape;
 
-
 	@FXML
 	private Text Image;
 
@@ -141,9 +140,13 @@ public class AjoutRecetteController implements Observer {
 	
 	@FXML
 	public VBox affEtape;
-	
+	@FXML
+	public VBox affIngr;
 	@FXML
 	public AnchorPane anchorEtape;
+	
+    @FXML
+    public AnchorPane anchorIngr;
 
 	@FXML
 	private void exit(ActionEvent event) {
