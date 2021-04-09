@@ -62,11 +62,13 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
+		System.out.println(arg);
 		if(arg instanceof ArrayList<?>)
 		{
 			VBox recettes = ctrlAccueil.recettes;
 			recettes.getChildren().clear();
 			ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
+			System.out.println("lstRecettes : "+lstRecettes);
 			for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 			{
 				HBox hb = new HBox();

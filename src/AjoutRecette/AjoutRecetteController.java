@@ -175,7 +175,7 @@ public class AjoutRecetteController implements Observer {
 
 	@FXML
 	void AddIngrédient(ActionEvent event) {
-		String nom = this.nomIngrédient.getText().toLowerCase();
+		String nom = this.nomIngrédient.getText();
 		int quantité = this.quantitéIngrédient.getValue();
 		String mesure = ((RadioMenuItem) this.mesures.getSelectedToggle()).getText();
 		this.mdl.ajoutIngrédient(nom, quantité, mesure);
@@ -205,8 +205,6 @@ public class AjoutRecetteController implements Observer {
 	@FXML
 	void Sauvegarder(ActionEvent event) {
 		System.out.println("Nom de la recette : "+NomRecette.getText());
-		System.out.println("Description de la recette : "+Description.getText());
-		System.out.println("Note :"+this.note.getSelectedToggle());
 		if (this.affImg.getChildren().size()>1) {
 			this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
 		}
@@ -243,7 +241,7 @@ public class AjoutRecetteController implements Observer {
 	public void personnesSpinner() {
 		SpinnerValueFactory<Integer> nombre = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 12, 4);
 		this.nbrPersonne.setValueFactory(nombre);
-		SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 500, 0);
+		SpinnerValueFactory<Integer> nombre2 = new SpinnerValueFactory.IntegerSpinnerValueFactory(0, 999, 0);
 		this.quantitéIngrédient.setValueFactory(nombre2);
 		this.quantitéIngrédient.setEditable(true);
 		this.mesures.selectToggle(this.defaultRadiobutton);

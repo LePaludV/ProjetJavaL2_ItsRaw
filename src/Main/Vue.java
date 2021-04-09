@@ -104,6 +104,7 @@ public class Vue extends Application {
             primaryStage.setScene(scene);
             vueAccueilRecette.loadRecette(rct);
             this.primaryStage.sizeToScene();
+            
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
         	Recette rct = new Recette();
         	System.out.println("ok");
