@@ -62,13 +62,11 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
-		System.out.println(arg);
 		if(arg instanceof ArrayList<?>)
 		{
 			VBox recettes = ctrlAccueil.recettes;
 			recettes.getChildren().clear();
 			ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
-			System.out.println("lstRecettes : "+lstRecettes);
 			for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 			{
 				HBox hb = new HBox();
@@ -77,20 +75,22 @@ public class InterfaceAccueil implements Observer
 				{
 					if((i+2)*i+j<lstRecettes.size())
 					{
-						Button btn = new Button();
-						btn.setId(Integer.toString((i+2)*i+j));
-
-						btn.setOnAction(e -> {
-							System.out.println(lstRecettes.get(Integer.parseInt(btn.getId())).getPhoto());
-							ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
-						});
-
 						Recette recette_courante = lstRecettes.get((i+2)*i+j);
 						String nom  = recette_courante.getNom();
-						System.out.println(nom);
+						VBox vbox = new VBox();
+						vbox.setAlignment(Pos.CENTER);
+						vbox.getStyleClass().add("box");
+						Button btn = new Button();
+						Label lblRecette = new Label(nom);
+						lblRecette.getStyleClass().add("label3");
+						btn.setId(Integer.toString((i+2)*i+j));
+						btn.setBackground(null);
+						
+						btn.setOnAction(e -> {
+							ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
+						});
 						try {
 							FileInputStream fis = new FileInputStream("imagesRecette/"+nom+".png");
-							System.out.println(fis);
 							ImageView imgView = new ImageView(new Image(fis));
 							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
 							double largeurPhoto = recette_courante.getPhoto().getWidth();
@@ -101,8 +101,8 @@ public class InterfaceAccueil implements Observer
 						} catch (FileNotFoundException e1) {
 							e1.printStackTrace();
 						}
-						btn.setBackground(null);
-						hb.getChildren().add(btn);							
+						vbox.getChildren().addAll(btn, lblRecette);
+						hb.getChildren().add(vbox);		
 					}
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);

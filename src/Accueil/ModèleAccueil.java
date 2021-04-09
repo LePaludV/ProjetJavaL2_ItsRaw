@@ -95,7 +95,7 @@ public class ModèleAccueil extends Observable {
 	public void afficherParIngrèdients(String ing) {
 		if (this.classeIng.get(ing) != null) {
 			ArrayList<Recette> liste = new ArrayList<Recette>();
-			for (String nomRecette : this.catégories.get(ing)) {
+			for (String nomRecette : this.classeIng.get(ing)) {
 				liste.add(this.recettes.get(nomRecette));
 			}
 			this.setChanged();
