@@ -89,6 +89,11 @@
                      <font>
                         <Font size="10.0" />
                      </font></Button>
+                  <ImageView fx:id="imgFav" fitHeight="37.0" fitWidth="41.0" layoutX="741.0" layoutY="14.0" onMouseClicked="#ajouterFav" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imgs/love.png" />
+                     </image>
+                  </ImageView>
                </children>
             </Pane>
          </children>

@@ -200,14 +200,6 @@
       <boolean>true</boolean>
      </void>
     </void>
-    <void property="difficulté">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
-    </void>
     <void property="etapes">
      <void method="add">
       <string>Laissez les abricots entiers ou coupez-les en deux. Mettez-les dans une jatte, couvrez-les d&apos;eau et laissez-les reposer, à couvert, au réfrigérateur, pendant 12 h.</string>
@@ -519,14 +511,6 @@
     </void>
     <void property="nom">
      <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void property="note">
-     <void index="0">
-      <boolean>true</boolean>
-     </void>
-     <void index="1">
-      <boolean>true</boolean>
-     </void>
     </void>
     <void property="note">
      <void index="0">

@@ -15,6 +15,15 @@
     <void method="add">
      <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
     </void>
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -28,6 +37,15 @@
   <void method="put">
    <string>abricot</string>
    <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
+    <void method="add">
+     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+    </void>
     <void method="add">
      <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
     </void>

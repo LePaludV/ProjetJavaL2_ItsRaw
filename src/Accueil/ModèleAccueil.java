@@ -178,4 +178,9 @@ public class ModèleAccueil extends Observable {
 		this.vue.changeWindow(Vue.typeInterface.PANIER);
 		
 	}
+
+	public void goToFav() {
+		this.vue.currentInterface = this.vue.currentInterface.FAVORIS;
+		this.vue.changeWindow(Vue.typeInterface.FAVORIS);
+	}
 }

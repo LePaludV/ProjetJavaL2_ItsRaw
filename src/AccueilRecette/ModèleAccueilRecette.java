@@ -3,6 +3,7 @@ import java.util.Observable;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
+import Favoris.*;
 import Main.*;
 import Panier.*;
 public class ModèleAccueilRecette extends Observable{
@@ -10,11 +11,13 @@ public class ModèleAccueilRecette extends Observable{
 	Vue vue;
 	ModèleAccueil mdlAcc;
 	ModèlePanier mdlPanier;
+	ModèleFavoris mdlFav;
 
-	public ModèleAccueilRecette(Vue v,ModèleAccueil mdl,ModèlePanier mdlPanier) {
+	public ModèleAccueilRecette(Vue v,ModèleAccueil mdl,ModèlePanier mdlPanier,ModèleFavoris mdlFav) {
 		this.mdlAcc=mdl;
 		this.vue = v;
 		this.mdlPanier=mdlPanier;
+		this.mdlFav=mdlFav;
 
 	}
 
@@ -63,7 +66,6 @@ public class ModèleAccueilRecette extends Observable{
 	}
 
 	public void ajouterAuPanier() {
-		System.out.println("Ajout des ingrédients au panier :");
 		this.mdlPanier.addIngredient(this.recette_courante.getIngrédients());
 		/*for(int i = 0;i<this.recette_courante.getIngrédients().size();i++) {
 			System.out.println(this.recette_courante.getIngrédients().get(i).mesure);
@@ -71,6 +73,15 @@ public class ModèleAccueilRecette extends Observable{
 			System.out.println(this.recette_courante.getIngrédients().get(i).quantité);
 		}*/
 		
+		
+	}
+
+	public void ajouterFav() {
+		System.out.println("Ajout au fav");
+		this.mdlFav.addRct(this.recette_courante.getNom());
+		this.setChanged();
+		this.notifyObservers(this.recette_courante);
+		// TODO Auto-generated method stub
 		
 	}
 	

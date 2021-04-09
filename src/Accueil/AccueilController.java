@@ -39,6 +39,9 @@ public class AccueilController implements Observer{
 	@FXML
 	    private ImageView panier;
 
+    @FXML
+    private ImageView favoris;
+    
 	ModèleAccueil mdl;
 	ModèleAccueilRecette mdlRecette;
 	BarreDeRecherche<String> bdr;
@@ -76,6 +79,11 @@ public class AccueilController implements Observer{
 	void goToPanier(MouseEvent event) {
 		this.mdl.goToPanier();
 	}
+	 
+	@FXML
+	void goToFav(MouseEvent event) {
+		this.mdl.goToFav();
+	    }
 
 	@Override
 	public void update(Observable arg0, Object string) {

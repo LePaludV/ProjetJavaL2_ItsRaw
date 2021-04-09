@@ -36,6 +36,7 @@ import AjoutRecette.*;
 import Etapes.EtapesController;
 import Etapes.InterfaceEtapes;
 import Etapes.ModèleEtapes;
+import Favoris.*;
 import Main.*;
 import Panier.*;
 import Etapes.*;
@@ -48,8 +49,9 @@ public class Vue extends Application {
 	ModèleAccueilRecette mdlAccueilRecette;
 	ModèleEtapes mdlEtapes;
 	ModèlePanier mdlPanier;
+	ModèleFavoris mdlFav;
 
-	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE, PANIER};
+	public enum typeInterface {ACCUEIL, AJOUT_RECETTE, ACCUEIL_RECETTE, ETAPE_RECETTE, PANIER, FAVORIS};
 	public typeInterface currentInterface = typeInterface.ACCUEIL;
 	
 	@Override
@@ -59,9 +61,9 @@ public class Vue extends Application {
 		this.primaryStage = primaryStage;
         this.primaryStage.setTitle("It's Raw");
         this.primaryStage.setResizable(false);
-
-        this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil, mdlPanier);
-
+        this.mdlFav= new ModèleFavoris(this);
+        this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil, mdlPanier, mdlFav);
+        
         this.changeWindow(this.currentInterface);
         primaryStage.show();
 
@@ -98,7 +100,7 @@ public class Vue extends Application {
         	if(this.mdlEtapes == null) {rct = null;}
         	else {rct=this.mdlEtapes.recette_courante;}
             AccueilRecetteController ctrlAccueilRecette = new AccueilRecetteController(this.mdlAccueilRecette);
-            InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette);
+            InterfaceAccueilRecette vueAccueilRecette = new InterfaceAccueilRecette(ctrlAccueilRecette, mdlFav);
             this.mdlAccueilRecette.addObserver(vueAccueilRecette);
             Scene scene=new Scene(InterfaceAccueilRecette.getRoot());
             primaryStage.setScene(scene);
@@ -128,6 +130,18 @@ public class Vue extends Application {
        
             Scene scene=new Scene(InterfacePanier.getRoot());
             vuePanier.loadPanier();
+            primaryStage.setScene(scene);
+            this.primaryStage.sizeToScene();
+            this.mdlPanier.AfficherPanier();
+
+        }
+        else if (this.currentInterface == typeInterface.FAVORIS) {
+        	
+            FavorisController ctrlFav = new FavorisController(this.mdlFav);
+            InterfaceFavoris vueFav = new InterfaceFavoris(ctrlFav, this.mdlFav);
+            this.mdlPanier.addObserver(vueFav);
+       
+            Scene scene=new Scene(InterfaceFavoris.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
             this.mdlPanier.AfficherPanier();

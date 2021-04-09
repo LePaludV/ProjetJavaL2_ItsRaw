@@ -3,6 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -16,16 +17,20 @@ import javafx.scene.layout.BorderPane;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
+import Favoris.*;
 import Main.*;
 public class InterfaceAccueilRecette  implements Observer {
 	static BorderPane rootLayout;
 	static AccueilRecetteController ctrlAccueilRct;
 	InputStream is1,is2;
 	Image etoileJaune,etoileNoire;
-	InputStream it1,it2;
+	InputStream it1,it2,CV,CF;
 	Image ToqueGrise,ToqueNoire;
+	Image CoeurVide,CoeurFull;
+	ArrayList<String> listeFav;
+	ModèleFavoris mdlFav;
 
-	public InterfaceAccueilRecette(AccueilRecetteController ctrl) {
+	public InterfaceAccueilRecette(AccueilRecetteController ctrl,ModèleFavoris mdlFav) {
 		ctrlAccueilRct = ctrl;
 		try {
 			is1 = new FileInputStream("imgs/etoileJaune.png");
@@ -44,7 +49,17 @@ public class InterfaceAccueilRecette  implements Observer {
 		} catch (FileNotFoundException e) {
 			System.out.println("Image non trouvée !");
 		}
-
+		
+		try {
+			CV = new FileInputStream("imgs/love.png");
+			CF= new FileInputStream("imgs/loveRed.png");
+			CoeurVide = new Image(CV);
+			CoeurFull = new Image(CF);
+		} catch (FileNotFoundException e) {
+			System.out.println("Image non trouvée !");
+		}
+		this.mdlFav=mdlFav;
+		this.listeFav=this.mdlFav.loadFav();
 	}
 
 	public static BorderPane getRoot() {
@@ -90,6 +105,12 @@ public class InterfaceAccueilRecette  implements Observer {
 				}
 			}
 		}
+		/*if(this.listeFav.contains(recette.getNom())) {
+			this.ctrlAccueilRct.imgFav.setImage(CoeurFull);
+		}
+		else {
+			this.ctrlAccueilRct.imgFav.setImage(CoeurVide);
+		}*/
 		loadRecette(recette);
 	}
 	

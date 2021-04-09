@@ -5,8 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+
+import java.io.File;
+
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
@@ -73,6 +77,9 @@ public class AccueilRecetteController {
 	    
 	    @FXML
 	    private ImageView imgPanier;
+	    
+	    @FXML
+	    public ImageView imgFav;
 
 	    @FXML
 	    void NoteDifficulté(ActionEvent event) {
@@ -105,6 +112,12 @@ public class AccueilRecetteController {
 	    @FXML
 	    void ajouterAuPanier(MouseEvent event) {
 	    	this.mdl.ajouterAuPanier();
+	    }
+	    
+	    @FXML
+	    void ajouterFav(MouseEvent event) {
+	    	this.mdl.ajouterFav();
+
 	    }
 	    
 		ModèleAccueilRecette mdl;
