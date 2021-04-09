@@ -166,6 +166,36 @@ public class InterfaceAjouterRecette implements Observer {
 			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}
 
+	
+
+		//Affichage des ingrédients
+		
+		ctrlAjout.affIngr.getChildren().clear();
+		for(Ingrédient i: recette.getIngrédients()) {
+			
+			Label lbl;
+			System.out.println("quantité : "+i.quantité);
+			if (i.quantité != 0.0) {
+				lbl = new Label((int)i.quantité+" "+i.mesure+" "+i.nom);
+			} else {
+				lbl = new Label(i.nom);
+			}
+			lbl.getStyleClass().add("label3");
+		
+			lbl.setPrefWidth(ctrlAjout.affIngr.getWidth());
+			lbl.setPrefHeight(15);
+			lbl.setWrapText(true);
+			Button btn = new Croix();
+			btn.setOnAction(e -> {
+				System.out.println("suprr");
+				ctrlAjout.supprimerIngrédient(i);
+			});
+			HBox hb = new HBox();
+			hb.setAlignment(Pos.CENTER_LEFT);
+			hb.getChildren().addAll(btn, lbl);
+			ctrlAjout.affIngr.getChildren().add(hb);
+			ctrlAjout.anchorIngr.setPrefHeight(ctrlAjout.affIngr.getHeight());
+		}
 		//Affichage des catégories
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
 		catégorie.getChildren().clear();
@@ -181,34 +211,6 @@ public class InterfaceAjouterRecette implements Observer {
 			hb.getChildren().addAll(btn, cat);
 			catégorie.getChildren().add(hb);
 		}
-
-		//Affichage des ingrédients
-		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
-		ingrédient.getChildren().clear();
-		for(Ingrédient i: recette.getIngrédients()) {
-			Button btn = new Croix();
-			btn.setOnAction(e -> {
-				ctrlAjout.supprimerIngrédient(i);
-			});
-			Label lbl;
-			System.out.println("quantité : "+i.quantité);
-			if (i.quantité != 0.0) {
-				lbl = new Label((int)i.quantité+" "+i.mesure+" "+i.nom);
-			} else {
-				lbl = new Label(i.nom);
-			}
-			lbl.getStyleClass().add("label3");
-			lbl.setWrapText(true);
-			lbl.setPrefWidth(ctrlAjout.affEtape.getWidth());
-			lbl.setPrefHeight(15);
-			lbl.setWrapText(true);
-			HBox hb = new HBox();
-			hb.setAlignment(Pos.CENTER_LEFT);
-			hb.getChildren().addAll(btn, lbl);
-			ingrédient.getChildren().add(hb);
-			ctrlAjout.anchorIngr.setPrefHeight(ctrlAjout.affIngr.getHeight());
-		}
-
 
 		if (recette.getPhoto() != null && ctrlAjout.affImg.getChildren().size() < 2) {
 			ImageView imgView = new ImageView(recette.getPhoto());
