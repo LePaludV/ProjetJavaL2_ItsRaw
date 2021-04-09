@@ -199,10 +199,14 @@ public class InterfaceAjouterRecette implements Observer {
 			}
 			lbl.getStyleClass().add("label3");
 			lbl.setWrapText(true);
+			lbl.setPrefWidth(ctrlAjout.affEtape.getWidth());
+			lbl.setPrefHeight(15);
+			lbl.setWrapText(true);
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
 			hb.getChildren().addAll(btn, lbl);
 			ingrédient.getChildren().add(hb);
+			ctrlAjout.anchorIngr.setPrefHeight(ctrlAjout.affIngr.getHeight());
 		}
 
 

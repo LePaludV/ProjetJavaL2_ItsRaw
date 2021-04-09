@@ -63,7 +63,6 @@ public class AjoutRecetteController implements Observer {
 	@FXML
 	private Label LabelEtape;
 
-
 	@FXML
 	private Text Image;
 
@@ -128,7 +127,7 @@ public class AjoutRecetteController implements Observer {
 	private MenuButton mesureIngrédient;
 
 	@FXML
-	public ToggleGroup mesures; 
+	public ToggleGroup mesures;
 
 	@FXML
 	private Button retour;
@@ -138,12 +137,16 @@ public class AjoutRecetteController implements Observer {
 
 	@FXML
 	private ComboBox<String> searchCatégorie;
-	
+
 	@FXML
 	public VBox affEtape;
-	
+	@FXML
+	public VBox affIngr;
 	@FXML
 	public AnchorPane anchorEtape;
+	
+    @FXML
+    public AnchorPane anchorIngr;
 
 	@FXML
 	private void exit(ActionEvent event) {
@@ -163,7 +166,7 @@ public class AjoutRecetteController implements Observer {
 		Image img = new Image(new FileInputStream(files.get(0)));
 		this.mdl.ajoutPhoto(img);
 	}
-	
+
 	@FXML
 	void AddEtape(ActionEvent event) {
 		this.mdl.ajoutEtape(this.TexteEtape.getText());
@@ -187,7 +190,7 @@ public class AjoutRecetteController implements Observer {
 	void NoteDifficulté(ActionEvent event) {
 		if (((ToggleButton) this.difficulté.getSelectedToggle()) != null) {
 			String s = ((ToggleButton) this.difficulté.getSelectedToggle()).getId();
-			this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));    		
+			this.mdl.ajoutDifficulté(Character.getNumericValue(s.charAt(s.length()-1)));
 		}
 	}
 
@@ -195,7 +198,7 @@ public class AjoutRecetteController implements Observer {
 	void NoteRecette(ActionEvent event) {
 		if (((ToggleButton) this.note.getSelectedToggle()) != null) {
 			String s = ((ToggleButton) this.note.getSelectedToggle()).getId();
-			this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));    		
+			this.mdl.ajoutNote(Character.getNumericValue(s.charAt(s.length()-1)));
 		}
 	}
 
@@ -203,7 +206,7 @@ public class AjoutRecetteController implements Observer {
 	void Sauvegarder(ActionEvent event) {
 		System.out.println("Nom de la recette : "+NomRecette.getText());
 		if (this.affImg.getChildren().size()>1) {
-			this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());    		
+			this.mdl.sauvegarder(NomRecette.getText(), this.Description.getText(),this.nbrPersonne.getValue());
 		}
 	}
 
@@ -211,7 +214,7 @@ public class AjoutRecetteController implements Observer {
 	ModèleAccueil mdlAcc;
 	int nombreEtape;
 	private BarreDeRecherche<String> barreCatégories;
-	
+
 	public AjoutRecetteController(ModèleAjoutRecette mdl, ModèleAccueil mdl2) {
 		this.mdl = mdl;
 		this.mdlAcc = mdl2;
@@ -222,7 +225,7 @@ public class AjoutRecetteController implements Observer {
 	public void supprimerIngrédient(Ingrédient ing) {
 		this.mdl.supprimerIng(ing);
 	}
-	
+
 	public void supprimerCatégorie(String cat) {
 		this.mdl.supprimerCat(cat);
 	}
@@ -243,11 +246,11 @@ public class AjoutRecetteController implements Observer {
 		this.quantitéIngrédient.setEditable(true);
 		this.mesures.selectToggle(this.defaultRadiobutton);
 		this.affImg.setAlignment(Pos.TOP_CENTER);
-		
+
 		for (String s : this.mdlAcc.catégories.keySet()) {
 			this.searchCatégorie.getItems().add(s);
 		}
-		
+
 		this.barreCatégories = new BarreDeRecherche<String>(this.searchCatégorie);
 		this.barreCatégories.addObserver(this);
 	}

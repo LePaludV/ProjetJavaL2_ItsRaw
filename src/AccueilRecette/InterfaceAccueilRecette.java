@@ -64,7 +64,6 @@ public class InterfaceAccueilRecette  implements Observer {
 
 	public void update(Observable arg0, Object rct) { 
 		Recette recette = (Recette) rct;
-
 		ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
 		for (int i=0;i<note.size();i++) {
 			if (note.get(i) instanceof ToggleButton) {

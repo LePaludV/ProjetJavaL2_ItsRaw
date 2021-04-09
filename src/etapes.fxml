@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EtapeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1080.0" styleClass="gridPane" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -23,30 +23,31 @@
             <RowConstraints maxHeight="321.0" minHeight="8.0" prefHeight="44.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label prefHeight="21.0" prefWidth="123.0" text="Nom de recettes" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Label fx:id="nom" prefHeight="88.0" prefWidth="733.0" styleClass="titre" stylesheets="@Main.css" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="suivant" layoutX="628.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickOnSuivant" text="SUIVANT" />
-                  <Button fx:id="precedent" layoutX="506.0" layoutY="16.0" mnemonicParsing="false" onAction="#clickOnPrecedent" text="PRECEDENT" />
+                  <Button fx:id="suivant" layoutX="583.0" layoutY="-1.0" mnemonicParsing="false" onAction="#clickOnSuivant" />
+                  <Button fx:id="precedent" layoutX="477.0" layoutY="1.0" mnemonicParsing="false" onAction="#clickOnPrecedent" />
                </children>
             </Pane>
-            <Label prefHeight="21.0" prefWidth="81.0" text="Ingrédients" GridPane.halignment="CENTER" />
+            <Label prefHeight="92.0" prefWidth="347.0" styleClass="titre" stylesheets="@Main.css" text="Ingrédients" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="retour" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#backToAccueilRecette" text="RETOUR" />
+                  <Button fx:id="retour" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#backToAccueilRecette" styleClass="button1" stylesheets="@Main.css" text="RETOUR" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ImageView fitHeight="280.0" fitWidth="554.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="image" fitHeight="280.0" fitWidth="554.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../imgs/not_found.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-border-color: black; -fx-alignment: center;" text="blablabla" />
-                  <Label layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" style="-fx-border-color: black; -fx-alignment: center;" text="ETAPE" />
+                  <Label fx:id="textDescription" alignment="CENTER" layoutX="15.0" layoutY="352.0" prefHeight="210.0" prefWidth="701.0" style="-fx-text-alignment: center;" styleClass="description" stylesheets="@Main.css" wrapText="true" />
+                  <Label fx:id="textEtape" layoutX="288.0" layoutY="307.0" prefHeight="38.0" prefWidth="158.0" styleClass="titre" stylesheets="@Main.css" />
                </children>
             </Pane>
+            <Label fx:id="textIngredients" alignment="TOP_CENTER" prefHeight="554.0" prefWidth="325.0" styleClass="description" stylesheets="@Main.css" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </center>
