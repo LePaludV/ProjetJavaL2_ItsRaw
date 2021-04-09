@@ -145,7 +145,7 @@ public class InterfaceAjouterRecette implements Observer {
 
 	@Override
 	public void update(Observable arg0, Object rct) {
-
+		//Affichage des étapes
 		Recette recette = (Recette) rct;
 		ctrlAjout.affEtape.getChildren().clear();
 		for(int i=0;i<recette.getEtapes().size();i++) {
@@ -166,6 +166,7 @@ public class InterfaceAjouterRecette implements Observer {
 			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}
 
+		//Affichage des catégories
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
 		catégorie.getChildren().clear();
 		for(String i: recette.getCatégories()) {
@@ -181,6 +182,7 @@ public class InterfaceAjouterRecette implements Observer {
 			catégorie.getChildren().add(hb);
 		}
 
+		//Affichage des ingrédients
 		VBox ingrédient = (VBox) rootLayout.lookup("#affIngr");
 		ingrédient.getChildren().clear();
 		for(Ingrédient i: recette.getIngrédients()) {
@@ -188,8 +190,13 @@ public class InterfaceAjouterRecette implements Observer {
 			btn.setOnAction(e -> {
 				ctrlAjout.supprimerIngrédient(i);
 			});
-			
-			Label lbl = new Label((int)i.quantité+i.mesure+" "+i.nom);
+			Label lbl;
+			System.out.println("quantité : "+i.quantité);
+			if (i.quantité != 0.0) {
+				lbl = new Label((int)i.quantité+" "+i.mesure+" "+i.nom);
+			} else {
+				lbl = new Label(i.nom);
+			}
 			lbl.getStyleClass().add("label3");
 			lbl.setWrapText(true);
 			HBox hb = new HBox();

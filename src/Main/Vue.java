@@ -103,6 +103,7 @@ public class Vue extends Application {
             primaryStage.setScene(scene);
             vueAccueilRecette.loadRecette(rct);
             this.primaryStage.sizeToScene();
+            
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
         	this.mdlEtapes = new ModèleEtapes(this);
             EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);

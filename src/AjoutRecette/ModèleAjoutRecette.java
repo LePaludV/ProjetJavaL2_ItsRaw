@@ -1,4 +1,4 @@
-package AjoutRecette;
+	package AjoutRecette;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -46,7 +46,8 @@ public class ModèleAjoutRecette extends Observable {
 
 	public void ajoutIngrédient(String nom, int quantité, String mesure) {
 		Ingrédient ingr=new Ingrédient();
-		ingr.setNom(nom);
+		Character c = nom.charAt(0);
+		ingr.setNom(nom.replace(c, c.toUpperCase(c)));
 		ingr.setQuantité(quantité);
 		ingr.setMesure(mesure);
 		this.recette_courante.getIngrédients().add(ingr);
@@ -67,6 +68,8 @@ public class ModèleAjoutRecette extends Observable {
 
 	public void ajoutCatégorie(String s) {
 		this.recette_courante.getCatégories().add(s);
+		Character c = s.charAt(0);
+		s = s.replace(c, c.toUpperCase(c));
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

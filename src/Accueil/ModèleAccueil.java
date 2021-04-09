@@ -33,6 +33,9 @@ public class ModèleAccueil extends Observable {
 		this.catégories = new HashMap<String, ArrayList<String>>();
 		this.classeIng = new HashMap<String, ArrayList<String>>();
 		this.vue = v;
+		this.loadData("data");
+		this.loadData("dataCatégories");
+		this.loadData("dataIngrédients");
 	}
 
 	public void goToAjouterRecette()
@@ -91,9 +94,12 @@ public class ModèleAccueil extends Observable {
 
 	public void afficherParIngrèdients(String ing) {
 		if (this.classeIng.get(ing) != null) {
-			System.out.println("affichage ingrédient : "+ing);
+			ArrayList<Recette> liste = new ArrayList<Recette>();
+			for (String nomRecette : this.catégories.get(ing)) {
+				liste.add(this.recettes.get(nomRecette));
+			}
 			this.setChanged();
-			this.notifyObservers(this.classeIng.get(ing));
+			this.notifyObservers(liste);
 		}
 	}
 
@@ -103,7 +109,7 @@ public class ModèleAccueil extends Observable {
 		for (String nom : this.recettes.keySet()) {
 			liste.add(this.recettes.get(nom));
 		}
-		this.notifyObservers(this.recettes);
+		this.notifyObservers(liste);
 	}
 
 	public void changerNote(Recette rct, int note) {
