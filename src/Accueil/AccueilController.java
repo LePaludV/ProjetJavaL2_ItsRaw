@@ -49,7 +49,6 @@ public class AccueilController implements Observer{
 		this.mdlRecette = mdlRecette;
 	}
 
-	// Event Listener on Button[#btnAjoutRecette].onAction
 	@FXML
 	public void ajouterRecette(ActionEvent event) {
 		this.mdl.goToAjouterRecette();

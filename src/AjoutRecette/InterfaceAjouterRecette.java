@@ -58,7 +58,6 @@ public class InterfaceAjouterRecette implements Observer {
 			System.out.println("Image non trouvée !");
 		}
 	}
-
 	public static BorderPane getRoot() {
 
 		 FXMLLoader loader = new FXMLLoader();
@@ -191,7 +190,6 @@ public class InterfaceAjouterRecette implements Observer {
 				ctrlAjout.supprimerIngrédient(i);
 			});
 			Label lbl;
-			System.out.println("quantité : "+i.quantité);
 			if (i.quantité != 0.0) {
 				lbl = new Label((int)i.quantité+" "+i.mesure+" "+i.nom);
 			} else {
