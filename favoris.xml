@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_281" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <string>Oeufs cocottes</string>
+  </void>
+  <void method="add">
+   <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+  </void>
+ </object>
+</java>

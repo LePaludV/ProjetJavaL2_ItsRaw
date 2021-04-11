@@ -59,7 +59,7 @@ public class InterfaceAccueilRecette  implements Observer {
 			System.out.println("Image non trouvée !");
 		}
 		this.mdlFav=mdlFav;
-		this.listeFav=this.mdlFav.loadFav();
+		
 	}
 
 	public static BorderPane getRoot() {
@@ -105,13 +105,15 @@ public class InterfaceAccueilRecette  implements Observer {
 				}
 			}
 		}
-		/*if(this.listeFav.contains(recette.getNom())) {
+		loadRecette(recette);
+		this.listeFav=this.mdlFav.loadFavoris();
+		if(this.listeFav.contains(recette.getNom())) {
 			this.ctrlAccueilRct.imgFav.setImage(CoeurFull);
 		}
 		else {
 			this.ctrlAccueilRct.imgFav.setImage(CoeurVide);
-		}*/
-		loadRecette(recette);
+		}
+		
 	}
 	
 	public void loadRecette(Recette rct) {

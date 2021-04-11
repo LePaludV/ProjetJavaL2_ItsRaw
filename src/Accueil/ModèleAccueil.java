@@ -183,4 +183,8 @@ public class ModèleAccueil extends Observable {
 		this.vue.currentInterface = this.vue.currentInterface.FAVORIS;
 		this.vue.changeWindow(Vue.typeInterface.FAVORIS);
 	}
+	
+	public HashMap<String, Recette> getListeRecettes() {
+		return this.recettes;
+	}
 }

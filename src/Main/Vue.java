@@ -129,7 +129,7 @@ public class Vue extends Application {
             this.mdlPanier.addObserver(vuePanier);
        
             Scene scene=new Scene(InterfacePanier.getRoot());
-            vuePanier.loadPanier();
+            
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
             this.mdlPanier.AfficherPanier();
@@ -138,13 +138,13 @@ public class Vue extends Application {
         else if (this.currentInterface == typeInterface.FAVORIS) {
         	
             FavorisController ctrlFav = new FavorisController(this.mdlFav);
-            InterfaceFavoris vueFav = new InterfaceFavoris(ctrlFav, this.mdlFav);
-            this.mdlPanier.addObserver(vueFav);
+            InterfaceFavoris vueFav = new InterfaceFavoris(ctrlFav, this.mdlFav,this.mdlAccueil);
+            this.mdlFav.addObserver(vueFav);
        
             Scene scene=new Scene(InterfaceFavoris.getRoot());
             primaryStage.setScene(scene);
             this.primaryStage.sizeToScene();
-            this.mdlPanier.AfficherPanier();
+            this.mdlFav.AfficherFavoris();
 
         }
 	}

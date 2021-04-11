@@ -45,10 +45,7 @@ public class InterfacePanier implements Observer {
 		 return rootLayout;
 	}
 
-	public void loadPanier() {
 	
-	
-	}
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
