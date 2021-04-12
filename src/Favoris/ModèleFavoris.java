@@ -96,5 +96,14 @@ public class ModèleFavoris extends Observable {
 	}
 
 
+
+	public void goToAccueilRecette() {
+		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
+		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
+		
+		
+	}
+
+
 	
 }

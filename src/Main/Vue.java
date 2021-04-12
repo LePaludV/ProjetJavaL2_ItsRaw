@@ -137,7 +137,7 @@ public class Vue extends Application {
         }
         else if (this.currentInterface == typeInterface.FAVORIS) {
         	
-            FavorisController ctrlFav = new FavorisController(this.mdlFav);
+            FavorisController ctrlFav = new FavorisController(this.mdlFav, mdlAccueilRecette);
             InterfaceFavoris vueFav = new InterfaceFavoris(ctrlFav, this.mdlFav,this.mdlAccueil);
             this.mdlFav.addObserver(vueFav);
        

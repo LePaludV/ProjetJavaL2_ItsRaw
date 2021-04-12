@@ -1,4 +1,6 @@
 package Favoris;
+import AccueilRecette.ModèleAccueilRecette;
+import Main.Recette;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -15,11 +17,11 @@ public class FavorisController {
     @FXML
     private ImageView poubelle;
 
-    @FXML
-    private ScrollPane scrollPanier;
+    @FXML 
+    public ScrollPane scrollFav;
 
     @FXML
-    private VBox listeIngr;
+    public VBox listeIngr;
 
     @FXML
     void goToAccueil(ActionEvent event) {
@@ -34,9 +36,15 @@ public class FavorisController {
 
 
 	ModèleFavoris mdlFav;
-	public FavorisController(ModèleFavoris mdlFav) {
+	ModèleAccueilRecette mdlRecette;
+	public FavorisController(ModèleFavoris mdlFav,ModèleAccueilRecette mdlRecette) {
 		this.mdlFav=mdlFav;
+		this.mdlRecette=mdlRecette;
 	}
 
+	public void openRecette(Recette rct) {
+		this.mdlFav.goToAccueilRecette();
+		this.mdlRecette.setRecette(rct);
+	}
 
 }
