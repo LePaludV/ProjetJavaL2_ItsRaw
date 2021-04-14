@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="817.0" prefWidth="1325.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="825.0" prefWidth="1330.0" styleClass="gridPane" stylesheets="@Main.css" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -60,7 +60,7 @@
                   <Pane layoutX="23.0" layoutY="195.0" prefHeight="474.0" prefWidth="467.0">
                      <children>
                         <Text layoutX="182.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="titre" text="Ingrédient" textAlignment="CENTER" wrappingWidth="124.78533935546875" />
-                        <Label fx:id="TexteIngrédient" alignment="TOP_CENTER" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" styleClass="description" />
+                        <Label fx:id="TexteIngrédient" alignment="TOP_CENTER" layoutX="41.0" layoutY="26.0" prefHeight="432.0" prefWidth="391.0" styleClass="ingredient" wrapText="true" />
                         <ImageView fx:id="imgPanier" fitHeight="42.0" fitWidth="50.0" layoutX="367.0" layoutY="398.0" onMouseClicked="#ajouterAuPanier" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imgs/ajoutPanier.png" />
