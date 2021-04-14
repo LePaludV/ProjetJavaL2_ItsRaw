@@ -34,7 +34,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
@@ -42,20 +41,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.20351758793969849" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="900.0" prefWidth="900.0" styleClass="gridPane" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.20351758793969849" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="900.0" prefWidth="900.0" styleClass="gridPane" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
   <items>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="gridPane" stylesheets="@Main.css">
          <children>
-            <Button fx:id="btnAjoutRecette" layoutX="522.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="186.0" styleClass="button1" stylesheets="@Main.css" text="Ajouter Recette" />
-            <Label layoutX="43.0" layoutY="25.0" prefHeight="117.0" prefWidth="398.0" stylesheets="@Main.css" text="IT'S ROOOOOOW">
-               <font>
-                  <Font name="System Bold" size="27.0" />
-               </font>
-            </Label>
-            <ComboBox fx:id="searchBar" editable="true" layoutX="485.0" layoutY="39.0" prefHeight="31.0" prefWidth="299.0" promptText="Search Bar" />
-            <ImageView fx:id="panier" fitHeight="50.0" fitWidth="54.0" layoutX="723.0" layoutY="115.0" onMouseClicked="#goToPanier" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnAjoutRecette" layoutX="581.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="186.0" styleClass="button1" stylesheets="@Main.css" text="Ajouter Recette" />
+            <ComboBox fx:id="searchBar" editable="true" layoutX="523.0" layoutY="42.0" prefHeight="31.0" prefWidth="334.0" promptText="Search Bar" />
+            <ImageView fx:id="panier" fitHeight="50.0" fitWidth="54.0" layoutX="784.0" layoutY="115.0" onMouseClicked="#goToPanier" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/Panier.png" />
                </image>
@@ -63,6 +56,10 @@
             <ImageView fx:id="favoris" fitHeight="50.0" fitWidth="54.0" layoutX="811.0" layoutY="115.0" onMouseClicked="#goToFav" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/loveRed.png" />
+
+            <ImageView fitHeight="195.0" fitWidth="360.0" layoutX="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/logo.png" />
                </image>
             </ImageView>
          </children>

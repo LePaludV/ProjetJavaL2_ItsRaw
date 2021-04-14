@@ -109,7 +109,6 @@ public class Vue extends Application {
             
         } else if (this.currentInterface == typeInterface.ETAPE_RECETTE) {
         	Recette rct = new Recette();
-        	System.out.println("ok");
         	rct = this.mdlAccueilRecette.recette_courante;
         	this.mdlEtapes = new ModèleEtapes(this);
         	this.mdlEtapes.setRecette(rct);
