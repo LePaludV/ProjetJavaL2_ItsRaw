@@ -3,6 +3,7 @@ package Favoris;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Observable;
@@ -32,10 +33,15 @@ public class InterfaceFavoris implements Observer {
 	ArrayList<String> listFavoris;
 	static ModèleAccueil mdl;
 
+		
+	
+	
 	public InterfaceFavoris(FavorisController ctrlFav, ModèleFavoris mdlFav,ModèleAccueil mdlAcc) {
 		this.ctrlFav=ctrlFav;
 		this.mdlFav=mdlFav;
 		this.mdl=mdlAcc;
+		
+		
 
 	}
 

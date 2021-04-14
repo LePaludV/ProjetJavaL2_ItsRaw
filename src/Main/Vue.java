@@ -42,7 +42,7 @@ import Panier.*;
 import Etapes.*;
 public class Vue extends Application {
 	Stage primaryStage;
-	InterfaceAccueil acc=new InterfaceAccueil(null);
+	InterfaceAccueil acc;
 	GridPane rootLayout;
 	ModèleAjoutRecette mdlAjout;
 	ModèleAccueil mdlAccueil;
@@ -56,6 +56,7 @@ public class Vue extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		this.acc=new InterfaceAccueil(null, mdlFav);
         this.mdlAccueil = new ModèleAccueil(this);
         this.mdlPanier=new ModèlePanier(this);
 		this.primaryStage = primaryStage;
@@ -83,8 +84,8 @@ public class Vue extends Application {
             this.primaryStage.sizeToScene();
         } else if (this.currentInterface == typeInterface.ACCUEIL)
         {
-            AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil, this.mdlAccueilRecette);
-            InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil);
+            AccueilController ctrlAccueil = new AccueilController(this.mdlAccueil, this.mdlAccueilRecette, mdlFav);
+            InterfaceAccueil vueAccueil = new InterfaceAccueil(ctrlAccueil, mdlFav);
             this.mdlAccueil.addObserver(vueAccueil);
             Scene scene=new Scene(InterfaceAccueil.getRoot());
             this.mdlAccueil.afficherRecettes();

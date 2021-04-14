@@ -71,6 +71,7 @@ public class ModèleFavoris extends Observable {
 	}
 	
 	private void saveFavoris(ArrayList<String> lst) {
+		System.out.println(lst);
 		XMLEncoder encoder = null;
 		try {
 			FileOutputStream fos = new FileOutputStream(this.favoris);
@@ -104,6 +105,20 @@ public class ModèleFavoris extends Observable {
 		
 	}
 
+
+
+	public void viderFav() {
+		this.listeFav.clear();
+		saveFavoris(this.listeFav);
+		this.setChanged();
+		this.notifyObservers();
+		
+		
+	}
+
+
+
+	
 
 	
 }

@@ -16,6 +16,7 @@ import java.util.Observer;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
@@ -24,6 +25,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundRepeat;
@@ -34,16 +36,31 @@ import javafx.scene.layout.VBox;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
+import Favoris.*;
 import Main.*;
 
 public class InterfaceAccueil implements Observer
 {
 	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
+	InputStream CV,CF;
+	ImageView CoeurVide,CoeurFull;
+	ArrayList listFavoris;
+	ModèleFavoris mdlFav;
+	
 
-	public InterfaceAccueil(AccueilController ctrl)
+	public InterfaceAccueil(AccueilController ctrl,ModèleFavoris mdlFav)
 	{
+		this.mdlFav=mdlFav;
 		ctrlAccueil = ctrl;
+		try {
+			CV = new FileInputStream("imgs/love.png");
+			CF= new FileInputStream("imgs/loveRed.png");
+			CoeurVide = new ImageView(new Image(CV));
+			CoeurFull = new ImageView(new Image(CF));
+		} catch (FileNotFoundException e) {
+			System.out.println("Image non trouvée !");
+		}
 	}
 
 	public static SplitPane getRoot()
@@ -62,6 +79,7 @@ public class InterfaceAccueil implements Observer
 
 	@Override
 	public void update(Observable o, Object arg) {
+		this.listFavoris=this.mdlFav.loadFavoris();
 		if(arg instanceof ArrayList<?>)
 		{
 			VBox recettes = ctrlAccueil.recettes;
@@ -101,7 +119,27 @@ public class InterfaceAccueil implements Observer
 						} catch (FileNotFoundException e1) {
 							e1.printStackTrace();
 						}
-						vbox.getChildren().addAll(btn, lblRecette);
+						
+						ImageView Coeur=new ImageView();
+						if(this.listFavoris.contains(nom)) {
+							Coeur=CoeurFull;
+						}else {Coeur=CoeurVide;}
+						
+						Coeur.setOnMouseClicked(e -> {
+						   ModèleFavoris mdlFav=new ModèleFavoris(null);
+						   
+								this.ctrlAccueil.modifRct(nom);
+						        System.out.println("Ajout au fav");
+						        
+						    }
+						);
+						Coeur.setFitHeight(50);
+						Coeur.setFitWidth(50);
+						
+						
+						HBox txtbtn=new HBox();
+						
+						vbox.getChildren().addAll(btn, lblRecette,Coeur);
 						hb.getChildren().add(vbox);		
 					}
 				}

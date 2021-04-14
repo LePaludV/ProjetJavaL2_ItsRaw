@@ -30,7 +30,7 @@ public class FavorisController {
 
     @FXML
     void viderPanier(MouseEvent event) {
-
+    	this.mdlFav.viderFav();
     }
 
 

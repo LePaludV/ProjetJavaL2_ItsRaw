@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TouchEvent;
 import javafx.scene.layout.VBox;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Observable;
@@ -21,6 +25,7 @@ import javafx.event.ActionEvent;
 import Accueil.*;
 import AccueilRecette.*;
 import AjoutRecette.*;
+import Favoris.ModèleFavoris;
 import Main.*;
 
 public class AccueilController implements Observer{
@@ -37,7 +42,7 @@ public class AccueilController implements Observer{
 	private ComboBox<String> searchBar;
 
 	@FXML
-	    private ImageView panier;
+	private ImageView panier;
 
     @FXML
     private ImageView favoris;
@@ -46,10 +51,15 @@ public class AccueilController implements Observer{
 	ModèleAccueilRecette mdlRecette;
 	BarreDeRecherche<String> bdr;
 
-	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette)
+	ModèleFavoris mdlFav;
+
+	
+	public AccueilController(ModèleAccueil mod, ModèleAccueilRecette mdlRecette,ModèleFavoris mdlFav)
 	{
 		this.mdl = mod;
 		this.mdlRecette = mdlRecette;
+		this.mdlFav=mdlFav;
+		
 	}
 
 	@FXML
@@ -96,6 +106,12 @@ public class AccueilController implements Observer{
 			System.out.println(recherche);
 			this.mdl.afficherParIngrèdients(recherche);
 		}
+	}
+
+	public void modifRct(String nom) {
+		this.mdlFav.addRct(nom);
+		System.out.println("Problème car fichier png vide dans le fond du coeur vide, faire un autre coeur vide avec un fon un peut moins vide ");
+		this.mdl.afficherRecettes();
 	}
 
 
