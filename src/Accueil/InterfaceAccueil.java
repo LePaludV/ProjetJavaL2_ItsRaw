@@ -54,7 +54,7 @@ public class InterfaceAccueil implements Observer
 		this.mdlFav=mdlFav;
 		ctrlAccueil = ctrl;
 		try {
-			CV = new FileInputStream("imgs/love.png");
+			CV = new FileInputStream("imgs/loveAcc.png");
 			CF= new FileInputStream("imgs/loveRed.png");
 			CoeurVide = new ImageView(new Image(CV));
 			CoeurFull = new ImageView(new Image(CF));
@@ -121,9 +121,10 @@ public class InterfaceAccueil implements Observer
 						}
 						
 						ImageView Coeur=new ImageView();
+						Coeur=CoeurVide;
 						if(this.listFavoris.contains(nom)) {
 							Coeur=CoeurFull;
-						}else {Coeur=CoeurVide;}
+						}
 						
 						Coeur.setOnMouseClicked(e -> {
 						   ModèleFavoris mdlFav=new ModèleFavoris(null);
