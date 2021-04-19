@@ -168,7 +168,6 @@ public class InterfaceAjouterRecette implements Observer {
 	
 
 		//Affichage des ingrédients
-		
 		ctrlAjout.affIngr.getChildren().clear();
 		for(Ingrédient i: recette.getIngrédients()) {
 			
@@ -178,22 +177,25 @@ public class InterfaceAjouterRecette implements Observer {
 			} else {
 				lbl = new Label(i.nom);
 			}
+			
 			lbl.getStyleClass().add("label3");
-		
 			lbl.setPrefWidth(ctrlAjout.affIngr.getWidth());
 			lbl.setPrefHeight(15);
 			lbl.setWrapText(true);
+			
 			Button btn = new Croix();
 			btn.setOnAction(e -> {
 				System.out.println("suprr");
 				ctrlAjout.supprimerIngrédient(i);
 			});
+			
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
 			hb.getChildren().addAll(btn, lbl);
 			ctrlAjout.affIngr.getChildren().add(hb);
-			ctrlAjout.anchorIngr.setPrefHeight(ctrlAjout.affIngr.getHeight());
+			//ctrlAjout.anchorIngr.setPrefHeight(ctrlAjout.affIngr.getHeight());
 		}
+		
 		//Affichage des catégories
 		VBox catégorie = (VBox) rootLayout.lookup("#affCat");
 		catégorie.getChildren().clear();
