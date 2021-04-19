@@ -147,7 +147,7 @@ public class InterfaceAccueil implements Observer
 						
 						
 						vbox.getChildren().addAll(btn, lblRecette,Coeur);
-						System.out.println(vbox.getChildren());
+						
 						hb.getChildren().add(vbox);		
 						
 					}
