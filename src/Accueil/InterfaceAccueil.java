@@ -43,8 +43,8 @@ public class InterfaceAccueil implements Observer
 {
 	static SplitPane rootLayout;
 	static AccueilController ctrlAccueil;
-	InputStream CV,CF;
-	ImageView CoeurVide,CoeurFull;
+	Image CV,CF;
+	
 	ArrayList listFavoris;
 	ModèleFavoris mdlFav;
 	
@@ -54,10 +54,9 @@ public class InterfaceAccueil implements Observer
 		this.mdlFav=mdlFav;
 		ctrlAccueil = ctrl;
 		try {
-			CV = new FileInputStream("imgs/loveAcc.png");
-			CF= new FileInputStream("imgs/loveRed.png");
-			CoeurVide = new ImageView(new Image(CV));
-			CoeurFull = new ImageView(new Image(CF));
+			this.CV = new Image(new FileInputStream("imgs/loveAcc.png"));
+			this.CF = new Image(new FileInputStream("imgs/loveRed.png"));
+			
 		} catch (FileNotFoundException e) {
 			System.out.println("Image non trouvée !");
 		}
@@ -100,10 +99,11 @@ public class InterfaceAccueil implements Observer
 						vbox.getStyleClass().add("box");
 						Button btn = new Button();
 						Label lblRecette = new Label(nom);
+					
 						lblRecette.getStyleClass().add("label3");
 						btn.setId(Integer.toString((i+2)*i+j));
-						btn.setBackground(null);
 						
+						btn.setBackground(null);
 						btn.setOnAction(e -> {
 							ctrlAccueil.openRecette(lstRecettes.get(Integer.parseInt(btn.getId())));
 						});
@@ -120,17 +120,23 @@ public class InterfaceAccueil implements Observer
 							e1.printStackTrace();
 						}
 						
+						
 						ImageView Coeur=new ImageView();
-						Coeur=CoeurVide;
+						
 						if(this.listFavoris.contains(nom)) {
-							Coeur=CoeurFull;
+							
+							Coeur.setImage(this.CF);
+							
+						}else {
+							Coeur.setImage(this.CV);
 						}
+						
 						
 						Coeur.setOnMouseClicked(e -> {
 						   ModèleFavoris mdlFav=new ModèleFavoris(null);
 						   
 								this.ctrlAccueil.modifRct(nom);
-						        System.out.println("Ajout au fav");
+						        
 						        
 						    }
 						);
@@ -138,10 +144,11 @@ public class InterfaceAccueil implements Observer
 						Coeur.setFitWidth(50);
 						
 						
-						HBox txtbtn=new HBox();
 						
 						vbox.getChildren().addAll(btn, lblRecette,Coeur);
+						System.out.println(vbox.getChildren());
 						hb.getChildren().add(vbox);		
+						
 					}
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);

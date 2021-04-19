@@ -12,6 +12,7 @@ import java.util.Observable;
 
 import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
+import Main.Recette;
 import Main.Vue;
 
 public class ModèleFavoris extends Observable {
@@ -115,6 +116,10 @@ public class ModèleFavoris extends Observable {
 		
 		
 	}
+
+
+
+	
 
 
 

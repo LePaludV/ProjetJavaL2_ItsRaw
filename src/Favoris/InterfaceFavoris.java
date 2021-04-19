@@ -32,7 +32,7 @@ public class InterfaceFavoris implements Observer {
 	HashMap<String, Recette> listeRecettes;
 	ArrayList<String> listFavoris;
 	static ModèleAccueil mdl;
-
+	Image CV,CF;
 		
 	
 	
@@ -40,7 +40,13 @@ public class InterfaceFavoris implements Observer {
 		this.ctrlFav=ctrlFav;
 		this.mdlFav=mdlFav;
 		this.mdl=mdlAcc;
-		
+		try {
+			this.CV = new Image(new FileInputStream("imgs/loveAcc.png"));
+			this.CF = new Image(new FileInputStream("imgs/loveRed.png"));
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Image non trouvée !");
+		}
 		
 
 	}
@@ -116,7 +122,29 @@ public class InterfaceFavoris implements Observer {
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				}
-				vbox.getChildren().addAll(btn, lblRecette);
+				ImageView Coeur=new ImageView();
+				
+				if(this.listFavoris.contains(nom)) {
+					
+					Coeur.setImage(this.CF);
+					
+				}else {
+					Coeur.setImage(this.CV);
+				}
+				
+				
+				Coeur.setOnMouseClicked(e -> {
+				   ModèleFavoris mdlFav=new ModèleFavoris(null);
+				   
+						this.ctrlFav.modifRct(nom);
+				        
+				        
+				    }
+				);
+				Coeur.setFitHeight(50);
+				Coeur.setFitWidth(50);
+				
+				vbox.getChildren().addAll(btn, lblRecette,Coeur);
 				hb.getChildren().add(vbox);		
 			}
 		}

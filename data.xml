@@ -199,6 +199,9 @@
      <void index="1">
       <boolean>true</boolean>
      </void>
+     <void index="2">
+      <boolean>true</boolean>
+     </void>
     </void>
     <void property="etapes">
      <void method="add">
@@ -517,6 +520,9 @@
       <boolean>true</boolean>
      </void>
      <void index="1">
+      <boolean>true</boolean>
+     </void>
+     <void index="2">
       <boolean>true</boolean>
      </void>
     </void>

@@ -47,4 +47,11 @@ public class FavorisController {
 		this.mdlRecette.setRecette(rct);
 	}
 
+	public void modifRct(String nom) {
+		this.mdlFav.addRct(nom);
+		this.mdlFav.AfficherFavoris();
+		
+	}
+	
+
 }

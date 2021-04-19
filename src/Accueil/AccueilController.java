@@ -110,7 +110,6 @@ public class AccueilController implements Observer{
 
 	public void modifRct(String nom) {
 		this.mdlFav.addRct(nom);
-		System.out.println("Problème car fichier png vide dans le fond du coeur vide, faire un autre coeur vide avec un fon un peut moins vide ");
 		this.mdl.afficherRecettes();
 	}
 
