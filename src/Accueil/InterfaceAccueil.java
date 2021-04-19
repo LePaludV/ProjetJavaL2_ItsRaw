@@ -83,6 +83,7 @@ public class InterfaceAccueil implements Observer
 		{
 			VBox recettes = ctrlAccueil.recettes;
 			recettes.getChildren().clear();
+			recettes.setSpacing(10);
 			ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
 			for(int i = 0; i < (int) (lstRecettes.size()/3)+lstRecettes.size()%3; i++)
 			{
