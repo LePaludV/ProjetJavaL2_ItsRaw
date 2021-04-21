@@ -31,6 +31,9 @@
     <void method="add">
      <string>Oeufs cocottes</string>
     </void>
+    <void method="add">
+     <string>Oeufs cocottes</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -128,6 +131,9 @@
   <void method="put">
    <string>entrée chaude</string>
    <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Oeufs cocottes</string>
+    </void>
     <void method="add">
      <string>Oeufs cocottes</string>
     </void>

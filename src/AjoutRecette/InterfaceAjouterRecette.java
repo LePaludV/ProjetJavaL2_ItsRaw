@@ -57,6 +57,7 @@ public class InterfaceAjouterRecette implements Observer {
 		} catch (FileNotFoundException e) {
 			System.out.println("Image non trouvée !");
 		}
+		
 	}
 	public static BorderPane getRoot() {
 
