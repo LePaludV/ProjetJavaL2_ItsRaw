@@ -117,6 +117,9 @@ public class InterfaceEtapes implements Observer {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		this.ctrlEtapes.retour.setOnAction(e -> {
+			this.ctrlEtapes.backToAccueilRecette(rct);
+		});
 	}
 
 }

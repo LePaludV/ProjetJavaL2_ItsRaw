@@ -33,7 +33,7 @@
             <Label prefHeight="92.0" prefWidth="347.0" styleClass="titre" stylesheets="@Main.css" text="Ingrédients" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                <children>
-                  <Button fx:id="retour" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" onAction="#backToAccueilRecette" styleClass="button1" stylesheets="@Main.css" text="RETOUR" />
+                  <Button fx:id="retour" layoutX="14.0" layoutY="9.0" mnemonicParsing="false" styleClass="button1" stylesheets="@Main.css" text="RETOUR" />
                </children>
             </Pane>
             <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
