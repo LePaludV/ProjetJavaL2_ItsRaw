@@ -131,7 +131,16 @@ public class InterfaceAccueilRecette  implements Observer {
 			ctrlAccueilRct.TexteIngrédient.setText("ingr");
 			System.out.println("nom de la recette "+rct.getNom());
 			System.out.println("photo de la recette "+rct.getPhoto());
+			
+			ImageView imgView = new ImageView(rct.getPhoto());
+			double hauteurVbox = rct.getPhoto().getHeight();
+			double hauteurPhoto = rct.getPhoto().getHeight();
+			double coeff = (hauteurVbox/hauteurPhoto);
+			//ctrlAccueilRct.ImageRecette.setFitHeight(hauteurPhoto);
+			//ctrlAccueilRct.ImageRecette.setFitWidth(rct.getPhoto().getWidth()/coeff);
 			ctrlAccueilRct.ImageRecette.setImage(rct.getPhoto());
+			
+			
 			ctrlAccueilRct.Nom.setText(rct.getNom());
 			ctrlAccueilRct.nbrPersonne.setText("Pour "+rct.getNbrPersonne()+" Personne(s).");
 			ctrlAccueilRct.TexteIngrédient.setText(rct.getIngrédients().toString());

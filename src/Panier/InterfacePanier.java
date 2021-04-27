@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
+import Main.Croix;
 import Main.Ingrédient;
 import Main.Vue;
 import javafx.fxml.FXMLLoader;
@@ -55,12 +56,17 @@ public class InterfacePanier implements Observer {
 		lstIngr.getChildren().clear();
 		
 		for(Ingrédient i: Ingrédients) {
-			Button btn = new Button();
+			Button btn = new Croix();
 			btn.setOnAction(e -> {
 				ctrlPanier.supprimerIngrédient(i);
 			});
 			
 			Label lbl = new Label(i.nom+" "+(int)i.quantité+" "+i.mesure);
+			lbl.setStyle("	-fx-highlight-text-fill: rgb(38,52,78);\r\n"
+					+ "	-fx-text-fill: rgb(38,52,78);\r\n"
+					+ "	-fx-font-size: 25px;\r\n"
+					+ "	-fx-text-alignment: center;\r\n"
+					+ "	-fx-font-weight: bold;");
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER);
 			try {
