@@ -137,6 +137,9 @@ public class AjoutRecetteController implements Observer {
 
 	@FXML
 	private ComboBox<String> searchCatégorie;
+	
+	@FXML
+	private Button theme1;
 
 	@FXML
 	public VBox affEtape;
@@ -253,6 +256,11 @@ public class AjoutRecetteController implements Observer {
 
 		this.barreCatégories = new BarreDeRecherche<String>(this.searchCatégorie);
 		this.barreCatégories.addObserver(this);
+	}
+	
+	public void setTheme()
+	{
+		
 	}
 
 	@Override

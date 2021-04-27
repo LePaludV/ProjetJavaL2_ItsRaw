@@ -113,7 +113,7 @@ public class Vue extends Application {
         	rct = this.mdlAccueilRecette.recette_courante;
         	this.mdlEtapes = new ModèleEtapes(this);
         	this.mdlEtapes.setRecette(rct);
-            EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes);
+            EtapesController ctrlEtapes = new EtapesController(this.mdlEtapes, this.mdlAccueilRecette);
             InterfaceEtapes vueEtapes = new InterfaceEtapes(ctrlEtapes);
             this.mdlEtapes.addObserver(vueEtapes);
             Scene scene=new Scene(InterfaceEtapes.getRoot());

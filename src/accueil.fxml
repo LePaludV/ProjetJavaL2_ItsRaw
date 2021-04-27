@@ -58,7 +58,7 @@
                   <Image url="@../imgs/loveRed.png" />
 			   </image>
 			</ImageView>
-            <ImageView fitHeight="195.0" fitWidth="360.0" layoutX="74.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="153.0" fitWidth="449.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imgs/logo.png" />
                </image>

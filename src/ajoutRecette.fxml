@@ -93,6 +93,31 @@
                         <Insets />
                      </opaqueInsets>
                   </Label>
+                  <HBox layoutX="51.0" layoutY="22.0" prefHeight="202.0" prefWidth="204.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="theme1" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme12" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme13" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="theme11" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme121" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme131" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="theme12" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme122" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                              <Button fx:id="theme132" mnemonicParsing="false" onAction="#setTheme" prefHeight="50.0" prefWidth="50.0" styleClass="buttonTheme" stylesheets="@Main.css" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children></Pane>
             <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="337.0">
                <children>

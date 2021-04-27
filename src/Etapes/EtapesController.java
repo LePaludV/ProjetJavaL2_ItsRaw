@@ -12,6 +12,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 import AccueilRecette.ModèleAccueilRecette;
+import Main.Recette;
 import javafx.event.ActionEvent;
 
 public class EtapesController {
@@ -20,7 +21,7 @@ public class EtapesController {
 	@FXML
 	public Button suivant;
 	@FXML
-	private Button retour;
+	public Button retour;
 	@FXML
 	public Label nom;
 	@FXML
@@ -33,9 +34,11 @@ public class EtapesController {
 	public ImageView image;
 
 	ModèleEtapes mdl;
+	ModèleAccueilRecette mdlAcc;
 
-	public EtapesController(ModèleEtapes mdl) {
+	public EtapesController(ModèleEtapes mdl, ModèleAccueilRecette mdlAcc) {
 		this.mdl = mdl;
+		this.mdlAcc = mdlAcc;
 	}
 
 	// Event Listener on Button[#precedent].onAction
@@ -48,9 +51,10 @@ public class EtapesController {
 	public void clickOnSuivant(ActionEvent event) {
 		this.mdl.clickSuivant();
 	}
-	@FXML
-	public void backToAccueilRecette(ActionEvent event) {
+
+	public void backToAccueilRecette(Recette rct) {
 		this.mdl.goToAccueil();
+		this.mdlAcc.setRecette(rct);
 	}
 	
 	public void finRecette()
