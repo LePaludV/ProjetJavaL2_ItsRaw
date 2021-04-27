@@ -96,7 +96,6 @@ public class Vue extends Application {
             this.primaryStage.sizeToScene();
 
         } else if (this.currentInterface == typeInterface.ACCUEIL_RECETTE) {
-        	System.out.println("changewindow");
         	Recette rct=new Recette();
         	if(this.mdlEtapes == null) {rct = null;}
         	else {rct=this.mdlEtapes.recette_courante;}
