@@ -16,6 +16,17 @@
     <void method="add">
      <string>Crumble breton</string>
     </void>
+    <void method="add">
+     <string>Soupe asiatique aux crevettes et à la coriandre</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>crevettes</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Soupe asiatique aux crevettes et à la coriandre</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -42,6 +53,18 @@
     <void method="add">
      <string>Steak frites en brochettes</string>
     </void>
+    <void method="add">
+     <string>Pavés de saumon en papillote</string>
+    </void>
+    <void method="add">
+     <string>Omelette aux champignons de paris facile</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux asperges</string>
+    </void>
+    <void method="add">
+     <string>Soupe asiatique aux crevettes et à la coriandre</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -52,6 +75,14 @@
     </void>
     <void method="add">
      <string>Hamburger au poisson</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>soupe</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Soupe asiatique aux crevettes et à la coriandre</string>
     </void>
    </object>
   </void>
@@ -150,6 +181,9 @@
     <void method="add">
      <string></string>
     </void>
+    <void method="add">
+     <string></string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -192,6 +226,14 @@
    </object>
   </void>
   <void method="put">
+   <string>entrée chaude</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>hamburger</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -222,6 +264,22 @@
    </object>
   </void>
   <void method="put">
+   <string>alcool</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Punch</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>oeuf</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>apéritifs</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -229,6 +287,9 @@
     </void>
     <void method="add">
      <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Punch</string>
     </void>
    </object>
   </void>
@@ -248,6 +309,9 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Nems</string>
+    </void>
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
     </void>
    </object>
   </void>
@@ -381,6 +445,9 @@
     <void method="add">
      <string>Filets de merlu sauce verte</string>
     </void>
+    <void method="add">
+     <string>Pavés de saumon en papillote</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -431,6 +498,9 @@
     <void method="add">
      <string></string>
     </void>
+    <void method="add">
+     <string></string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -444,6 +514,9 @@
   <void method="put">
    <string>gâteau au chocolat</string>
    <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
+    </void>
     <void method="add">
      <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
@@ -493,6 +566,12 @@
     </void>
     <void method="add">
      <string>Crumble breton</string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
    </object>
   </void>
@@ -609,6 +688,17 @@
     </void>
     <void method="add">
      <string>Crumble breton</string>
+    </void>
+    <void method="add">
+     <string>Omelette aux champignons de paris facile</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>ocktail</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Punch</string>
     </void>
    </object>
   </void>
