@@ -21,53 +21,10 @@
    </object>
   </void>
   <void method="put">
-   <string>Pot de sauce raclette</string>
+   <string>Cannelle</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Tomate</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Hamberger facile</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Carotte</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nems</string>
+     <string>Crumble breton</string>
     </void>
    </object>
   </void>
@@ -83,40 +40,10 @@
    </object>
   </void>
   <void method="put">
-   <string>Barres de chocolat</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Pain au chocolat</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Poivron vert</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Salade</string>
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Hamberger facile</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Ciboulette</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
@@ -241,73 +168,10 @@
    </object>
   </void>
   <void method="put">
-   <string>Mascarpone</string>
+   <string>Concentré de tomates </string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -320,46 +184,8 @@
     <void method="add">
      <string>Tacos mexicains</string>
     </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Gousses Ail</string>
-   <object class="java.util.ArrayList">
     <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Banane</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Smoothie banane-cacao</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Lait</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Smoothie banane-cacao</string>
-    </void>
-    <void method="add">
-     <string>Pain au chocolat</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Ketchup</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Hamberger facile</string>
-    </void>
-    <void method="add">
-     <string>Hamburger au poisson</string>
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -400,41 +226,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Poignées de chaPelure</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Tortillas pour tacos</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -453,17 +244,6 @@
     </void>
     <void method="add">
      <string>Filets de merlu sauce verte</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Gousses d&apos;ail (selon les goûts)</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
@@ -550,77 +330,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Sucre glace</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-    <void method="add">
-     <string>Cappucino de fraises en verrines</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Citron</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -698,6 +407,9 @@
     <void method="add">
      <string>Cappucino de fraises en verrines</string>
     </void>
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -712,90 +424,10 @@
    </object>
   </void>
   <void method="put">
-   <string>Pot de Ricotta</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Tabasco</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Poivre farine</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Eau</string>
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Pain au chocolat</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Macaroni</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
     </void>
    </object>
   </void>
@@ -889,16 +521,8 @@
     <void method="add">
      <string>Falafet (croquettes de pois chiches)</string>
     </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Bouquet persil</string>
-   <object class="java.util.ArrayList">
     <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -915,6 +539,784 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Pain au chocolat</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pommes</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Bâtonnets de poissons panés surgelés</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Hamburger au poisson</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pain à hamburgers</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Hamberger facile</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Haricots rouges</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Feuilles de riz</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Rouleaux de printemps à la banane et au gingembre</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Huile de friture</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Paquet Nouilles chinoises (mie)</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Maquereaux vidés</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Papillotes de maquereaux au barbecue</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sachet de sucre vanillé</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Galçons</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Smoothie banane-cacao</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Jaune d&apos;oeuf</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Hamberger facile</string>
+    </void>
+    <void method="add">
+     <string>Steak frites en brochettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Vermicelles de riz (cheveux d&apos;ange)</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nems</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string> pain à hamburger</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Hamburger au poisson</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Cumin</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poivre</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Papillotes de maquereaux au barbecue</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Nems</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Hamberger facile</string>
+    </void>
+    <void method="add">
+     <string>Steak frites en brochettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Huile d&apos;olive</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+    <void method="add">
+     <string>Caviar d&apos;aubergines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pesto</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pommes de terre</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Steak frites en brochettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Tomates</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Porc hâché</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nems</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Nuoc mam</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nems</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Farine</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string></string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Huile</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Papillotes de maquereaux au barbecue</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Ognion</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pot de sauce raclette</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Palets bretons</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Tomate</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Hamberger facile</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Carotte</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nems</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Barres de chocolat</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Pain au chocolat</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poivron vert</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Ciboulette</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Mascarpone</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Gousses Ail</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Banane</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Smoothie banane-cacao</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Lait</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Smoothie banane-cacao</string>
+    </void>
+    <void method="add">
+     <string>Pain au chocolat</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Ketchup</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Hamberger facile</string>
+    </void>
+    <void method="add">
+     <string>Hamburger au poisson</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poignées de chaPelure</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Gousses d&apos;ail (selon les goûts)</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sucre glace</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pot de Ricotta</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Tabasco</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+    <void method="add">
+     <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poivre farine</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Macaroni</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Bouquet persil</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
     </void>
    </object>
   </void>
@@ -957,14 +1359,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Bâtonnets de poissons panés surgelés</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Hamburger au poisson</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Aubergines</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -987,13 +1381,8 @@
     <void method="add">
      <string>Tacos mexicains</string>
     </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Pain à hamburgers</string>
-   <object class="java.util.ArrayList">
     <void method="add">
-     <string>Hamberger facile</string>
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -1076,17 +1465,6 @@
     </void>
     <void method="add">
      <string>Cappucino de fraises en verrines</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Haricots rouges</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
     </void>
    </object>
   </void>
@@ -1185,14 +1563,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Feuilles de riz</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Rouleaux de printemps à la banane et au gingembre</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Crevettes décortiquées</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1200,17 +1570,6 @@
     </void>
     <void method="add">
      <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Huile de friture</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
     </void>
    </object>
   </void>
@@ -1347,17 +1706,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Paquet Nouilles chinoises (mie)</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Sucre</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1395,48 +1743,6 @@
     </void>
     <void method="add">
      <string></string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Maquereaux vidés</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Papillotes de maquereaux au barbecue</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Galçons</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Smoothie banane-cacao</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Jaune d&apos;oeuf</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Hamberger facile</string>
     </void>
    </object>
   </void>
@@ -1512,49 +1818,10 @@
    </object>
   </void>
   <void method="put">
-   <string>Vermicelles de riz (cheveux d&apos;ange)</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nems</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string> pain à hamburger</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Hamburger au poisson</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Champignons parfumés chinois</string>
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Nems</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Cumin</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
     </void>
    </object>
   </void>
@@ -1600,68 +1867,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Poivre</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Papillotes de maquereaux au barbecue</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Mac and Cheese à la sauce Raclette</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Nems</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Hamberger facile</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Piment oiseau</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1669,29 +1874,6 @@
     </void>
     <void method="add">
      <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Huile d&apos;olive</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-    <void method="add">
-     <string>Filets de merlu sauce verte</string>
-    </void>
-    <void method="add">
-     <string>Nouilles sautées au soja et aux crevettes</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
-    </void>
-    <void method="add">
-     <string>Caviar d&apos;aubergines</string>
     </void>
    </object>
   </void>
@@ -1719,40 +1901,6 @@
    </object>
   </void>
   <void method="put">
-   <string>Pesto</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Tomates</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-    <void method="add">
-     <string>Tacos mexicains</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
    <string>Persil</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1761,68 +1909,8 @@
     <void method="add">
      <string>Falafet (croquettes de pois chiches)</string>
     </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Porc hâché</string>
-   <object class="java.util.ArrayList">
     <void method="add">
-     <string>Nems</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Nuoc mam</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Nems</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Farine</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Tourte aux épinards et à la Ricotta</string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
-    </void>
-    <void method="add">
-     <string></string>
-    </void>
-    <void method="add">
-     <string></string>
-    </void>
-    <void method="add">
-     <string></string>
-    </void>
-    <void method="add">
-     <string></string>
-    </void>
-    <void method="add">
-     <string></string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
-    </void>
-    <void method="add">
-     <string></string>
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -1831,14 +1919,6 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Pain au chocolat</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Huile</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Papillotes de maquereaux au barbecue</string>
     </void>
    </object>
   </void>
@@ -1861,17 +1941,6 @@
     </void>
     <void method="add">
      <string>Filets de merlu sauce verte</string>
-    </void>
-   </object>
-  </void>
-  <void method="put">
-   <string>Ognion</string>
-   <object class="java.util.ArrayList">
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
-    </void>
-    <void method="add">
-     <string>Falafet (croquettes de pois chiches)</string>
     </void>
    </object>
   </void>

@@ -13,6 +13,9 @@
     <void method="add">
      <string>Falafet (croquettes de pois chiches)</string>
     </void>
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -35,6 +38,9 @@
     </void>
     <void method="add">
      <string>Falafet (croquettes de pois chiches)</string>
+    </void>
+    <void method="add">
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
@@ -485,6 +491,9 @@
     <void method="add">
      <string></string>
     </void>
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -598,6 +607,9 @@
     <void method="add">
      <string>Hamberger facile</string>
     </void>
+    <void method="add">
+     <string>Crumble breton</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -619,6 +631,14 @@
     </void>
     <void method="add">
      <string>Caviar d&apos;aubergines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>borchettes</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Steak frites en brochettes</string>
     </void>
    </object>
   </void>
