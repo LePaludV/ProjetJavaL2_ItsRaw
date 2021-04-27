@@ -1,1253 +1,348 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_202" class="java.beans.XMLDecoder">
+<java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
-   <string>epaule d&apos;agneau</string>
+   <string>Pot de sauce raclette</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Mac and Cheese à la sauce Raclette</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>crème fraîche</string>
+   <string>Oeufs</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>huile d&apos;olive</string>
+   <string>Fraises</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Cappucino de fraises en verrines</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>coriande en poudre</string>
+   <string>Pot de yaourt nature (125g)</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Tourte aux épinards et à la Ricotta</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>oignons</string>
+   <string>Poisgnée pistache écossées</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Cappucino de fraises en verrines</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>poivre noir du moulin</string>
+   <string>Crevettes décortiquées</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>cannelle en poudre</string>
+   <string>Glace à la pistache</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Cappucino de fraises en verrines</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>raisins secs</string>
+   <string>Ciboulette</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>poivre</string>
+   <string>Beurre</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Papillotes de maquereaux au barbecue</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>oeuf</string>
+   <string>Moutarde</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Papillotes de maquereaux au barbecue</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>gruyère râpé</string>
+   <string>Epinards frais</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Tourte aux épinards et à la Ricotta</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>sel</string>
+   <string>Chocolat noir</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Oeufs cocottes</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>clou de girofle broyés</string>
+   <string>Paquet Nouilles chinoises (mie)</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>eau de rose</string>
+   <string>Sucre</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Gâteau au chocolat fondant facile et sans gluten</string>
     </void>
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>gingembre en poudre</string>
+   <string>Mascarpone</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
-    </void>
-    <void method="add">
-     <string>Tajine d&apos;agneau aux abricots (Maroc)</string>
+     <string>Cappucino de fraises en verrines</string>
     </void>
    </object>
   </void>
   <void method="put">
-   <string>tranche de jambon</string>
+   <string>Maquereaux vidés</string>
    <object class="java.util.ArrayList">
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Papillotes de maquereaux au barbecue</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Gousses Ail</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Jaune d&apos;oeuf</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Crème fraîche</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sauce soja</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poignées de chaPelure</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Verre de Vin blanc</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Gousses d&apos;ail (selon les goûts)</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sucre vanillé</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Barquette Soja</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poivre</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Papillotes de maquereaux au barbecue</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Piment oiseau</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Huile d&apos;olive</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pesto</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sucre glace</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Citron</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Papillotes de maquereaux au barbecue</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Farine</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pot de Ricotta</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tourte aux épinards et à la Ricotta</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Huile</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Papillotes de maquereaux au barbecue</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Poivre farine</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Macaroni</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Sel</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Mac and Cheese à la sauce Raclette</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Papillotes de maquereaux au barbecue</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Tourte aux épinards et à la Ricotta</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Nouilles sautées au soja et aux crevettes</string>
     </void>
     <void method="add">
-     <string>Oeufs cocottes</string>
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Merluchons en filets</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Bouquet persil</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Filets de merlu sauce verte</string>
     </void>
    </object>
   </void>
