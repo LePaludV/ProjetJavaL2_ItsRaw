@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.input.TouchEvent;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 
 import java.io.FileInputStream;
@@ -77,10 +76,6 @@ public class AccueilController implements Observer{
 		for (String s : liste) {
 			this.searchBar.getItems().add(s);
 		}
-		System.out.println("hello");
-		this.searchBar.setOnKeyPressed(e -> {
-			System.out.println(e.getCode());
-		});
 	}
 
 	public void createSearchBar() {

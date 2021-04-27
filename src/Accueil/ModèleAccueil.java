@@ -142,7 +142,6 @@ public class ModèleAccueil extends Observable {
 
 	private void loadData(String url) {
 		System.out.println("liste des recettes "+this.recettes);
-
 		XMLDecoder decoder = null;
 		try {
 			FileInputStream fis = new FileInputStream(url+".xml");
@@ -157,6 +156,7 @@ public class ModèleAccueil extends Observable {
 				this.classeIng = (HashMap<String, ArrayList<String>>) decoder.readObject();				
 			}
 		} catch (Exception e) {
+
 			e.printStackTrace();
 		} finally {
 			if (decoder != null) decoder.close();

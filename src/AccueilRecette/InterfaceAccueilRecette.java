@@ -77,7 +77,7 @@ public class InterfaceAccueilRecette  implements Observer {
 		return rootLayout;
 	}
 
-	public void update(Observable arg0, Object rct) {
+	public void update(Observable arg0, Object rct) { 
 		Recette recette = (Recette) rct;
 		ObservableList<Toggle> note = ctrlAccueilRct.note.getToggles();
 		for (int i=0;i<note.size();i++) {
@@ -115,7 +115,7 @@ public class InterfaceAccueilRecette  implements Observer {
 		}
 		
 	}
-
+	
 	public void loadRecette(Recette rct) {
 		if(rct==null) {
 			ctrlAccueilRct.TexteDescription.setText("Problème chargement de la recette séléctionner dans l'accueil "
@@ -131,7 +131,7 @@ public class InterfaceAccueilRecette  implements Observer {
 			ctrlAccueilRct.TexteIngrédient.setText("ingr");
 			System.out.println("nom de la recette "+rct.getNom());
 			System.out.println("photo de la recette "+rct.getPhoto());
-			ctrlAccueilRct.ImageRecette.setImage(rct.getPhotoImage());
+			ctrlAccueilRct.ImageRecette.setImage(rct.getPhoto());
 			ctrlAccueilRct.Nom.setText(rct.getNom());
 			ctrlAccueilRct.nbrPersonne.setText("Pour "+rct.getNbrPersonne()+" Personne(s).");
 			ctrlAccueilRct.TexteIngrédient.setText(rct.getIngrédients().toString());

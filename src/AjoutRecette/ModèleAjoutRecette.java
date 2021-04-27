@@ -110,7 +110,7 @@ public class ModèleAjoutRecette extends Observable {
 		this.recette_courante.setNom(s);
 		this.recette_courante.setDescription(desc);
 		this.recette_courante.setNbrPersonne(nbrPersonne);
-		this.saveImage(this.recette_courante.getPhotoImage());
+		this.saveImage(this.recette_courante.getPhoto());
 		this.setChanged();
 		this.notifyObservers(this.recette_courante);
 	}

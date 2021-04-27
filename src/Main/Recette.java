@@ -1,28 +1,17 @@
 package Main;
-import java.awt.image.BufferedImage;
-import java.io.File;
-package Main;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
-
-import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 public class Recette implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	String nom, description;
-	Image photo;
 	String nom;
 	String description;
-	transient Image photo;
+	Image photo;
 	ArrayList<Ingrédient> ingrédients;
 	boolean[] note = {false,false,false,false,false};
 	boolean saved;
@@ -53,21 +42,11 @@ public class Recette implements Serializable {
 	}
 
 	public Image getPhoto() {
-		try {
-            File file = new File("imagesRecette/"+this.getNom()+".png");
-			BufferedImage bufferedImage = SwingFXUtils.fromFXImage(this.photo, null);
-			ImageIO.write(bufferedImage, "png", file);
-		} catch (IOException ex) {
-			throw new RuntimeException(ex);
-		}
-		return this.photo;
-	}
-
-	public Image getPhotoImage() {
 		return this.photo;
 	}
 
 	public void setPhotoByImage(Image img) {
+		System.out.println("setPhoto !");
 		this.photo = img;
 	}
 

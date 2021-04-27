@@ -28,7 +28,7 @@
 .cross_button:hover{
 	-fx-background-color: rgba(0,0,0,0.2);
 }
-*/
+
 .description{
 	-fx-background-insets: 1 1 1 1, 1;
 	-fx-background-radius: 10;
