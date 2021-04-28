@@ -57,9 +57,9 @@ public class EtapesController {
 		this.mdlAcc.setRecette(rct);
 	}
 	
-	public void finRecette()
+	public void setIndex(int i)
 	{
-		this.mdl.indexEtape -= 1;
+		this.mdl.indexEtape = i;
 	}
 
 }

@@ -100,7 +100,7 @@ public class InterfaceAccueil implements Observer
 						vbox.getStyleClass().add("box");
 						Button btn = new Button();
 						Label lblRecette = new Label(nom);
-					
+						lblRecette.setWrapText(true);
 						lblRecette.getStyleClass().add("label3");
 						btn.setId(Integer.toString((i+2)*i+j));
 						

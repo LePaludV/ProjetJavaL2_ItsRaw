@@ -50,31 +50,11 @@ public class InterfaceEtapes implements Observer {
 		}
 		else
 		{
-			ctrlEtapes.finRecette();
-			ctrlEtapes.textEtape.setText("Etape " + (this.rct.getEtapes().size()));
-			ctrlEtapes.textDescription.setText(this.rct.getEtapes().get(this.rct.getEtapes().size()-1));
+			ctrlEtapes.setIndex(this.rct.getEtapes().size());
+			ctrlEtapes.textEtape.setText("Etape Finale");
+			ctrlEtapes.textDescription.setText("Bon appétit !");
 		}
 	}
-	
-	/*public String description(String des)
-	{
-		String newText = "";
-		int compteurChar = 0;
-		for(int i = 2; i < des.length(); i++)
-		{
-			if(compteurChar<50 || des.charAt(i) != ' ')
-			{
-				newText = newText + des.charAt(i);
-				compteurChar += 1;
-			}
-			else
-			{
-				compteurChar = 0;
-				newText = newText + '\n';
-			}
-		}
-		return newText;
-	}*/
 	
 	public void loadRecette(Recette rct)
 	{
