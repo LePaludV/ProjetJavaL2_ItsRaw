@@ -162,6 +162,7 @@ public class InterfaceAjouterRecette implements Observer {
 			HBox hb = new HBox();
 			hb.setAlignment(Pos.CENTER_LEFT);
 			hb.getChildren().addAll(btn, etape);
+			hb.setPrefHeight(25);
 			ctrlAjout.affEtape.getChildren().add(hb);
 			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
 		}

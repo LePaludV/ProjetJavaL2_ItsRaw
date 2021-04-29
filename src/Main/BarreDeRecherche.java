@@ -76,7 +76,7 @@ public class BarreDeRecherche<T> extends Observable implements EventHandler {
             return;
         } 
         
-        if (evt.getCode() == KeyCode.ENTER) {
+        if (evt.getCode() == KeyCode.ENTER && !this.comboBox.getEditor().getText().equals("")) {
         	this.setChanged();
         	this.notifyObservers(this.comboBox.getEditor().getText());
         	this.comboBox.getEditor().setText(null);

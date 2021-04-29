@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_202" class="java.beans.XMLDecoder">
+<java version="1.8.0_281" class="java.beans.XMLDecoder">
  <object class="java.util.HashMap">
   <void method="put">
    <string>Galette de riz </string>
@@ -243,6 +243,9 @@
     <void method="add">
      <string></string>
     </void>
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -368,6 +371,14 @@
    </object>
   </void>
   <void method="put">
+   <string>Miel liquide</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Fromage blanc au miel et aux fraises</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>GinGembre</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -411,6 +422,9 @@
     </void>
     <void method="add">
      <string>Cookies maison</string>
+    </void>
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
     </void>
    </object>
   </void>
@@ -1101,6 +1115,14 @@
    </object>
   </void>
   <void method="put">
+   <string>Fécule de mais</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>Sucre de canne</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1366,6 +1388,14 @@
     </void>
     <void method="add">
      <string>Artichauts à la barigoule</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Pâte feuilletée</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte laitière fraise-chocolat</string>
     </void>
    </object>
   </void>
@@ -1654,6 +1684,14 @@
    </object>
   </void>
   <void method="put">
+   <string>Pâte brisée</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>Nuoc mam</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1776,6 +1814,14 @@
    </object>
   </void>
   <void method="put">
+   <string>Chocolat noir à cuire</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte laitière fraise-chocolat</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>Huile</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -1815,6 +1861,14 @@
     </void>
     <void method="add">
      <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Lait demi-écrémé</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte laitière fraise-chocolat</string>
     </void>
    </object>
   </void>
@@ -1991,6 +2045,14 @@
     </void>
     <void method="add">
      <string>Tacos mexicains</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Fromage blanc</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Fromage blanc au miel et aux fraises</string>
     </void>
    </object>
   </void>
@@ -2361,6 +2423,14 @@
     </void>
     <void method="add">
      <string>Cappucino de fraises en verrines</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Petits beurre</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
     </void>
    </object>
   </void>
@@ -2771,6 +2841,12 @@
     <void method="add">
      <string>Cappucino de fraises en verrines</string>
     </void>
+    <void method="add">
+     <string>Fromage blanc au miel et aux fraises</string>
+    </void>
+    <void method="add">
+     <string>Tarte laitière fraise-chocolat</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -2980,6 +3056,14 @@
     </void>
     <void method="add">
      <string>Crèmes de mangue en petits pots</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Yaourt nature</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte laitière fraise-chocolat</string>
     </void>
    </object>
   </void>
@@ -3214,6 +3298,9 @@
     <void method="add">
      <string>Cappucino de fraises en verrines</string>
     </void>
+    <void method="add">
+     <string>Fromage blanc au miel et aux fraises</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -3411,6 +3498,9 @@
     <void method="add">
      <string>Brookies</string>
     </void>
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -3434,6 +3524,14 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Brookies</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>Rhubarbe</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Tarte a la rhubarbe</string>
     </void>
    </object>
   </void>

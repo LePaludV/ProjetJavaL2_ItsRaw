@@ -53,6 +53,12 @@ public class ModèleAccueil extends Observable {
 		this.afficherCategories();
 	}
 
+	public void changerNoteDifficulte(Recette rct) {
+		Recette recetteCourante = this.recettes.get(rct.getNom());
+		recetteCourante.setDifficulté(rct.getDifficulté());
+		recetteCourante.setNote(rct.getNote());
+		this.saveData("data");
+	}
 
 	public void ajouterRecette(Recette rct) {
 

@@ -54,7 +54,7 @@ public class ModèleAccueilRecette extends Observable{
 
 
 	public void goToAccueil() {
-		this.mdlAcc.ajouterRecette(this.recette_courante);
+		this.mdlAcc.changerNoteDifficulte(this.recette_courante);
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL);
 	}
@@ -77,12 +77,9 @@ public class ModèleAccueilRecette extends Observable{
 	}
 
 	public void ajouterFav() {
-		System.out.println("Ajout au fav");
 		this.mdlFav.addRct(this.recette_courante.getNom());
 		this.setChanged();
-		this.notifyObservers(this.recette_courante);
-		// TODO Auto-generated method stub
-		
+		this.notifyObservers(this.recette_courante);		
 	}
 	
 	
