@@ -82,6 +82,15 @@
     <void method="add">
      <string>Artichauts à la barigoule</string>
     </void>
+    <void method="add">
+     <string>Sardines au four à l&apos;ail</string>
+    </void>
+    <void method="add">
+     <string>Cuisse de canard à l&apos;orientale</string>
+    </void>
+    <void method="add">
+     <string>Velouté de Potiron et Carottes</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -103,6 +112,9 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Soupe asiatique aux crevettes et à la coriandre</string>
+    </void>
+    <void method="add">
+     <string>Velouté de Potiron et Carottes</string>
     </void>
    </object>
   </void>
@@ -174,6 +186,15 @@
     <void method="add">
      <string>Rouleaux de printemps à la banane et au gingembre</string>
     </void>
+    <void method="add">
+     <string>Bricks au thon </string>
+    </void>
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
+    </void>
+    <void method="add">
+     <string>dfsf</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -200,6 +221,12 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
+    </void>
+    <void method="add">
+     <string>Sardines au four à l&apos;ail</string>
+    </void>
+    <void method="add">
+     <string>Velouté de Potiron et Carottes</string>
     </void>
    </object>
   </void>
@@ -301,6 +328,12 @@
     <void method="add">
      <string>Salade de radis au chèvre frais</string>
     </void>
+    <void method="add">
+     <string>Bricks au thon </string>
+    </void>
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
+    </void>
    </object>
   </void>
   <void method="put">
@@ -353,6 +386,14 @@
    </object>
   </void>
   <void method="put">
+   <string>velouté</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Velouté de Potiron et Carottes</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
    <string>poisson</string>
    <object class="java.util.ArrayList">
     <void method="add">
@@ -363,6 +404,12 @@
     </void>
     <void method="add">
      <string>Pavés de saumon en papillote</string>
+    </void>
+    <void method="add">
+     <string>Sardines au four à l&apos;ail</string>
+    </void>
+    <void method="add">
+     <string>Bricks au thon </string>
     </void>
    </object>
   </void>
@@ -379,6 +426,14 @@
    <object class="java.util.ArrayList">
     <void method="add">
      <string>Pain au chocolat</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>hiver</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <string>Velouté de Potiron et Carottes</string>
     </void>
    </object>
   </void>
@@ -791,6 +846,12 @@
     </void>
     <void method="add">
      <string>Cookies maison</string>
+    </void>
+    <void method="add">
+     <string>Bricks au thon </string>
+    </void>
+    <void method="add">
+     <string>Œuf cocotte, champignons et sauce 3 Fromages</string>
     </void>
    </object>
   </void>
