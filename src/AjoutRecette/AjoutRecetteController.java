@@ -139,11 +139,10 @@ public class AjoutRecetteController implements Observer {
 	private ComboBox<String> searchCatégorie;
 	
 	@FXML
-	public VBox affEtape;
-	@FXML
 	public VBox affIngr;
+	
 	@FXML
-	public AnchorPane anchorEtape;
+	public ScrollPane scrollEtape;
 	
     @FXML
     public AnchorPane anchorIngr;

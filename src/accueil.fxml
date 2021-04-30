@@ -46,7 +46,7 @@
   <items>
       <Pane prefHeight="200.0" prefWidth="200.0" styleClass="gridPane" stylesheets="@Main.css">
          <children>
-            <Button fx:id="btnAjoutRecette" layoutX="581.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="50.0" prefWidth="186.0" styleClass="button1" stylesheets="@Main.css" text="Ajouter Recette" />
+            <Button fx:id="btnAjoutRecette" layoutX="542.0" layoutY="115.0" mnemonicParsing="false" onAction="#ajouterRecette" prefHeight="54.0" prefWidth="225.0" styleClass="button1" stylesheets="@Main.css" text="Ajouter Recette" />
             <ComboBox fx:id="searchBar" editable="true" layoutX="523.0" layoutY="42.0" prefHeight="31.0" prefWidth="334.0" promptText="Search Bar" />
             <ImageView fx:id="panier" fitHeight="50.0" fitWidth="54.0" layoutX="777.0" layoutY="115.0" onMouseClicked="#goToPanier" pickOnBounds="true" preserveRatio="true">
                <image>

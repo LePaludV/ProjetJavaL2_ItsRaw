@@ -23,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import Accueil.*;
 import AccueilRecette.*;
@@ -147,14 +148,12 @@ public class InterfaceAjouterRecette implements Observer {
 	public void update(Observable arg0, Object rct) {
 		//Affichage des étapes
 		Recette recette = (Recette) rct;
-		ctrlAjout.affEtape.getChildren().clear();
+		VBox vbEtape = new VBox();
 		for(int i=0;i<recette.getEtapes().size();i++) {
 			String text = (i+1)+". "+recette.getEtapes().get(i);
-			Label etape = new Label(text);
+			Text etape = new Text(text);
 			etape.getStyleClass().add("label2");
-			etape.setPrefWidth(ctrlAjout.affEtape.getWidth());
-			etape.setPrefHeight(15);
-			etape.setWrapText(true);
+			
 			Button btn = new Croix();
 			btn.setOnAction(e -> {
 				ctrlAjout.supprimerEtape(text.split(" ")[1]);
@@ -163,10 +162,11 @@ public class InterfaceAjouterRecette implements Observer {
 			hb.setAlignment(Pos.CENTER_LEFT);
 			hb.getChildren().addAll(btn, etape);
 			hb.setPrefHeight(25);
-			ctrlAjout.affEtape.getChildren().add(hb);
-			ctrlAjout.anchorEtape.setPrefHeight(ctrlAjout.affEtape.getHeight());
+			System.out.println(ctrlAjout.scrollEtape.getWidth()-20);
+			etape.setWrappingWidth(ctrlAjout.scrollEtape.getWidth());
+			vbEtape.getChildren().add(hb);
 		}
-
+		ctrlAjout.scrollEtape.setContent(vbEtape);
 	
 
 		//Affichage des ingrédients
@@ -205,6 +205,7 @@ public class InterfaceAjouterRecette implements Observer {
 			Label cat = new Label(i);
 			cat.getStyleClass().add("label3");
 			Button btn = new Croix();
+
 			btn.setOnAction(e -> {
 				ctrlAjout.supprimerCatégorie(i);
 			});

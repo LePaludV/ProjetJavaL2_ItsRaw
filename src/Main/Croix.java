@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class Croix extends Button {
 	
@@ -26,5 +27,11 @@ public class Croix extends Button {
 		}
 		this.getStyleClass().add("cross_button");
 		this.setBackground(null);
+		
+		this.setOnMouseExited(e -> {
+			this.setBackground(null);
+		});
 	}
+	
+
 }
