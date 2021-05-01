@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_281" class="java.beans.XMLDecoder">
- <object class="java.util.ArrayList"/>
+<java version="1.8.0_202" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <string></string>
+  </void>
+  <void method="add">
+   <string>Hamberger facile</string>
+  </void>
+  <void method="add">
+   <string>Cookies maison</string>
+  </void>
+ </object>
 </java>

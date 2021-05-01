@@ -33,6 +33,9 @@ public class AccueilController implements Observer{
 	private Button btnAjoutRecette;
 
 	@FXML
+	private Button refresh;
+	
+	@FXML
 	public VBox recettes;
 
 	@FXML
@@ -65,6 +68,12 @@ public class AccueilController implements Observer{
 	@FXML
 	public void ajouterRecette(ActionEvent event) {
 		this.mdl.goToAjouterRecette();
+	}
+	
+	@FXML
+	public void refreshAccueil()
+	{
+		this.mdl.afficherRecettes();
 	}
 
 	public void openRecette(Recette rct) {

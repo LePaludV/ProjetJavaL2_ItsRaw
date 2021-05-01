@@ -63,6 +63,7 @@
                   <Image url="@../imgs/logo.png" />
                </image>
             </ImageView>
+            <Button fx:id="refresh" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#refreshAccueil" opacity="0.0" prefHeight="169.0" prefWidth="500.0" />
          </children>
       </Pane>
       <ScrollPane fx:id="scrollRecettes" minWidth="793.0" prefHeight="711.0" prefWidth="793.0" styleClass="gridPane" stylesheets="@Main.css">

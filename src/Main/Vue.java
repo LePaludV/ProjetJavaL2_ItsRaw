@@ -60,7 +60,7 @@ public class Vue extends Application {
         this.mdlAccueil = new ModèleAccueil(this);
         this.mdlPanier=new ModèlePanier(this);
 		this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("It's Raw");
+        this.primaryStage.setTitle("Overcooked");
         this.primaryStage.setResizable(false);
         this.mdlFav= new ModèleFavoris(this);
         this.mdlAccueilRecette = new ModèleAccueilRecette(this, mdlAccueil, mdlPanier, mdlFav);
