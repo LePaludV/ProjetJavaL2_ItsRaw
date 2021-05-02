@@ -108,6 +108,19 @@ public class ModèleAccueil extends Observable {
 			this.notifyObservers(liste);
 		}
 	}
+	
+	public void afficherParNom(String nom) {
+		ArrayList<Recette> recettesRecherchees = new ArrayList<>();
+		System.out.println("Nom de la recette "+nom);
+		for (String nomRecette : this.recettes.keySet()) {
+			if (nomRecette.toLowerCase().contains(nom.toLowerCase())) {
+				recettesRecherchees.add(this.recettes.get(nomRecette));
+			}
+		}
+		this.setChanged();
+		if (recettesRecherchees.size() != 0)
+			this.notifyObservers(recettesRecherchees);
+	}
 
 	public void afficherRecettes() {
 		this.setChanged();
