@@ -146,7 +146,7 @@
                   <Label fx:id="LabelEtape" alignment="CENTER" layoutX="39.0" layoutY="122.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="597.0" styleClass="titre" stylesheets="@Main.css" text="ETAPE" />
                   <ScrollPane fx:id="scrollEtape" layoutX="9.0" layoutY="175.0" prefHeight="218.0" prefWidth="662.0">
                      <content>
-                      <AnchorPane fx:id="anchorEtape" minHeight="0.0" minWidth="0.0" prefHeight="213.0" prefWidth="641.0" />
+                      <AnchorPane fx:id="anchorEtape" minHeight="0.0" minWidth="0.0" prefHeight="211.0" prefWidth="641.0" />
                      </content>
                   </ScrollPane>
                   <TextArea fx:id="Description" layoutX="27.0" layoutY="15.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="628.0" promptText="Description" styleClass="description" stylesheets="@Main.css" />

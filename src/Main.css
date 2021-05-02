@@ -50,9 +50,27 @@
 	-fx-font-weight: bold;
 }
 
-.gridPane{
+.gridPane, .gridPane > .viewport{
 	-fx-background-color: rgb(226,217,205);
 }
+
+.gridPane .track{
+	-fx-background-color: rgb(187, 180, 170);
+}
+
+.gridPane .thumb{
+	-fx-background-color: rgb(197,127,107);
+}
+
+.gridPane .increment-arrow,.decrement-arrow{
+	-fx-background-color: transparent;
+}
+
+.gridPane .increment-button,.decrement-button,.corner{
+	-fx-border-style: rgb(226,217,205);
+	-fx-background-color: rgb(226,217,205);
+}
+
 .titre{
 	-fx-font-family: Tahoma;
 	-fx-font-size: 25px;
@@ -70,7 +88,6 @@
 {
 	-fx-background-color: rgb(148,32,40);
 	-fx-background-radius: 10;
-
 }
 
 .label1

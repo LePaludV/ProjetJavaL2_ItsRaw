@@ -68,9 +68,9 @@
       </Pane>
       <ScrollPane fx:id="scrollRecettes" minWidth="793.0" prefHeight="711.0" prefWidth="793.0" styleClass="gridPane" stylesheets="@Main.css">
          <content>
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="1024.0" styleClass="gridPane" stylesheets="@Main.css">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="717.0" prefWidth="957.0" styleClass="gridPane" stylesheets="@Main.css">
                <children>
-                  <VBox fx:id="recettes" layoutX="-3.0" layoutY="2.0" prefHeight="711.0" prefWidth="1022.0" styleClass="gridPane" stylesheets="@Main.css" />
+                  <VBox fx:id="recettes" layoutX="-3.0" layoutY="2.0" prefHeight="711.0" prefWidth="966.0" styleClass="gridPane" stylesheets="@Main.css" />
                </children>
             </AnchorPane>
          </content>
