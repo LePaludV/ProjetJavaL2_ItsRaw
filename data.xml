@@ -6,7 +6,6 @@
    <object class="Main.Recette" id="Recette1">
     <void property="catégories">
      <void method="add">
-     <void method="add">
       <string>gâteau au chocolat</string>
      </void>
      <void method="add">

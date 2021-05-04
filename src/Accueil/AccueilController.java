@@ -117,6 +117,10 @@ public class AccueilController implements Observer{
 			this.mdl.afficherParNom(recherche);
 		}
 	}
+	
+	public void afficherPlus() {
+		this.mdl.afficherPlus();
+	}
 
 	public void modifRct(String nom) {
 		this.mdlFav.addRct(nom);

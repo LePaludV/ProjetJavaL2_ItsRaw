@@ -7,5 +7,8 @@
   <void method="add">
    <string>Cookies maison</string>
   </void>
+  <void method="add">
+   <string>Velouté de fanes de radis</string>
+  </void>
  </object>
 </java>

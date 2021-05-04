@@ -150,7 +150,15 @@ public class InterfaceAccueil implements Observer
 		{
 			VBox recettes = ctrlAccueil.recettes;
 			recettes.getChildren().clear();
+			recettes.setAlignment(Pos.CENTER);
 			recettes.setSpacing(10);
+			Button afficher = new Button();
+			afficher.setText("Afficher plus");
+			afficher.getStyleClass().add("button1");
+			afficher.setOnAction(e -> {
+				ctrlAccueil.afficherPlus();
+			});
+			
 			ArrayList<Recette> lstRecettes = (ArrayList<Recette>) arg;
 			System.out.println("Taille des recettes : "+lstRecettes.size());
 			int x = 0;
@@ -222,6 +230,7 @@ public class InterfaceAccueil implements Observer
 				}
 				ctrlAccueil.recettes.getChildren().add(hb);
 			}
+			recettes.getChildren().add(afficher);
 			ScrollPane sp = new ScrollPane();
 			sp.setContent(ctrlAccueil.recettes);
 			ctrlAccueil.scrollRecettes.setContent(recettes);

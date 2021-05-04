@@ -25,9 +25,10 @@ public class ModèleAccueil extends Observable {
 	public HashMap<String, ArrayList<String>> catégories;
 	public Vue vue;
 	public File fichier;
-
+	int lastIndex;
 
 	public ModèleAccueil(Vue v) {
+		this.lastIndex = 3;
 		this.fichier=new File("data.xml");
 		this.recettes = new HashMap<String, Recette>();
 		this.catégories = new HashMap<String, ArrayList<String>>();
@@ -40,6 +41,7 @@ public class ModèleAccueil extends Observable {
 
 	public void goToAjouterRecette()
 	{
+		lastIndex = 3;
 		this.vue.currentInterface = this.vue.currentInterface.AJOUT_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.AJOUT_RECETTE);
 	}
@@ -120,12 +122,19 @@ public class ModèleAccueil extends Observable {
 		if (recettesRecherchees.size() != 0)
 			this.notifyObservers(recettesRecherchees);
 	}
+	
+	public void afficherPlus() {
+		lastIndex += 3;
+		this.afficherRecettes();
+	}
 
 	public void afficherRecettes() {
 		this.setChanged();
 		ArrayList<Recette> liste = new ArrayList<Recette>();
 		for (String nom : this.recettes.keySet()) {
-			liste.add(this.recettes.get(nom));
+			if (liste.size()<3*lastIndex) {
+				liste.add(this.recettes.get(nom));				
+			}
 		}
 		this.notifyObservers(liste);
 	}
@@ -186,17 +195,20 @@ public class ModèleAccueil extends Observable {
 	}
 
 	public void goToAjouterAccueilRecette() {
+		lastIndex = 3;
 		this.vue.currentInterface = this.vue.currentInterface.ACCUEIL_RECETTE;
 		this.vue.changeWindow(Vue.typeInterface.ACCUEIL_RECETTE);
 	}
 
 	public void goToPanier() {
+		lastIndex = 3;
 		this.vue.currentInterface = this.vue.currentInterface.PANIER;
 		this.vue.changeWindow(Vue.typeInterface.PANIER);
 		
 	}
 
 	public void goToFav() {
+		lastIndex = 3;
 		this.vue.currentInterface = this.vue.currentInterface.FAVORIS;
 		this.vue.changeWindow(Vue.typeInterface.FAVORIS);
 	}
