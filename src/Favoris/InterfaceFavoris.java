@@ -101,6 +101,7 @@ public class InterfaceFavoris implements Observer {
 				VBox vbox = new VBox();
 				vbox.setAlignment(Pos.CENTER);
 				vbox.getStyleClass().add("box");
+				vbox.setStyle("-fx-background-color: "+recette_courante.getCouleur()+";");
 				Button btn = new Button();
 				Label lblRecette = new Label(nom);
 				lblRecette.getStyleClass().add("label3");
