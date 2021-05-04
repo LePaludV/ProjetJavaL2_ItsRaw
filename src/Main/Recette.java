@@ -9,7 +9,7 @@ import javafx.scene.image.Image;
 public class Recette implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	String nom;
+	String nom, couleur;
 	String description;
 	Image photo;
 	ArrayList<Ingrédient> ingrédients;
@@ -18,6 +18,7 @@ public class Recette implements Serializable {
 	boolean[] difficulté = {false,false,false,false,false};
 	ArrayList<String> étapes, catégories;
 	int nbrPersonne;
+	
 
 	public Recette() {
 		this.nom="";
@@ -27,6 +28,14 @@ public class Recette implements Serializable {
 		this.saved=false;
 		this.description = "";
 		this.photo = null;
+	}
+	
+	public String getCouleur() {
+		return this.couleur;
+	}
+	
+	public void setCouleur(String s) {
+		this.couleur = s;
 	}
 
 	public int getNbrPersonne() {

@@ -184,9 +184,12 @@ public class InterfaceAccueil implements Observer
 						try {
 							FileInputStream fis = new FileInputStream("imagesRecette/"+nom+".png");
 							BufferedImage bi = ImageIO.read(new File("imagesRecette/"+nom+".png"));
-							String couleur = getHexColor(bi);
+							if (recette_courante.getCouleur()==null) {
+								String couleur = getHexColor(bi);
+								recette_courante.setCouleur(couleur);						
+							}
 							ImageView imgView = new ImageView(new Image(fis));
-							vbox.setStyle("-fx-background-color: "+couleur+";");
+							vbox.setStyle("-fx-background-color: "+recette_courante.getCouleur()+";");
 							double largeurScroll = ctrlAccueil.scrollRecettes.getMinWidth();
 							double largeurPhoto = recette_courante.getPhoto().getWidth();
 							double coeff = (largeurScroll/largeurPhoto);

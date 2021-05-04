@@ -111,7 +111,6 @@ public class ModèleAccueil extends Observable {
 	
 	public void afficherParNom(String nom) {
 		ArrayList<Recette> recettesRecherchees = new ArrayList<>();
-		System.out.println("Nom de la recette "+nom);
 		for (String nomRecette : this.recettes.keySet()) {
 			if (nomRecette.toLowerCase().contains(nom.toLowerCase())) {
 				recettesRecherchees.add(this.recettes.get(nomRecette));
@@ -160,7 +159,6 @@ public class ModèleAccueil extends Observable {
 	}
 
 	private void loadData(String url) {
-		System.out.println("liste des recettes "+this.recettes);
 		XMLDecoder decoder = null;
 		try {
 			FileInputStream fis = new FileInputStream(url+".xml");
